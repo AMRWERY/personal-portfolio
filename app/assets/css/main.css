@@ -1,0 +1,194 @@
+@import "tailwindcss";
+@plugin "tailwindcss-rtl";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================================================
+   SEMANTIC THEME VARIABLES (LIGHT = Editorial Daylight, DARK = Midnight Editorial)
+   ============================================================================ */
+:root {
+  --bg: #f7f9fc;
+  --surface: #ffffff;
+  --surface-elevated: #eff3f8;
+  --border-subtle: #d6dfeb;
+  --text-primary: #0b1017;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --accent-ink: #0d68b2;
+  --accent-soft: #e6f4fe;
+  --warning: #9a6309;
+  --success: #1c7c54;
+
+  /* Motion duration variables */
+  --duration-fast: 140ms;
+  --duration-standard: 200ms;
+  --duration-panel: 280ms;
+  --duration-enter: 420ms;
+}
+
+.dark {
+  --bg: #0b1017;
+  --surface: #111923;
+  --surface-elevated: #172231;
+  --border-subtle: #263445;
+  --text-primary: #f3f6fa;
+  --text-secondary: #a5b1c0;
+  --text-muted: #718095;
+  --accent-ink: #56b4f8;
+  --accent-soft: #142d42;
+  --warning: #e8b45d;
+  --success: #48b987;
+}
+
+/* Semantic tokens bound dynamically via @theme inline */
+@theme inline {
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border: var(--border-subtle);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+}
+
+/* Static Design System Tokens */
+@theme {
+  --color-accent: #56b4f8;
+  --color-on-accent: #081524;
+
+  --container-max: 1240px;
+
+  --font-display: "Montserrat", sans-serif;
+  --font-headline: "Montserrat", sans-serif;
+  --font-title: "Montserrat", sans-serif;
+  --font-body: "Montserrat", sans-serif;
+  --font-label: "Montserrat", sans-serif;
+
+  /* Typography Scale */
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 56px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 700;
+
+  --text-display-lg-mobile: 32px;
+  --text-display-lg-mobile--line-height: 40px;
+  --text-display-lg-mobile--letter-spacing: -0.01em;
+  --text-display-lg-mobile--font-weight: 700;
+
+  --text-headline-xl: 40px;
+  --text-headline-xl--line-height: 48px;
+  --text-headline-xl--letter-spacing: -0.02em;
+  --text-headline-xl--font-weight: 700;
+
+  --text-headline-xl-mobile: 28px;
+  --text-headline-xl-mobile--line-height: 36px;
+  --text-headline-xl-mobile--letter-spacing: -0.01em;
+  --text-headline-xl-mobile--font-weight: 700;
+
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--letter-spacing: -0.01em;
+  --text-headline-lg--font-weight: 700;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--font-weight: 600;
+
+  --text-headline-sm: 20px;
+  --text-headline-sm--line-height: 28px;
+  --text-headline-sm--font-weight: 600;
+
+  --text-title-lg: 18px;
+  --text-title-lg--line-height: 26px;
+  --text-title-lg--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 26px;
+  --text-body-md--font-weight: 400;
+
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 22px;
+  --text-body-sm--font-weight: 400;
+
+  --text-label-md: 14px;
+  --text-label-md--line-height: 20px;
+  --text-label-md--letter-spacing: 0.01em;
+  --text-label-md--font-weight: 500;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.05em;
+  --text-label-sm--font-weight: 600;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+
+  /* Motion Easing Curves */
+  --ease-fast: cubic-bezier(0.2, 0, 0, 1);
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-panel: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-enter: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Reset letter-spacing in Arabic RTL so glyphs stay connected cleanly */
+  html[dir="rtl"] * {
+    letter-spacing: 0 !important;
+  }
+}
+
+@keyframes heroFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-text {
+  animation: heroFadeInUp 420ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-hero-avatar {
+  opacity: 0;
+  animation: heroFadeInUp 420ms cubic-bezier(0.22, 1, 0.36, 1) 90ms forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  .animate-hero-text,
+  .animate-hero-avatar {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
