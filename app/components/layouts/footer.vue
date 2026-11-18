@@ -32,7 +32,7 @@
             :href="PROFILE.githubUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="hover:text-accent-ink transition-colors inline-flex items-center gap-1.5 min-h-11 md:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+            class="hover:text-accent-ink transition-colors inline-flex items-center gap-1.5 min-h-11 lg:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
           >
             <LazyVAppIcon name="lucide:github" class="w-4 h-4" />
             <span>GitHub</span>
@@ -41,14 +41,14 @@
             :href="PROFILE.linkedinUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="hover:text-accent-ink transition-colors inline-flex items-center gap-1.5 min-h-11 md:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+            class="hover:text-accent-ink transition-colors inline-flex items-center gap-1.5 min-h-11 lg:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
           >
             <LazyVAppIcon name="lucide:linkedin" class="w-4 h-4" />
             <span>LinkedIn</span>
           </a>
           <a
             :href="`mailto:${PROFILE.email}`"
-            class="hover:text-accent-ink transition-colors inline-flex items-center gap-1.5 min-h-11 md:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+            class="hover:text-accent-ink transition-colors inline-flex items-center gap-1.5 min-h-11 lg:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
           >
             <LazyVAppIcon name="lucide:mail" class="w-4 h-4" />
             <span>{{ locale === "en" ? "Email" : "البريد الإلكتروني" }}</span>
@@ -66,7 +66,7 @@
               v-for="item in NAV_ITEMS"
               :key="item.key"
               :to="item.to"
-              class="hover:text-text-primary transition-colors inline-flex items-center min-h-11 md:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+              class="hover:text-text-primary transition-colors inline-flex items-center min-h-11 lg:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
             >
               {{ t(item.label) }}
             </nuxt-link-locale>

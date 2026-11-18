@@ -76,7 +76,7 @@
                 <nuxt-link-locale
                   v-if="project.slug"
                   :to="`/work/${project.slug}`"
-                  class="group/btn inline-flex items-center gap-1 min-h-11 md:min-h-0 px-3 py-1 rounded-full bg-surface-elevated border border-border text-label-sm text-text-secondary hover:text-accent-ink hover:border-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  class="group/btn inline-flex items-center gap-1 min-h-11 lg:min-h-0 px-3 py-1 rounded-full bg-surface-elevated border border-border text-label-sm text-text-secondary hover:text-accent-ink hover:border-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   <span>{{ t(project.label) }}</span>
                   <LazyVAppIcon

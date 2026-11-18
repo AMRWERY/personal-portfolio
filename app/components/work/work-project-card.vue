@@ -122,7 +122,7 @@
               :href="link.href"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-1 min-h-11 md:min-h-0 text-label-sm font-medium text-text-secondary hover:text-text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+              class="inline-flex items-center gap-1 min-h-11 lg:min-h-0 text-label-sm font-medium text-text-secondary hover:text-text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
             >
               <LazyVAppIcon
                 v-if="link.kind === 'repo'"

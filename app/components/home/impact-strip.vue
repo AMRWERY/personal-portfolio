@@ -12,7 +12,7 @@
       >
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8">
           <div
-            v-for="metric in IMPACT_METRICS"
+            v-for="(metric, index) in IMPACT_METRICS"
             :key="metric.value"
             class="space-y-0.5 md:space-y-1"
           >
@@ -22,7 +22,12 @@
                 metric.highlight ? 'text-accent-ink' : 'text-text-primary'
               "
             >
-              {{ metric.value }}
+              <!-- counts up when the strip scrolls into view, staggered left to right -->
+              <VCountUp
+                :value="metric.value"
+                :start="isVisible"
+                :delay="index * 120"
+              />
             </div>
             <div
               class="text-body-sm text-text-secondary font-medium leading-snug"
