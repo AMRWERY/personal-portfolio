@@ -17,8 +17,8 @@
 
         <Transition
           mode="out-in"
-          enter-active-class="transition-all duration-(--duration-standard) ease-standard"
-          leave-active-class="transition-all duration-(--duration-fast) ease-standard"
+          enter-active-class="transition-ui duration-(--duration-standard) ease-standard"
+          leave-active-class="transition-ui duration-(--duration-fast) ease-standard"
           enter-from-class="opacity-0 translate-y-2"
           leave-to-class="opacity-0 -translate-y-2"
         >
@@ -92,7 +92,7 @@
             type="button"
             role="tab"
             :aria-selected="activeIndex === index"
-            class="group relative rounded-xl border-2 bg-surface-elevated p-3 text-start transition-all duration-(--duration-standard) ease-standard focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
+            class="group relative rounded-xl border-2 bg-surface-elevated p-3 text-start transition-ui duration-(--duration-standard) ease-standard focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
             :class="
               activeIndex === index
                 ? 'border-accent -translate-y-0.5'
@@ -119,7 +119,7 @@
               {{ t(item.caption) }}
             </div>
             <span
-              class="absolute top-2 end-2 w-2 h-2 rounded-full bg-accent transition-all duration-(--duration-panel) ease-panel"
+              class="absolute top-2 end-2 w-2 h-2 rounded-full bg-accent transition-ui duration-(--duration-panel) ease-panel"
               :class="activeIndex === index ? 'scale-100 opacity-100' : 'scale-0 opacity-0'"
               aria-hidden="true"
             />

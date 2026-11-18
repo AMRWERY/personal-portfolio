@@ -15,18 +15,27 @@
 
     <slot :described-by="error ? errorId : undefined" :invalid="!!error" />
 
-    <p
-      v-if="error"
-      :id="errorId"
-      role="alert"
-      class="text-body-sm text-rose-600 dark:text-rose-400 font-medium flex items-center gap-1.5"
+    <!-- Always mounted so screen readers announce changes; collapses smoothly (no layout jump) -->
+    <div
+      class="grid transition-[grid-template-rows,opacity] duration-(--duration-standard) ease-standard motion-reduce:transition-none"
+      :class="error ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
     >
-      <LazyVAppIcon
-        name="lucide:alert-circle"
-        class="w-3.5 h-3.5 md:w-4 md:h-4"
-      />
-      <span>{{ error }}</span>
-    </p>
+      <div class="overflow-hidden">
+        <p
+          :id="errorId"
+          role="alert"
+          class="text-body-sm text-rose-600 dark:text-rose-400 font-medium flex items-center gap-1.5"
+        >
+          <LazyVAppIcon
+            name="lucide:alert-circle"
+            class="w-3.5 h-3.5 md:w-4 md:h-4"
+          />
+          <!-- live message while invalid; the lingering copy is hidden from assistive tech -->
+          <span v-if="error">{{ error }}</span>
+          <span v-else aria-hidden="true">{{ lastError }}</span>
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -40,4 +49,13 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const errorId = computed(() => `${props.id}-error`);
+
+// keep the last message on screen while the error row fades out
+const lastError = ref(props.error ?? "");
+watch(
+  () => props.error,
+  (message) => {
+    if (message) lastError.value = message;
+  },
+);
 </script>

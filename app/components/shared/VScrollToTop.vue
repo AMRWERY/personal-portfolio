@@ -1,8 +1,8 @@
 <template>
   <Transition
-    enter-active-class="transition-all duration-(--duration-standard) ease-standard"
+    enter-active-class="transition-ui duration-(--duration-standard) ease-standard"
     enter-from-class="opacity-0 translate-y-3"
-    leave-active-class="transition-all duration-(--duration-standard) ease-standard"
+    leave-active-class="transition-ui duration-(--duration-standard) ease-standard"
     leave-to-class="opacity-0 translate-y-3"
   >
     <LazyVButton

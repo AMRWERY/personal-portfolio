@@ -61,7 +61,7 @@
       <TransitionGroup
         v-if="visibleProjects.length"
         tag="div"
-        enter-active-class="transition-all duration-(--duration-standard) ease-standard"
+        enter-active-class="transition-ui duration-(--duration-standard) ease-standard"
         enter-from-class="opacity-0 translate-y-2"
         class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8"
       >

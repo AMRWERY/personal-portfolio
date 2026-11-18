@@ -1,55 +1,76 @@
 <template>
-  <!-- Compact Circular Header Variant (28–32px) -->
-  <div
+  <!-- Compact circle (header, 28–32px): a tighter crop on the face so it stays recognisable -->
+  <span
     v-if="variant === 'compact'"
-    class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-accent-soft border border-accent/40 overflow-hidden flex items-center justify-center shrink-0 transition-transform duration-(--duration-fast) group-hover:scale-105"
+    class="hidden min-[480px]:flex w-7 h-7 md:w-8 md:h-8 rounded-full bg-accent-soft border border-accent/40 overflow-hidden items-center justify-center shrink-0 transition-transform duration-(--duration-fast) ease-standard group-hover:scale-105 motion-reduce:transition-none"
   >
     <img
       v-if="showRealImage()"
       :src="src"
       :alt="alt"
-      class="w-full h-full object-cover object-top"
+      width="32"
+      height="32"
+      class="w-full h-full object-cover max-w-none [transform:translate(-18%,79%)_scale(2.6)]"
       @error="hasImageError = true"
     />
     <span v-else class="font-headline font-bold text-accent-ink text-label-sm">
       {{ monogram }}
     </span>
-  </div>
+  </span>
 
-  <!-- Editorial 4:5 Portrait Frame (Home Hero & About) -->
+  <!-- Editorial 4:5 portrait (Home hero + About). Same photo, same crop, only the size differs. -->
   <div
     v-else
-    class="relative w-64 sm:w-[300px] lg:w-full lg:max-w-[340px] aspect-4/5 rounded-xl lg:rounded-2xl bg-surface border border-border shadow-xl lg:shadow-2xl overflow-hidden flex flex-col items-center justify-between text-center"
-    :class="showRealImage() ? '' : 'p-5 lg:p-6'"
+    class="relative aspect-4/5 rounded-2xl bg-surface border border-border shadow-xl overflow-hidden"
+    :class="
+      size === 'md'
+        ? 'w-44 sm:w-48 lg:w-52'
+        : 'w-64 sm:w-[300px] lg:w-[340px]'
+    "
   >
     <img
       v-if="showRealImage()"
       :src="src"
       :alt="alt"
-      class="w-full h-full object-cover object-top"
+      :width="size === 'md' ? 208 : 340"
+      :height="size === 'md' ? 260 : 425"
+      decoding="async"
+      :loading="size === 'md' ? 'lazy' : 'eager'"
+      :fetchpriority="size === 'md' ? 'auto' : 'high'"
+      class="absolute inset-0 w-full h-full object-cover [object-position:78%_top]"
       @error="hasImageError = true"
     />
 
-    <!-- Final-Size AM Monogram Fallback -->
-    <template v-else>
-      <div class="flex flex-col items-center my-auto">
-        <div
-          class="w-20 h-20 lg:w-24 lg:h-24 rounded-xl lg:rounded-2xl bg-background border border-border flex items-center justify-center mb-3 lg:mb-4 shadow-inner"
+    <!-- Placeholder: the AM monogram inside the exact final frame -->
+    <div
+      v-else
+      class="absolute inset-0 flex flex-col items-center justify-center text-center p-4"
+    >
+      <div
+        class="rounded-xl bg-background border border-border flex items-center justify-center shadow-inner mb-3"
+        :class="size === 'md' ? 'w-16 h-16' : 'w-20 h-20 lg:w-24 lg:h-24'"
+      >
+        <span
+          class="font-headline font-bold text-accent-ink tracking-tighter"
+          :class="
+            size === 'md'
+              ? 'text-headline-md'
+              : 'text-headline-lg lg:text-display-lg'
+          "
         >
-          <span
-            class="font-headline text-headline-lg lg:text-display-lg font-bold text-accent-ink tracking-tighter"
-          >
-            {{ monogram }}
-          </span>
-        </div>
-        <p class="font-headline text-headline-sm font-bold text-text-primary">
-          {{ name }}
-        </p>
-        <p class="text-body-sm text-text-secondary mt-0.5 lg:mt-1 font-medium">
-          {{ role }}
-        </p>
+          {{ monogram }}
+        </span>
       </div>
-    </template>
+      <p
+        class="font-headline font-bold text-text-primary"
+        :class="size === 'md' ? 'text-body-md' : 'text-headline-sm'"
+      >
+        {{ name }}
+      </p>
+      <p class="text-body-sm text-text-secondary mt-0.5 font-medium">
+        {{ role }}
+      </p>
+    </div>
   </div>
 </template>
 
@@ -58,6 +79,7 @@ import type { Props } from "~/types/profile-avatar";
 
 const props = withDefaults(defineProps<Props>(), {
   variant: "hero",
+  size: "lg",
   src: "",
   alt: "Portrait of Amr Mohamed",
   monogram: "AM",

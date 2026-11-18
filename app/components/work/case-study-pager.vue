@@ -6,7 +6,7 @@
       <!-- Previous -->
       <nuxt-link-locale
         :to="`/work/${previous.slug}`"
-        class="group/btn p-4 md:p-6 rounded-xl border border-border bg-surface hover:border-accent hover:-translate-y-0.5 transition-all duration-(--duration-fast) flex items-center gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        class="group/btn p-4 md:p-6 rounded-xl border border-border bg-surface hover:border-accent hover:-translate-y-0.5 transition-ui duration-(--duration-fast) flex items-center gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       >
         <div
           class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-surface-elevated border border-border text-text-secondary group-hover/btn:text-accent-ink group-hover/btn:border-accent flex items-center justify-center shrink-0 transition-colors"
@@ -33,7 +33,7 @@
       <!-- Next -->
       <nuxt-link-locale
         :to="`/work/${next.slug}`"
-        class="group/btn p-4 md:p-6 rounded-xl border border-border bg-surface hover:border-accent hover:-translate-y-0.5 transition-all duration-(--duration-fast) flex items-center justify-between gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        class="group/btn p-4 md:p-6 rounded-xl border border-border bg-surface hover:border-accent hover:-translate-y-0.5 transition-ui duration-(--duration-fast) flex items-center justify-between gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       >
         <div class="min-w-0 space-y-0.5">
           <span

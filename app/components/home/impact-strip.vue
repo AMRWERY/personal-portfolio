@@ -1,8 +1,8 @@
 <template>
   <section
     ref="sectionRef"
-    class="px-5 md:px-0 transition-all duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'reveal-in' : 'reveal-out'"
+    class="px-5 md:px-0 transition-ui duration-(--duration-enter) ease-enter"
+    :class="isVisible ? 'reveal-group-in' : 'reveal-group-out'"
   >
     <div
       class="border border-border md:border-x-0 rounded-xl md:rounded-none bg-surface md:bg-surface/80 dark:md:bg-surface/60"
@@ -10,7 +10,7 @@
       <div
         class="max-w-(--container-max) mx-auto p-5 md:px-6 lg:px-12 md:py-10"
       >
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8">
+        <div class="reveal-stagger grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8">
           <div
             v-for="(metric, index) in IMPACT_METRICS"
             :key="metric.value"

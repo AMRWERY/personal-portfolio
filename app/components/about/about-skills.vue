@@ -1,13 +1,13 @@
 <template>
   <section
     ref="sectionRef"
-    class="border-t border-border bg-surface/40 py-12 md:py-20 lg:py-24 transition-all duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'reveal-in' : 'reveal-out'"
+    class="border-t border-border bg-surface/40 py-12 md:py-20 lg:py-24 transition-ui duration-(--duration-enter) ease-enter"
+    :class="isVisible ? 'reveal-group-in' : 'reveal-group-out'"
   >
     <div
       class="max-w-(--container-max) mx-auto px-5 lg:px-12 space-y-6 md:space-y-12"
     >
-      <div class="max-w-2xl space-y-1 md:space-y-2">
+      <div class="reveal-head max-w-2xl space-y-1 md:space-y-2">
         <span
           class="font-headline text-label-sm font-semibold text-accent-ink uppercase tracking-wider block"
         >
@@ -24,7 +24,7 @@
       </div>
 
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6"
+        class="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6"
       >
         <div
           v-for="group in ABOUT_SKILLS.groups"

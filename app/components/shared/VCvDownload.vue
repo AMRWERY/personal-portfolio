@@ -18,9 +18,9 @@
     </LazyVButton>
 
     <Transition
-      enter-active-class="transition-all duration-(--duration-fast) ease-standard motion-reduce:transition-none"
+      enter-active-class="transition-ui duration-(--duration-fast) ease-standard motion-reduce:transition-none"
       enter-from-class="opacity-0 -translate-y-1"
-      leave-active-class="transition-all duration-(--duration-fast) ease-standard motion-reduce:transition-none"
+      leave-active-class="transition-ui duration-(--duration-fast) ease-standard motion-reduce:transition-none"
       leave-to-class="opacity-0 -translate-y-1"
     >
       <ul

@@ -40,6 +40,7 @@
         class="lg:col-span-4 flex justify-center lg:justify-end animate-about-portrait"
       >
         <ProfileAvatar
+          size="md"
           :src="PROFILE.avatarSrc"
           :monogram="PROFILE.monogram"
           :name="PROFILE.name"

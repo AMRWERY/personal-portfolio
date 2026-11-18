@@ -1,6 +1,6 @@
 <template>
   <article
-    class="group rounded-xl lg:rounded-2xl border border-border bg-surface overflow-hidden flex flex-col justify-between transition-all duration-(--duration-standard) ease-standard hover:border-accent hover:-translate-y-1 hover:shadow-xl"
+    class="group rounded-xl lg:rounded-2xl border border-border bg-surface overflow-hidden flex flex-col justify-between transition-ui duration-(--duration-standard) ease-standard hover:border-accent hover:-translate-y-1 hover:shadow-xl"
   >
     <!-- 16:10 Media Stage -->
     <div
@@ -49,7 +49,7 @@
           </h3>
           <LazyVAppIcon
             name="lucide:arrow-up-right"
-            class="hidden md:block w-5 h-5 text-text-secondary group-hover:text-accent-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:group-hover:-translate-x-0.5 transition-all duration-(--duration-fast)"
+            class="hidden md:block w-5 h-5 text-text-secondary group-hover:text-accent-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:group-hover:-translate-x-0.5 transition-ui duration-(--duration-fast)"
           />
         </div>
 

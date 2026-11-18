@@ -168,9 +168,12 @@ const SOCIALS: { name: string; icon: IconifyName; href: string; handle: string }
 // Shared row styling (constants keep the link variants in sync)
 const ROW =
   "group/btn flex items-center gap-3 md:gap-4 p-3 md:p-3.5 rounded-xl border border-border bg-background hover:border-accent transition-colors duration-(--duration-fast) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
-const ICON_BOX =
+
+  const ICON_BOX =
   "w-9 h-9 md:w-10 md:h-10 rounded-lg bg-accent-soft text-accent-ink flex items-center justify-center shrink-0 transition-transform duration-(--duration-fast) group-hover/btn:scale-105";
-const LABEL = "block text-label-sm font-semibold text-text-secondary";
+
+  const LABEL = "block text-label-sm font-semibold text-text-secondary";
+
 const VALUE =
   "block text-body-sm md:text-body-md font-medium text-text-primary truncate";
 </script>

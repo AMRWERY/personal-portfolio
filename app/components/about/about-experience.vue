@@ -1,10 +1,10 @@
 <template>
   <section
     ref="sectionRef"
-    class="max-w-(--container-max) mx-auto px-5 lg:px-12 py-12 md:py-20 lg:py-24 transition-all duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'reveal-in' : 'reveal-out'"
+    class="max-w-(--container-max) mx-auto px-5 lg:px-12 py-12 md:py-20 lg:py-24 transition-ui duration-(--duration-enter) ease-enter"
+    :class="isVisible ? 'reveal-group-in' : 'reveal-group-out'"
   >
-    <div class="max-w-2xl space-y-1 md:space-y-2 mb-6 md:mb-12">
+    <div class="reveal-head max-w-2xl space-y-1 md:space-y-2 mb-6 md:mb-12">
       <span
         class="font-headline text-label-sm font-semibold text-accent-ink uppercase tracking-wider block"
       >
@@ -22,7 +22,7 @@
 
     <!-- Vertical timeline -->
     <ol
-      class="relative space-y-4 md:space-y-8 before:absolute before:inset-y-0 before:start-[7px] md:before:start-3 before:w-0.5 before:bg-border"
+      class="reveal-stagger relative space-y-4 md:space-y-8 before:absolute before:inset-y-0 before:start-[7px] md:before:start-3 before:w-0.5 before:bg-border"
     >
       <li
         v-for="entry in ABOUT_EXPERIENCE.entries"

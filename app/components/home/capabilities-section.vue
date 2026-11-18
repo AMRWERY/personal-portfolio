@@ -1,11 +1,11 @@
 <template>
   <section
     ref="sectionRef"
-    class="md:border-t md:border-border md:bg-surface-elevated/50 dark:md:bg-surface/40 py-6 md:py-20 lg:py-28 transition-all duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'reveal-in' : 'reveal-out'"
+    class="md:border-t md:border-border md:bg-surface-elevated/50 dark:md:bg-surface/40 py-6 md:py-20 lg:py-28 transition-ui duration-(--duration-enter) ease-enter"
+    :class="isVisible ? 'reveal-group-in' : 'reveal-group-out'"
   >
     <div class="max-w-(--container-max) mx-auto px-5 lg:px-12">
-      <div class="max-w-2xl mb-5 md:mb-12">
+      <div class="reveal-head max-w-2xl mb-5 md:mb-12">
         <LazyVEyebrowLabel class="hidden md:inline-flex mb-2">
           {{ locale === "en" ? "CORE SERVICES" : "مجالات العمل" }}
         </LazyVEyebrowLabel>
@@ -24,12 +24,12 @@
       </div>
 
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6"
+        class="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6"
       >
         <div
           v-for="item in CAPABILITIES"
           :key="item.id"
-          class="p-4 md:p-6 rounded-xl md:rounded-2xl border border-border bg-surface transition-all duration-(--duration-fast) hover:border-border/80 flex md:block items-start gap-3"
+          class="p-4 md:p-6 rounded-xl md:rounded-2xl border border-border bg-surface transition-ui duration-(--duration-fast) hover:border-border/80 flex md:block items-start gap-3"
         >
           <div
             class="md:w-10 md:h-10 md:rounded-xl md:bg-accent-soft md:border md:border-accent/30 text-accent-ink flex items-center justify-center md:mb-4 shrink-0 mt-0.5 md:mt-0"

@@ -10,7 +10,7 @@ import type {
 export const PROFILE = {
   name: "Amr Mohamed",
   monogram: "AM",
-  avatarSrc: "", // e.g. "/images/avatar.webp" once a photo is added to /public/images
+  avatarSrc: "/img/personal-photo.png", // the single source for every avatar on the site
   email: "amrmounir2@gmail.com",
   phone: "+201022655742",
   phoneDisplay: "+20 102 265 5742",
@@ -48,7 +48,6 @@ export const NAV_ITEMS: NavItem[] = [
   { key: "home", label: { en: "Home", ar: "الرئيسية" }, to: "/" },
   { key: "work", label: { en: "Work", ar: "أعمالي" }, to: "/work" },
   { key: "about", label: { en: "About", ar: "نبذة عني" }, to: "/about" },
-  { key: "contact", label: { en: "Contact", ar: "تواصل معي" }, to: "/contact" },
 ];
 
 export const HERO_COPY = {

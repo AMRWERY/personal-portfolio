@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="bg-background text-text-primary font-body antialiased min-h-screen selection:bg-accent selection:text-on-accent overflow-x-hidden transition-colors duration-(--duration-standard)"
+      class="bg-background text-text-primary font-body antialiased min-h-screen selection:bg-accent selection:text-on-accent overflow-x-clip transition-colors duration-(--duration-standard)"
     >
       <Header :active-route="activeRoute" />
 

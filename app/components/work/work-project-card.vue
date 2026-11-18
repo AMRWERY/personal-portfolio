@@ -1,6 +1,6 @@
 <template>
   <article
-    class="group rounded-xl lg:rounded-2xl border border-border bg-surface overflow-hidden flex flex-col transition-all duration-(--duration-standard) ease-standard hover:border-accent hover:-translate-y-1 hover:shadow-xl"
+    class="group rounded-xl lg:rounded-2xl border border-border bg-surface overflow-hidden flex flex-col transition-ui duration-(--duration-standard) ease-standard hover:border-accent hover:-translate-y-1 hover:shadow-xl"
     :class="project.featured ? 'md:col-span-2 lg:flex-row' : 'justify-between'"
   >
     <!-- Media stage -->

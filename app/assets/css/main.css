@@ -62,6 +62,10 @@
 
   --container-max: 1240px;
 
+  /* Plain transition-colors / transition-opacity etc. use the shared micro token */
+  --default-transition-duration: 140ms;
+  --default-transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+
   --font-display: "Montserrat", sans-serif;
   --font-headline: "Montserrat", sans-serif;
   --font-title: "Montserrat", sans-serif;
@@ -164,21 +168,33 @@
   }
 }
 
-.animate-hero-text {
-  animation: heroFadeInUp 420ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+/* Hero entrance: each text group rises once (420ms) in a 50ms sequence; the
+   portrait follows 60ms after the first group. --hero-base offsets later blocks. */
+.animate-hero-text > * {
+  opacity: 0;
+  animation: heroFadeInUp var(--duration-enter) var(--ease-enter)
+    calc(var(--hero-base, 0ms) + var(--n, 0) * 50ms) forwards;
 }
+.animate-hero-text > :nth-child(2) { --n: 1; }
+.animate-hero-text > :nth-child(3) { --n: 2; }
+.animate-hero-text > :nth-child(4) { --n: 3; }
 
 .animate-hero-avatar {
   opacity: 0;
-  animation: heroFadeInUp 420ms cubic-bezier(0.22, 1, 0.36, 1) 90ms forwards;
+  animation: heroFadeInUp var(--duration-enter) var(--ease-enter) 60ms forwards;
 }
 
+/* ============================================================================
+   REDUCED MOTION — site-wide
+   Content is visible immediately: no reveals, no stagger, no smooth scrolling.
+   State changes (hover colour, focus ring, menu open/close) stay, just instant.
+   ============================================================================ */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto !important;
   }
 
-  .animate-hero-text,
+  .animate-hero-text > *,
   .animate-hero-avatar {
     animation: none !important;
     opacity: 1 !important;
@@ -189,35 +205,69 @@
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
     animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    scroll-behavior: auto !important;
   }
 }
 
 /* ============================================================================
-   VIEW TRANSITIONS (theme + locale toggles)
+   SHARED TRANSITION UTILITY (replaces `transition-all`)
+   Only properties that actually change in this UI, with the shared tokens as
+   defaults (duration-* / ease-* utilities still override them).
    ============================================================================ */
-/* Locale switch: smooth crossfade of the whole page */
+@utility transition-ui {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, box-shadow, opacity, translate, scale;
+  transition-timing-function: var(--tw-ease, var(--ease-standard));
+  transition-duration: var(--tw-duration, var(--duration-standard));
+}
+
+/* ============================================================================
+   GROUP REVEAL (section header + sibling cards)
+   Used with .reveal-group-out / .reveal-group-in on the section, .reveal-head
+   on its heading block and .reveal-stagger on the grid whose children rise.
+   Each element fades + rises 12px once (420ms); cards follow in 60ms steps,
+   capped at 280ms total. An animation (fill: backwards) is used instead of a
+   transition so the cards' own hover transitions are never delayed.
+   ============================================================================ */
+.reveal-group-out :is(.reveal-head, .reveal-stagger > *) {
+  opacity: 0;
+}
+.reveal-group-in :is(.reveal-head, .reveal-stagger > *) {
+  animation: revealRise var(--duration-enter) var(--ease-enter) var(--d, 0ms) backwards;
+}
+@keyframes revealRise {
+  from {
+    opacity: 0;
+    translate: 0 0.75rem;
+  }
+}
+.reveal-stagger > :nth-child(1) { --d: 60ms; }
+.reveal-stagger > :nth-child(2) { --d: 120ms; }
+.reveal-stagger > :nth-child(3) { --d: 180ms; }
+.reveal-stagger > :nth-child(4) { --d: 240ms; }
+.reveal-stagger > :nth-child(n + 5) { --d: 280ms; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal-group-out :is(.reveal-head, .reveal-stagger > *) {
+    opacity: 1;
+  }
+  .reveal-group-in :is(.reveal-head, .reveal-stagger > *) {
+    animation: none;
+  }
+}
+
+/* ============================================================================
+   VIEW TRANSITIONS (theme + language toggles)
+   One 200ms crossfade of the whole page: background, surfaces, text and borders
+   change together; for the language switch the layout flip is never seen mid-way.
+   ============================================================================ */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 400ms;
-  animation-timing-function: ease;
+  animation-duration: var(--duration-standard);
+  animation-timing-function: var(--ease-standard);
 }
-
-/* Theme switch: the circular reveal is driven from JS (see utils/viewTransition.ts) */
-html.vt-reveal::view-transition-old(root),
-html.vt-reveal::view-transition-new(root) {
-  animation: none;
-  mix-blend-mode: normal;
-}
-
-html.vt-reveal::view-transition-old(root) {
-  z-index: 1;
-}
-
-html.vt-reveal::view-transition-new(root) {
-  z-index: 2;
-}
-
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-group(*),
   ::view-transition-old(*),
@@ -336,6 +386,10 @@ html {
 }
 .underline-draw {
   animation: underlineReveal 900ms cubic-bezier(0.22, 1, 0.36, 1) 350ms both;
+}
+/* Nav links: same stroke, quicker draw, no delay */
+.underline-draw-fast {
+  animation: underlineReveal var(--duration-enter) var(--ease-enter) both;
 }
 @media (prefers-reduced-motion: reduce) {
   .underline-draw {

@@ -60,7 +60,7 @@ export default defineNuxtConfig({
   ],
   app: {
     head: {
-      title: "Personal Portfolio",
+      title: "Amr Mohamed | Personal Portfolio",
       script: [
         {
           // Apply the theme before first paint (stored choice, else device preference)

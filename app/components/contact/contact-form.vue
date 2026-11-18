@@ -1,8 +1,16 @@
 <template>
   <div class="border border-border bg-surface rounded-2xl p-5 sm:p-8">
+    <Transition
+      mode="out-in"
+      enter-active-class="transition-ui duration-(--duration-standard) ease-standard"
+      enter-from-class="opacity-0"
+      leave-active-class="transition-ui duration-(--duration-fast) ease-standard"
+      leave-to-class="opacity-0"
+    >
     <!-- Success -->
     <div
       v-if="status === 'success'"
+      key="success"
       role="status"
       class="py-8 md:py-10 px-2 md:px-4 text-center space-y-3 md:space-y-4"
     >
@@ -38,12 +46,31 @@
       </div>
     </div>
 
-    <template v-else>
-      <!-- Server failure -->
+    <div v-else key="form">
+      <!-- Announced to screen readers when a send fails (the banner below is visual) -->
+      <p class="sr-only" role="alert">
+        {{
+          status === "error"
+            ? locale === "en"
+              ? "Message could not be sent."
+              : "تعذّر إرسال الرسالة."
+            : ""
+        }}
+      </p>
+
+      <!-- Server failure: animates its height + opacity, so nothing jumps -->
       <div
-        v-if="status === 'error'"
-        role="alert"
-        class="mb-5 md:mb-6 p-3.5 md:p-4 rounded-xl border border-rose-500/40 bg-rose-500/10 flex items-start gap-2.5 md:gap-3"
+        class="grid transition-[grid-template-rows,opacity,margin] duration-(--duration-standard) ease-standard motion-reduce:transition-none"
+        :class="
+          status === 'error'
+            ? 'grid-rows-[1fr] opacity-100 mb-5 md:mb-6'
+            : 'grid-rows-[0fr] opacity-0 mb-0'
+        "
+        :inert="status !== 'error'"
+      >
+        <div class="overflow-hidden">
+      <div
+        class="p-3.5 md:p-4 rounded-xl border border-rose-500/40 bg-rose-500/10 flex items-start gap-2.5 md:gap-3"
       >
         <LazyVAppIcon
           name="lucide:triangle-alert"
@@ -81,6 +108,8 @@
           {{ locale === "en" ? "Retry" : "إعادة المحاولة" }}
         </button>
       </div>
+        </div>
+      </div>
 
       <form novalidate class="space-y-4 md:space-y-6" @submit.prevent="onSubmit">
         <VFormField
@@ -115,7 +144,7 @@
           <template #default="{ describedBy, invalid }">
             <div class="relative">
               <span
-                class="absolute inset-y-0 start-0 ps-3.5 flex items-center pointer-events-none text-text-secondary"
+                class="absolute inset-y-0 start-0 w-10 flex items-center justify-center pointer-events-none text-text-secondary"
                 aria-hidden="true"
               >
                 <LazyVAppIcon name="lucide:mail" class="w-4 h-4" />
@@ -129,10 +158,9 @@
                 inputmode="email"
                 required
                 placeholder="you@company.com"
-                dir="ltr"
                 :aria-invalid="invalid"
                 :aria-describedby="describedBy"
-                :class="[inputClass(invalid), 'ps-10 text-start']"
+                :class="inputClass(invalid, true)"
                 @input="errors.email = ''"
               />
             </div>
@@ -241,7 +269,8 @@
           </p>
         </div>
       </form>
-    </template>
+    </div>
+    </Transition>
   </div>
 </template>
 
@@ -266,8 +295,10 @@ const form = reactive({
 
 const errors = reactive({ name: "", email: "", message: "" });
 
-const inputClass = (invalid: boolean) => [
-  "w-full min-h-11 px-3.5 md:px-4 py-2.5 md:py-3 rounded-md bg-background border text-text-primary placeholder:text-text-secondary/60 text-body-sm md:text-body-md transition-colors duration-(--duration-fast) focus:outline-none focus:ring-1",
+const inputClass = (invalid: boolean, withIcon = false) => [
+  "w-full min-h-11 py-2.5 md:py-3",
+  withIcon ? "ps-10 pe-3.5 md:pe-4" : "px-3.5 md:px-4",
+  " rounded-md bg-background border text-text-primary placeholder:text-text-secondary/60 text-body-sm md:text-body-md transition-colors duration-(--duration-fast) focus:outline-none focus:ring-1",
   invalid
     ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
     : "border-border focus:border-accent focus:ring-accent",

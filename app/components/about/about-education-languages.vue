@@ -1,10 +1,10 @@
 <template>
   <section
     ref="sectionRef"
-    class="max-w-(--container-max) mx-auto px-5 lg:px-12 py-10 md:py-20 lg:py-24 transition-all duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'reveal-in' : 'reveal-out'"
+    class="max-w-(--container-max) mx-auto px-5 lg:px-12 py-10 md:py-20 lg:py-24 transition-ui duration-(--duration-enter) ease-enter"
+    :class="isVisible ? 'reveal-group-in' : 'reveal-group-out'"
   >
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8">
+    <div class="reveal-stagger grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8">
       <!-- Education -->
       <div
         class="p-4 md:p-8 rounded-xl md:rounded-2xl border border-border bg-surface space-y-2 md:space-y-4"

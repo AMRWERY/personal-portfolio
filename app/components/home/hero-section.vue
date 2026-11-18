@@ -52,6 +52,7 @@
       <!-- CTAs + Desktop Location: Left 7 Cols (Row 2) on Desktop, Full-Width Bottom on Mobile -->
       <div
         class="lg:col-span-7 lg:col-start-1 lg:row-start-2 space-y-4 pt-2 lg:pt-0 animate-hero-text"
+        style="--hero-base: 200ms"
       >
         <div
           class="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-4"
@@ -62,10 +63,6 @@
               name="lucide:arrow-right"
               class="w-4 h-4 rtl:rotate-180 arrow-nudge-x"
             />
-          </LazyVButton>
-
-          <LazyVButton to="/contact" variant="secondary" class="w-full sm:w-auto">
-            {{ t(HERO_COPY.secondaryCta) }}
           </LazyVButton>
 
           <LazyVCvDownload />
