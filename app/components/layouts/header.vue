@@ -6,7 +6,7 @@
       class="max-w-(--container-max) mx-auto px-5 lg:px-12 h-16 md:h-20 flex items-center justify-between"
     >
       <!-- Monogram Wordmark & Compact Avatar -->
-      <NuxtLink
+      <nuxt-link-locale
         :to="localePath('/')"
         class="flex items-center gap-2.5 md:gap-3.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-lg p-1"
       >
@@ -20,14 +20,14 @@
         >
           {{ PROFILE.monogram }}<span class="text-accent">.</span>
         </span>
-      </NuxtLink>
+      </nuxt-link-locale>
 
       <!-- Desktop Navigation -->
       <nav
         aria-label="Primary navigation"
         class="hidden md:flex items-center gap-8"
       >
-        <NuxtLink
+        <nuxt-link-locale
           v-for="item in NAV_ITEMS"
           :key="item.key"
           :to="localePath(item.to)"
@@ -39,7 +39,7 @@
           "
         >
           {{ t(item.label) }}
-        </NuxtLink>
+        </nuxt-link-locale>
       </nav>
 
       <!-- Persistent Utilities -->
@@ -94,7 +94,7 @@
           aria-label="Mobile navigation"
           class="flex flex-col gap-1 font-headline text-body-md font-semibold"
         >
-          <NuxtLink
+          <nuxt-link-locale
             v-for="(item, idx) in NAV_ITEMS"
             :key="item.key"
             :ref="
@@ -112,7 +112,7 @@
             @click="closeMobileMenu(false)"
           >
             {{ t(item.label) }}
-          </NuxtLink>
+          </nuxt-link-locale>
         </nav>
 
         <LazyVButton to="/contact" block @click="closeMobileMenu(false)">

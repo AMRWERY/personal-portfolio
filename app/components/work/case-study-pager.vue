@@ -4,7 +4,7 @@
       class="md:border-y border-border md:py-8 grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-6"
     >
       <!-- Previous -->
-      <NuxtLink
+      <nuxt-link-locale
         :to="localePath(`/work/${previous.slug}`)"
         class="group/btn p-4 md:p-6 rounded-xl border border-border bg-surface hover:border-accent hover:-translate-y-0.5 transition-all duration-(--duration-fast) flex items-center gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       >
@@ -28,10 +28,10 @@
             {{ shortTitle(previous.title) }}
           </h3>
         </div>
-      </NuxtLink>
+      </nuxt-link-locale>
 
       <!-- Next -->
-      <NuxtLink
+      <nuxt-link-locale
         :to="localePath(`/work/${next.slug}`)"
         class="group/btn p-4 md:p-6 rounded-xl border border-border bg-surface hover:border-accent hover:-translate-y-0.5 transition-all duration-(--duration-fast) flex items-center justify-between gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       >
@@ -55,7 +55,7 @@
             class="w-4 h-4 md:w-5 md:h-5 rtl:rotate-180 arrow-nudge-x"
           />
         </div>
-      </NuxtLink>
+      </nuxt-link-locale>
     </div>
   </section>
 </template>

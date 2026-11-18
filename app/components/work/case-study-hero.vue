@@ -7,19 +7,19 @@
       :aria-label="locale === 'en' ? 'Breadcrumb' : 'مسار التنقل'"
       class="flex items-center gap-1.5 md:gap-2 text-label-sm font-semibold uppercase tracking-wider mb-4 md:mb-6 text-text-secondary"
     >
-      <NuxtLink
+      <nuxt-link-locale
         :to="localePath('/')"
         class="hover:text-accent-ink transition-colors"
       >
         {{ locale === "en" ? "Home" : "الرئيسية" }}
-      </NuxtLink>
+      </nuxt-link-locale>
       <span aria-hidden="true">/</span>
-      <NuxtLink
+      <nuxt-link-locale
         :to="localePath('/work')"
         class="hover:text-accent-ink transition-colors"
       >
         {{ locale === "en" ? "Work" : "أعمالي" }}
-      </NuxtLink>
+      </nuxt-link-locale>
       <span aria-hidden="true">/</span>
       <span class="text-accent-ink" aria-current="page">{{ shortTitle }}</span>
     </nav>

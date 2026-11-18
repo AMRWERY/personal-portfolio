@@ -62,21 +62,16 @@
         <div class="flex flex-wrap items-center justify-center gap-4">
           <span>© {{ currentYear }} {{ PROFILE.name }}</span>
           <nav aria-label="Footer navigation" class="flex items-center gap-4">
-            <NuxtLink
+            <nuxt-link-locale
               v-for="item in NAV_ITEMS"
               :key="item.key"
               :to="localePath(item.to)"
               class="hover:text-text-primary transition-colors"
             >
               {{ t(item.label) }}
-            </NuxtLink>
+            </nuxt-link-locale>
           </nav>
         </div>
-
-        <LazyVButton variant="ghost" @click="scrollToTop">
-          <LazyVAppIcon name="lucide:arrow-up" class="w-3.5 h-3.5 arrow-nudge-y" />
-          <span>{{ locale === "en" ? "Back to top" : "العودة للأعلى" }}</span>
-        </LazyVButton>
       </div>
     </div>
   </footer>
