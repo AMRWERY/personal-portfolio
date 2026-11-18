@@ -31,7 +31,15 @@ export type IconifyName =
   | "lucide:layout-dashboard"
   | "lucide:users"
   | "lucide:arrow-left"
-  | "lucide:alert-circle";
+  | "lucide:alert-circle"
+  | "lucide:code"
+  | "lucide:palette"
+  | "lucide:database"
+  | "lucide:server"
+  | "lucide:globe"
+  | "lucide:terminal"
+  | "lucide:sparkles"
+  | "lucide:graduation-cap";
 
 export interface LocalizedText {
   en: string;
@@ -152,4 +160,36 @@ export interface WorkProject {
   /** Shown instead of links when the project is private, e.g. "Internal Enterprise" */
   privateNote?: LocalizedText;
   screenshotSrc?: string;
+}
+
+export interface AboutApproachStep {
+  id: string;
+  title: LocalizedText;
+  description: LocalizedText;
+  /** Short footer label, e.g. "Discovery & Planning" */
+  tag: LocalizedText;
+}
+
+export interface AboutProjectChip {
+  label: LocalizedText;
+  /** When set, the chip links to /work/<slug> */
+  slug?: string;
+}
+
+export interface AboutExperienceEntry {
+  id: string;
+  period: LocalizedText;
+  title: LocalizedText;
+  badge: LocalizedText;
+  description: LocalizedText;
+  projectsLabel: LocalizedText;
+  projects: AboutProjectChip[];
+  isCurrent?: boolean;
+}
+
+export interface AboutSkillGroup {
+  id: string;
+  icon: IconifyName;
+  title: LocalizedText;
+  skills: LocalizedText[];
 }
