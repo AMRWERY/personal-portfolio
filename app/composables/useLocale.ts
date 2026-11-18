@@ -15,10 +15,10 @@ export function useLocale() {
   async function toggleLocale() {
     const next: Locale = locale.value === "en" ? "ar" : "en";
     await withViewTransition(async () => {
-      await setLocale(next);
-      const path = switchLocalePath(next);
-      if (path) await navigateTo(path);
-    });
+        await setLocale(next);
+        const path = switchLocalePath(next);
+        if (path) await navigateTo(path);
+      });
   }
 
   return { locale, t, toggleLocale };

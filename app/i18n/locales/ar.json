@@ -1,6 +1,6 @@
 {
   "content": {
-    "cVFILES": {
+    "cvFiles": {
       "pdf": {
         "label": "PDF",
         "description": "الأنسب للقراءة والطباعة"
@@ -10,7 +10,7 @@
         "description": "مستند قابل للتعديل"
       }
     },
-    "nAVITEMS": {
+    "navItems": {
       "home": {
         "label": "الرئيسية"
       },
@@ -21,15 +21,16 @@
         "label": "نبذة عني"
       }
     },
-    "hEROCOPY": {
-      "greeting": "مرحباً، أنا عمرو محمد",
+    "heroCopy": {
+      "greeting": "مرحباً، أنا",
       "headline": "أبني تجارب ويب متقنة باستخدام Vue.js و Nuxt.js.",
       "supporting": "مطور واجهات أمامية بخبرة تتجاوز 3 سنوات في بناء المواقع الإنتاجية ومنصات التجارة الإلكترونية ولوحات التحكم، مع التركيز على Vue.js و Nuxt.js و TypeScript وبناء مكونات قابلة لإعادة الاستخدام وربط واجهات البرمجة.",
       "primaryCta": "استكشف أعمالي",
       "secondaryCta": "تواصل معي",
-      "location": "مقيم في القاهرة، مصر"
+      "location": "مقيم في القاهرة، مصر",
+      "greetingName": "عمرو محمد"
     },
-    "iMPACTMETRICS": {
+    "impactMetrics": {
       "0": {
         "label": "سنوات خبرة في تطوير الواجهات",
         "context": "عمل احترافي ومستقل"
@@ -47,7 +48,7 @@
         "context": "ASAGTC · تحديثات فورية"
       }
     },
-    "fEATUREDPROJECTS": {
+    "featuredProjects": {
       "lexusEgypt": {
         "categoryBadge": "احترافي · Code95",
         "role": "مطور واجهات أمامية — مالك التنفيذ",
@@ -69,7 +70,7 @@
         "summary": "منصة توظيف واستقدام سعودية مع تكامل Visa و Mada و STC Pay وإصلاح الأعطال وتطوير المزايا."
       }
     },
-    "cAPABILITIES": {
+    "capabilities": {
       "vueNuxt": {
         "title": "تطوير تطبيقات Vue.js و Nuxt.js",
         "description": "تطبيقات ويب إنتاجية باستخدام Vue 3 Composition API و Nuxt و TypeScript."
@@ -95,7 +96,7 @@
         "description": "تدفقات دفع عبر Visa و Mada و STC Pay مع واجهات مبنية على صلاحيات الأدوار."
       }
     },
-    "eXPERIENCEPREVIEW": {
+    "experiencePreview": {
       "0": {
         "period": "يوليو 2025 – الآن",
         "role": "مطور واجهات أمامية",
@@ -112,7 +113,7 @@
         "projectsSummary": "أبرز المشاريع: Marca Store، لوحة إدارة الصالة الرياضية، Lugar Store."
       }
     },
-    "aBOUTINTRO": {
+    "aboutIntro": {
       "eyebrow": "نبذة",
       "title": "نبذة بسيطة عن طريقتي في البناء.",
       "bio": "أنا عمرو محمد، مطور واجهات أمامية مقيم في القاهرة، مصر. لدي أكثر من 3 سنوات من الخبرة في بناء تطبيقات Vue.js وNuxt.js، بدءاً من مواقع العملاء ومتاجر التجارة الإلكترونية وصولاً إلى لوحات التحكم. أركّز على واجهات قابلة للصيانة ومكونات قابلة لإعادة الاستخدام وربط واجهات البرمجة وتجارب عربية/إنجليزية سهلة الوصول.",
@@ -128,7 +129,7 @@
         }
       }
     },
-    "aBOUTAPPROACH": {
+    "aboutApproach": {
       "eyebrow": "المنهجية",
       "title": "طريقة العمل",
       "description": "عملية هندسية منظمة من اكتشاف المتطلبات الأولية حتى ربط واجهات البرمجة الفعلي والتحسين بعد الإطلاق.",
@@ -155,7 +156,7 @@
         }
       }
     },
-    "aBOUTEXPERIENCE": {
+    "aboutExperience": {
       "eyebrow": "المسيرة المهنية",
       "title": "الخط الزمني للخبرة",
       "description": "سجل من العمل في تطوير الوكالات ولوحات التحكم الداخلية ومنصات التجارة الإلكترونية متعددة الأسواق.",
@@ -219,7 +220,7 @@
         }
       }
     },
-    "aBOUTSKILLS": {
+    "aboutSkills": {
       "eyebrow": "الأدوات",
       "title": "المهارات التقنية",
       "description": "الأدوات والتقنيات التي أعمل بها، مجمّعة حسب المجال.",
@@ -304,14 +305,14 @@
         }
       }
     },
-    "aBOUTEDUCATION": {
+    "aboutEducation": {
       "eyebrow": "التعليم",
       "title": "الخلفية الأكاديمية",
       "degree": "بكالوريوس الحقوق (LL.B.)",
       "school": "جامعة القاهرة، مصر",
       "graduated": "تخرج عام 2012"
     },
-    "aBOUTLANGUAGES": {
+    "aboutLanguages": {
       "eyebrow": "التواصل",
       "title": "اللغات",
       "items": {
@@ -325,7 +326,7 @@
         }
       }
     },
-    "cASESTUDIES": {
+    "caseStudies": {
       "lexusEgypt": {
         "typeLabel": "احترافي · موقع رسمي",
         "market": "مصر",
@@ -841,7 +842,8 @@
     },
     "vToggleTheme": {
       "switchToLight": "التبديل إلى المظهر الفاتح",
-      "switchToDark": "التبديل إلى المظهر الداكن"
+      "switchToDark": "التبديل إلى المظهر الداكن",
+      "toggle": "تبديل المظهر"
     },
     "vProjectStatusBadge": {
       "inProgress": "قيد التنفيذ"

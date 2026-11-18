@@ -221,7 +221,7 @@
    ============================================================================ */
 @utility transition-ui {
   transition-property: color, background-color, border-color,
-    text-decoration-color, box-shadow, opacity, translate, scale;
+    text-decoration-color, box-shadow, opacity, translate, scale, rotate;
   transition-timing-function: var(--tw-ease, var(--ease-standard));
   transition-duration: var(--tw-duration, var(--duration-standard));
 }
@@ -262,14 +262,30 @@
 
 /* ============================================================================
    VIEW TRANSITIONS (theme + language toggles)
-   One 200ms crossfade of the whole page: background, surfaces, text and borders
-   change together; for the language switch the layout flip is never seen mid-way.
+   utils/viewTransition.ts sets data-vt="theme" on <html> while the theme transition runs.
    ============================================================================ */
+
+/* Default (anything else): one 200ms crossfade of the whole page */
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation-duration: var(--duration-standard);
   animation-timing-function: var(--ease-standard);
 }
+
+/* THEME: a circle grows from the toggle button and reveals the new theme.
+   The circle itself is animated from JS; here the two snapshots just stack. */
+html[data-vt="theme"]::view-transition-old(root),
+html[data-vt="theme"]::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+html[data-vt="theme"]::view-transition-old(root) {
+  z-index: 1;
+}
+html[data-vt="theme"]::view-transition-new(root) {
+  z-index: 2;
+}
+
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-group(*),
   ::view-transition-old(*),

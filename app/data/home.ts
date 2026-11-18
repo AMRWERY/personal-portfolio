@@ -23,15 +23,15 @@ export const PROFILE = {
 export const CV_FILES: CvFile[] = [
   {
     "format": "pdf",
-    "label": "content.cVFILES.pdf.label",
-    "description": "content.cVFILES.pdf.description",
+    "label": "content.cvFiles.pdf.label",
+    "description": "content.cvFiles.pdf.description",
     "href": "/cv/Amr%20Mohamed%20CV.pdf",
     "filename": "Amr Mohamed CV.pdf"
   },
   {
     "format": "docx",
-    "label": "content.cVFILES.docx.label",
-    "description": "content.cVFILES.docx.description",
+    "label": "content.cvFiles.docx.label",
+    "description": "content.cvFiles.docx.description",
     "href": "/cv/Amr%20Mohamed%20CV.docx",
     "filename": "Amr Mohamed CV.docx"
   }
@@ -40,51 +40,52 @@ export const CV_FILES: CvFile[] = [
 export const NAV_ITEMS: NavItem[] = [
   {
     "key": "home",
-    "label": "content.nAVITEMS.home.label",
+    "label": "content.navItems.home.label",
     "to": "/"
   },
   {
     "key": "work",
-    "label": "content.nAVITEMS.work.label",
+    "label": "content.navItems.work.label",
     "to": "/work"
   },
   {
     "key": "about",
-    "label": "content.nAVITEMS.about.label",
+    "label": "content.navItems.about.label",
     "to": "/about"
   }
 ];
 
 export const HERO_COPY = {
-  "greeting": "content.hEROCOPY.greeting",
-  "headline": "content.hEROCOPY.headline",
-  "supporting": "content.hEROCOPY.supporting",
-  "primaryCta": "content.hEROCOPY.primaryCta",
-  "secondaryCta": "content.hEROCOPY.secondaryCta",
-  "location": "content.hEROCOPY.location"
+  "greeting": "content.heroCopy.greeting",
+  "greetingName": "content.heroCopy.greetingName",
+  "headline": "content.heroCopy.headline",
+  "supporting": "content.heroCopy.supporting",
+  "primaryCta": "content.heroCopy.primaryCta",
+  "secondaryCta": "content.heroCopy.secondaryCta",
+  "location": "content.heroCopy.location"
 };
 
 export const IMPACT_METRICS: ImpactMetric[] = [
   {
     "value": "3+",
-    "label": "content.iMPACTMETRICS.0.label",
-    "context": "content.iMPACTMETRICS.0.context",
+    "label": "content.impactMetrics.0.label",
+    "context": "content.impactMetrics.0.context",
     "highlight": true
   },
   {
     "value": "30",
-    "label": "content.iMPACTMETRICS.1.label",
-    "context": "content.iMPACTMETRICS.1.context"
+    "label": "content.impactMetrics.1.label",
+    "context": "content.impactMetrics.1.context"
   },
   {
     "value": "46",
-    "label": "content.iMPACTMETRICS.2.label",
-    "context": "content.iMPACTMETRICS.2.context"
+    "label": "content.impactMetrics.2.label",
+    "context": "content.impactMetrics.2.context"
   },
   {
     "value": "100+",
-    "label": "content.iMPACTMETRICS.3.label",
-    "context": "content.iMPACTMETRICS.3.context"
+    "label": "content.impactMetrics.3.label",
+    "context": "content.impactMetrics.3.context"
   }
 ];
 
@@ -94,9 +95,9 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     "title": "Lexus Egypt — Official Website",
     "mediaLabel": "Lexus Egypt — Official Website",
     "status": "In progress",
-    "categoryBadge": "content.fEATUREDPROJECTS.lexusEgypt.categoryBadge",
-    "role": "content.fEATUREDPROJECTS.lexusEgypt.role",
-    "summary": "content.fEATUREDPROJECTS.lexusEgypt.summary",
+    "categoryBadge": "content.featuredProjects.lexusEgypt.categoryBadge",
+    "role": "content.featuredProjects.lexusEgypt.role",
+    "summary": "content.featuredProjects.lexusEgypt.summary",
     "stack": [
       "Nuxt.js",
       "TypeScript",
@@ -107,9 +108,9 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     "slug": "marca-store",
     "title": "Marca Store — E-Commerce Platform",
     "mediaLabel": "Marca Store — Storefront & Admin",
-    "categoryBadge": "content.fEATUREDPROJECTS.marcaStore.categoryBadge",
-    "role": "content.fEATUREDPROJECTS.marcaStore.role",
-    "summary": "content.fEATUREDPROJECTS.marcaStore.summary",
+    "categoryBadge": "content.featuredProjects.marcaStore.categoryBadge",
+    "role": "content.featuredProjects.marcaStore.role",
+    "summary": "content.featuredProjects.marcaStore.summary",
     "stack": [
       "Vue.js",
       "Pinia",
@@ -120,9 +121,9 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     "slug": "gym-management",
     "title": "Gym Management Dashboard — ASAGTC",
     "mediaLabel": "Gym Management Dashboard — ASAGTC",
-    "categoryBadge": "content.fEATUREDPROJECTS.gymManagement.categoryBadge",
-    "role": "content.fEATUREDPROJECTS.gymManagement.role",
-    "summary": "content.fEATUREDPROJECTS.gymManagement.summary",
+    "categoryBadge": "content.featuredProjects.gymManagement.categoryBadge",
+    "role": "content.featuredProjects.gymManagement.role",
+    "summary": "content.featuredProjects.gymManagement.summary",
     "stack": [
       "Vue.js",
       "Vuex",
@@ -133,9 +134,9 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     "slug": "abdal",
     "title": "Abdal — Recruitment Services Platform",
     "mediaLabel": "Abdal Recruitment Platform",
-    "categoryBadge": "content.fEATUREDPROJECTS.abdal.categoryBadge",
-    "role": "content.fEATUREDPROJECTS.abdal.role",
-    "summary": "content.fEATUREDPROJECTS.abdal.summary",
+    "categoryBadge": "content.featuredProjects.abdal.categoryBadge",
+    "role": "content.featuredProjects.abdal.role",
+    "summary": "content.featuredProjects.abdal.summary",
     "stack": [
       "Vue.js",
       "REST API",
@@ -148,60 +149,60 @@ export const CAPABILITIES: CapabilityItem[] = [
   {
     "id": "vue-nuxt",
     "icon": "lucide:layers",
-    "title": "content.cAPABILITIES.vueNuxt.title",
-    "description": "content.cAPABILITIES.vueNuxt.description"
+    "title": "content.capabilities.vueNuxt.title",
+    "description": "content.capabilities.vueNuxt.description"
   },
   {
     "id": "architecture",
     "icon": "lucide:component",
-    "title": "content.cAPABILITIES.architecture.title",
-    "description": "content.cAPABILITIES.architecture.description"
+    "title": "content.capabilities.architecture.title",
+    "description": "content.capabilities.architecture.description"
   },
   {
     "id": "ecommerce-dashboards",
     "icon": "lucide:shopping-bag",
-    "title": "content.cAPABILITIES.ecommerceDashboards.title",
-    "description": "content.cAPABILITIES.ecommerceDashboards.description"
+    "title": "content.capabilities.ecommerceDashboards.title",
+    "description": "content.capabilities.ecommerceDashboards.description"
   },
   {
     "id": "rest-api",
     "icon": "lucide:network",
-    "title": "content.cAPABILITIES.restApi.title",
-    "description": "content.cAPABILITIES.restApi.description"
+    "title": "content.capabilities.restApi.title",
+    "description": "content.capabilities.restApi.description"
   },
   {
     "id": "i18n-rtl",
     "icon": "lucide:languages",
-    "title": "content.cAPABILITIES.i18nRtl.title",
-    "description": "content.cAPABILITIES.i18nRtl.description"
+    "title": "content.capabilities.i18nRtl.title",
+    "description": "content.capabilities.i18nRtl.description"
   },
   {
     "id": "payments-rbac",
     "icon": "lucide:shield-check",
-    "title": "content.cAPABILITIES.paymentsRbac.title",
-    "description": "content.cAPABILITIES.paymentsRbac.description"
+    "title": "content.capabilities.paymentsRbac.title",
+    "description": "content.capabilities.paymentsRbac.description"
   }
 ];
 
 export const EXPERIENCE_PREVIEW: ExperiencePreviewItem[] = [
   {
-    "period": "content.eXPERIENCEPREVIEW.0.period",
+    "period": "content.experiencePreview.0.period",
     "company": "Code95 Web Technologies",
-    "role": "content.eXPERIENCEPREVIEW.0.role",
-    "projectsSummary": "content.eXPERIENCEPREVIEW.0.projectsSummary",
+    "role": "content.experiencePreview.0.role",
+    "projectsSummary": "content.experiencePreview.0.projectsSummary",
     "isCurrent": true
   },
   {
-    "period": "content.eXPERIENCEPREVIEW.1.period",
+    "period": "content.experiencePreview.1.period",
     "company": "Kabret",
-    "role": "content.eXPERIENCEPREVIEW.1.role",
-    "projectsSummary": "content.eXPERIENCEPREVIEW.1.projectsSummary"
+    "role": "content.experiencePreview.1.role",
+    "projectsSummary": "content.experiencePreview.1.projectsSummary"
   },
   {
-    "period": "content.eXPERIENCEPREVIEW.2.period",
+    "period": "content.experiencePreview.2.period",
     "company": "Freelance Frontend Projects",
-    "role": "content.eXPERIENCEPREVIEW.2.role",
-    "projectsSummary": "content.eXPERIENCEPREVIEW.2.projectsSummary"
+    "role": "content.experiencePreview.2.role",
+    "projectsSummary": "content.experiencePreview.2.projectsSummary"
   }
 ];
 

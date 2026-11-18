@@ -21,106 +21,106 @@ const metric = (
 
 export const CASE_STUDIES: Record<string, CaseStudy> = {
   "lexus-egypt": {
-    "typeLabel": "content.cASESTUDIES.lexusEgypt.typeLabel",
-    "market": "content.cASESTUDIES.lexusEgypt.market",
-    "deliverable": "content.cASESTUDIES.lexusEgypt.deliverable",
-    "intro": "content.cASESTUDIES.lexusEgypt.intro",
+    "typeLabel": "content.caseStudies.lexusEgypt.typeLabel",
+    "market": "content.caseStudies.lexusEgypt.market",
+    "deliverable": "content.caseStudies.lexusEgypt.deliverable",
+    "intro": "content.caseStudies.lexusEgypt.intro",
     "contributions": [
       {
         "icon": "lucide:layers",
-        "title": "content.cASESTUDIES.lexusEgypt.contributions.0.title",
-        "text": "content.cASESTUDIES.lexusEgypt.contributions.0.text"
+        "title": "content.caseStudies.lexusEgypt.contributions.0.title",
+        "text": "content.caseStudies.lexusEgypt.contributions.0.text"
       },
       {
         "icon": "lucide:component",
-        "title": "content.cASESTUDIES.lexusEgypt.contributions.1.title",
-        "text": "content.cASESTUDIES.lexusEgypt.contributions.1.text"
+        "title": "content.caseStudies.lexusEgypt.contributions.1.title",
+        "text": "content.caseStudies.lexusEgypt.contributions.1.text"
       },
       {
         "icon": "lucide:network",
-        "title": "content.cASESTUDIES.lexusEgypt.contributions.2.title",
-        "text": "content.cASESTUDIES.lexusEgypt.contributions.2.text"
+        "title": "content.caseStudies.lexusEgypt.contributions.2.title",
+        "text": "content.caseStudies.lexusEgypt.contributions.2.text"
       }
     ],
-    "note": "content.cASESTUDIES.lexusEgypt.note"
+    "note": "content.caseStudies.lexusEgypt.note"
   },
   "marca-store": {
-    "typeLabel": "content.cASESTUDIES.marcaStore.typeLabel",
-    "market": "content.cASESTUDIES.marcaStore.market",
-    "deliverable": "content.cASESTUDIES.marcaStore.deliverable",
-    "intro": "content.cASESTUDIES.marcaStore.intro",
+    "typeLabel": "content.caseStudies.marcaStore.typeLabel",
+    "market": "content.caseStudies.marcaStore.market",
+    "deliverable": "content.caseStudies.marcaStore.deliverable",
+    "intro": "content.caseStudies.marcaStore.intro",
     "gallery": [
       {
         "icon": "lucide:shopping-bag",
-        "title": "content.cASESTUDIES.marcaStore.gallery.0.title",
-        "caption": "content.cASESTUDIES.marcaStore.gallery.0.caption",
-        "stageTitle": "content.cASESTUDIES.marcaStore.gallery.0.stageTitle",
-        "stageDescription": "content.cASESTUDIES.marcaStore.gallery.0.stageDescription"
+        "title": "content.caseStudies.marcaStore.gallery.0.title",
+        "caption": "content.caseStudies.marcaStore.gallery.0.caption",
+        "stageTitle": "content.caseStudies.marcaStore.gallery.0.stageTitle",
+        "stageDescription": "content.caseStudies.marcaStore.gallery.0.stageDescription"
       },
       {
         "icon": "lucide:layout-dashboard",
-        "title": "content.cASESTUDIES.marcaStore.gallery.1.title",
-        "caption": "content.cASESTUDIES.marcaStore.gallery.1.caption",
-        "stageTitle": "content.cASESTUDIES.marcaStore.gallery.1.stageTitle",
-        "stageDescription": "content.cASESTUDIES.marcaStore.gallery.1.stageDescription"
+        "title": "content.caseStudies.marcaStore.gallery.1.title",
+        "caption": "content.caseStudies.marcaStore.gallery.1.caption",
+        "stageTitle": "content.caseStudies.marcaStore.gallery.1.stageTitle",
+        "stageDescription": "content.caseStudies.marcaStore.gallery.1.stageDescription"
       },
       {
         "icon": "lucide:users",
-        "title": "content.cASESTUDIES.marcaStore.gallery.2.title",
-        "caption": "content.cASESTUDIES.marcaStore.gallery.2.caption",
-        "stageTitle": "content.cASESTUDIES.marcaStore.gallery.2.stageTitle",
-        "stageDescription": "content.cASESTUDIES.marcaStore.gallery.2.stageDescription"
+        "title": "content.caseStudies.marcaStore.gallery.2.title",
+        "caption": "content.caseStudies.marcaStore.gallery.2.caption",
+        "stageTitle": "content.caseStudies.marcaStore.gallery.2.stageTitle",
+        "stageDescription": "content.caseStudies.marcaStore.gallery.2.stageDescription"
       },
       {
         "icon": "lucide:languages",
-        "title": "content.cASESTUDIES.marcaStore.gallery.3.title",
-        "caption": "content.cASESTUDIES.marcaStore.gallery.3.caption",
-        "stageTitle": "content.cASESTUDIES.marcaStore.gallery.3.stageTitle",
-        "stageDescription": "content.cASESTUDIES.marcaStore.gallery.3.stageDescription"
+        "title": "content.caseStudies.marcaStore.gallery.3.title",
+        "caption": "content.caseStudies.marcaStore.gallery.3.caption",
+        "stageTitle": "content.caseStudies.marcaStore.gallery.3.stageTitle",
+        "stageDescription": "content.caseStudies.marcaStore.gallery.3.stageDescription"
       }
     ],
     "contributions": [
       {
         "icon": "lucide:layers",
-        "title": "content.cASESTUDIES.marcaStore.contributions.0.title",
-        "text": "content.cASESTUDIES.marcaStore.contributions.0.text"
+        "title": "content.caseStudies.marcaStore.contributions.0.title",
+        "text": "content.caseStudies.marcaStore.contributions.0.text"
       },
       {
         "icon": "lucide:component",
-        "title": "content.cASESTUDIES.marcaStore.contributions.1.title",
-        "text": "content.cASESTUDIES.marcaStore.contributions.1.text"
+        "title": "content.caseStudies.marcaStore.contributions.1.title",
+        "text": "content.caseStudies.marcaStore.contributions.1.text"
       },
       {
         "icon": "lucide:shield-check",
-        "title": "content.cASESTUDIES.marcaStore.contributions.2.title",
-        "text": "content.cASESTUDIES.marcaStore.contributions.2.text"
+        "title": "content.caseStudies.marcaStore.contributions.2.title",
+        "text": "content.caseStudies.marcaStore.contributions.2.text"
       },
       {
         "icon": "lucide:languages",
-        "title": "content.cASESTUDIES.marcaStore.contributions.3.title",
-        "text": "content.cASESTUDIES.marcaStore.contributions.3.text"
+        "title": "content.caseStudies.marcaStore.contributions.3.title",
+        "text": "content.caseStudies.marcaStore.contributions.3.text"
       }
     ],
     "metrics": [
       {
         "value": "2",
-        "label": "content.cASESTUDIES.marcaStore.metrics.0.label",
-        "hint": "content.cASESTUDIES.marcaStore.metrics.0.hint"
+        "label": "content.caseStudies.marcaStore.metrics.0.label",
+        "hint": "content.caseStudies.marcaStore.metrics.0.hint"
       },
       {
         "value": "30",
-        "label": "content.cASESTUDIES.marcaStore.metrics.1.label",
-        "hint": "content.cASESTUDIES.marcaStore.metrics.1.hint"
+        "label": "content.caseStudies.marcaStore.metrics.1.label",
+        "hint": "content.caseStudies.marcaStore.metrics.1.hint"
       },
       {
         "value": "46",
-        "label": "content.cASESTUDIES.marcaStore.metrics.2.label",
-        "hint": "content.cASESTUDIES.marcaStore.metrics.2.hint"
+        "label": "content.caseStudies.marcaStore.metrics.2.label",
+        "hint": "content.caseStudies.marcaStore.metrics.2.hint"
       },
       {
         "value": "21",
-        "label": "content.cASESTUDIES.marcaStore.metrics.3.label",
-        "hint": "content.cASESTUDIES.marcaStore.metrics.3.hint"
+        "label": "content.caseStudies.marcaStore.metrics.3.label",
+        "hint": "content.caseStudies.marcaStore.metrics.3.hint"
       }
     ],
     "stack": [
@@ -138,11 +138,11 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     "metrics": [
       {
         "value": "100+",
-        "label": "content.cASESTUDIES.gymManagement.metrics.0.label"
+        "label": "content.caseStudies.gymManagement.metrics.0.label"
       },
       {
         "value": "38",
-        "label": "content.cASESTUDIES.gymManagement.metrics.1.label"
+        "label": "content.caseStudies.gymManagement.metrics.1.label"
       }
     ]
   },
@@ -150,12 +150,12 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     "metrics": [
       {
         "value": "271",
-        "label": "content.cASESTUDIES.lugarStore.metrics.0.label"
+        "label": "content.caseStudies.lugarStore.metrics.0.label"
       },
       {
         "value": "3",
-        "label": "content.cASESTUDIES.lugarStore.metrics.1.label",
-        "hint": "content.cASESTUDIES.lugarStore.metrics.1.hint"
+        "label": "content.caseStudies.lugarStore.metrics.1.label",
+        "hint": "content.caseStudies.lugarStore.metrics.1.hint"
       }
     ]
   },
@@ -163,19 +163,19 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     "metrics": [
       {
         "value": "15",
-        "label": "content.cASESTUDIES.shipIt.metrics.0.label"
+        "label": "content.caseStudies.shipIt.metrics.0.label"
       },
       {
         "value": "33",
-        "label": "content.cASESTUDIES.shipIt.metrics.1.label"
+        "label": "content.caseStudies.shipIt.metrics.1.label"
       },
       {
         "value": "14",
-        "label": "content.cASESTUDIES.shipIt.metrics.2.label"
+        "label": "content.caseStudies.shipIt.metrics.2.label"
       },
       {
         "value": "293",
-        "label": "content.cASESTUDIES.shipIt.metrics.3.label"
+        "label": "content.caseStudies.shipIt.metrics.3.label"
       }
     ]
   },
@@ -183,11 +183,11 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     "metrics": [
       {
         "value": "18",
-        "label": "content.cASESTUDIES.cospora.metrics.0.label"
+        "label": "content.caseStudies.cospora.metrics.0.label"
       },
       {
         "value": "43",
-        "label": "content.cASESTUDIES.cospora.metrics.1.label"
+        "label": "content.caseStudies.cospora.metrics.1.label"
       }
     ]
   },
@@ -195,11 +195,11 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     "metrics": [
       {
         "value": "22",
-        "label": "content.cASESTUDIES.alQuran.metrics.0.label"
+        "label": "content.caseStudies.alQuran.metrics.0.label"
       },
       {
         "value": "18",
-        "label": "content.cASESTUDIES.alQuran.metrics.1.label"
+        "label": "content.caseStudies.alQuran.metrics.1.label"
       }
     ]
   },
@@ -207,11 +207,11 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     "metrics": [
       {
         "value": "4",
-        "label": "content.cASESTUDIES.islamApp.metrics.0.label"
+        "label": "content.caseStudies.islamApp.metrics.0.label"
       },
       {
         "value": "7",
-        "label": "content.cASESTUDIES.islamApp.metrics.1.label"
+        "label": "content.caseStudies.islamApp.metrics.1.label"
       }
     ]
   }

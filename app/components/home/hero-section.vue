@@ -14,6 +14,7 @@
         <!-- :key restarts the underline animation when the language changes -->
         <LazyVUnderlinedText :key="locale">
           {{ t(HERO_COPY.greeting) }}
+          <span class="text-text-primary">{{ t(HERO_COPY.greetingName) }}</span>
         </LazyVUnderlinedText>
 
         <h1
