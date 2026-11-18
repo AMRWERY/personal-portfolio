@@ -39,7 +39,12 @@ export type IconifyName =
   | "lucide:globe"
   | "lucide:terminal"
   | "lucide:sparkles"
-  | "lucide:graduation-cap";
+  | "lucide:graduation-cap"
+  | "lucide:phone"
+  | "lucide:send"
+  | "lucide:circle-check"
+  | "lucide:triangle-alert"
+  | "lucide:rotate-ccw";
 
 export interface LocalizedText {
   en: string;

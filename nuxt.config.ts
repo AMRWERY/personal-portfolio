@@ -10,6 +10,11 @@ export default defineNuxtConfig({
     "@nuxt/icon/module",
   ],
   compatibilityDate: "2025-07-15",
+  runtimeConfig: {
+    // Private, server-only. Set NUXT_CONTACT_WEBHOOK_URL to an endpoint that
+    // accepts a JSON POST (Formspree, Web3Forms, Slack/Discord webhook, etc.).
+    contactWebhookUrl: "",
+  },
   devtools: { enabled: true },
   vite: {
     plugins: [tailwindcss()],

@@ -321,3 +321,25 @@ html {
     transform: none !important;
   }
 }
+
+/* Self-drawing underline (VUnderlinedText).
+   A clip reveal (not a dash-offset trick) so the stroke is always one solid
+   line at any width. In RTL the svg is mirrored, so the same keyframes reveal
+   it from the right. */
+@keyframes underlineReveal {
+  from {
+    clip-path: inset(-50% 100% -50% 0);
+  }
+  to {
+    clip-path: inset(-50% 0 -50% 0);
+  }
+}
+.underline-draw {
+  animation: underlineReveal 900ms cubic-bezier(0.22, 1, 0.36, 1) 350ms both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .underline-draw {
+    animation: none;
+    clip-path: none;
+  }
+}

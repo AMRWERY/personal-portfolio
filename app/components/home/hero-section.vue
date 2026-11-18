@@ -9,9 +9,10 @@
       <div
         class="lg:col-span-7 lg:col-start-1 lg:row-start-1 space-y-4 lg:space-y-8 animate-hero-text"
       >
-        <LazyVEyebrowLabel with-dot>
-          {{ t(HERO_COPY.eyebrow) }}
-        </LazyVEyebrowLabel>
+        <!-- :key restarts the underline animation when the language changes -->
+        <LazyVUnderlinedText :key="locale">
+          {{ t(HERO_COPY.greeting) }}
+        </LazyVUnderlinedText>
 
         <h1
           class="font-headline text-display-lg-mobile lg:text-display-lg font-bold text-text-primary tracking-tight text-balance"
@@ -38,7 +39,7 @@
       <div
         class="lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:row-span-2 flex justify-center lg:justify-end pt-2 lg:pt-0 animate-hero-avatar"
       >
-        <ProfileAvatar
+        <profile-avatar
           variant="hero"
           :src="PROFILE.avatarSrc"
           :monogram="PROFILE.monogram"
@@ -80,5 +81,5 @@
 <script lang="ts" setup>
 import { HERO_COPY, PROFILE } from "@/data/home";
 
-const { t } = useLocale();
+const { locale, t } = useLocale();
 </script>

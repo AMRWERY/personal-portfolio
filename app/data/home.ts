@@ -11,8 +11,12 @@ export const PROFILE = {
   monogram: "AM",
   avatarSrc: "", // Set to '/images/avatar.webp' once supplied
   email: "amrmounir2@gmail.com",
+  phone: "+201022655742",
+  phoneDisplay: "+20 102 265 5742",
   githubUrl: "https://github.com/AMRWERY",
+  githubHandle: "github.com/AMRWERY",
   linkedinUrl: "https://www.linkedin.com/in/amr-mohamed-3a714b1a7",
+  linkedinHandle: "in/amr-mohamed-3a714b1a7",
 };
 
 export const NAV_ITEMS: NavItem[] = [
@@ -23,9 +27,9 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const HERO_COPY = {
-  eyebrow: {
-    en: "FRONTEND DEVELOPER · CAIRO, EGYPT",
-    ar: "مطور واجهات أمامية · القاهرة، مصر",
+  greeting: {
+    en: "Hi, I am Amr Mohamed",
+    ar: "مرحباً، أنا عمرو محمد",
   },
   headline: {
     en: "I build thoughtful web experiences with Vue.js & Nuxt.js.",
