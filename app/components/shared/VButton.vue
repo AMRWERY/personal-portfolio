@@ -83,7 +83,7 @@ const tagAttrs = computed(() => {
 });
 
 const BASE_CLASSES =
-  "inline-flex items-center justify-center gap-2 rounded-md font-headline transition-all duration-(--duration-fast) cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent aria-disabled:pointer-events-none aria-disabled:opacity-50 disabled:pointer-events-none disabled:opacity-50";
+  "group/btn inline-flex items-center justify-center gap-2 rounded-md font-headline transition-all duration-(--duration-fast) cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent aria-disabled:pointer-events-none aria-disabled:opacity-50 disabled:pointer-events-none disabled:opacity-50";
 
 const VARIANT_CLASSES: Record<Variant, string> = {
   primary:

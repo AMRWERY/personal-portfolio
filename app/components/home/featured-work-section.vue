@@ -16,7 +16,7 @@
         </h2>
       </div>
 
-      <LazyVButton to="/work" variant="ghost" class="group">
+      <LazyVButton to="/work" variant="ghost">
         <span class="md:hidden">{{
           locale === "en" ? "All 15" : "كل الأعمال (15)"
         }}</span>
@@ -25,7 +25,7 @@
         }}</span>
         <LazyVAppIcon
           name="lucide:arrow-right"
-          class="w-4 h-4 transition-transform duration-(--duration-fast) group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1"
+          class="w-4 h-4 rtl:rotate-180 arrow-nudge-x"
         />
       </LazyVButton>
     </div>

@@ -57,7 +57,7 @@
             <span>{{ t(HERO_COPY.primaryCta) }}</span>
             <LazyVAppIcon
               name="lucide:arrow-right"
-              class="w-4 h-4 rtl:rotate-180"
+              class="w-4 h-4 rtl:rotate-180 arrow-nudge-x"
             />
           </LazyVButton>
 

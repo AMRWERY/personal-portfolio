@@ -251,3 +251,33 @@ html {
     border: 2px solid var(--bg);
   }
 }
+
+/* Hide the scrollbar on horizontally scrollable chip rows (still scrollable) */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============================================================================
+   ARROW MICRO-INTERACTIONS
+   Use inside a VButton (it is a `group/btn`). Horizontal arrows nudge toward
+   their direction and flip in RTL; vertical arrows lift.
+   ============================================================================ */
+@utility arrow-nudge-x {
+  @apply transition-transform duration-(--duration-fast) ease-standard group-hover/btn:translate-x-1 rtl:group-hover/btn:-translate-x-1;
+}
+
+@utility arrow-nudge-y {
+  @apply transition-transform duration-(--duration-fast) ease-standard group-hover/btn:-translate-y-1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arrow-nudge-x,
+  .arrow-nudge-y {
+    transition: none;
+    transform: none !important;
+  }
+}

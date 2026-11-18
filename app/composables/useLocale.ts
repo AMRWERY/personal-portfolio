@@ -1,4 +1,5 @@
-import type { Locale, LocalizedText } from "~/types/portfolio";
+import type { Locale } from "~/types/supported-locales";
+import type { LocalizedText } from "~/types/portfolio";
 
 export function useLocale() {
   const { locale, setLocale } = useI18n();

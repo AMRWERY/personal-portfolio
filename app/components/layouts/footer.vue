@@ -62,19 +62,19 @@
         <div class="flex flex-wrap items-center justify-center gap-4">
           <span>© {{ currentYear }} {{ PROFILE.name }}</span>
           <nav aria-label="Footer navigation" class="flex items-center gap-4">
-            <a
+            <NuxtLink
               v-for="item in NAV_ITEMS"
               :key="item.key"
-              :href="item.to"
+              :to="localePath(item.to)"
               class="hover:text-text-primary transition-colors"
             >
               {{ t(item.label) }}
-            </a>
+            </NuxtLink>
           </nav>
         </div>
 
         <LazyVButton variant="ghost" @click="scrollToTop">
-          <LazyVAppIcon name="lucide:arrow-up" class="w-3.5 h-3.5" />
+          <LazyVAppIcon name="lucide:arrow-up" class="w-3.5 h-3.5 arrow-nudge-y" />
           <span>{{ locale === "en" ? "Back to top" : "العودة للأعلى" }}</span>
         </LazyVButton>
       </div>
@@ -86,6 +86,7 @@
 import { NAV_ITEMS, PROFILE } from "@/data/home";
 
 const { locale, t } = useLocale();
+const localePath = useLocalePath();
 
 const currentYear = new Date().getFullYear();
 

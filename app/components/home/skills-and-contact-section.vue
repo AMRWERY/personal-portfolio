@@ -14,7 +14,7 @@
       <div
         class="flex flex-wrap items-center justify-center gap-2 md:gap-3 max-w-4xl mx-auto"
       >
-        <TechBadge
+        <LazyVTechBadge
           v-for="skill in SKILLS_PREVIEW"
           :key="skill"
           :label="skill"
@@ -61,7 +61,7 @@
             <span>{{ locale === "en" ? "Send a message" : "أرسل رسالة" }}</span>
             <LazyVAppIcon
               name="lucide:arrow-right"
-              class="w-4 h-4 rtl:rotate-180"
+              class="w-4 h-4 rtl:rotate-180 arrow-nudge-x"
             />
           </LazyVButton>
 

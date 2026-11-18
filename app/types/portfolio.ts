@@ -1,4 +1,3 @@
-export type Locale = "en" | "ar";
 export type ThemeMode = "dark" | "light";
 export type ProjectStatus = "In progress";
 
@@ -23,7 +22,11 @@ export type IconifyName =
   | "lucide:shield-check"
   | "lucide:mail"
   | "lucide:github"
-  | "lucide:linkedin";
+  | "lucide:linkedin"
+  | "lucide:external-link"
+  | "lucide:check"
+  | "lucide:info"
+  | "lucide:folder-search";
 
 export interface LocalizedText {
   en: string;
@@ -69,4 +72,33 @@ export interface ExperiencePreviewItem {
   role: LocalizedText;
   projectsSummary: LocalizedText;
   isCurrent?: boolean;
+}
+
+export type ProjectCategory = "professional" | "freelance" | "personal";
+
+export interface ProjectLink {
+  kind: "live" | "repo" | "brand";
+  label: LocalizedText;
+  href: string;
+}
+
+export interface WorkProject {
+  slug: string;
+  title: string;
+  category: ProjectCategory;
+  /** Pill on the media stage, e.g. "Professional · Code95" */
+  categoryBadge: LocalizedText;
+  role: LocalizedText;
+  period: LocalizedText;
+  summary: LocalizedText;
+  /** Extra callout, shown on featured (wide) cards only */
+  highlight?: { label: LocalizedText; text: LocalizedText };
+  stack: string[];
+  status?: ProjectStatus;
+  /** Wide, two-column card at the top of the grid */
+  featured?: boolean;
+  links: ProjectLink[];
+  /** Shown instead of links when the project is private, e.g. "Internal Enterprise" */
+  privateNote?: LocalizedText;
+  screenshotSrc?: string;
 }

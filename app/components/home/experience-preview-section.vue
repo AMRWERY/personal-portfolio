@@ -21,7 +21,7 @@
           </h2>
         </div>
 
-        <LazyVButton to="/about" variant="ghost" class="group">
+        <LazyVButton to="/about" variant="ghost">
           <span class="md:hidden">{{
             locale === "en" ? "Full bio" : "السيرة الكاملة"
           }}</span>
@@ -30,7 +30,7 @@
           }}</span>
           <LazyVAppIcon
             name="lucide:arrow-right"
-            class="w-4 h-4 transition-transform duration-(--duration-fast) group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1"
+            class="w-4 h-4 rtl:rotate-180 arrow-nudge-x"
           />
         </LazyVButton>
       </div>

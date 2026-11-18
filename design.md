@@ -638,7 +638,7 @@ Design these consistently across all pages:
 - `SecondaryButton`
 - `SectionHeading`
 - `LazyVEyebrowLabel`
-- `Tag / TechBadge`
+- `Tag / LazyVTechBadge`
 - `Breadcrumbs`
 - `BackToTop`
 

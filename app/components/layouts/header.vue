@@ -6,8 +6,8 @@
       class="max-w-(--container-max) mx-auto px-5 lg:px-12 h-16 md:h-20 flex items-center justify-between"
     >
       <!-- Monogram Wordmark & Compact Avatar -->
-      <a
-        href="/"
+      <NuxtLink
+        :to="localePath('/')"
         class="flex items-center gap-2.5 md:gap-3.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-lg p-1"
       >
         <ProfileAvatar
@@ -20,17 +20,17 @@
         >
           {{ PROFILE.monogram }}<span class="text-accent">.</span>
         </span>
-      </a>
+      </NuxtLink>
 
       <!-- Desktop Navigation -->
       <nav
         aria-label="Primary navigation"
         class="hidden md:flex items-center gap-8"
       >
-        <a
+        <NuxtLink
           v-for="item in NAV_ITEMS"
           :key="item.key"
-          :href="item.to"
+          :to="localePath(item.to)"
           class="font-headline text-body-sm relative py-1 transition-colors duration-(--duration-fast) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
           :class="
             activeRoute === item.key
@@ -39,37 +39,14 @@
           "
         >
           {{ t(item.label) }}
-        </a>
+        </NuxtLink>
       </nav>
 
       <!-- Persistent Utilities -->
       <div class="flex items-center gap-2 md:gap-3.5">
-        <LazyVButton
-          variant="outline"
-          size="icon"
-          :aria-label="
-            theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
-          "
-          @click="toggleTheme"
-        >
-          <LazyVAppIcon
-            :name="theme === 'dark' ? 'lucide:moon' : 'lucide:sun'"
-            class="w-4 h-4"
-          />
-        </LazyVButton>
+        <LazyVToggleTheme />
 
-        <LazyVButton
-          variant="outline"
-          size="sm"
-          :aria-label="
-            locale === 'en'
-              ? 'Switch language to Arabic'
-              : 'Switch language to English'
-          "
-          @click="toggleLocale"
-        >
-          {{ locale === "en" ? "عربي" : "EN" }}
-        </LazyVButton>
+        <LazyVToggleLocale />
 
         <!-- Desktop Contact Action -->
         <div class="hidden sm:block">
@@ -117,15 +94,15 @@
           aria-label="Mobile navigation"
           class="flex flex-col gap-1 font-headline text-body-md font-semibold"
         >
-          <a
+          <NuxtLink
             v-for="(item, idx) in NAV_ITEMS"
             :key="item.key"
             :ref="
               idx === 0
-                ? (el) => (drawerFirstLinkRef = el as HTMLAnchorElement)
+                ? (el) => (drawerFirstLinkRef = (el as { $el: HTMLElement } | null)?.$el ?? null)
                 : undefined
             "
-            :href="item.to"
+            :to="localePath(item.to)"
             class="py-2.5 border-b border-border/50 last:border-b-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
             :class="
               activeRoute === item.key
@@ -135,7 +112,7 @@
             @click="closeMobileMenu(false)"
           >
             {{ t(item.label) }}
-          </a>
+          </NuxtLink>
         </nav>
 
         <LazyVButton to="/contact" block @click="closeMobileMenu(false)">
@@ -151,9 +128,8 @@ import { NAV_ITEMS, PROFILE } from "@/data/home";
 import type { NavItem } from "@/types/portfolio";
 import type { HeaderProps } from "@/types/layouts";
 
-const { locale, toggleLocale, t } = useLocale();
-
-const { theme, toggleTheme } = useTheme();
+const { locale, t } = useLocale();
+const localePath = useLocalePath();
 
 withDefaults(defineProps<HeaderProps>(), {
   activeRoute: "home",
@@ -162,7 +138,7 @@ withDefaults(defineProps<HeaderProps>(), {
 const isMobileOpen = ref(false);
 // LazyVButton is a component, so the ref holds its instance; focus via $el
 const menuTriggerRef = ref<{ $el: HTMLElement } | null>(null);
-const drawerFirstLinkRef = ref<HTMLAnchorElement | null>(null);
+const drawerFirstLinkRef = ref<HTMLElement | null>(null);
 
 async function openMobileMenu(): Promise<void> {
   isMobileOpen.value = true;

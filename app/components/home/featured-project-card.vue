@@ -77,7 +77,7 @@
         class="pt-3 lg:pt-4 border-t border-border flex flex-col sm:flex-row sm:items-center justify-between gap-3"
       >
         <div class="flex flex-wrap gap-1.5 lg:gap-2">
-          <TechBadge
+          <LazyVTechBadge
             v-for="tech in project.stack.slice(0, 4)"
             :key="tech"
             :label="tech"
