@@ -267,7 +267,7 @@ const form = reactive({
 const errors = reactive({ name: "", email: "", message: "" });
 
 const inputClass = (invalid: boolean) => [
-  "w-full px-3.5 md:px-4 py-2.5 md:py-3 rounded-md bg-background border text-text-primary placeholder:text-text-secondary/60 text-body-sm md:text-body-md transition-colors duration-(--duration-fast) focus:outline-none focus:ring-1",
+  "w-full min-h-11 px-3.5 md:px-4 py-2.5 md:py-3 rounded-md bg-background border text-text-primary placeholder:text-text-secondary/60 text-body-sm md:text-body-md transition-colors duration-(--duration-fast) focus:outline-none focus:ring-1",
   invalid
     ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
     : "border-border focus:border-accent focus:ring-accent",

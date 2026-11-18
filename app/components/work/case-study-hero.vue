@@ -9,14 +9,14 @@
     >
       <nuxt-link-locale
         to="/"
-        class="hover:text-accent-ink transition-colors"
+        class="inline-flex items-center min-h-11 md:min-h-0 hover:text-accent-ink transition-colors"
       >
         {{ locale === "en" ? "Home" : "الرئيسية" }}
       </nuxt-link-locale>
       <span aria-hidden="true">/</span>
       <nuxt-link-locale
         to="/work"
-        class="hover:text-accent-ink transition-colors"
+        class="inline-flex items-center min-h-11 md:min-h-0 hover:text-accent-ink transition-colors"
       >
         {{ locale === "en" ? "Work" : "أعمالي" }}
       </nuxt-link-locale>

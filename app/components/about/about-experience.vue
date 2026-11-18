@@ -2,7 +2,7 @@
   <section
     ref="sectionRef"
     class="max-w-(--container-max) mx-auto px-5 lg:px-12 py-12 md:py-20 lg:py-24 transition-all duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
+    :class="isVisible ? 'reveal-in' : 'reveal-out'"
   >
     <div class="max-w-2xl space-y-1 md:space-y-2 mb-6 md:mb-12">
       <span
@@ -76,7 +76,7 @@
                 <nuxt-link-locale
                   v-if="project.slug"
                   :to="`/work/${project.slug}`"
-                  class="group/btn inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-elevated border border-border text-label-sm text-text-secondary hover:text-accent-ink hover:border-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  class="group/btn inline-flex items-center gap-1 min-h-11 md:min-h-0 px-3 py-1 rounded-full bg-surface-elevated border border-border text-label-sm text-text-secondary hover:text-accent-ink hover:border-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   <span>{{ t(project.label) }}</span>
                   <LazyVAppIcon

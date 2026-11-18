@@ -46,19 +46,6 @@
             >
               {{ stageDescription }}
             </p>
-            <div
-              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-background border border-border text-label-sm text-text-secondary"
-            >
-              <LazyVAppIcon
-                name="lucide:image"
-                class="hidden md:block w-3.5 h-3.5 text-accent-ink"
-              />
-              <span>{{
-                locale === "en"
-                  ? "Add real project screenshot"
-                  : "أضف لقطة شاشة حقيقية للمشروع"
-              }}</span>
-            </div>
           </div>
         </Transition>
 
@@ -153,7 +140,7 @@
             type="button"
             role="tab"
             :aria-selected="activeIndex === index"
-            class="shrink-0 px-3 py-1.5 rounded-lg border-2 bg-surface-elevated text-label-sm transition-colors duration-(--duration-standard) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
+            class="shrink-0 min-h-11 px-3 py-1.5 rounded-lg border-2 bg-surface-elevated text-label-sm transition-colors duration-(--duration-standard) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
             :class="
               activeIndex === index
                 ? 'border-accent text-accent-ink font-semibold'

@@ -1,6 +1,8 @@
 <template>
+  <!-- relative z-10: lifts the hero (and the CV dropdown inside it) above the
+       later sections, whose reveal transforms would otherwise paint over it -->
   <section
-    class="max-w-(--container-max) mx-auto px-5 lg:px-12 pt-8 md:pt-16 lg:pt-24 pb-12 md:pb-16 lg:pb-24"
+    class="relative z-10 max-w-(--container-max) mx-auto px-5 lg:px-12 pt-8 md:pt-16 lg:pt-24 pb-12 md:pb-16 lg:pb-24"
   >
     <div
       class="grid grid-cols-1 lg:grid-cols-12 gap-y-6 lg:gap-y-8 lg:gap-x-16 items-center"
@@ -65,6 +67,8 @@
           <LazyVButton to="/contact" variant="secondary" class="w-full sm:w-auto">
             {{ t(HERO_COPY.secondaryCta) }}
           </LazyVButton>
+
+          <LazyVCvDownload />
         </div>
 
         <div

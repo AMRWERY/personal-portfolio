@@ -22,13 +22,6 @@
         >
           {{ project.mediaLabel }}
         </span>
-        <span class="hidden sm:inline text-body-sm text-text-secondary mt-1">
-          {{
-            locale === "en"
-              ? "Add real project screenshot"
-              : "أضف لقطة شاشة حقيقية للمشروع"
-          }}
-        </span>
       </template>
 
       <div

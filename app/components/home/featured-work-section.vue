@@ -2,7 +2,7 @@
   <section
     ref="sectionRef"
     class="max-w-(--container-max) mx-auto px-5 lg:px-12 py-14 md:py-20 lg:py-28 transition-all duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
+    :class="isVisible ? 'reveal-in' : 'reveal-out'"
   >
     <div class="flex flex-row items-end justify-between gap-4 mb-6 md:mb-12">
       <div>

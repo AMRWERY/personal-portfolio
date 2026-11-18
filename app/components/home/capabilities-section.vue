@@ -2,7 +2,7 @@
   <section
     ref="sectionRef"
     class="md:border-t md:border-border md:bg-surface-elevated/50 dark:md:bg-surface/40 py-6 md:py-20 lg:py-28 transition-all duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
+    :class="isVisible ? 'reveal-in' : 'reveal-out'"
   >
     <div class="max-w-(--container-max) mx-auto px-5 lg:px-12">
       <div class="max-w-2xl mb-5 md:mb-12">

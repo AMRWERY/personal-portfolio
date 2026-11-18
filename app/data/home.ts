@@ -1,5 +1,6 @@
 import type {
   CapabilityItem,
+  CvFile,
   ExperiencePreviewItem,
   FeaturedProject,
   ImpactMetric,
@@ -9,7 +10,7 @@ import type {
 export const PROFILE = {
   name: "Amr Mohamed",
   monogram: "AM",
-  avatarSrc: "", // Set to '/images/avatar.webp' once supplied
+  avatarSrc: "", // e.g. "/images/avatar.webp" once a photo is added to /public/images
   email: "amrmounir2@gmail.com",
   phone: "+201022655742",
   phoneDisplay: "+20 102 265 5742",
@@ -18,6 +19,30 @@ export const PROFILE = {
   linkedinUrl: "https://www.linkedin.com/in/amr-mohamed-3a714b1a7",
   linkedinHandle: "in/amr-mohamed-3a714b1a7",
 };
+
+/** Files live in /public/cv. Replace them in place to update the downloads. */
+export const CV_FILES: CvFile[] = [
+  {
+    format: "pdf",
+    label: { en: "PDF", ar: "PDF" },
+    description: {
+      en: "Best for reading and printing",
+      ar: "الأنسب للقراءة والطباعة",
+    },
+    href: encodeURI("/cv/Amr Mohamed CV.pdf"),
+    filename: "Amr Mohamed CV.pdf",
+  },
+  {
+    format: "docx",
+    label: { en: "Word (.docx)", ar: "Word (.docx)" },
+    description: {
+      en: "Editable document",
+      ar: "مستند قابل للتعديل",
+    },
+    href: encodeURI("/cv/Amr Mohamed CV.docx"),
+    filename: "Amr Mohamed CV.docx",
+  },
+];
 
 export const NAV_ITEMS: NavItem[] = [
   { key: "home", label: { en: "Home", ar: "الرئيسية" }, to: "/" },

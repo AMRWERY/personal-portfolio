@@ -51,16 +51,6 @@
       >
         <WorkFilterBar v-model="activeFilter" :options="filterOptions" />
 
-        <div
-          class="hidden lg:flex items-center gap-2 text-label-sm text-text-secondary font-medium"
-        >
-          <LazyVAppIcon name="lucide:info" class="w-3.5 h-3.5 text-accent-ink" />
-          <span>{{
-            locale === "en"
-              ? "All facts sourced directly from Amr's verified CV"
-              : "جميع المعلومات مأخوذة مباشرة من السيرة الذاتية الموثقة لعمرو"
-          }}</span>
-        </div>
       </div>
     </section>
 

@@ -8,7 +8,7 @@
       <!-- Monogram Wordmark & Compact Avatar -->
       <nuxt-link-locale
         to="/"
-        class="flex items-center gap-2.5 md:gap-3.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-lg p-1"
+        class="flex items-center gap-2.5 md:gap-3.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-lg p-1 min-h-11"
       >
         <ProfileAvatar
           variant="compact"
@@ -31,10 +31,10 @@
           v-for="item in NAV_ITEMS"
           :key="item.key"
           :to="item.to"
-          class="font-headline text-body-sm relative py-1 transition-colors duration-(--duration-fast) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+          class="font-headline text-body-sm relative py-3 transition-colors duration-(--duration-fast) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
           :class="
             activeRoute === item.key
-              ? 'font-semibold text-accent-ink after:absolute after:bottom-0 after:start-0 after:w-full after:h-0.5 after:bg-accent after:rounded-full'
+              ? 'font-semibold text-accent-ink after:absolute after:bottom-2 after:start-0 after:w-full after:h-0.5 after:bg-accent after:rounded-full'
               : 'font-medium text-text-secondary hover:text-text-primary'
           "
         >

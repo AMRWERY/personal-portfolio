@@ -2,7 +2,7 @@
   <section
     ref="sectionRef"
     class="px-5 md:px-0 transition-all duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
+    :class="isVisible ? 'reveal-in' : 'reveal-out'"
   >
     <div
       class="border border-border md:border-x-0 rounded-xl md:rounded-none bg-surface md:bg-surface/80 dark:md:bg-surface/60"

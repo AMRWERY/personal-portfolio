@@ -4,7 +4,7 @@
       <span
         class="hidden md:block font-headline text-label-sm font-semibold text-accent-ink uppercase tracking-wider mb-1"
       >
-        {{ locale === "en" ? "VERIFIED CV METRICS" : "أرقام موثقة من السيرة الذاتية" }}
+        {{ locale === "en" ? "BY THE NUMBERS" : "بالأرقام" }}
       </span>
       <h2
         class="font-headline text-headline-sm md:text-headline-lg font-bold text-text-primary"

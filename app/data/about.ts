@@ -249,8 +249,8 @@ export const ABOUT_SKILLS: {
   eyebrow: { en: "TOOLSET", ar: "الأدوات" },
   title: { en: "Technical skills", ar: "المهارات التقنية" },
   description: {
-    en: "Verified technical proficiencies grouped by domain. Strictly no progress bars or decorative percentages.",
-    ar: "مهارات تقنية موثقة مجمّعة حسب المجال، دون أشرطة تقدم أو نسب مئوية تزيينية.",
+    en: "Tools and technologies I work with, grouped by domain.",
+    ar: "الأدوات والتقنيات التي أعمل بها، مجمّعة حسب المجال.",
   },
   groups: [
     {

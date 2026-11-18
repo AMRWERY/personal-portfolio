@@ -44,7 +44,20 @@ export type IconifyName =
   | "lucide:send"
   | "lucide:circle-check"
   | "lucide:triangle-alert"
-  | "lucide:rotate-ccw";
+  | "lucide:rotate-ccw"
+  | "lucide:download"
+  | "lucide:chevron-down"
+  | "lucide:file-text";
+
+export interface CvFile {
+  format: "pdf" | "docx";
+  label: LocalizedText;
+  description: LocalizedText;
+  /** Public URL (already URL-encoded) */
+  href: string;
+  /** Suggested name for the saved file */
+  filename: string;
+}
 
 export interface LocalizedText {
   en: string;

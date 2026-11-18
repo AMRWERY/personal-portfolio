@@ -32,17 +32,6 @@
 
     <!-- Final-Size AM Monogram Fallback -->
     <template v-else>
-      <div class="w-full flex items-center justify-between">
-        <span
-          class="text-label-sm font-semibold text-accent-ink uppercase tracking-widest"
-        >
-          IDENTITY
-        </span>
-        <span class="text-label-sm font-semibold text-text-secondary uppercase">
-          4:5 CROP
-        </span>
-      </div>
-
       <div class="flex flex-col items-center my-auto">
         <div
           class="w-20 h-20 lg:w-24 lg:h-24 rounded-xl lg:rounded-2xl bg-background border border-border flex items-center justify-center mb-3 lg:mb-4 shadow-inner"
@@ -53,24 +42,12 @@
             {{ monogram }}
           </span>
         </div>
-        <h2 class="font-headline text-headline-sm font-bold text-text-primary">
+        <p class="font-headline text-headline-sm font-bold text-text-primary">
           {{ name }}
-        </h2>
+        </p>
         <p class="text-body-sm text-text-secondary mt-0.5 lg:mt-1 font-medium">
           {{ role }}
         </p>
-        <div
-          class="hidden lg:inline-block mt-4 px-3 py-1 rounded-full bg-surface-elevated dark:bg-background/80 border border-border text-label-sm text-text-secondary font-medium"
-        >
-          Portrait Placeholder
-        </div>
-      </div>
-
-      <div
-        class="w-full pt-2 lg:pt-3 border-t border-border text-label-sm text-text-secondary flex items-center justify-between font-medium"
-      >
-        <span class="truncate">public/images/avatar.webp</span>
-        <span class="text-accent-ink shrink-0 ms-2">24px Radius</span>
       </div>
     </template>
   </div>

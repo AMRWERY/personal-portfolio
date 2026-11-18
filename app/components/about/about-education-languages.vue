@@ -2,7 +2,7 @@
   <section
     ref="sectionRef"
     class="max-w-(--container-max) mx-auto px-5 lg:px-12 py-10 md:py-20 lg:py-24 transition-all duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
+    :class="isVisible ? 'reveal-in' : 'reveal-out'"
   >
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8">
       <!-- Education -->

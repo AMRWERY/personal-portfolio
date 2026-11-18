@@ -2,7 +2,7 @@
   <section
     ref="sectionRef"
     class="max-w-(--container-max) mx-auto px-5 lg:px-12 pb-16 lg:pb-24 space-y-10 lg:space-y-16 transition-all duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
+    :class="isVisible ? 'reveal-in' : 'reveal-out'"
   >
     <!-- Skills Tag Row -->
     <div>
