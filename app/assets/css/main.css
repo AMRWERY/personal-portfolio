@@ -225,3 +225,29 @@ html.vt-reveal::view-transition-new(root) {
     animation: none !important;
   }
 }
+
+/* ============================================================================
+   SCROLLBAR (follows the active theme via the semantic variables)
+   ============================================================================ */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-ink) var(--bg);
+}
+
+/* Fallback for browsers without the standard scrollbar-color (older Safari) */
+@supports not (scrollbar-color: auto) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent-ink);
+    border-radius: 9999px;
+    border: 2px solid var(--bg);
+  }
+}
