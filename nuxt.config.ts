@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   modules: [
     "@pinia/nuxt",
     "@vueuse/nuxt/module",
+    "@vueuse/motion/nuxt",
     "@nuxtjs/i18n",
     "@nuxt/icon/module",
   ],
@@ -55,7 +56,14 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Personal Portfolio",
-      script: [{}],
+      script: [
+        {
+          // Apply the theme before first paint (stored choice, else device preference)
+          // so there is no light/dark flash. Mirrors useTheme()/useDark storage key.
+          innerHTML: `try{var s=localStorage.getItem('portfolio-theme');var d=s==='dark'||(s!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d)}catch(e){}`,
+          tagPosition: "head",
+        },
+      ],
       noscript: [],
       link: [{}],
       meta: [

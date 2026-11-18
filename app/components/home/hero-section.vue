@@ -53,23 +53,17 @@
         <div
           class="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-4"
         >
-          <a
-            href="/work"
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md font-headline font-semibold text-label-md bg-accent text-on-accent transition-all duration-(--duration-fast) hover:brightness-110 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background shadow-md shadow-accent/10"
-          >
+          <LazyVButton to="/work" class="w-full sm:w-auto">
             <span>{{ t(HERO_COPY.primaryCta) }}</span>
             <LazyVAppIcon
               name="lucide:arrow-right"
               class="w-4 h-4 rtl:rotate-180"
             />
-          </a>
+          </LazyVButton>
 
-          <a
-            href="/contact"
-            class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-md font-headline font-medium text-label-md bg-surface-elevated text-text-primary border border-border hover:border-accent hover:text-accent-ink hover:-translate-y-0.5 active:translate-y-0 transition-all duration-(--duration-fast) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-          >
+          <LazyVButton to="/contact" variant="secondary" class="w-full sm:w-auto">
             {{ t(HERO_COPY.secondaryCta) }}
-          </a>
+          </LazyVButton>
         </div>
 
         <div

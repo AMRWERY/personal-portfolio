@@ -57,24 +57,23 @@
         <div
           class="pt-2 lg:pt-4 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 sm:gap-4"
         >
-          <a
-            href="/contact"
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 lg:py-3.5 rounded-md font-headline font-semibold text-label-md bg-accent text-on-accent transition-all duration-(--duration-fast) hover:brightness-110 hover:-translate-y-0.5 active:translate-y-0 shadow-lg shadow-accent/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-          >
+          <LazyVButton to="/contact" size="lg" class="w-full sm:w-auto">
             <span>{{ locale === "en" ? "Send a message" : "أرسل رسالة" }}</span>
             <LazyVAppIcon
               name="lucide:arrow-right"
               class="w-4 h-4 rtl:rotate-180"
             />
-          </a>
+          </LazyVButton>
 
-          <a
+          <LazyVButton
             :href="`mailto:${PROFILE.email}`"
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 lg:py-3.5 rounded-md font-headline font-medium text-label-sm lg:text-label-md bg-surface-elevated border border-border text-text-primary hover:border-accent hover:text-accent-ink transition-all duration-(--duration-fast) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            variant="secondary"
+            size="lg"
+            class="w-full sm:w-auto"
           >
             <LazyVAppIcon name="lucide:mail" class="w-4 h-4 text-accent-ink" />
             <span>{{ PROFILE.email }}</span>
-          </a>
+          </LazyVButton>
         </div>
       </div>
     </div>

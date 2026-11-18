@@ -2,7 +2,12 @@
   <component
     :is="tag"
     v-bind="tagAttrs"
-    :class="[BASE_CLASSES, VARIANT_CLASSES[variant], SIZE_CLASSES[size], block && 'w-full']"
+    :class="[
+      BASE_CLASSES,
+      VARIANT_CLASSES[variant],
+      SIZE_CLASSES[size],
+      block && 'w-full',
+    ]"
   >
     <slot />
   </component>
@@ -10,9 +15,7 @@
 
 <script lang="ts" setup>
 import type { RouteLocationRaw } from "vue-router";
-
-type Variant = "primary" | "secondary" | "ghost";
-type Size = "sm" | "md" | "lg";
+import type { Variant, Size } from "~/types/shared/VButton";
 
 const props = withDefaults(
   defineProps<{
@@ -87,11 +90,13 @@ const VARIANT_CLASSES: Record<Variant, string> = {
     "font-semibold bg-accent text-on-accent shadow-md shadow-accent/10 hover:brightness-110 hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
   secondary:
     "font-medium bg-surface-elevated text-text-primary border border-border hover:border-accent hover:text-accent-ink hover:-translate-y-0.5 active:translate-y-0",
-  ghost:
-    "font-semibold text-accent-ink hover:underline rounded-sm px-1.5 py-1",
+  outline:
+    "font-bold bg-surface border border-border text-text-secondary hover:text-accent-ink hover:border-accent",
+  ghost: "font-semibold text-accent-ink hover:underline rounded-sm px-1.5 py-1",
 };
 
 const SIZE_CLASSES: Record<Size, string> = {
+  icon: "w-10 h-10 md:w-9 md:h-9 text-label-sm",
   sm: "px-3 py-2 text-label-sm",
   md: "px-6 py-3 text-label-md",
   lg: "px-8 py-3 lg:py-3.5 text-label-md",

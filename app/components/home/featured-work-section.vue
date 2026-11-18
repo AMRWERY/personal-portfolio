@@ -16,10 +16,7 @@
         </h2>
       </div>
 
-      <a
-        href="/work"
-        class="inline-flex items-center gap-1.5 text-body-sm font-semibold text-accent-ink hover:underline group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
-      >
+      <LazyVButton to="/work" variant="ghost" class="group">
         <span class="md:hidden">{{
           locale === "en" ? "All 15" : "كل الأعمال (15)"
         }}</span>
@@ -30,7 +27,7 @@
           name="lucide:arrow-right"
           class="w-4 h-4 transition-transform duration-(--duration-fast) group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1"
         />
-      </a>
+      </LazyVButton>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8">

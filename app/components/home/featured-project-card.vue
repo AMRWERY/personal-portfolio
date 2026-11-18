@@ -83,12 +83,13 @@
             :label="tech"
           />
         </div>
-        <a
-          :href="`/work/${project.slug}`"
-          class="text-body-sm font-semibold text-accent-ink dark:text-text-primary hover:text-accent-ink transition-colors shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+        <LazyVButton
+          :to="`/work/${project.slug}`"
+          variant="ghost"
+          class="shrink-0"
         >
           {{ locale === "en" ? "View case study" : "عرض دراسة الحالة" }}
-        </a>
+        </LazyVButton>
       </div>
     </div>
   </article>

@@ -192,3 +192,36 @@
     animation-duration: 0.01ms !important;
   }
 }
+
+/* ============================================================================
+   VIEW TRANSITIONS (theme + locale toggles)
+   ============================================================================ */
+/* Locale switch: smooth crossfade of the whole page */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 400ms;
+  animation-timing-function: ease;
+}
+
+/* Theme switch: the circular reveal is driven from JS (see utils/viewTransition.ts) */
+html.vt-reveal::view-transition-old(root),
+html.vt-reveal::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html.vt-reveal::view-transition-old(root) {
+  z-index: 1;
+}
+
+html.vt-reveal::view-transition-new(root) {
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

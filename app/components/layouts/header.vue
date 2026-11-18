@@ -44,46 +44,46 @@
 
       <!-- Persistent Utilities -->
       <div class="flex items-center gap-2 md:gap-3.5">
-        <button
-          type="button"
+        <LazyVButton
+          variant="outline"
+          size="icon"
           :aria-label="
             theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
           "
-          class="inline-flex items-center justify-center w-10 h-10 md:w-9 md:h-9 rounded-md bg-surface border border-border text-text-secondary hover:text-accent-ink hover:border-accent transition-colors duration-(--duration-fast) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
           @click="toggleTheme"
         >
           <LazyVAppIcon
             :name="theme === 'dark' ? 'lucide:moon' : 'lucide:sun'"
             class="w-4 h-4"
           />
-        </button>
+        </LazyVButton>
 
-        <button
-          type="button"
+        <LazyVButton
+          variant="outline"
+          size="sm"
           :aria-label="
             locale === 'en'
               ? 'Switch language to Arabic'
               : 'Switch language to English'
           "
-          class="inline-flex items-center justify-center px-3 h-10 md:h-9 rounded-md bg-surface border border-border text-label-sm font-bold text-text-secondary hover:text-accent-ink hover:border-accent transition-colors duration-(--duration-fast) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
           @click="toggleLocale"
         >
           {{ locale === "en" ? "عربي" : "EN" }}
-        </button>
+        </LazyVButton>
 
         <!-- Desktop Contact Action -->
-        <a
-          href="/contact"
-          class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-md font-headline font-semibold text-label-md bg-surface-elevated text-text-primary border border-border hover:border-accent hover:text-accent-ink transition-all duration-(--duration-fast) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        >
-          {{ locale === "en" ? "Let's talk" : "لنتحدث" }}
-        </a>
+        <div class="hidden sm:block">
+          <LazyVButton to="/contact" variant="secondary" size="sm">
+            {{ locale === "en" ? "Let's talk" : "لنتحدث" }}
+          </LazyVButton>
+        </div>
 
         <!-- Mobile Menu Trigger -->
-        <button
+        <LazyVButton
           ref="menuTriggerRef"
-          type="button"
-          class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md bg-surface border border-border text-text-primary hover:text-accent-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
+          variant="outline"
+          size="icon"
+          class="md:hidden"
           :aria-expanded="isMobileOpen"
           aria-controls="mobile-drawer"
           :aria-label="
@@ -95,7 +95,7 @@
             :name="isMobileOpen ? 'lucide:x' : 'lucide:menu'"
             class="w-4 h-4"
           />
-        </button>
+        </LazyVButton>
       </div>
     </div>
 
@@ -138,13 +138,9 @@
           </a>
         </nav>
 
-        <a
-          href="/contact"
-          class="w-full inline-flex items-center justify-center py-3 rounded-md font-headline font-semibold text-label-md bg-accent text-on-accent shadow-md"
-          @click="closeMobileMenu(false)"
-        >
+        <LazyVButton to="/contact" block @click="closeMobileMenu(false)">
           {{ locale === "en" ? "Let's talk" : "لنتحدث" }}
-        </a>
+        </LazyVButton>
       </div>
     </Transition>
   </header>
@@ -164,7 +160,8 @@ withDefaults(defineProps<HeaderProps>(), {
 });
 
 const isMobileOpen = ref(false);
-const menuTriggerRef = ref<HTMLButtonElement | null>(null);
+// LazyVButton is a component, so the ref holds its instance; focus via $el
+const menuTriggerRef = ref<{ $el: HTMLElement } | null>(null);
 const drawerFirstLinkRef = ref<HTMLAnchorElement | null>(null);
 
 async function openMobileMenu(): Promise<void> {
@@ -176,7 +173,7 @@ async function openMobileMenu(): Promise<void> {
 function closeMobileMenu(restoreFocus = true): void {
   isMobileOpen.value = false;
   if (restoreFocus) {
-    nextTick(() => menuTriggerRef.value?.focus());
+    nextTick(() => menuTriggerRef.value?.$el.focus());
   }
 }
 

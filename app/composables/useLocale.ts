@@ -8,11 +8,14 @@ export function useLocale() {
   const t = (text: LocalizedText): string =>
     text[locale.value as Locale] ?? text.en;
 
+  /** Crossfades between languages so the dir/lang flip is never seen as a jump. */
   async function toggleLocale() {
     const next: Locale = locale.value === "en" ? "ar" : "en";
-    await setLocale(next);
-    const path = switchLocalePath(next);
-    if (path) await navigateTo(path);
+    await withViewTransition(async () => {
+      await setLocale(next);
+      const path = switchLocalePath(next);
+      if (path) await navigateTo(path);
+    });
   }
 
   return { locale, t, toggleLocale };

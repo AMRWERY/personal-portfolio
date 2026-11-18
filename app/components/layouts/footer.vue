@@ -73,14 +73,10 @@
           </nav>
         </div>
 
-        <button
-          type="button"
-          class="inline-flex items-center gap-1.5 hover:text-accent-ink transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm px-1.5 py-1"
-          @click="scrollToTop"
-        >
+        <LazyVButton variant="ghost" @click="scrollToTop">
           <LazyVAppIcon name="lucide:arrow-up" class="w-3.5 h-3.5" />
           <span>{{ locale === "en" ? "Back to top" : "العودة للأعلى" }}</span>
-        </button>
+        </LazyVButton>
       </div>
     </div>
   </footer>
