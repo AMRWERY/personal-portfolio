@@ -8,14 +8,14 @@
       class="flex items-center gap-1.5 md:gap-2 text-label-sm font-semibold uppercase tracking-wider mb-4 md:mb-6 text-text-secondary"
     >
       <nuxt-link-locale
-        :to="localePath('/')"
+        to="/"
         class="hover:text-accent-ink transition-colors"
       >
         {{ locale === "en" ? "Home" : "الرئيسية" }}
       </nuxt-link-locale>
       <span aria-hidden="true">/</span>
       <nuxt-link-locale
-        :to="localePath('/work')"
+        to="/work"
         class="hover:text-accent-ink transition-colors"
       >
         {{ locale === "en" ? "Work" : "أعمالي" }}
@@ -116,7 +116,6 @@ import type { CaseStudyProps } from "@/types/work";
 const props = defineProps<CaseStudyProps>();
 
 const { locale, t } = useLocale();
-const localePath = useLocalePath();
 
 const caseStudy = computed(() => props.project.caseStudy);
 

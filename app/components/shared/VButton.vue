@@ -19,9 +19,9 @@ import type { Variant, Size } from "~/types/shared/VButton";
 
 const props = withDefaults(
   defineProps<{
-    /** Force a specific tag/component. Defaults to nuxt-link-locale (`to`), `a` (`href`) or `button`. */
+    /** Force a specific tag/component. Defaults to NuxtLinkLocale (`to`), `a` (`href`) or `button`. */
     as?: string | object;
-    /** Internal route. Rendered with nuxt-link-locale and prefixed with the active locale. */
+    /** Internal route. Rendered with NuxtLinkLocale and prefixed with the active locale. */
     to?: RouteLocationRaw;
     /** External / mailto / hash link. Rendered as a plain `a`. */
     href?: string;
@@ -45,12 +45,12 @@ const props = withDefaults(
   },
 );
 
-const localePath = useLocalePath();
-const nuxt-link-locale = resolveComponent("nuxt-link-locale");
+// Locale-aware link from @nuxtjs/i18n: adds the active locale prefix itself
+const NuxtLinkLocale = resolveComponent("NuxtLinkLocale");
 
 const tag = computed(() => {
   if (props.as) return props.as;
-  if (props.to) return nuxt-link-locale;
+  if (props.to) return NuxtLinkLocale;
   if (props.href) return "a";
   return "button";
 });
@@ -66,7 +66,7 @@ const tagAttrs = computed(() => {
 
   const attrs: Record<string, unknown> = {};
   if (props.to) {
-    attrs.to = typeof props.to === "string" ? localePath(props.to) : props.to;
+    attrs.to = props.to;
   }
   if (props.href) {
     attrs.href = props.href;

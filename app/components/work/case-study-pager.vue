@@ -5,7 +5,7 @@
     >
       <!-- Previous -->
       <nuxt-link-locale
-        :to="localePath(`/work/${previous.slug}`)"
+        :to="`/work/${previous.slug}`"
         class="group/btn p-4 md:p-6 rounded-xl border border-border bg-surface hover:border-accent hover:-translate-y-0.5 transition-all duration-(--duration-fast) flex items-center gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       >
         <div
@@ -32,7 +32,7 @@
 
       <!-- Next -->
       <nuxt-link-locale
-        :to="localePath(`/work/${next.slug}`)"
+        :to="`/work/${next.slug}`"
         class="group/btn p-4 md:p-6 rounded-xl border border-border bg-surface hover:border-accent hover:-translate-y-0.5 transition-all duration-(--duration-fast) flex items-center justify-between gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       >
         <div class="min-w-0 space-y-0.5">
@@ -64,7 +64,6 @@
 import type { CaseStudyPagerProps } from "@/types/work";
 
 const { locale } = useLocale();
-const localePath = useLocalePath();
 
 defineProps<CaseStudyPagerProps>();
 

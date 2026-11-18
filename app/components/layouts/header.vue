@@ -7,7 +7,7 @@
     >
       <!-- Monogram Wordmark & Compact Avatar -->
       <nuxt-link-locale
-        :to="localePath('/')"
+        to="/"
         class="flex items-center gap-2.5 md:gap-3.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-lg p-1"
       >
         <ProfileAvatar
@@ -30,7 +30,7 @@
         <nuxt-link-locale
           v-for="item in NAV_ITEMS"
           :key="item.key"
-          :to="localePath(item.to)"
+          :to="item.to"
           class="font-headline text-body-sm relative py-1 transition-colors duration-(--duration-fast) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
           :class="
             activeRoute === item.key
@@ -102,7 +102,7 @@
                 ? (el) => (drawerFirstLinkRef = (el as { $el: HTMLElement } | null)?.$el ?? null)
                 : undefined
             "
-            :to="localePath(item.to)"
+            :to="item.to"
             class="py-2.5 border-b border-border/50 last:border-b-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
             :class="
               activeRoute === item.key
@@ -129,7 +129,6 @@ import type { NavItem } from "@/types/portfolio";
 import type { HeaderProps } from "@/types/layouts";
 
 const { locale, t } = useLocale();
-const localePath = useLocalePath();
 
 withDefaults(defineProps<HeaderProps>(), {
   activeRoute: "home",

@@ -65,7 +65,7 @@
             <nuxt-link-locale
               v-for="item in NAV_ITEMS"
               :key="item.key"
-              :to="localePath(item.to)"
+              :to="item.to"
               class="hover:text-text-primary transition-colors"
             >
               {{ t(item.label) }}
@@ -81,7 +81,6 @@
 import { NAV_ITEMS, PROFILE } from "@/data/home";
 
 const { locale, t } = useLocale();
-const localePath = useLocalePath();
 
 const currentYear = new Date().getFullYear();
 
