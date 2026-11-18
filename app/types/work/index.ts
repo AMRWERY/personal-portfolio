@@ -1,4 +1,8 @@
-import type { ProjectCategory, WorkProject } from "@/types/portfolio";
+import type {
+  LocalizedText,
+  ProjectCategory,
+  WorkProject,
+} from "@/types/portfolio";
 
 export type WorkFilter = "all" | ProjectCategory;
 
@@ -14,4 +18,20 @@ export interface WorkFilterOption {
 
 export interface WorkFilterBarProps {
   options: WorkFilterOption[];
+}
+
+export interface CaseStudyProps {
+  project: WorkProject;
+}
+
+export interface CaseStudyPagerProps {
+  previous: WorkProject;
+  next: WorkProject;
+}
+
+export interface WorkCtaSectionProps {
+  eyebrow?: LocalizedText;
+  title?: LocalizedText;
+  description?: LocalizedText;
+  primaryLabel?: LocalizedText;
 }

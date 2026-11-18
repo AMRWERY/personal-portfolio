@@ -1,4 +1,5 @@
 import type { WorkProject } from "@/types/portfolio";
+import { CASE_STUDIES } from "@/data/case-studies";
 
 const PROFESSIONAL_CODE95 = {
   en: "Professional · Code95",
@@ -19,7 +20,7 @@ const FRONTEND_ROLE = { en: "Frontend Developer", ar: "مطور واجهات أ�
 const LIVE = { en: "Live", ar: "المعاينة" };
 const CODE = { en: "Code", ar: "الكود" };
 
-export const WORK_PROJECTS: WorkProject[] = [
+const BASE_PROJECTS: WorkProject[] = [
   // 1 ─────────────────────────────────────────────────────────────
   {
     slug: "lexus-egypt",
@@ -64,7 +65,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     period: { en: "May 2025 – Nov 2025", ar: "مايو 2025 – نوفمبر 2025" },
     summary: {
       en: "Two-app e-commerce frontend for Egypt and Saudi Arabia, delivering a customer storefront and separate admin app connected to Firebase.",
-      ar: "واجهة تجارة إلكترونية من تطبيقين لمصر والسعودية: متجر للعملاء وتطبيق إدارة منفصل مرتبطان بـ Firebase.",
+      ar: "واجهة تجارة إلكترونية من تطبيقين لمصر والسعودية: متجر للعملاء وتطبيق إدارة منفصل مرتبطان بخدمة Firebase.",
     },
     highlight: {
       label: { en: "Delivered Metrics:", ar: "ما تم تسليمه:" },
@@ -78,12 +79,20 @@ export const WORK_PROJECTS: WorkProject[] = [
       {
         kind: "live",
         label: { en: "Live Store", ar: "المتجر" },
+        detailLabel: { en: "Visit Live Storefront", ar: "زيارة المتجر المباشر" },
         href: "https://marca-store-user.vercel.app",
       },
       {
         kind: "repo",
         label: { en: "Store Repo", ar: "مستودع المتجر" },
+        detailLabel: { en: "Storefront Repository", ar: "مستودع المتجر" },
         href: "https://github.com/AMRWERY/Marca-Store---user",
+      },
+      {
+        kind: "repo",
+        label: { en: "Admin Repo", ar: "مستودع الإدارة" },
+        detailLabel: { en: "Admin Repository", ar: "مستودع لوحة الإدارة" },
+        href: "https://github.com/AMRWERY/Marca-Store---admin",
       },
     ],
   },
@@ -334,7 +343,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     period: { en: "Jan 2024", ar: "يناير 2024" },
     summary: {
       en: "Islamic content web application using public REST API data. 4 pages and 7 reusable components built with Nuxt.js, Pinia, and Headless UI.",
-      ar: "تطبيق ويب للمحتوى الإسلامي يعتمد على بيانات واجهات REST عامة: 4 صفحات و7 مكونات مبنية بـ Nuxt.js وPinia وHeadless UI.",
+      ar: "تطبيق ويب للمحتوى الإسلامي يعتمد على بيانات واجهات REST عامة: 4 صفحات و7 مكونات مبنية باستخدام Nuxt.js وPinia وHeadless UI.",
     },
     stack: ["Nuxt.js", "Pinia", "Headless UI", "REST API"],
     links: [
@@ -356,7 +365,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     period: { en: "Oct 2023", ar: "أكتوبر 2023" },
     summary: {
       en: "Movie search application fetching titles, posters, release years, and plot summaries from the OMDb API. Built with Vue.js, Vite, and Vue Router.",
-      ar: "تطبيق للبحث عن الأفلام يجلب العناوين والملصقات وسنوات الإصدار وملخصات القصة من OMDb API، مبني بـ Vue.js وVite وVue Router.",
+      ar: "تطبيق للبحث عن الأفلام يجلب العناوين والملصقات وسنوات الإصدار وملخصات القصة من OMDb API، مبني باستخدام Vue.js وVite وVue Router.",
     },
     stack: ["Vue.js", "Vite", "Vue Router", "OMDb API"],
     links: [
@@ -373,3 +382,27 @@ export const WORK_PROJECTS: WorkProject[] = [
     ],
   },
 ];
+
+export const WORK_PROJECTS: WorkProject[] = BASE_PROJECTS.map((project) => ({
+  ...project,
+  caseStudy: CASE_STUDIES[project.slug],
+}));
+
+export const getProjectBySlug = (slug: string): WorkProject | undefined =>
+  WORK_PROJECTS.find((project) => project.slug === slug);
+
+/** Previous/next project in catalog order, wrapping around at the ends. */
+export function getAdjacentProjects(slug: string): {
+  previous: WorkProject;
+  next: WorkProject;
+} {
+  const index = Math.max(
+    0,
+    WORK_PROJECTS.findIndex((project) => project.slug === slug),
+  );
+  const total = WORK_PROJECTS.length;
+  return {
+    previous: WORK_PROJECTS[(index - 1 + total) % total]!,
+    next: WORK_PROJECTS[(index + 1) % total]!,
+  };
+}

@@ -124,7 +124,7 @@
 
           <div v-if="project.links.length" class="flex items-center gap-4">
             <a
-              v-for="link in project.links"
+              v-for="link in project.links.slice(0, 2)"
               :key="link.href"
               :href="link.href"
               target="_blank"

@@ -26,7 +26,12 @@ export type IconifyName =
   | "lucide:external-link"
   | "lucide:check"
   | "lucide:info"
-  | "lucide:folder-search";
+  | "lucide:folder-search"
+  | "lucide:layout"
+  | "lucide:layout-dashboard"
+  | "lucide:users"
+  | "lucide:arrow-left"
+  | "lucide:alert-circle";
 
 export interface LocalizedText {
   en: string;
@@ -79,7 +84,52 @@ export type ProjectCategory = "professional" | "freelance" | "personal";
 export interface ProjectLink {
   kind: "live" | "repo" | "brand";
   label: LocalizedText;
+  /** Longer label used on the case-study page; falls back to `label` */
+  detailLabel?: LocalizedText;
   href: string;
+}
+
+export interface CaseStudyGalleryItem {
+  icon: IconifyName;
+  /** Thumbnail title, e.g. "Storefront Home" */
+  title: LocalizedText;
+  /** Thumbnail caption, e.g. "Customer Interface" */
+  caption: LocalizedText;
+  /** Headline shown on the media stage when selected */
+  stageTitle: LocalizedText;
+  /** Description shown on the media stage when selected */
+  stageDescription: LocalizedText;
+  screenshotSrc?: string;
+}
+
+export interface CaseStudyContribution {
+  icon: IconifyName;
+  title: LocalizedText;
+  text: LocalizedText;
+}
+
+export interface CaseStudyMetric {
+  value: string;
+  label: LocalizedText;
+  hint?: LocalizedText;
+}
+
+/** Optional extra content for /work/[slug]. Sections with no data are hidden. */
+export interface CaseStudy {
+  /** Pill above the title, e.g. "Freelance · E-Commerce Platform" */
+  typeLabel?: LocalizedText;
+  /** Second pill, e.g. "Egypt & Saudi Arabia" */
+  market?: LocalizedText;
+  deliverable?: LocalizedText;
+  /** Longer intro paragraph; falls back to the project summary */
+  intro?: LocalizedText;
+  gallery?: CaseStudyGalleryItem[];
+  contributions?: CaseStudyContribution[];
+  metrics?: CaseStudyMetric[];
+  /** Full stack list; falls back to the project's card stack */
+  stack?: string[];
+  /** Status / accuracy note shown under the contributions */
+  note?: LocalizedText;
 }
 
 export interface WorkProject {
@@ -98,6 +148,7 @@ export interface WorkProject {
   /** Wide, two-column card at the top of the grid */
   featured?: boolean;
   links: ProjectLink[];
+  caseStudy?: CaseStudy;
   /** Shown instead of links when the project is private, e.g. "Internal Enterprise" */
   privateNote?: LocalizedText;
   screenshotSrc?: string;

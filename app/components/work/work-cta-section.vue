@@ -7,29 +7,21 @@
         <span
           class="hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-soft text-accent-ink text-label-sm font-semibold uppercase tracking-wider"
         >
-          {{ locale === "en" ? "DIRECT COLLABORATION" : "تعاون مباشر" }}
+          {{ t(eyebrow) }}
         </span>
         <h2
           class="font-headline text-headline-sm md:text-headline-lg font-bold text-text-primary tracking-tight"
         >
-          {{
-            locale === "en"
-              ? "Interested in working together?"
-              : "مهتم بالعمل معاً؟"
-          }}
+          {{ t(title) }}
         </h2>
         <p class="text-body-sm md:text-body-md text-text-secondary font-light">
-          {{
-            locale === "en"
-              ? "I am available for frontend architecture, Nuxt.js/Vue.js web applications, and senior frontend roles."
-              : "متاح لأعمال معمارية الواجهات الأمامية وتطبيقات الويب بـ Nuxt.js وVue.js والأدوار الأمامية المتقدمة."
-          }}
+          {{ t(description) }}
         </p>
         <div
           class="pt-2 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 md:gap-4"
         >
           <LazyVButton to="/contact" class="w-full sm:w-auto">
-            <span>{{ locale === "en" ? "Get in touch" : "تواصل معي" }}</span>
+            <span>{{ t(primaryLabel) }}</span>
             <LazyVAppIcon
               name="lucide:arrow-right"
               class="w-4 h-4 rtl:rotate-180 arrow-nudge-x"
@@ -51,6 +43,20 @@
 
 <script lang="ts" setup>
 import { PROFILE } from "@/data/home";
+import type { WorkCtaSectionProps } from "@/types/work";
 
-const { locale } = useLocale();
+const { t } = useLocale();
+
+withDefaults(defineProps<WorkCtaSectionProps>(), {
+  eyebrow: () => ({ en: "DIRECT COLLABORATION", ar: "تعاون مباشر" }),
+  title: () => ({
+    en: "Interested in working together?",
+    ar: "مهتم بالعمل معاً؟",
+  }),
+  description: () => ({
+    en: "I am available for frontend architecture, Nuxt.js/Vue.js web applications, and senior frontend roles.",
+    ar: "متاح لأعمال معمارية الواجهات الأمامية وتطبيقات الويب باستخدام Nuxt.js وVue.js والأدوار الأمامية المتقدمة.",
+  }),
+  primaryLabel: () => ({ en: "Get in touch", ar: "تواصل معي" }),
+});
 </script>

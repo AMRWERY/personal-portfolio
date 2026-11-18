@@ -281,3 +281,14 @@ html {
     transform: none !important;
   }
 }
+
+/* Backward-pointing arrow (e.g. "previous"): nudges the opposite way */
+@utility arrow-nudge-x-back {
+  @apply transition-transform duration-(--duration-fast) ease-standard group-hover/btn:-translate-x-1 rtl:group-hover/btn:translate-x-1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .arrow-nudge-x-back {
+    transition: none;
+    transform: none !important;
+  }
+}
