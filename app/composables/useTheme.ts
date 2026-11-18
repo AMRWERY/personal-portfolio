@@ -8,7 +8,7 @@ import type { ThemeMode } from "@/types/portfolio";
  * Toggling animates as a circular reveal from the clicked button.
  */
 export function useTheme() {
-  const isDark = useDark({ storageKey: "portfolio-theme" });
+  const isDark = useDark({ storageKey: "portfolio-theme-mode" });
 
   const theme = computed<ThemeMode>(() => (isDark.value ? "dark" : "light"));
 

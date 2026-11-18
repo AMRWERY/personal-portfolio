@@ -60,7 +60,7 @@ export default defineNuxtConfig({
         {
           // Apply the theme before first paint (stored choice, else device preference)
           // so there is no light/dark flash. Mirrors useTheme()/useDark storage key.
-          innerHTML: `try{var s=localStorage.getItem('portfolio-theme');var d=s==='dark'||(s!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d)}catch(e){}`,
+          innerHTML: `try{var s=localStorage.getItem('portfolio-theme-mode');var d=s==='dark'||(s!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d)}catch(e){}`,
           tagPosition: "head",
         },
       ],
