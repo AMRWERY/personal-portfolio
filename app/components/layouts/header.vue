@@ -13,7 +13,7 @@
       <!-- Monogram Wordmark & Compact Avatar -->
       <nuxt-link-locale
         to="/"
-        class="flex items-center gap-2.5 md:gap-3.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-lg p-1 min-h-11"
+        class="flex items-center gap-2.5 md:gap-3.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-lg p-1 min-h-11 min-w-11"
       >
         <ProfileAvatar
           variant="compact"
@@ -29,14 +29,14 @@
 
       <!-- Desktop Navigation -->
       <nav
-        aria-label="Primary navigation"
-        class="hidden md:flex items-center gap-8"
+        :aria-label="t('ui.header.primaryNavigation')"
+        class="hidden md:flex items-center gap-4"
       >
         <nuxt-link-locale
           v-for="item in NAV_ITEMS"
           :key="item.key"
           :to="item.to"
-          class="font-headline text-body-sm relative py-3 transition-colors duration-(--duration-fast) ease-standard focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+          class="font-headline text-body-sm relative py-3 px-2 min-w-11 text-center transition-colors duration-(--duration-fast) ease-standard focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
           :class="
             activeRoute === item.key
               ? 'font-semibold text-accent-ink'
@@ -48,7 +48,7 @@
           <!-- v-if: the draw animation replays each time a link becomes the active one -->
           <svg
             v-if="activeRoute === item.key"
-            class="underline-draw underline-draw-fast absolute inset-x-0 bottom-1 w-full h-2 rtl:-scale-x-100 overflow-visible"
+            class="underline-draw underline-draw-fast absolute inset-x-2 bottom-1 w-[calc(100%-1rem)] h-2 rtl:-scale-x-100 overflow-visible"
             viewBox="0 0 200 12"
             preserveAspectRatio="none"
             fill="none"
@@ -74,7 +74,7 @@
         <!-- Desktop Contact Action -->
         <div class="hidden sm:block">
           <LazyVButton to="/contact" variant="secondary" size="sm">
-            {{ locale === "en" ? "Let's talk" : "لنتحدث" }}
+            {{ t('ui.header.letsTalk') }}
           </LazyVButton>
         </div>
 
@@ -87,7 +87,9 @@
           :aria-expanded="isMobileOpen"
           aria-controls="mobile-drawer"
           :aria-label="
-            isMobileOpen ? 'Close navigation menu' : 'Open navigation menu'
+            isMobileOpen
+              ? t('ui.header.closeNavigationMenu')
+              : t('ui.header.openNavigationMenu')
           "
           @click="toggleMobileMenu"
         >
@@ -129,7 +131,7 @@
           ref="drawerRef"
           role="dialog"
           aria-modal="true"
-          :aria-label="locale === 'en' ? 'Navigation menu' : 'قائمة التنقل'"
+          :aria-label="t('ui.header.navigationMenu')"
           class="md:hidden fixed inset-y-0 end-0 z-61 w-[min(20rem,86vw)] flex flex-col bg-surface border-s border-border shadow-2xl"
           @keydown="onDrawerKeydown"
         >
@@ -146,7 +148,7 @@
               variant="outline"
               size="icon"
               :aria-label="
-                locale === 'en' ? 'Close navigation menu' : 'إغلاق قائمة التنقل'
+                t('ui.header.closeNavigationMenu')
               "
               @click="closeMobileMenu(true)"
             >
@@ -155,7 +157,7 @@
           </div>
 
           <nav
-            :aria-label="locale === 'en' ? 'Mobile navigation' : 'التنقل'"
+            :aria-label="t('ui.header.mobileNavigation')"
             class="flex-1 overflow-y-auto px-3 py-4 flex flex-col gap-1 font-headline text-body-md font-semibold"
           >
             <nuxt-link-locale
@@ -179,7 +181,7 @@
             class="shrink-0 p-5 border-t border-border pb-[max(1.25rem,env(safe-area-inset-bottom))]"
           >
             <LazyVButton to="/contact" block @click="closeMobileMenu(false)">
-              {{ locale === "en" ? "Let's talk" : "لنتحدث" }}
+              {{ t('ui.header.letsTalk') }}
             </LazyVButton>
           </div>
         </aside>

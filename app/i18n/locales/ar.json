@@ -1,0 +1,854 @@
+{
+  "content": {
+    "cVFILES": {
+      "pdf": {
+        "label": "PDF",
+        "description": "الأنسب للقراءة والطباعة"
+      },
+      "docx": {
+        "label": "Word (.docx)",
+        "description": "مستند قابل للتعديل"
+      }
+    },
+    "nAVITEMS": {
+      "home": {
+        "label": "الرئيسية"
+      },
+      "work": {
+        "label": "أعمالي"
+      },
+      "about": {
+        "label": "نبذة عني"
+      }
+    },
+    "hEROCOPY": {
+      "greeting": "مرحباً، أنا عمرو محمد",
+      "headline": "أبني تجارب ويب متقنة باستخدام Vue.js و Nuxt.js.",
+      "supporting": "مطور واجهات أمامية بخبرة تتجاوز 3 سنوات في بناء المواقع الإنتاجية ومنصات التجارة الإلكترونية ولوحات التحكم، مع التركيز على Vue.js و Nuxt.js و TypeScript وبناء مكونات قابلة لإعادة الاستخدام وربط واجهات البرمجة.",
+      "primaryCta": "استكشف أعمالي",
+      "secondaryCta": "تواصل معي",
+      "location": "مقيم في القاهرة، مصر"
+    },
+    "iMPACTMETRICS": {
+      "0": {
+        "label": "سنوات خبرة في تطوير الواجهات",
+        "context": "عمل احترافي ومستقل"
+      },
+      "1": {
+        "label": "صفحة في مشروع متجر Marca Store",
+        "context": "المتجر ولوحة الإدارة"
+      },
+      "2": {
+        "label": "مكوناً قابلاً لإعادة الاستخدام في Marca Store",
+        "context": "21 مخزن Pinia · دعم RTL"
+      },
+      "3": {
+        "label": "شاشة في لوحة إدارة الصالة الرياضية",
+        "context": "ASAGTC · تحديثات فورية"
+      }
+    },
+    "fEATUREDPROJECTS": {
+      "lexusEgypt": {
+        "categoryBadge": "احترافي · Code95",
+        "role": "مطور واجهات أمامية — مالك التنفيذ",
+        "summary": "تولي تطوير الواجهة الأمامية من التأسيس والبنية البرمجية وصولاً إلى بناء الصفحات وربط واجهات البرمجة حتى الإطلاق."
+      },
+      "marcaStore": {
+        "categoryBadge": "عمل حر · مصر والسعودية",
+        "role": "مطور واجهات أمامية مستقل",
+        "summary": "منصة تجارة إلكترونية من تطبيقين لمصر والسعودية تضم 30 صفحة و46 مكوناً قابلاً لإعادة الاستخدام."
+      },
+      "gymManagement": {
+        "categoryBadge": "عمل حر · القاهرة، مصر",
+        "role": "مطور واجهات أمامية مستقل",
+        "summary": "لوحة تحكم تضم أكثر من 100 شاشة وتحديثات فورية وتصدير التقارير مع تكامل REST API و Laravel Echo."
+      },
+      "abdal": {
+        "categoryBadge": "احترافي · السعودية",
+        "role": "مطور واجهات أمامية — Code95",
+        "summary": "منصة توظيف واستقدام سعودية مع تكامل Visa و Mada و STC Pay وإصلاح الأعطال وتطوير المزايا."
+      }
+    },
+    "cAPABILITIES": {
+      "vueNuxt": {
+        "title": "تطوير تطبيقات Vue.js و Nuxt.js",
+        "description": "تطبيقات ويب إنتاجية باستخدام Vue 3 Composition API و Nuxt و TypeScript."
+      },
+      "architecture": {
+        "title": "مكونات قابلة لإعادة الاستخدام وبنية الواجهات",
+        "description": "مكتبات مكونات منظمة وإدارة حالة واضحة عبر Pinia وأنظمة تصميم باستخدام Tailwind CSS."
+      },
+      "ecommerceDashboards": {
+        "title": "المتاجر الإلكترونية ولوحات التحكم",
+        "description": "واجهات متاجر إلكترونية متكاملة ولوحات تحكم إدارية تدعم تصدير التقارير."
+      },
+      "restApi": {
+        "title": "ربط واجهات برمجة التطبيقات (REST API)",
+        "description": "ربط واجهات البرمجة ومعالجة الأخطاء والتحديثات الفورية عبر Pusher و Laravel Echo."
+      },
+      "i18nRtl": {
+        "title": "واجهات عربية وإنجليزية ودعم RTL",
+        "description": "توطين كامل باللغتين العربية والإنجليزية عبر vue-i18n و Nuxt i18n مع ضبط اتجاه RTL."
+      },
+      "paymentsRbac": {
+        "title": "بوابات الدفع والصلاحيات متعددة الأدوار",
+        "description": "تدفقات دفع عبر Visa و Mada و STC Pay مع واجهات مبنية على صلاحيات الأدوار."
+      }
+    },
+    "eXPERIENCEPREVIEW": {
+      "0": {
+        "period": "يوليو 2025 – الآن",
+        "role": "مطور واجهات أمامية",
+        "projectsSummary": "أبرز المشاريع: Lexus Egypt، Abdal، Toyota Egypt، Attijariwafa Bank Egypt."
+      },
+      "1": {
+        "period": "يناير 2024 – مايو 2025",
+        "role": "مطور واجهات أمامية",
+        "projectsSummary": "أبرز المشاريع: لوحة تحكم Jai، لوحة تحكم Treat."
+      },
+      "2": {
+        "period": "أبريل 2023 – نوفمبر 2025",
+        "role": "مشاريع عمل حر",
+        "projectsSummary": "أبرز المشاريع: Marca Store، لوحة إدارة الصالة الرياضية، Lugar Store."
+      }
+    },
+    "aBOUTINTRO": {
+      "eyebrow": "نبذة",
+      "title": "نبذة بسيطة عن طريقتي في البناء.",
+      "bio": "أنا عمرو محمد، مطور واجهات أمامية مقيم في القاهرة، مصر. لدي أكثر من 3 سنوات من الخبرة في بناء تطبيقات Vue.js وNuxt.js، بدءاً من مواقع العملاء ومتاجر التجارة الإلكترونية وصولاً إلى لوحات التحكم. أركّز على واجهات قابلة للصيانة ومكونات قابلة لإعادة الاستخدام وربط واجهات البرمجة وتجارب عربية/إنجليزية سهلة الوصول.",
+      "facts": {
+        "0": {
+          "text": "القاهرة، مصر"
+        },
+        "1": {
+          "text": "Vue.js · Nuxt.js · TypeScript"
+        },
+        "2": {
+          "text": "العربية لغة أم · إنجليزية بمستوى مهني"
+        }
+      }
+    },
+    "aBOUTAPPROACH": {
+      "eyebrow": "المنهجية",
+      "title": "طريقة العمل",
+      "description": "عملية هندسية منظمة من اكتشاف المتطلبات الأولية حتى ربط واجهات البرمجة الفعلي والتحسين بعد الإطلاق.",
+      "steps": {
+        "requirements": {
+          "title": "المتطلبات",
+          "description": "تحليل مواصفات المنتج ورحلات المستخدم والحالات الطرفية وأهداف العمل قبل كتابة أي كود.",
+          "tag": "الاكتشاف والتخطيط"
+        },
+        "architecture": {
+          "title": "البنية البرمجية",
+          "description": "إرساء هيكل مجلدات معياري لمشاريع Vue/Nuxt ومكتبات مكونات قابلة لإعادة الاستخدام وأنواع TypeScript صارمة ومخازن Pinia.",
+          "tag": "البنية والمتغيرات"
+        },
+        "uiApis": {
+          "title": "الواجهات وواجهات البرمجة",
+          "description": "تنفيذ واجهات متجاوبة وبوابات دفع ونقاط REST غير متزامنة مع حالات تحميل وتحقق سليمة.",
+          "tag": "التنفيذ والتكامل"
+        },
+        "delivery": {
+          "title": "الصقل والتسليم",
+          "description": "التعاون الفعّال مع فريق الخلفية ومعالجة أخطاء الواجهة المباشرة وصقل تخطيطات RTL وضمان التسليم.",
+          "tag": "التحسين والتسليم"
+        }
+      }
+    },
+    "aBOUTEXPERIENCE": {
+      "eyebrow": "المسيرة المهنية",
+      "title": "الخط الزمني للخبرة",
+      "description": "سجل من العمل في تطوير الوكالات ولوحات التحكم الداخلية ومنصات التجارة الإلكترونية متعددة الأسواق.",
+      "entries": {
+        "code95": {
+          "period": "يوليو 2025 – الآن · القاهرة، مصر",
+          "title": "Code95 Web Technologies",
+          "badge": "مطور واجهات أمامية",
+          "description": "يقود تطوير الواجهات الأمامية لعملاء من المؤسسات في قطاعات السيارات والبنوك والاستقدام، ويتولى تأسيس المشاريع وبنية الواجهة وتنفيذ بوابات الدفع وربط واجهات REST.",
+          "projectsLabel": "مشاريع العملاء المرتبطة:",
+          "projects": {
+            "lexusEgypt": {
+              "label": "Lexus Egypt (مالك المشروع · قيد التنفيذ)"
+            },
+            "abdal": {
+              "label": "Abdal (Visa / Mada / STC Pay)"
+            },
+            "toyotaEgypt": {
+              "label": "Toyota Egypt (مسار الدفع)"
+            },
+            "attijariwafaBank": {
+              "label": "Attijariwafa Bank Egypt"
+            }
+          }
+        },
+        "kabret": {
+          "period": "يناير 2024 – مايو 2025 · القاهرة، مصر",
+          "title": "Kabret",
+          "badge": "مطور واجهات أمامية",
+          "description": "طوّر وصان ميزات لوحات التحكم الإدارية الداخلية، وتعاون مع مطوري الخلفية لربط شاشات البيانات المعقدة بواجهات REST، وبنى مكونات Vuetify قابلة لإعادة الاستخدام، وعالج مشكلات مزامنة الحالة.",
+          "projectsLabel": "المشاريع الداخلية المرتبطة:",
+          "projects": {
+            "0": {
+              "label": "Jai Dashboard (وحدات الإدارة · Vuetify)"
+            },
+            "1": {
+              "label": "Treat Dashboard (Nuxt.js · TypeScript)"
+            }
+          }
+        },
+        "freelance": {
+          "period": "أبريل 2023 – نوفمبر 2025 · عمل جزئي ومستقل",
+          "title": "مطور واجهات أمامية مستقل",
+          "badge": "تعاقدات مستقلة",
+          "description": "سلّم تطبيقات ويب مخصصة ومنصات تجارة إلكترونية متعددة الأسواق ولوحات عمليات لحظية لعملاء في مصر والكويت والسعودية.",
+          "projectsLabel": "أبرز المشاريع المسلَّمة:",
+          "projects": {
+            "3": {
+              "label": "موقع حجز السفر — O Tech (الكويت)"
+            },
+            "marcaStore": {
+              "label": "Marca Store (تطبيقان · 30 صفحة · 46 مكوناً)"
+            },
+            "gymManagement": {
+              "label": "Gym Management Dashboard (+100 واجهة · Echo)"
+            },
+            "lugarStore": {
+              "label": "Lugar Store (تجارة إلكترونية للأثاث)"
+            }
+          }
+        }
+      }
+    },
+    "aBOUTSKILLS": {
+      "eyebrow": "الأدوات",
+      "title": "المهارات التقنية",
+      "description": "الأدوات والتقنيات التي أعمل بها، مجمّعة حسب المجال.",
+      "groups": {
+        "frontendCore": {
+          "title": "أساسيات الواجهة الأمامية",
+          "skills": {
+            "0": "Vue.js",
+            "1": "Nuxt.js",
+            "2": "Composition API",
+            "3": "TypeScript",
+            "4": "JavaScript (ES6+)",
+            "5": "HTML5",
+            "6": "CSS3"
+          }
+        },
+        "uiStyling": {
+          "title": "الواجهات والتنسيق",
+          "skills": {
+            "0": "Tailwind CSS",
+            "1": "Vuetify",
+            "2": "Bootstrap",
+            "3": "Headless UI",
+            "4": "التصميم المتجاوب"
+          }
+        },
+        "stateForms": {
+          "title": "الحالة والتوجيه والنماذج",
+          "skills": {
+            "0": "Pinia",
+            "1": "Vuex",
+            "2": "Vue Router",
+            "3": "VeeValidate",
+            "4": "Vuelidate",
+            "5": "VueUse"
+          }
+        },
+        "apisBackend": {
+          "title": "واجهات البرمجة وخدمات الخلفية",
+          "skills": {
+            "0": "ربط واجهات REST",
+            "1": "Firebase",
+            "2": "Supabase",
+            "3": "Pusher",
+            "4": "Laravel Echo",
+            "5": "التحديثات اللحظية"
+          }
+        },
+        "i18n": {
+          "title": "التعريب (i18n)",
+          "skills": {
+            "0": "vue-i18n",
+            "1": "Nuxt i18n",
+            "2": "العربية / الإنجليزية",
+            "3": "تخطيطات RTL",
+            "4": "تبديل اللغة"
+          }
+        },
+        "tooling": {
+          "title": "الأدوات وسير العمل",
+          "skills": {
+            "0": "Vite",
+            "1": "Git",
+            "2": "GitHub",
+            "3": "GitLab",
+            "4": "Husky",
+            "5": "Commitlint",
+            "6": "Vercel"
+          }
+        }
+      },
+      "specializations": {
+        "title": "تخصصات إضافية",
+        "items": {
+          "0": "ربط بوابات الدفع (Visa وMada وSTC Pay)",
+          "1": "التحكم بالوصول حسب الأدوار (RBAC)",
+          "2": "إدارة بيانات SEO الوصفية (useHead)",
+          "3": "عرض البيانات عبر ApexCharts",
+          "4": "تصدير PDF / Excel / CSV",
+          "5": "تصحيح أخطاء الواجهة الأمامية",
+          "6": "التطوير بمساعدة الذكاء الاصطناعي (Cursor وClaude Code)"
+        }
+      }
+    },
+    "aBOUTEDUCATION": {
+      "eyebrow": "التعليم",
+      "title": "الخلفية الأكاديمية",
+      "degree": "بكالوريوس الحقوق (LL.B.)",
+      "school": "جامعة القاهرة، مصر",
+      "graduated": "تخرج عام 2012"
+    },
+    "aBOUTLANGUAGES": {
+      "eyebrow": "التواصل",
+      "title": "اللغات",
+      "items": {
+        "0": {
+          "name": "العربية",
+          "level": "لغة أم"
+        },
+        "1": {
+          "name": "الإنجليزية",
+          "level": "كفاءة عمل مهنية"
+        }
+      }
+    },
+    "cASESTUDIES": {
+      "lexusEgypt": {
+        "typeLabel": "احترافي · موقع رسمي",
+        "market": "مصر",
+        "deliverable": "الموقع الرسمي الجديد (الواجهة الأمامية)",
+        "intro": "يتولى الواجهة الأمامية من تأسيس المشروع وبنيته وسير العمل، مروراً ببناء مكونات الواجهة وربط واجهات REST، ويقود التطوير المستمر نحو الإطلاق.",
+        "contributions": {
+          "0": {
+            "title": "واجهة أمامية من الصفر",
+            "text": "أنشأ الواجهة الأمامية من الأساس: تأسيس المشروع والبنية البرمجية وسير العمل."
+          },
+          "1": {
+            "title": "أساس المكونات",
+            "text": "أرسى أساس المكونات الذي تُبنى عليه بقية الواجهة."
+          },
+          "2": {
+            "title": "التكامل مع الخلفية",
+            "text": "يقود التكامل مع واجهات REST الخاصة بالخلفية."
+          }
+        },
+        "note": "حالة المشروع: يشمل العمل بنية الواجهة الأمامية وتطويرها ولا يزال قيد التنفيذ. لم يُطلق الموقع الجديد بعد."
+      },
+      "marcaStore": {
+        "typeLabel": "عمل حر · منصة تجارة إلكترونية",
+        "market": "مصر والسعودية",
+        "deliverable": "تطبيقان ويب إنتاجيان",
+        "intro": "بنى الواجهة الأمامية الكاملة لنشاط تجارة إلكترونية يخدم سوقي مصر والسعودية. سلّم متجراً موجهاً للعملاء ولوحة إدارة شاملة مرتبطة بخدمة Firebase لإدارة المخزون والطلبات والعملاء لحظياً.",
+        "gallery": {
+          "0": {
+            "title": "الصفحة الرئيسية للمتجر",
+            "caption": "واجهة العميل",
+            "stageTitle": "Marca Store — معاينة متجر العملاء",
+            "stageDescription": "كتالوج المنتجات وفلاتر الفئات والسلة ومسار دفع ثنائي اللغة بالعربية والإنجليزية."
+          },
+          "1": {
+            "title": "لوحة الإدارة",
+            "caption": "الطلبات والمنتجات",
+            "stageTitle": "Marca Store — لوحة الإدارة الخلفية",
+            "stageDescription": "دورة تنفيذ الطلبات كاملة وتتبع المخزون ومصادقة Firebase."
+          },
+          "2": {
+            "title": "صلاحيات الأدوار",
+            "caption": "مدير/موظف/تاجر",
+            "stageTitle": "Marca Store — صلاحيات الحسابات بثلاثة مستويات",
+            "stageDescription": "لوحات مبنية على الأدوار تقيّد العمليات الحساسة على المنتجات لكل من المدير والموظف والتاجر."
+          },
+          "3": {
+            "title": "تخطيط العربية RTL",
+            "caption": "محاذاة vue-i18n",
+            "stageTitle": "Marca Store — تخطيط التعريب بالعربية RTL",
+            "stageDescription": "عكس دقيق للواجهة من اليمين إلى اليسار باستخدام vue-i18n ونماذج VeeValidate المعرّبة."
+          }
+        },
+        "contributions": {
+          "0": {
+            "title": "بنية واجهة أمامية بتطبيقين",
+            "text": "صمّم عميلي ويب منفصلين من الصفر باستخدام Vue.js وVite: واجهة تسوق للعملاء وبوابة إدارة داخلية للأعمال."
+          },
+          "1": {
+            "title": "46 مكوناً و21 مخزن Pinia",
+            "text": "وحّد عناصر الواجهة عبر بطاقات الكتالوج والنوافذ وحقول الدفع والرسوم الديناميكية، مع إدارة حالة معيارية باستخدام Pinia للسلة والمفضلة والمصادقة ومسار الطلب."
+          },
+          "2": {
+            "title": "تحكم بالوصول على ثلاثة مستويات (RBAC)",
+            "text": "طبّق صلاحيات دقيقة لحسابات المدير والموظف والتاجر داخل لوحة الإدارة، مع تقييد تعديل المنتجات واعتماد الطلبات."
+          },
+          "3": {
+            "title": "تعريب ثنائي اللغة ودعم كامل لاتجاه RTL",
+            "text": "دمج vue-i18n للإنجليزية والعربية مع تبديل تلقائي لاتجاه التخطيط وتنقل معكوس وقواعد تحقق معرّبة عبر VeeValidate."
+          }
+        },
+        "metrics": {
+          "0": {
+            "label": "تطبيقات مُسلَّمة",
+            "hint": "المتجر والإدارة"
+          },
+          "1": {
+            "label": "إجمالي الصفحات",
+            "hint": "في التطبيقين"
+          },
+          "2": {
+            "label": "مكوناً",
+            "hint": "مكتبة قابلة لإعادة الاستخدام"
+          },
+          "3": {
+            "label": "مخزن Pinia",
+            "hint": "إدارة الحالة"
+          }
+        }
+      },
+      "gymManagement": {
+        "metrics": {
+          "0": {
+            "label": "واجهة"
+          },
+          "1": {
+            "label": "وحدة Vuex"
+          }
+        }
+      },
+      "lugarStore": {
+        "metrics": {
+          "0": {
+            "label": "تعديلاً"
+          },
+          "1": {
+            "label": "أشهر",
+            "hint": "بُني من الصفر"
+          }
+        }
+      },
+      "shipIt": {
+        "metrics": {
+          "0": {
+            "label": "صفحة"
+          },
+          "1": {
+            "label": "مكوناً"
+          },
+          "2": {
+            "label": "مخزناً"
+          },
+          "3": {
+            "label": "تعديلاً"
+          }
+        }
+      },
+      "cospora": {
+        "metrics": {
+          "0": {
+            "label": "صفحة"
+          },
+          "1": {
+            "label": "مكوناً"
+          }
+        }
+      },
+      "alQuran": {
+        "metrics": {
+          "0": {
+            "label": "صفحة"
+          },
+          "1": {
+            "label": "مكوناً"
+          }
+        }
+      },
+      "islamApp": {
+        "metrics": {
+          "0": {
+            "label": "صفحات"
+          },
+          "1": {
+            "label": "مكونات"
+          }
+        }
+      }
+    },
+    "workProjects": {
+      "lexusEgypt": {
+        "categoryBadge": "احترافي · Code95",
+        "role": "مالك التنفيذ",
+        "period": "يوليو 2025 – الآن",
+        "summary": "يتولى تطوير الواجهة الأمامية لموقع لكزس مصر الجديد من التأسيس والبنية البرمجية وصولاً إلى بناء الواجهات وربط واجهات البرمجة تمهيداً للإطلاق.",
+        "highlight": {
+          "label": "أبرز النقاط:",
+          "text": "بناء الواجهة الأمامية من الصفر، وإرساء أساس المكونات، وقيادة التكامل مع الخلفية."
+        },
+        "links": {
+          "0": {
+            "label": "الموقع الرسمي"
+          }
+        }
+      },
+      "marcaStore": {
+        "categoryBadge": "عمل حر · مصر والسعودية",
+        "role": "مطور مستقل",
+        "period": "مايو 2025 – نوفمبر 2025",
+        "summary": "واجهة تجارة إلكترونية من تطبيقين لمصر والسعودية: متجر للعملاء وتطبيق إدارة منفصل مرتبطان بخدمة Firebase.",
+        "highlight": {
+          "label": "ما تم تسليمه:",
+          "text": "تطبيقان، 30 صفحة، 46 مكوناً قابلاً لإعادة الاستخدام، 21 مخزن Pinia، 3 أدوار (مدير/موظف/تاجر)، ودعم كامل للعربية RTL."
+        },
+        "links": {
+          "0": {
+            "label": "المتجر",
+            "detailLabel": "زيارة المتجر المباشر"
+          },
+          "1": {
+            "label": "مستودع المتجر",
+            "detailLabel": "مستودع المتجر"
+          },
+          "2": {
+            "label": "مستودع الإدارة",
+            "detailLabel": "مستودع لوحة الإدارة"
+          }
+        }
+      },
+      "abdal": {
+        "categoryBadge": "احترافي · Code95",
+        "role": "مطور واجهات أمامية",
+        "period": "يوليو 2025 – الآن",
+        "summary": "يطوّر ويصون منصة العملاء لشركة سعودية لخدمات الاستقدام، مع دمج بوابات الدفع Visa وMada وSTC Pay.",
+        "links": {
+          "0": {
+            "label": "abdal.sa"
+          }
+        }
+      },
+      "toyotaEgypt": {
+        "categoryBadge": "احترافي · Code95",
+        "role": "مطور واجهات أمامية",
+        "period": "يوليو 2025 – الآن",
+        "summary": "يصون ويحسّن موقع تويوتا مصر الرسمي، ويعالج مشكلات مسار الدفع الإلكتروني ويشخّص أخطاء الواجهة لضمان الاستقرار.",
+        "links": {
+          "0": {
+            "label": "toyota.com.eg"
+          }
+        }
+      },
+      "attijariwafaBank": {
+        "categoryBadge": "احترافي · Code95",
+        "role": "مطور واجهات أمامية",
+        "period": "يوليو 2025 – الآن",
+        "summary": "يطوّر ميزات جديدة ويصون واجهة الموقع وفق متطلبات العمل، مع تحسين مكونات الواجهة ومعالجة الأخطاء لضمان الاستقرار.",
+        "links": {
+          "0": {
+            "label": "attijariwafabank.com.eg"
+          }
+        }
+      },
+      "jaiDashboard": {
+        "categoryBadge": "احترافي · Kabret",
+        "role": "مطور واجهات أمامية",
+        "period": "يناير 2024 – مايو 2025",
+        "summary": "بنى وصان ميزات لوحة التحكم، وعمل مع مطوري الخلفية لربط الشاشات بواجهات REST، وأنشأ وحدات واجهة قابلة لإعادة الاستخدام.",
+        "privateNote": "نظام داخلي للمؤسسة"
+      },
+      "treatDashboard": {
+        "categoryBadge": "احترافي · Kabret",
+        "role": "مطور واجهات أمامية",
+        "period": "يناير 2024 – مايو 2025",
+        "summary": "بنى وصان ميزات لوحة التحكم وربط الواجهة بخدمات الخلفية باستخدام Nuxt.js وTypeScript وVuetify.",
+        "privateNote": "نظام داخلي للمؤسسة"
+      },
+      "lugarStore": {
+        "categoryBadge": "عمل حر · القاهرة، مصر",
+        "role": "مطور مستقل",
+        "period": "ديسمبر 2024 – فبراير 2025",
+        "summary": "بُني من الصفر خلال 3 أشهر عبر 271 تعديلاً: تجربة التسوق ولوحة الإدارة، مع الكتالوج والسلة والمفضلة والدفع ودعم العربية RTL.",
+        "links": {
+          "0": {
+            "label": "المعاينة"
+          },
+          "1": {
+            "label": "الكود"
+          }
+        }
+      },
+      "travelBooking": {
+        "categoryBadge": "عمل حر · الكويت (عن بُعد)",
+        "role": "مطور مستقل",
+        "period": "أكتوبر 2023 – ديسمبر 2023",
+        "summary": "طوّر وصان ميزات الواجهة لتطبيق حجز السفر، وتعاون مع فريق الخلفية لدى العميل في ربط واجهات REST.",
+        "privateNote": "مشروع خاص بالعميل"
+      },
+      "gymManagement": {
+        "categoryBadge": "عمل حر · القاهرة، مصر",
+        "role": "مطور مستقل",
+        "period": "أبريل 2023 – سبتمبر 2023",
+        "summary": "بنى أكثر من 100 واجهة و38 وحدة Vuex مع تحديثات فورية عبر Pusher وLaravel Echo، وتصدير PDF/Excel/CSV، ومعايير commitlint.",
+        "links": {
+          "0": {
+            "label": "الكود"
+          }
+        }
+      },
+      "alQuran": {
+        "categoryBadge": "مشروع شخصي",
+        "role": "شخصي",
+        "period": "أغسطس 2026",
+        "summary": "تطبيق لقراءة القرآن والاستماع إليه يحمّل السور والتلاوات من واجهات REST عامة: 22 صفحة و18 مكوناً وبث صوتي.",
+        "links": {
+          "0": {
+            "label": "المعاينة"
+          },
+          "1": {
+            "label": "الكود"
+          }
+        }
+      },
+      "shipIt": {
+        "categoryBadge": "مشروع شخصي",
+        "role": "شخصي",
+        "period": "يناير 2025 – مارس 2025",
+        "summary": "منصة متكاملة بمتجر للعملاء ولوحة إدارة: 15 صفحة و33 مكوناً و14 مخزناً عبر 293 تعديلاً، مع دعم العربية RTL.",
+        "links": {
+          "0": {
+            "label": "المعاينة"
+          },
+          "1": {
+            "label": "الكود"
+          }
+        }
+      },
+      "cospora": {
+        "categoryBadge": "مشروع شخصي",
+        "role": "شخصي",
+        "period": "نوفمبر 2024 – ديسمبر 2024",
+        "summary": "منصة تجارة إلكترونية لمستحضرات التجميل بواجهتين للعميل والإدارة: 18 صفحة و43 مكوناً ورسوم ApexCharts وتهيئة SEO عبر useHead.",
+        "links": {
+          "0": {
+            "label": "المعاينة"
+          },
+          "1": {
+            "label": "الكود"
+          }
+        }
+      },
+      "islamApp": {
+        "categoryBadge": "مشروع شخصي",
+        "role": "شخصي",
+        "period": "يناير 2024",
+        "summary": "تطبيق ويب للمحتوى الإسلامي يعتمد على بيانات واجهات REST عامة: 4 صفحات و7 مكونات مبنية باستخدام Nuxt.js وPinia وHeadless UI.",
+        "links": {
+          "0": {
+            "label": "المعاينة"
+          },
+          "1": {
+            "label": "الكود"
+          }
+        }
+      },
+      "movieApp": {
+        "categoryBadge": "مشروع شخصي",
+        "role": "شخصي",
+        "period": "أكتوبر 2023",
+        "summary": "تطبيق للبحث عن الأفلام يجلب العناوين والملصقات وسنوات الإصدار وملخصات القصة من OMDb API، مبني باستخدام Vue.js وVite وVue Router.",
+        "links": {
+          "0": {
+            "label": "المعاينة"
+          },
+          "1": {
+            "label": "الكود"
+          }
+        }
+      }
+    }
+  },
+  "ui": {
+    "contactChannels": {
+      "directChannels": "قنوات التواصل المباشر",
+      "feelFreeToReachOut": "تواصل معي مباشرة عبر البريد أو الهاتف أو الشبكات المهنية.",
+      "email": "البريد الإلكتروني",
+      "phoneWhatsApp": "الهاتف / واتساب",
+      "location": "الموقع",
+      "cairoEgypt": "القاهرة، مصر",
+      "currentAvailability": "التوفر الحالي",
+      "availableForSelectedFrontendFreelanc": "متاح لعقود العمل الحر المختارة في الواجهات الأمامية والاستشارات للمؤسسات وفرص العمل بدوام كامل في Vue.js / Nuxt.js. وقت الرد المعتاد خلال 24 ساعة."
+    },
+    "contactForm": {
+      "messageReceived": "تم استلام رسالتك",
+      "thankYouForReachingOut": "شكراً لتواصلك. سأراجع متطلباتك وأرد عليك خلال 24 ساعة.",
+      "sendAnotherMessage": "إرسال رسالة أخرى",
+      "messageCouldNotBeSent": "تعذّر إرسال الرسالة.",
+      "messageCouldNotBeSent2": "تعذّر إرسال الرسالة",
+      "weHitANetworkIssue": "واجهنا مشكلة في الاتصال بالخدمة. أعد المحاولة أو راسلني مباشرة على",
+      "retry": "إعادة المحاولة",
+      "name": "الاسم",
+      "eGSarahJenkins": "مثال: سارة أحمد",
+      "emailAddress": "البريد الإلكتروني",
+      "subject": "الموضوع",
+      "optional": "اختياري",
+      "eGFrontendContractNuxt": "مثال: عقد واجهات أمامية / استشارة Nuxt.js",
+      "message": "الرسالة",
+      "tellMeAboutYourProject": "حدثني عن نطاق مشروعك والجدول الزمني والتقنيات...",
+      "sendingMessage": "جارٍ إرسال الرسالة...",
+      "sendMessage": "إرسال الرسالة",
+      "allInquiriesAreReceivedPrivately": "تصلني جميع الاستفسارات بشكل خاص. دون رسائل مزعجة أو مشاركة مع أطراف أخرى.",
+      "pleaseEnterYourName": "من فضلك أدخل اسمك.",
+      "pleaseEnterAValidEmail": "من فضلك أدخل بريداً إلكترونياً صالحاً.",
+      "pleaseProvideDetailsAboutYour": "من فضلك اكتب تفاصيل استفسارك."
+    },
+    "capabilitiesSection": {
+      "coreServices": "مجالات العمل",
+      "capabilities": "القدرات الهندسية",
+      "handsOnFrontendEngineeringFocused": "تطوير واجهات أمامية يركز على البنية البرمجية والمكونات القابلة لإعادة الاستخدام والتعاون الوثيق مع فرق الخلفية."
+    },
+    "experiencePreviewSection": {
+      "careerTimeline": "المسيرة المهنية",
+      "experiencePreview": "ملخص الخبرة",
+      "fullBio": "السيرة الكاملة",
+      "viewFullExperience": "عرض الخبرة الكاملة"
+    },
+    "featuredProjectCard": {
+      "viewCaseStudy": "عرض دراسة الحالة"
+    },
+    "featuredWorkSection": {
+      "portfolioHighlights": "أبرز الأعمال",
+      "featuredWork": "أعمال مختارة",
+      "all15": "كل الأعمال (15)",
+      "viewAll15Projects": "عرض جميع المشاريع (15)"
+    },
+    "skillsAndContactSection": {
+      "technologyFocus": "التقنيات الأساسية",
+      "getInTouch": "تواصل معي",
+      "haveAProjectOrRole": "هل لديك مشروع أو فرصة عمل في ذهنك؟ لنتحدث.",
+      "alwaysGladToDiscussVue": "يسعدني دائماً مناقشة مشاريع الويب ومنصات التجارة الإلكترونية وبناء الواجهات باستخدام Vue.js و Nuxt.js.",
+      "sendAMessage": "أرسل رسالة"
+    },
+    "footer": {
+      "basedInCairoEgyptBilingual": "مقيم في القاهرة، مصر. ثنائي اللغة: العربية والإنجليزية.",
+      "email": "البريد الإلكتروني",
+      "footerNavigation": "التنقل في التذييل",
+      "tagline": "مطور واجهات أمامية · Vue.js · Nuxt.js · TypeScript"
+    },
+    "header": {
+      "letsTalk": "لنتحدث",
+      "navigationMenu": "قائمة التنقل",
+      "closeNavigationMenu": "إغلاق قائمة التنقل",
+      "mobileNavigation": "التنقل",
+      "primaryNavigation": "التنقل الرئيسي",
+      "openNavigationMenu": "فتح قائمة التنقل"
+    },
+    "vCvDownload": {
+      "downloadCV": "تحميل السيرة الذاتية"
+    },
+    "vScrollToTop": {
+      "scrollToTop": "العودة للأعلى"
+    },
+    "vToggleLocale": {
+      "switchLanguageToArabic": "Switch language to English",
+      "text": "EN"
+    },
+    "caseStudyContributions": {
+      "engineeringResponsibilities": "المسؤوليات الهندسية",
+      "myContribution": "مساهمتي"
+    },
+    "caseStudyGallery": {
+      "interfaceViewsAppFlows": "واجهات المشروع وتدفقاته",
+      "clickThumbnailToPreviewStage": "اضغط على المصغّرة للمعاينة",
+      "projectScreenshotGallery": "معرض لقطات المشروع"
+    },
+    "caseStudyHero": {
+      "breadcrumb": "مسار التنقل",
+      "home": "الرئيسية",
+      "work": "أعمالي",
+      "role": "الدور:",
+      "deliverable": "المخرج:"
+    },
+    "caseStudyMetrics": {
+      "byTheNumbers": "بالأرقام",
+      "keyMetrics": "أبرز الأرقام",
+      "highlights": "أبرز النقاط"
+    },
+    "caseStudyPager": {
+      "previousProject": "المشروع السابق",
+      "nextProject": "المشروع التالي"
+    },
+    "workCtaSection": {
+      "directCollaboration": "تعاون مباشر",
+      "interestedInWorkingTogether": "مهتم بالعمل معاً؟",
+      "iAmAvailableForFrontend": "متاح لأعمال معمارية الواجهات الأمامية وتطبيقات الويب باستخدام Nuxt.js وVue.js والأدوار الأمامية المتقدمة.",
+      "getInTouch": "تواصل معي"
+    },
+    "workFilterBar": {
+      "filterProjectsByCategory": "تصفية المشاريع حسب الفئة"
+    },
+    "workProjectCard": {
+      "viewCaseStudy": "عرض دراسة الحالة"
+    },
+    "aboutPage": {
+      "aboutAmrMohamed": "نبذة عني {'|'} عمرو محمد",
+      "frontendDeveloperInCairoWith": "مطور واجهات أمامية في القاهرة بخبرة تتجاوز 3 سنوات في بناء تطبيقات Vue.js وNuxt.js: مواقع ومتاجر إلكترونية ولوحات تحكم.",
+      "collaborate": "لنتعاون",
+      "letsBuildSomethingReliableTogether": "لنبنِ معاً شيئاً موثوقاً.",
+      "whetherYouHaveAnUpcoming": "سواء كان لديك مشروع قادم أو تحتاج استشارة في الواجهات الأمامية أو توظف لدور Vue.js/Nuxt.js، يسعدني التواصل."
+    },
+    "contactPage": {
+      "contact": "تواصل",
+      "letsBuildSomethingUseful": "لنبنِ شيئاً مفيداً.",
+      "haveARoleProjectOr": "لديك وظيفة أو مشروع أو فكرة للتعاون؟ أرسل لي رسالة.",
+      "contactAmrMohamed": "تواصل {'|'} عمرو محمد",
+      "getInTouchWithAmr": "تواصل مع عمرو محمد بخصوص الوظائف الأمامية ومشاريع Vue.js وNuxt.js أو التعاون."
+    },
+    "homePage": {
+      "amrMohamedPersonalPortfolio": "عمرو محمد {'|'} المعرض الشخصي",
+      "frontendDeveloperInCairoBuilding": "مطور واجهات أمامية في القاهرة يبني مواقع ومنصات تجارة إلكترونية ولوحات تحكم بـ Vue.js وNuxt.js."
+    },
+    "workPage": {
+      "breadcrumb": "مسار التنقل",
+      "portfolio": "الأعمال",
+      "work": "المشاريع",
+      "selectedWork": "أعمال مختارة",
+      "aSelectionOfProductionWork": "مجموعة من الأعمال الإنتاجية والمشاريع الحرة والتجارب الشخصية في التجارة الإلكترونية ولوحات التحكم والمحتوى وتطبيقات الويب.",
+      "projectsCataloged": "مشروع مدرج",
+      "noProjectsFound": "لا توجد مشاريع",
+      "noProjectsMatchThisCategory": "لا توجد مشاريع في هذه الفئة. اضغط \"الكل\" لعرض جميع الأعمال.",
+      "resetFilter": "إعادة ضبط التصفية",
+      "selectedWorkAmrMohamed": "أعمال مختارة {'|'} عمرو محمد",
+      "productionWorkFreelanceProjectsAnd": "أعمال إنتاجية ومشاريع حرة وتجارب شخصية لعمرو محمد، مطور واجهات أمامية في القاهرة.",
+      "all": "الكل",
+      "professional": "احترافي",
+      "freelance": "عمل حر",
+      "personal": "شخصي"
+    },
+    "caseStudyPage": {
+      "technologyStack": "التقنيات المستخدمة",
+      "projectInquiry": "استفسار عن مشروع",
+      "haveASimilarProjectIn": "لديك مشروع مشابه؟ لنتحدث.",
+      "availableToArchitectFrontendApplicat": "متاح لتصميم تطبيقات الواجهات الأمامية والاستشارة في أنظمة Vue.js/Nuxt.js أو الانضمام إلى فرق الهندسة.",
+      "startAConversation": "ابدأ المحادثة",
+      "title": "{title} — دراسة حالة {'|'} عمرو محمد"
+    },
+    "vToggleTheme": {
+      "switchToLight": "التبديل إلى المظهر الفاتح",
+      "switchToDark": "التبديل إلى المظهر الداكن"
+    },
+    "vProjectStatusBadge": {
+      "inProgress": "قيد التنفيذ"
+    },
+    "profileAvatar": {
+      "alt": "صورة شخصية لعمرو محمد",
+      "role": "مطور واجهات أمامية"
+    }
+  }
+}

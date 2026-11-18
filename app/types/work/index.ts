@@ -12,7 +12,7 @@ export interface WorkProjectCardProps {
 
 export interface WorkFilterOption {
   value: WorkFilter;
-  label: { en: string; ar: string };
+  label: LocalizedText;
   count: number;
 }
 

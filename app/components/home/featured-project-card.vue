@@ -81,7 +81,7 @@
           variant="ghost"
           class="shrink-0"
         >
-          {{ locale === "en" ? "View case study" : "عرض دراسة الحالة" }}
+          {{ t('ui.featuredProjectCard.viewCaseStudy') }}
         </LazyVButton>
       </div>
     </div>
@@ -92,7 +92,7 @@
 import type { FeaturedProject } from "@/types/portfolio";
 import type { FeaturedProjectCardProps } from "@/types/home";
 
-const { locale, t } = useLocale();
+const { t } = useLocale();
 
 defineProps<FeaturedProjectCardProps>();
 </script>

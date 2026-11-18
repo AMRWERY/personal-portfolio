@@ -15,5 +15,12 @@
 </template>
 
 <script lang="ts" setup>
+const { t } = useLocale();
 
+useSeoMeta({
+  title: () =>
+    t('ui.homePage.amrMohamedPersonalPortfolio'),
+  description: () =>
+    t('ui.homePage.frontendDeveloperInCairoBuilding'),
+});
 </script>

@@ -71,7 +71,7 @@
         <ul class="md:pt-2 md:border-t border-border space-y-2 md:space-y-3">
           <li
             v-for="language in ABOUT_LANGUAGES.items"
-            :key="language.name.en"
+            :key="language.name"
             class="flex items-center justify-between gap-3 text-body-sm"
           >
             <span

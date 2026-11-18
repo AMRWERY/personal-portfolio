@@ -66,11 +66,13 @@
   --default-transition-duration: 140ms;
   --default-transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
 
-  --font-display: "Montserrat", sans-serif;
-  --font-headline: "Montserrat", sans-serif;
-  --font-title: "Montserrat", sans-serif;
-  --font-body: "Montserrat", sans-serif;
-  --font-label: "Montserrat", sans-serif;
+  /* Space Grotesk has no Arabic glyphs: Arabic text falls through to the system Arabic font */
+  --font-sans: "Space Grotesk", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-headline: "Space Grotesk", system-ui, sans-serif;
+  --font-title: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Space Grotesk", system-ui, sans-serif;
+  --font-label: "Space Grotesk", system-ui, sans-serif;
 
   /* Typography Scale */
   --text-display-lg: 48px;

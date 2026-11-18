@@ -4,21 +4,21 @@
   >
     <!-- Breadcrumb -->
     <nav
-      :aria-label="locale === 'en' ? 'Breadcrumb' : 'مسار التنقل'"
+      :aria-label="t('ui.caseStudyHero.breadcrumb')"
       class="flex items-center gap-1.5 md:gap-2 text-label-sm font-semibold uppercase tracking-wider mb-4 md:mb-6 text-text-secondary"
     >
       <nuxt-link-locale
         to="/"
-        class="inline-flex items-center min-h-11 lg:min-h-0 hover:text-accent-ink transition-colors"
+        class="inline-flex items-center justify-center min-h-11 min-w-11 lg:min-h-0 lg:min-w-0 hover:text-accent-ink transition-colors"
       >
-        {{ locale === "en" ? "Home" : "الرئيسية" }}
+        {{ t('ui.caseStudyHero.home') }}
       </nuxt-link-locale>
       <span aria-hidden="true">/</span>
       <nuxt-link-locale
         to="/work"
-        class="inline-flex items-center min-h-11 lg:min-h-0 hover:text-accent-ink transition-colors"
+        class="inline-flex items-center justify-center min-h-11 min-w-11 lg:min-h-0 lg:min-w-0 hover:text-accent-ink transition-colors"
       >
-        {{ locale === "en" ? "Work" : "أعمالي" }}
+        {{ t('ui.caseStudyHero.work') }}
       </nuxt-link-locale>
       <span aria-hidden="true">/</span>
       <span class="text-accent-ink" aria-current="page">{{ shortTitle }}</span>
@@ -54,13 +54,13 @@
         class="hidden md:flex flex-wrap items-center gap-x-3 gap-y-1 text-body-sm text-text-secondary"
       >
         <span class="font-semibold text-text-primary">
-          {{ locale === "en" ? "Role:" : "الدور:" }}
+          {{ t('ui.caseStudyHero.role') }}
         </span>
         <span>{{ t(project.role) }}</span>
         <template v-if="caseStudy?.deliverable">
           <span aria-hidden="true">·</span>
           <span class="font-semibold text-text-primary">
-            {{ locale === "en" ? "Deliverable:" : "المخرج:" }}
+            {{ t('ui.caseStudyHero.deliverable') }}
           </span>
           <span>{{ t(caseStudy.deliverable) }}</span>
         </template>

@@ -5,20 +5,20 @@
         class="hidden md:block font-headline text-label-sm font-semibold text-accent-ink uppercase tracking-wider mb-1"
       >
         {{
-          locale === "en" ? "ENGINEERING RESPONSIBILITIES" : "المسؤوليات الهندسية"
+          t('ui.caseStudyContributions.engineeringResponsibilities')
         }}
       </span>
       <h2
         class="font-headline text-headline-sm md:text-headline-lg font-bold text-text-primary"
       >
-        {{ locale === "en" ? "My contribution" : "مساهمتي" }}
+        {{ t('ui.caseStudyContributions.myContribution') }}
       </h2>
     </div>
 
     <div class="space-y-3 md:space-y-4">
       <div
         v-for="item in contributions"
-        :key="item.title.en"
+        :key="item.title"
         class="flex items-start gap-4 p-4 md:p-5 rounded-xl border border-border bg-surface"
       >
         <div
@@ -55,7 +55,7 @@
 <script lang="ts" setup>
 import type { CaseStudyContribution, LocalizedText } from "@/types/portfolio";
 
-const { locale, t } = useLocale();
+const { t } = useLocale();
 
 defineProps<{
   contributions: CaseStudyContribution[];

@@ -7,21 +7,21 @@
     <div class="reveal-head flex flex-row items-end justify-between gap-4 mb-6 md:mb-12">
       <div>
         <LazyVEyebrowLabel class="hidden md:inline-flex mb-2">
-          {{ locale === "en" ? "PORTFOLIO HIGHLIGHTS" : "أبرز الأعمال" }}
+          {{ t('ui.featuredWorkSection.portfolioHighlights') }}
         </LazyVEyebrowLabel>
         <h2
           class="font-headline text-headline-sm md:text-headline-lg lg:text-headline-xl font-bold text-text-primary tracking-tight"
         >
-          {{ locale === "en" ? "Featured work" : "أعمال مختارة" }}
+          {{ t('ui.featuredWorkSection.featuredWork') }}
         </h2>
       </div>
 
       <LazyVButton to="/work" variant="ghost">
         <span class="md:hidden">{{
-          locale === "en" ? "All 15" : "كل الأعمال (15)"
+          t('ui.featuredWorkSection.all15')
         }}</span>
         <span class="hidden md:inline">{{
-          locale === "en" ? "View all 15 projects" : "عرض جميع المشاريع (15)"
+          t('ui.featuredWorkSection.viewAll15Projects')
         }}</span>
         <LazyVAppIcon
           name="lucide:arrow-right"
@@ -43,7 +43,7 @@
 <script lang="ts" setup>
 import { FEATURED_PROJECTS } from "@/data/home";
 
-const { locale } = useLocale();
+const { t } = useLocale();
 
 const sectionRef = ref<HTMLElement | null>(null);
 

@@ -7,18 +7,16 @@
     <div class="max-w-(--container-max) mx-auto px-5 lg:px-12">
       <div class="reveal-head max-w-2xl mb-5 md:mb-12">
         <LazyVEyebrowLabel class="hidden md:inline-flex mb-2">
-          {{ locale === "en" ? "CORE SERVICES" : "مجالات العمل" }}
+          {{ t('ui.capabilitiesSection.coreServices') }}
         </LazyVEyebrowLabel>
         <h2
           class="font-headline text-headline-sm md:text-headline-lg lg:text-headline-xl font-bold text-text-primary tracking-tight"
         >
-          {{ locale === "en" ? "Capabilities" : "القدرات الهندسية" }}
+          {{ t('ui.capabilitiesSection.capabilities') }}
         </h2>
         <p class="hidden md:block text-body-md text-text-secondary mt-2">
           {{
-            locale === "en"
-              ? "Hands-on frontend engineering focused on architecture, reusable interfaces, and robust backend collaboration."
-              : "تطوير واجهات أمامية يركز على البنية البرمجية والمكونات القابلة لإعادة الاستخدام والتعاون الوثيق مع فرق الخلفية."
+            t('ui.capabilitiesSection.handsOnFrontendEngineeringFocused')
           }}
         </p>
       </div>
@@ -57,7 +55,7 @@
 <script lang="ts" setup>
 import { CAPABILITIES } from "@/data/home";
 
-const { locale, t } = useLocale();
+const { t } = useLocale();
 
 const sectionRef = ref<HTMLElement | null>(null);
 

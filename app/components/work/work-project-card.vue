@@ -108,7 +108,7 @@
 
         <div class="flex flex-wrap items-center justify-between gap-3">
           <LazyVButton :to="`/work/${project.slug}`" variant="ghost">
-            {{ locale === "en" ? "View case study" : "عرض دراسة الحالة" }}
+            {{ t('ui.workProjectCard.viewCaseStudy') }}
             <LazyVAppIcon
               name="lucide:arrow-right"
               class="w-4 h-4 rtl:rotate-180 arrow-nudge-x"
@@ -122,7 +122,7 @@
               :href="link.href"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-1 min-h-11 lg:min-h-0 text-label-sm font-medium text-text-secondary hover:text-text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+              class="inline-flex items-center justify-center gap-1 min-h-11 min-w-11 lg:min-h-0 lg:min-w-0 text-label-sm font-medium text-text-secondary hover:text-text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
             >
               <LazyVAppIcon
                 v-if="link.kind === 'repo'"
@@ -152,7 +152,7 @@
 <script lang="ts" setup>
 import type { WorkProjectCardProps } from "@/types/work";
 
-const { locale, t } = useLocale();
+const { t } = useLocale();
 
 defineProps<WorkProjectCardProps>();
 </script>

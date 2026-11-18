@@ -59,10 +59,8 @@ export interface CvFile {
   filename: string;
 }
 
-export interface LocalizedText {
-  en: string;
-  ar: string;
-}
+/** A message key into app/i18n/locales/{en,ar}.json, resolved with t(key). */
+export type LocalizedText = string;
 
 export interface NavItem {
   label: LocalizedText;

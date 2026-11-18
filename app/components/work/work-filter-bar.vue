@@ -4,9 +4,7 @@
     class="relative flex items-center gap-2 md:gap-2.5 overflow-x-auto no-scrollbar pb-1 md:flex-wrap md:overflow-visible"
     role="tablist"
     :aria-label="
-      locale === 'en'
-        ? 'Filter projects by category'
-        : 'تصفية المشاريع حسب الفئة'
+      t('ui.workFilterBar.filterProjectsByCategory')
     "
   >
     <!-- Sliding active pill (sits behind the tabs) -->

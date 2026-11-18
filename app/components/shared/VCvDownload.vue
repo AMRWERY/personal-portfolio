@@ -9,7 +9,7 @@
       @click="open = !open"
     >
       <LazyVAppIcon name="lucide:download" class="w-4 h-4" />
-      <span>{{ locale === "en" ? "Download CV" : "تحميل السيرة الذاتية" }}</span>
+      <span>{{ t('ui.vCvDownload.downloadCV') }}</span>
       <LazyVAppIcon
         name="lucide:chevron-down"
         class="w-4 h-4 transition-transform duration-(--duration-fast) motion-reduce:transition-none"

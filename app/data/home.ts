@@ -8,279 +8,201 @@ import type {
 } from "@/types/portfolio";
 
 export const PROFILE = {
-  name: "Amr Mohamed",
-  monogram: "AM",
-  avatarSrc: "/img/personal-photo.png", // the single source for every avatar on the site
-  email: "amrmounir2@gmail.com",
-  phone: "+201022655742",
-  phoneDisplay: "+20 102 265 5742",
-  githubUrl: "https://github.com/AMRWERY",
-  githubHandle: "github.com/AMRWERY",
-  linkedinUrl: "https://www.linkedin.com/in/amr-mohamed-3a714b1a7",
-  linkedinHandle: "in/amr-mohamed-3a714b1a7",
+  "name": "Amr Mohamed",
+  "monogram": "AM",
+  "avatarSrc": "/img/personal-photo.png",
+  "email": "amrmounir2@gmail.com",
+  "phone": "+201022655742",
+  "phoneDisplay": "+20 102 265 5742",
+  "githubUrl": "https://github.com/AMRWERY",
+  "githubHandle": "github.com/AMRWERY",
+  "linkedinUrl": "https://www.linkedin.com/in/amr-mohamed-3a714b1a7",
+  "linkedinHandle": "in/amr-mohamed-3a714b1a7"
 };
 
-/** Files live in /public/cv. Replace them in place to update the downloads. */
 export const CV_FILES: CvFile[] = [
   {
-    format: "pdf",
-    label: { en: "PDF", ar: "PDF" },
-    description: {
-      en: "Best for reading and printing",
-      ar: "الأنسب للقراءة والطباعة",
-    },
-    href: encodeURI("/cv/Amr Mohamed CV.pdf"),
-    filename: "Amr Mohamed CV.pdf",
+    "format": "pdf",
+    "label": "content.cVFILES.pdf.label",
+    "description": "content.cVFILES.pdf.description",
+    "href": "/cv/Amr%20Mohamed%20CV.pdf",
+    "filename": "Amr Mohamed CV.pdf"
   },
   {
-    format: "docx",
-    label: { en: "Word (.docx)", ar: "Word (.docx)" },
-    description: {
-      en: "Editable document",
-      ar: "مستند قابل للتعديل",
-    },
-    href: encodeURI("/cv/Amr Mohamed CV.docx"),
-    filename: "Amr Mohamed CV.docx",
-  },
+    "format": "docx",
+    "label": "content.cVFILES.docx.label",
+    "description": "content.cVFILES.docx.description",
+    "href": "/cv/Amr%20Mohamed%20CV.docx",
+    "filename": "Amr Mohamed CV.docx"
+  }
 ];
 
 export const NAV_ITEMS: NavItem[] = [
-  { key: "home", label: { en: "Home", ar: "الرئيسية" }, to: "/" },
-  { key: "work", label: { en: "Work", ar: "أعمالي" }, to: "/work" },
-  { key: "about", label: { en: "About", ar: "نبذة عني" }, to: "/about" },
+  {
+    "key": "home",
+    "label": "content.nAVITEMS.home.label",
+    "to": "/"
+  },
+  {
+    "key": "work",
+    "label": "content.nAVITEMS.work.label",
+    "to": "/work"
+  },
+  {
+    "key": "about",
+    "label": "content.nAVITEMS.about.label",
+    "to": "/about"
+  }
 ];
 
 export const HERO_COPY = {
-  greeting: {
-    en: "Hi, I am Amr Mohamed",
-    ar: "مرحباً، أنا عمرو محمد",
-  },
-  headline: {
-    en: "I build thoughtful web experiences with Vue.js & Nuxt.js.",
-    ar: "أبني تجارب ويب متقنة باستخدام Vue.js و Nuxt.js.",
-  },
-  supporting: {
-    en: "Frontend Developer with 3+ years of experience building production websites, e-commerce platforms, and admin dashboards. Focused on Vue.js, Nuxt.js, TypeScript, reusable UI, and reliable API integration.",
-    ar: "مطور واجهات أمامية بخبرة تتجاوز 3 سنوات في بناء المواقع الإنتاجية ومنصات التجارة الإلكترونية ولوحات التحكم، مع التركيز على Vue.js و Nuxt.js و TypeScript وبناء مكونات قابلة لإعادة الاستخدام وربط واجهات البرمجة.",
-  },
-  primaryCta: { en: "Explore my work", ar: "استكشف أعمالي" },
-  secondaryCta: { en: "Get in touch", ar: "تواصل معي" },
-  location: { en: "Based in Cairo, Egypt", ar: "مقيم في القاهرة، مصر" },
+  "greeting": "content.hEROCOPY.greeting",
+  "headline": "content.hEROCOPY.headline",
+  "supporting": "content.hEROCOPY.supporting",
+  "primaryCta": "content.hEROCOPY.primaryCta",
+  "secondaryCta": "content.hEROCOPY.secondaryCta",
+  "location": "content.hEROCOPY.location"
 };
 
 export const IMPACT_METRICS: ImpactMetric[] = [
   {
-    value: "3+",
-    label: {
-      en: "Years of frontend experience",
-      ar: "سنوات خبرة في تطوير الواجهات",
-    },
-    context: { en: "Professional & Freelance", ar: "عمل احترافي ومستقل" },
-    highlight: true,
+    "value": "3+",
+    "label": "content.iMPACTMETRICS.0.label",
+    "context": "content.iMPACTMETRICS.0.context",
+    "highlight": true
   },
   {
-    value: "30",
-    label: {
-      en: "Pages in Marca Store's two-app project",
-      ar: "صفحة في مشروع متجر Marca Store",
-    },
-    context: { en: "Storefront & Admin", ar: "المتجر ولوحة الإدارة" },
+    "value": "30",
+    "label": "content.iMPACTMETRICS.1.label",
+    "context": "content.iMPACTMETRICS.1.context"
   },
   {
-    value: "46",
-    label: {
-      en: "Reusable components in Marca Store",
-      ar: "مكوناً قابلاً لإعادة الاستخدام في Marca Store",
-    },
-    context: { en: "21 Pinia Stores · RTL", ar: "21 مخزن Pinia · دعم RTL" },
+    "value": "46",
+    "label": "content.iMPACTMETRICS.2.label",
+    "context": "content.iMPACTMETRICS.2.context"
   },
   {
-    value: "100+",
-    label: {
-      en: "Views in the Gym Management Dashboard",
-      ar: "شاشة في لوحة إدارة الصالة الرياضية",
-    },
-    context: { en: "ASAGTC · Real-Time Echo", ar: "ASAGTC · تحديثات فورية" },
-  },
+    "value": "100+",
+    "label": "content.iMPACTMETRICS.3.label",
+    "context": "content.iMPACTMETRICS.3.context"
+  }
 ];
 
 export const FEATURED_PROJECTS: FeaturedProject[] = [
   {
-    slug: "lexus-egypt",
-    title: "Lexus Egypt — Official Website",
-    mediaLabel: "Lexus Egypt — Official Website",
-    status: "In progress",
-    categoryBadge: { en: "Professional · Code95", ar: "احترافي · Code95" },
-    role: {
-      en: "Frontend Developer — Project Owner",
-      ar: "مطور واجهات أمامية — مالك التنفيذ",
-    },
-    summary: {
-      en: "Owns the frontend from initial setup and architecture through UI development and API integration toward launch.",
-      ar: "تولي تطوير الواجهة الأمامية من التأسيس والبنية البرمجية وصولاً إلى بناء الصفحات وربط واجهات البرمجة حتى الإطلاق.",
-    },
-    stack: ["Nuxt.js", "TypeScript", "Tailwind CSS"],
+    "slug": "lexus-egypt",
+    "title": "Lexus Egypt — Official Website",
+    "mediaLabel": "Lexus Egypt — Official Website",
+    "status": "In progress",
+    "categoryBadge": "content.fEATUREDPROJECTS.lexusEgypt.categoryBadge",
+    "role": "content.fEATUREDPROJECTS.lexusEgypt.role",
+    "summary": "content.fEATUREDPROJECTS.lexusEgypt.summary",
+    "stack": [
+      "Nuxt.js",
+      "TypeScript",
+      "Tailwind CSS"
+    ]
   },
   {
-    slug: "marca-store",
-    title: "Marca Store — E-Commerce Platform",
-    mediaLabel: "Marca Store — Storefront & Admin",
-    categoryBadge: {
-      en: "Freelance · Egypt & KSA",
-      ar: "عمل حر · مصر والسعودية",
-    },
-    role: {
-      en: "Freelance Frontend Developer",
-      ar: "مطور واجهات أمامية مستقل",
-    },
-    summary: {
-      en: "Two-app e-commerce frontend for Egypt and Saudi Arabia, with 30 pages and 46 reusable components.",
-      ar: "منصة تجارة إلكترونية من تطبيقين لمصر والسعودية تضم 30 صفحة و46 مكوناً قابلاً لإعادة الاستخدام.",
-    },
-    stack: ["Vue.js", "Pinia", "Firebase"],
+    "slug": "marca-store",
+    "title": "Marca Store — E-Commerce Platform",
+    "mediaLabel": "Marca Store — Storefront & Admin",
+    "categoryBadge": "content.fEATUREDPROJECTS.marcaStore.categoryBadge",
+    "role": "content.fEATUREDPROJECTS.marcaStore.role",
+    "summary": "content.fEATUREDPROJECTS.marcaStore.summary",
+    "stack": [
+      "Vue.js",
+      "Pinia",
+      "Firebase"
+    ]
   },
   {
-    slug: "gym-management",
-    title: "Gym Management Dashboard — ASAGTC",
-    mediaLabel: "Gym Management Dashboard — ASAGTC",
-    categoryBadge: {
-      en: "Freelance · Cairo, Egypt",
-      ar: "عمل حر · القاهرة، مصر",
-    },
-    role: {
-      en: "Freelance Frontend Developer",
-      ar: "مطور واجهات أمامية مستقل",
-    },
-    summary: {
-      en: "Dashboard with 100+ views, real-time updates, and report exports. Integrated with backend REST APIs and Laravel Echo.",
-      ar: "لوحة تحكم تضم أكثر من 100 شاشة وتحديثات فورية وتصدير التقارير مع تكامل REST API و Laravel Echo.",
-    },
-    stack: ["Vue.js", "Vuex", "Pusher"],
+    "slug": "gym-management",
+    "title": "Gym Management Dashboard — ASAGTC",
+    "mediaLabel": "Gym Management Dashboard — ASAGTC",
+    "categoryBadge": "content.fEATUREDPROJECTS.gymManagement.categoryBadge",
+    "role": "content.fEATUREDPROJECTS.gymManagement.role",
+    "summary": "content.fEATUREDPROJECTS.gymManagement.summary",
+    "stack": [
+      "Vue.js",
+      "Vuex",
+      "Pusher"
+    ]
   },
   {
-    slug: "abdal",
-    title: "Abdal — Recruitment Services Platform",
-    mediaLabel: "Abdal Recruitment Platform",
-    categoryBadge: {
-      en: "Professional · Saudi Arabia",
-      ar: "احترافي · السعودية",
-    },
-    role: {
-      en: "Frontend Developer — Code95",
-      ar: "مطور واجهات أمامية — Code95",
-    },
-    summary: {
-      en: "Saudi recruitment platform with Visa, Mada, and STC Pay integrations. Continuous UI bug fixing and feature enhancements.",
-      ar: "منصة توظيف واستقدام سعودية مع تكامل Visa و Mada و STC Pay وإصلاح الأعطال وتطوير المزايا.",
-    },
-    stack: ["Vue.js", "REST API", "Bootstrap"],
-  },
+    "slug": "abdal",
+    "title": "Abdal — Recruitment Services Platform",
+    "mediaLabel": "Abdal Recruitment Platform",
+    "categoryBadge": "content.fEATUREDPROJECTS.abdal.categoryBadge",
+    "role": "content.fEATUREDPROJECTS.abdal.role",
+    "summary": "content.fEATUREDPROJECTS.abdal.summary",
+    "stack": [
+      "Vue.js",
+      "REST API",
+      "Bootstrap"
+    ]
+  }
 ];
 
 export const CAPABILITIES: CapabilityItem[] = [
   {
-    id: "vue-nuxt",
-    icon: "lucide:layers",
-    title: {
-      en: "Vue.js & Nuxt.js Development",
-      ar: "تطوير تطبيقات Vue.js و Nuxt.js",
-    },
-    description: {
-      en: "Production SPAs and SSR web applications built with Vue 3 Composition API, Nuxt 3, and strict TypeScript patterns.",
-      ar: "تطبيقات ويب إنتاجية باستخدام Vue 3 Composition API و Nuxt و TypeScript.",
-    },
+    "id": "vue-nuxt",
+    "icon": "lucide:layers",
+    "title": "content.cAPABILITIES.vueNuxt.title",
+    "description": "content.cAPABILITIES.vueNuxt.description"
   },
   {
-    id: "architecture",
-    icon: "lucide:component",
-    title: {
-      en: "Reusable Components & Frontend Architecture",
-      ar: "مكونات قابلة لإعادة الاستخدام وبنية الواجهات",
-    },
-    description: {
-      en: "Structured component libraries, consistent state modules in Pinia, and maintainable Tailwind CSS token systems.",
-      ar: "مكتبات مكونات منظمة وإدارة حالة واضحة عبر Pinia وأنظمة تصميم باستخدام Tailwind CSS.",
-    },
+    "id": "architecture",
+    "icon": "lucide:component",
+    "title": "content.cAPABILITIES.architecture.title",
+    "description": "content.cAPABILITIES.architecture.description"
   },
   {
-    id: "ecommerce-dashboards",
-    icon: "lucide:shopping-bag",
-    title: {
-      en: "E-Commerce & Dashboards",
-      ar: "المتاجر الإلكترونية ولوحات التحكم",
-    },
-    description: {
-      en: "Customer storefronts, complex filter catalogs, and comprehensive management dashboards with report exports.",
-      ar: "واجهات متاجر إلكترونية متكاملة ولوحات تحكم إدارية تدعم تصدير التقارير.",
-    },
+    "id": "ecommerce-dashboards",
+    "icon": "lucide:shopping-bag",
+    "title": "content.cAPABILITIES.ecommerceDashboards.title",
+    "description": "content.cAPABILITIES.ecommerceDashboards.description"
   },
   {
-    id: "rest-api",
-    icon: "lucide:network",
-    title: {
-      en: "REST API Integration",
-      ar: "ربط واجهات برمجة التطبيقات (REST API)",
-    },
-    description: {
-      en: "Clean asynchronous API communication, error handling, and real-time events via Pusher and Laravel Echo.",
-      ar: "ربط واجهات البرمجة ومعالجة الأخطاء والتحديثات الفورية عبر Pusher و Laravel Echo.",
-    },
+    "id": "rest-api",
+    "icon": "lucide:network",
+    "title": "content.cAPABILITIES.restApi.title",
+    "description": "content.cAPABILITIES.restApi.description"
   },
   {
-    id: "i18n-rtl",
-    icon: "lucide:languages",
-    title: {
-      en: "Arabic / English & RTL Interfaces",
-      ar: "واجهات عربية وإنجليزية ودعم RTL",
-    },
-    description: {
-      en: "Full bilingual localization using vue-i18n and Nuxt i18n with consistent right-to-left alignment and typography.",
-      ar: "توطين كامل باللغتين العربية والإنجليزية عبر vue-i18n و Nuxt i18n مع ضبط اتجاه RTL.",
-    },
+    "id": "i18n-rtl",
+    "icon": "lucide:languages",
+    "title": "content.cAPABILITIES.i18nRtl.title",
+    "description": "content.cAPABILITIES.i18nRtl.description"
   },
   {
-    id: "payments-rbac",
-    icon: "lucide:shield-check",
-    title: {
-      en: "Payment Integrations & Role-Based Interfaces",
-      ar: "بوابات الدفع والصلاحيات متعددة الأدوار",
-    },
-    description: {
-      en: "Checkout flows with Visa, Mada, and STC Pay alongside multi-tier role permissions (Admin, Employee, Merchant).",
-      ar: "تدفقات دفع عبر Visa و Mada و STC Pay مع واجهات مبنية على صلاحيات الأدوار.",
-    },
-  },
+    "id": "payments-rbac",
+    "icon": "lucide:shield-check",
+    "title": "content.cAPABILITIES.paymentsRbac.title",
+    "description": "content.cAPABILITIES.paymentsRbac.description"
+  }
 ];
 
 export const EXPERIENCE_PREVIEW: ExperiencePreviewItem[] = [
   {
-    period: { en: "Jul 2025 – Present", ar: "يوليو 2025 – الآن" },
-    company: "Code95 Web Technologies",
-    role: { en: "Frontend Developer", ar: "مطور واجهات أمامية" },
-    projectsSummary: {
-      en: "Key projects: Lexus Egypt, Abdal, Toyota Egypt, Attijariwafa Bank Egypt.",
-      ar: "أبرز المشاريع: Lexus Egypt، Abdal، Toyota Egypt، Attijariwafa Bank Egypt.",
-    },
-    isCurrent: true,
+    "period": "content.eXPERIENCEPREVIEW.0.period",
+    "company": "Code95 Web Technologies",
+    "role": "content.eXPERIENCEPREVIEW.0.role",
+    "projectsSummary": "content.eXPERIENCEPREVIEW.0.projectsSummary",
+    "isCurrent": true
   },
   {
-    period: { en: "Jan 2024 – May 2025", ar: "يناير 2024 – مايو 2025" },
-    company: "Kabret",
-    role: { en: "Frontend Developer", ar: "مطور واجهات أمامية" },
-    projectsSummary: {
-      en: "Key projects: Jai Dashboard, Treat Dashboard admin modules.",
-      ar: "أبرز المشاريع: لوحة تحكم Jai، لوحة تحكم Treat.",
-    },
+    "period": "content.eXPERIENCEPREVIEW.1.period",
+    "company": "Kabret",
+    "role": "content.eXPERIENCEPREVIEW.1.role",
+    "projectsSummary": "content.eXPERIENCEPREVIEW.1.projectsSummary"
   },
   {
-    period: { en: "Apr 2023 – Nov 2025", ar: "أبريل 2023 – نوفمبر 2025" },
-    company: "Freelance Frontend Projects",
-    role: { en: "Part-time Engagements", ar: "مشاريع عمل حر" },
-    projectsSummary: {
-      en: "Key projects: Marca Store (2 apps), Gym Management Dashboard, Lugar Store.",
-      ar: "أبرز المشاريع: Marca Store، لوحة إدارة الصالة الرياضية، Lugar Store.",
-    },
-  },
+    "period": "content.eXPERIENCEPREVIEW.2.period",
+    "company": "Freelance Frontend Projects",
+    "role": "content.eXPERIENCEPREVIEW.2.role",
+    "projectsSummary": "content.eXPERIENCEPREVIEW.2.projectsSummary"
+  }
 ];
 
 export const SKILLS_PREVIEW = [
@@ -292,5 +214,5 @@ export const SKILLS_PREVIEW = [
   "Tailwind CSS",
   "REST APIs",
   "Firebase",
-  "Vuex",
+  "Vuex"
 ];

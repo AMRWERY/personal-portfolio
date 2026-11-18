@@ -23,6 +23,8 @@ export default defineNuxtConfig({
     storesDirs: ["./app/stores/**"],
   },
   i18n: {
+    // Locale files, vue-i18n config and detector live in app/i18n (resolved from the project root)
+    restructureDir: "app/i18n",
     baseUrl: process.env.NUXT_PUBLIC_SITE_URL || "",
     locales: [
       {
@@ -70,7 +72,15 @@ export default defineNuxtConfig({
         },
       ],
       noscript: [],
-      link: [{}],
+      link: [
+        // Space Grotesk (variable, 300–700). preconnect first so the font request starts early.
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap",
+        },
+      ],
       meta: [
         {
           name: "viewport",

@@ -11,30 +11,20 @@
     <AboutEducationLanguages />
 
     <WorkCtaSection
-      :eyebrow="{ en: 'COLLABORATE', ar: 'لنتعاون' }"
-      :title="{
-        en: 'Let\'s build something reliable together.',
-        ar: 'لنبنِ معاً شيئاً موثوقاً.',
-      }"
-      :description="{
-        en: 'Whether you have an upcoming project, need frontend consulting, or are hiring for a Vue.js/Nuxt.js role, I\'d love to connect.',
-        ar: 'سواء كان لديك مشروع قادم أو تحتاج استشارة في الواجهات الأمامية أو توظف لدور Vue.js/Nuxt.js، يسعدني التواصل.',
-      }"
+      :eyebrow="'ui.aboutPage.collaborate'"
+      :title="'ui.aboutPage.letsBuildSomethingReliableTogether'"
+      :description="'ui.aboutPage.whetherYouHaveAnUpcoming'"
     />
   </div>
 </template>
 
 <script lang="ts" setup>
-const { locale } = useLocale();
+const { t } = useLocale();
 
 useSeoMeta({
   title: () =>
-    locale.value === "en"
-      ? "About Amr Mohamed — Frontend Developer"
-      : "عن عمرو محمد — مطور واجهات أمامية",
+    t('ui.aboutPage.aboutAmrMohamed'),
   description: () =>
-    locale.value === "en"
-      ? "Frontend developer in Cairo with 3+ years building Vue.js and Nuxt.js applications: websites, e-commerce storefronts, and admin dashboards."
-      : "مطور واجهات أمامية في القاهرة بخبرة تتجاوز 3 سنوات في بناء تطبيقات Vue.js وNuxt.js: مواقع ومتاجر إلكترونية ولوحات تحكم.",
+    t('ui.aboutPage.frontendDeveloperInCairoWith'),
 });
 </script>

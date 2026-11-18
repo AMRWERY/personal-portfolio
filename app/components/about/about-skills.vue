@@ -43,7 +43,7 @@
           <div class="flex flex-wrap gap-1.5 md:pt-1">
             <LazyVTechBadge
               v-for="skill in group.skills"
-              :key="skill.en"
+              :key="skill"
               :label="t(skill)"
             />
           </div>
@@ -62,7 +62,7 @@
         <div class="flex flex-wrap gap-2 pt-1">
           <LazyVTechBadge
             v-for="item in ABOUT_SKILLS.specializations.items"
-            :key="item.en"
+            :key="item"
             :label="t(item)"
           />
         </div>

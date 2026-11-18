@@ -1,13 +1,15 @@
 import type { Locale } from "~/types/supported-locales";
-import type { LocalizedText } from "~/types/portfolio";
 
 export function useLocale() {
-  const { locale, setLocale } = useI18n();
+  const { locale, t: translate, setLocale } = useI18n();
   const switchLocalePath = useSwitchLocalePath();
 
-  /** Pick the string for the active locale from an { en, ar } object. */
-  const t = (text: LocalizedText): string =>
-    text[locale.value as Locale] ?? text.en;
+  /**
+   * Translate a message key from app/i18n/locales/{en,ar}.json.
+   * `named` fills {placeholders}, e.g. t("ui.caseStudyPage.title", { title }).
+   */
+  const t = (key: string, named?: Record<string, unknown>): string =>
+    named ? translate(key, named) : translate(key);
 
   /** Crossfades between languages so the dir/lang flip is never seen as a jump. */
   async function toggleLocale() {

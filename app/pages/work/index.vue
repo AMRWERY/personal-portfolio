@@ -5,13 +5,13 @@
       class="max-w-(--container-max) mx-auto px-5 lg:px-12 pt-8 md:pt-16 lg:pt-20 pb-6 md:pb-8"
     >
       <nav
-        :aria-label="locale === 'en' ? 'Breadcrumb' : 'مسار التنقل'"
+        :aria-label="t('ui.workPage.breadcrumb')"
         class="flex items-center gap-1.5 md:gap-2 text-label-sm font-semibold text-accent-ink uppercase tracking-wider mb-3 md:mb-4"
       >
-        <span>{{ locale === "en" ? "PORTFOLIO" : "الأعمال" }}</span>
+        <span>{{ t('ui.workPage.portfolio') }}</span>
         <span class="text-text-secondary" aria-hidden="true">/</span>
         <span class="text-text-primary">{{
-          locale === "en" ? "WORK" : "المشاريع"
+          t('ui.workPage.work')
         }}</span>
       </nav>
 
@@ -22,15 +22,13 @@
           <h1
             class="font-headline text-headline-xl-mobile md:text-display-lg font-bold text-text-primary tracking-tight"
           >
-            {{ locale === "en" ? "Selected work" : "أعمال مختارة" }}
+            {{ t('ui.workPage.selectedWork') }}
           </h1>
           <p
             class="text-body-sm md:text-body-lg text-text-secondary font-light leading-relaxed"
           >
             {{
-              locale === "en"
-                ? "A selection of production work, freelance projects, and personal builds across e-commerce, dashboards, content, and web applications."
-                : "مجموعة من الأعمال الإنتاجية والمشاريع الحرة والتجارب الشخصية في التجارة الإلكترونية ولوحات التحكم والمحتوى وتطبيقات الويب."
+              t('ui.workPage.aSelectionOfProductionWork')
             }}
           </p>
         </div>
@@ -42,7 +40,7 @@
           <span class="text-accent-ink font-bold">{{
             visibleProjects.length
           }}</span>
-          {{ locale === "en" ? "projects cataloged" : "مشروع مدرج" }}
+          {{ t('ui.workPage.projectsCataloged') }}
         </div>
       </div>
 
@@ -87,17 +85,15 @@
         <h2
           class="font-headline text-headline-sm font-bold text-text-primary"
         >
-          {{ locale === "en" ? "No projects found" : "لا توجد مشاريع" }}
+          {{ t('ui.workPage.noProjectsFound') }}
         </h2>
         <p class="text-body-sm text-text-secondary">
           {{
-            locale === "en"
-              ? 'No projects match this category. Click "All" to view the full portfolio.'
-              : 'لا توجد مشاريع في هذه الفئة. اضغط "الكل" لعرض جميع الأعمال.'
+            t('ui.workPage.noProjectsMatchThisCategory')
           }}
         </p>
         <LazyVButton size="sm" @click="activeFilter = 'all'">
-          {{ locale === "en" ? "Reset filter" : "إعادة ضبط التصفية" }}
+          {{ t('ui.workPage.resetFilter') }}
         </LazyVButton>
       </div>
     </section>
@@ -110,17 +106,13 @@
 import { WORK_PROJECTS } from "@/data/work";
 import type { WorkFilter, WorkFilterOption } from "@/types/work";
 
-const { locale } = useLocale();
+const { t } = useLocale();
 
 useSeoMeta({
   title: () =>
-    locale.value === "en"
-      ? "Selected Work — Amr Mohamed"
-      : "أعمال مختارة — عمرو محمد",
+    t('ui.workPage.selectedWorkAmrMohamed'),
   description: () =>
-    locale.value === "en"
-      ? "Production work, freelance projects, and personal builds by Amr Mohamed, a frontend developer in Cairo."
-      : "أعمال إنتاجية ومشاريع حرة وتجارب شخصية لعمرو محمد، مطور واجهات أمامية في القاهرة.",
+    t('ui.workPage.productionWorkFreelanceProjectsAnd'),
 });
 
 const activeFilter = ref<WorkFilter>("all");
@@ -131,20 +123,20 @@ const countOf = (category: WorkFilter) =>
     : WORK_PROJECTS.filter((p) => p.category === category).length;
 
 const filterOptions: WorkFilterOption[] = [
-  { value: "all", label: { en: "All", ar: "الكل" }, count: countOf("all") },
+  { value: "all", label: 'ui.workPage.all', count: countOf("all") },
   {
     value: "professional",
-    label: { en: "Professional", ar: "احترافي" },
+    label: 'ui.workPage.professional',
     count: countOf("professional"),
   },
   {
     value: "freelance",
-    label: { en: "Freelance", ar: "عمل حر" },
+    label: 'ui.workPage.freelance',
     count: countOf("freelance"),
   },
   {
     value: "personal",
-    label: { en: "Personal", ar: "شخصي" },
+    label: 'ui.workPage.personal',
     count: countOf("personal"),
   },
 ];

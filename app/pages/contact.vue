@@ -5,16 +5,14 @@
     <!-- Intro -->
     <div class="max-w-2xl mb-8 md:mb-16 space-y-3 md:space-y-4">
       <LazyVEyebrowLabel with-dot>
-        {{ locale === "en" ? "CONTACT" : "تواصل" }}
+        {{ t('ui.contactPage.contact') }}
       </LazyVEyebrowLabel>
 
       <h1
         class="font-headline text-headline-xl-mobile md:text-display-lg-mobile lg:text-display-lg font-bold text-text-primary tracking-tight text-balance"
       >
         {{
-          locale === "en"
-            ? "Let's build something useful."
-            : "لنبنِ شيئاً مفيداً."
+          t('ui.contactPage.letsBuildSomethingUseful')
         }}
       </h1>
 
@@ -22,9 +20,7 @@
         class="text-body-md md:text-body-lg text-text-secondary font-light text-pretty"
       >
         {{
-          locale === "en"
-            ? "Have a role, project, or collaboration in mind? Send me a message."
-            : "لديك وظيفة أو مشروع أو فكرة للتعاون؟ أرسل لي رسالة."
+          t('ui.contactPage.haveARoleProjectOr')
         }}
       </p>
     </div>
@@ -40,16 +36,12 @@
 </template>
 
 <script lang="ts" setup>
-const { locale } = useLocale();
+const { t } = useLocale();
 
 useSeoMeta({
   title: () =>
-    locale.value === "en"
-      ? "Contact — Amr Mohamed · Frontend Developer"
-      : "تواصل — عمرو محمد · مطور واجهات أمامية",
+    t('ui.contactPage.contactAmrMohamed'),
   description: () =>
-    locale.value === "en"
-      ? "Get in touch with Amr Mohamed about frontend roles, Vue.js and Nuxt.js projects, or collaborations."
-      : "تواصل مع عمرو محمد بخصوص الوظائف الأمامية ومشاريع Vue.js وNuxt.js أو التعاون.",
+    t('ui.contactPage.getInTouchWithAmr'),
 });
 </script>

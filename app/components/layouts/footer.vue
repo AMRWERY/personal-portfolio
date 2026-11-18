@@ -13,14 +13,12 @@
             </span>
             <span class="text-text-muted" aria-hidden="true">·</span>
             <span class="text-body-sm text-text-secondary">
-              Frontend Developer · Vue.js · Nuxt.js · TypeScript
+              {{ t('ui.footer.tagline') }}
             </span>
           </div>
           <p class="text-body-sm text-text-secondary">
             {{
-              locale === "en"
-                ? "Based in Cairo, Egypt. Bilingual English & Arabic."
-                : "مقيم في القاهرة، مصر. ثنائي اللغة: العربية والإنجليزية."
+              t('ui.footer.basedInCairoEgyptBilingual')
             }}
           </p>
         </div>
@@ -51,7 +49,7 @@
             class="hover:text-accent-ink transition-colors inline-flex items-center gap-1.5 min-h-11 lg:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
           >
             <LazyVAppIcon name="lucide:mail" class="w-4 h-4" />
-            <span>{{ locale === "en" ? "Email" : "البريد الإلكتروني" }}</span>
+            <span>{{ t('ui.footer.email') }}</span>
           </a>
         </div>
       </div>
@@ -61,7 +59,7 @@
       >
         <div class="flex flex-wrap items-center justify-center gap-4">
           <span>© {{ currentYear }} {{ PROFILE.name }}</span>
-          <nav aria-label="Footer navigation" class="flex items-center gap-4">
+          <nav :aria-label="t('ui.footer.footerNavigation')" class="flex items-center gap-4">
             <nuxt-link-locale
               v-for="item in NAV_ITEMS"
               :key="item.key"

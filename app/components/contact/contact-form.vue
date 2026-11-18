@@ -25,22 +25,20 @@
       <h2
         class="font-headline text-headline-sm font-bold text-text-primary"
       >
-        {{ locale === "en" ? "Message received" : "تم استلام رسالتك" }}
+        {{ t('ui.contactForm.messageReceived') }}
       </h2>
       <p
         class="text-body-sm md:text-body-md text-text-secondary max-w-md mx-auto leading-relaxed"
       >
         {{
-          locale === "en"
-            ? "Thank you for reaching out. I will review your requirements and respond within 24 hours."
-            : "شكراً لتواصلك. سأراجع متطلباتك وأرد عليك خلال 24 ساعة."
+          t('ui.contactForm.thankYouForReachingOut')
         }}
       </p>
       <div class="pt-2 md:pt-4">
         <LazyVButton variant="secondary" @click="reset">
           <LazyVAppIcon name="lucide:rotate-ccw" class="w-4 h-4" />
           <span>{{
-            locale === "en" ? "Send another message" : "إرسال رسالة أخرى"
+            t('ui.contactForm.sendAnotherMessage')
           }}</span>
         </LazyVButton>
       </div>
@@ -51,9 +49,7 @@
       <p class="sr-only" role="alert">
         {{
           status === "error"
-            ? locale === "en"
-              ? "Message could not be sent."
-              : "تعذّر إرسال الرسالة."
+            ? t('ui.contactForm.messageCouldNotBeSent')
             : ""
         }}
       </p>
@@ -81,16 +77,12 @@
             class="block font-semibold text-rose-600 dark:text-rose-400"
           >
             {{
-              locale === "en"
-                ? "Message could not be sent"
-                : "تعذّر إرسال الرسالة"
+              t('ui.contactForm.messageCouldNotBeSent2')
             }}
           </span>
           <span class="text-text-secondary">
             {{
-              locale === "en"
-                ? "We hit a network issue reaching the service. Please retry, or email me directly at"
-                : "واجهنا مشكلة في الاتصال بالخدمة. أعد المحاولة أو راسلني مباشرة على"
+              t('ui.contactForm.weHitANetworkIssue')
             }}
             <a
               :href="`mailto:${PROFILE.email}`"
@@ -105,7 +97,7 @@
           class="shrink-0 px-2.5 py-1 rounded bg-rose-500/20 text-rose-700 dark:text-rose-300 hover:bg-rose-500/30 text-label-sm font-medium transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           @click="onSubmit"
         >
-          {{ locale === "en" ? "Retry" : "إعادة المحاولة" }}
+          {{ t('ui.contactForm.retry') }}
         </button>
       </div>
         </div>
@@ -114,7 +106,7 @@
       <form novalidate class="space-y-4 md:space-y-6" @submit.prevent="onSubmit">
         <VFormField
           id="contact-name"
-          :label="locale === 'en' ? 'Name' : 'الاسم'"
+          :label="t('ui.contactForm.name')"
           required
           :error="errors.name"
         >
@@ -126,7 +118,7 @@
               name="name"
               autocomplete="name"
               required
-              :placeholder="locale === 'en' ? 'e.g. Sarah Jenkins' : 'مثال: سارة أحمد'"
+              :placeholder="t('ui.contactForm.eGSarahJenkins')"
               :aria-invalid="invalid"
               :aria-describedby="describedBy"
               :class="inputClass(invalid)"
@@ -137,7 +129,7 @@
 
         <VFormField
           id="contact-email"
-          :label="locale === 'en' ? 'Email address' : 'البريد الإلكتروني'"
+          :label="t('ui.contactForm.emailAddress')"
           required
           :error="errors.email"
         >
@@ -169,8 +161,8 @@
 
         <VFormField
           id="contact-subject"
-          :label="locale === 'en' ? 'Subject' : 'الموضوع'"
-          :optional-label="locale === 'en' ? 'Optional' : 'اختياري'"
+          :label="t('ui.contactForm.subject')"
+          :optional-label="t('ui.contactForm.optional')"
         >
           <input
             id="contact-subject"
@@ -178,9 +170,7 @@
             type="text"
             name="subject"
             :placeholder="
-              locale === 'en'
-                ? 'e.g. Frontend Contract / Nuxt.js Consulting'
-                : 'مثال: عقد واجهات أمامية / استشارة Nuxt.js'
+              t('ui.contactForm.eGFrontendContractNuxt')
             "
             :class="inputClass(false)"
           />
@@ -188,7 +178,7 @@
 
         <VFormField
           id="contact-message"
-          :label="locale === 'en' ? 'Message' : 'الرسالة'"
+          :label="t('ui.contactForm.message')"
           required
           :error="errors.message"
         >
@@ -200,9 +190,7 @@
               required
               rows="5"
               :placeholder="
-                locale === 'en'
-                  ? 'Tell me about your project scope, timeline, and tech stack...'
-                  : 'حدثني عن نطاق مشروعك والجدول الزمني والتقنيات...'
+                t('ui.contactForm.tellMeAboutYourProject')
               "
               :aria-invalid="invalid"
               :aria-describedby="describedBy"
@@ -248,11 +236,11 @@
                 />
               </svg>
               <span>{{
-                locale === "en" ? "Sending message..." : "جارٍ إرسال الرسالة..."
+                t('ui.contactForm.sendingMessage')
               }}</span>
             </span>
             <span v-else class="inline-flex items-center gap-2">
-              <span>{{ locale === "en" ? "Send message" : "إرسال الرسالة" }}</span>
+              <span>{{ t('ui.contactForm.sendMessage') }}</span>
               <LazyVAppIcon
                 name="lucide:send"
                 class="w-4 h-4 rtl:-scale-x-100 arrow-nudge-x"
@@ -262,9 +250,7 @@
 
           <p class="text-body-sm text-text-secondary text-center">
             {{
-              locale === "en"
-                ? "All inquiries are received privately. No spam or third-party sharing."
-                : "تصلني جميع الاستفسارات بشكل خاص. دون رسائل مزعجة أو مشاركة مع أطراف أخرى."
+              t('ui.contactForm.allInquiriesAreReceivedPrivately')
             }}
           </p>
         </div>
@@ -279,7 +265,7 @@ import { PROFILE } from "@/data/home";
 
 type Status = "idle" | "sending" | "success" | "error";
 
-const { locale } = useLocale();
+const { locale, t } = useLocale();
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -306,22 +292,15 @@ const inputClass = (invalid: boolean, withIcon = false) => [
 
 /** Fills `errors`; returns the id of the first invalid control (to focus it). */
 function validate(): string | null {
-  const en = locale.value === "en";
   errors.name = form.name.trim()
     ? ""
-    : en
-      ? "Please enter your name."
-      : "من فضلك أدخل اسمك.";
+    : t('ui.contactForm.pleaseEnterYourName');
   errors.email = EMAIL_PATTERN.test(form.email.trim())
     ? ""
-    : en
-      ? "Please enter a valid email address."
-      : "من فضلك أدخل بريداً إلكترونياً صالحاً.";
+    : t('ui.contactForm.pleaseEnterAValidEmail');
   errors.message = form.message.trim()
     ? ""
-    : en
-      ? "Please provide details about your inquiry."
-      : "من فضلك اكتب تفاصيل استفسارك.";
+    : t('ui.contactForm.pleaseProvideDetailsAboutYour');
 
   if (errors.name) return "contact-name";
   if (errors.email) return "contact-email";

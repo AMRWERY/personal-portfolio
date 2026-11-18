@@ -64,16 +64,12 @@
             class="text-label-sm font-semibold uppercase tracking-wider text-text-secondary"
           >
             {{
-              locale === "en"
-                ? "Interface Views & App Flows"
-                : "واجهات المشروع وتدفقاته"
+              t('ui.caseStudyGallery.interfaceViewsAppFlows')
             }}
           </span>
           <span class="text-label-sm text-text-secondary">
             {{
-              locale === "en"
-                ? "Click thumbnail to preview stage"
-                : "اضغط على المصغّرة للمعاينة"
+              t('ui.caseStudyGallery.clickThumbnailToPreviewStage')
             }}
           </span>
         </div>
@@ -83,7 +79,7 @@
           class="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-4"
           role="tablist"
           :aria-label="
-            locale === 'en' ? 'Project screenshot gallery' : 'معرض لقطات المشروع'
+            t('ui.caseStudyGallery.projectScreenshotGallery')
           "
         >
           <button
@@ -131,7 +127,7 @@
           class="md:hidden flex items-center gap-2 overflow-x-auto no-scrollbar"
           role="tablist"
           :aria-label="
-            locale === 'en' ? 'Project screenshot gallery' : 'معرض لقطات المشروع'
+            t('ui.caseStudyGallery.projectScreenshotGallery')
           "
         >
           <button
@@ -161,7 +157,7 @@ import type { CaseStudyProps } from "@/types/work";
 
 const props = defineProps<CaseStudyProps>();
 
-const { locale, t } = useLocale();
+const { t } = useLocale();
 
 const gallery = computed(() => props.project.caseStudy?.gallery ?? []);
 const hasGallery = computed(() => gallery.value.length > 0);

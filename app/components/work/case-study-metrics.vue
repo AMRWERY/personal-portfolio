@@ -4,16 +4,16 @@
       <span
         class="hidden md:block font-headline text-label-sm font-semibold text-accent-ink uppercase tracking-wider mb-1"
       >
-        {{ locale === "en" ? "BY THE NUMBERS" : "بالأرقام" }}
+        {{ t('ui.caseStudyMetrics.byTheNumbers') }}
       </span>
       <h2
         class="font-headline text-headline-sm md:text-headline-lg font-bold text-text-primary"
       >
         <span class="md:hidden">{{
-          locale === "en" ? "Key metrics" : "أبرز الأرقام"
+          t('ui.caseStudyMetrics.keyMetrics')
         }}</span>
         <span class="hidden md:inline">{{
-          locale === "en" ? "Highlights" : "أبرز النقاط"
+          t('ui.caseStudyMetrics.highlights')
         }}</span>
       </h2>
     </div>
@@ -21,7 +21,7 @@
     <div class="grid grid-cols-2 gap-3 md:gap-4">
       <div
         v-for="(item, index) in metrics"
-        :key="item.label.en"
+        :key="item.label"
         class="p-3 md:p-5 rounded-lg md:rounded-xl border border-border bg-surface-elevated md:bg-surface"
       >
         <div
@@ -46,7 +46,7 @@
 <script lang="ts" setup>
 import type { CaseStudyMetric } from "@/types/portfolio";
 
-const { locale, t } = useLocale();
+const { t } = useLocale();
 
 defineProps<{ metrics: CaseStudyMetric[] }>();
 </script>

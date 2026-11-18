@@ -3,7 +3,9 @@
     :variant="variant"
     :size="size"
     :aria-label="
-      theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
+      theme === 'dark'
+        ? t('ui.vToggleTheme.switchToLight')
+        : t('ui.vToggleTheme.switchToDark')
     "
     @click="toggleTheme"
   >
@@ -23,4 +25,5 @@ withDefaults(defineProps<Props>(), {
 });
 
 const { theme, toggleTheme } = useTheme();
+const { t } = useLocale();
 </script>

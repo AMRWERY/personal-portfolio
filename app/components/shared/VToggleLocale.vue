@@ -3,13 +3,11 @@
     :variant="variant"
     :size="size"
     :aria-label="
-      locale === 'en'
-        ? 'Switch language to Arabic'
-        : 'Switch language to English'
+      t('ui.vToggleLocale.switchLanguageToArabic')
     "
     @click="toggleLocale"
   >
-    {{ locale === "en" ? "ع" : "EN" }}
+    {{ t('ui.vToggleLocale.text') }}
   </LazyVButton>
 </template>
 
@@ -21,5 +19,5 @@ withDefaults(defineProps<Props>(), {
   size: "sm",
 });
 
-const { locale, toggleLocale } = useLocale();
+const { toggleLocale, t } = useLocale();
 </script>

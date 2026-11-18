@@ -7,7 +7,7 @@
     <img
       v-if="showRealImage()"
       :src="src"
-      :alt="alt"
+      :alt="altText"
       width="32"
       height="32"
       class="w-full h-full object-cover max-w-none [transform:translate(-18%,79%)_scale(2.6)]"
@@ -31,7 +31,7 @@
     <img
       v-if="showRealImage()"
       :src="src"
-      :alt="alt"
+      :alt="altText"
       :width="size === 'md' ? 208 : 340"
       :height="size === 'md' ? 260 : 425"
       decoding="async"
@@ -68,7 +68,7 @@
         {{ name }}
       </p>
       <p class="text-body-sm text-text-secondary mt-0.5 font-medium">
-        {{ role }}
+        {{ roleText }}
       </p>
     </div>
   </div>
@@ -81,11 +81,15 @@ const props = withDefaults(defineProps<Props>(), {
   variant: "hero",
   size: "lg",
   src: "",
-  alt: "Portrait of Amr Mohamed",
   monogram: "AM",
   name: "Amr Mohamed",
-  role: "Frontend Developer",
 });
+
+const { t } = useLocale();
+
+// Defaults come from the locale files so the alt text / role follow the language
+const altText = computed(() => props.alt ?? t("ui.profileAvatar.alt"));
+const roleText = computed(() => props.role ?? t("ui.profileAvatar.role"));
 
 const hasImageError = ref(false);
 

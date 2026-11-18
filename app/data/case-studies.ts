@@ -21,184 +21,109 @@ const metric = (
 
 export const CASE_STUDIES: Record<string, CaseStudy> = {
   "lexus-egypt": {
-    typeLabel: {
-      en: "Professional · Official Website",
-      ar: "احترافي · موقع رسمي",
-    },
-    market: { en: "Egypt", ar: "مصر" },
-    deliverable: {
-      en: "New Official Website (Frontend)",
-      ar: "الموقع الرسمي الجديد (الواجهة الأمامية)",
-    },
-    intro: {
-      en: "Owns the frontend from initial project setup, architecture, and workflow through UI component development and REST API integration. Leads ongoing development toward launch.",
-      ar: "يتولى الواجهة الأمامية من تأسيس المشروع وبنيته وسير العمل، مروراً ببناء مكونات الواجهة وربط واجهات REST، ويقود التطوير المستمر نحو الإطلاق.",
-    },
-    contributions: [
+    "typeLabel": "content.cASESTUDIES.lexusEgypt.typeLabel",
+    "market": "content.cASESTUDIES.lexusEgypt.market",
+    "deliverable": "content.cASESTUDIES.lexusEgypt.deliverable",
+    "intro": "content.cASESTUDIES.lexusEgypt.intro",
+    "contributions": [
       {
-        icon: "lucide:layers",
-        title: {
-          en: "Frontend From Scratch",
-          ar: "واجهة أمامية من الصفر",
-        },
-        text: {
-          en: "Created the frontend from the ground up: project setup, architecture, and development workflow.",
-          ar: "أنشأ الواجهة الأمامية من الأساس: تأسيس المشروع والبنية البرمجية وسير العمل.",
-        },
+        "icon": "lucide:layers",
+        "title": "content.cASESTUDIES.lexusEgypt.contributions.0.title",
+        "text": "content.cASESTUDIES.lexusEgypt.contributions.0.text"
       },
       {
-        icon: "lucide:component",
-        title: {
-          en: "Component Foundations",
-          ar: "أساس المكونات",
-        },
-        text: {
-          en: "Established the component foundations the rest of the interface is built on.",
-          ar: "أرسى أساس المكونات الذي تُبنى عليه بقية الواجهة.",
-        },
+        "icon": "lucide:component",
+        "title": "content.cASESTUDIES.lexusEgypt.contributions.1.title",
+        "text": "content.cASESTUDIES.lexusEgypt.contributions.1.text"
       },
       {
-        icon: "lucide:network",
-        title: {
-          en: "Backend Integration",
-          ar: "التكامل مع الخلفية",
-        },
-        text: {
-          en: "Leads integration with the backend REST APIs.",
-          ar: "يقود التكامل مع واجهات REST الخاصة بالخلفية.",
-        },
-      },
+        "icon": "lucide:network",
+        "title": "content.cASESTUDIES.lexusEgypt.contributions.2.title",
+        "text": "content.cASESTUDIES.lexusEgypt.contributions.2.text"
+      }
     ],
-    note: {
-      en: "Project status: the work covers frontend architecture and development and remains actively in progress. The new website has not launched yet.",
-      ar: "حالة المشروع: يشمل العمل بنية الواجهة الأمامية وتطويرها ولا يزال قيد التنفيذ. لم يُطلق الموقع الجديد بعد.",
-    },
+    "note": "content.cASESTUDIES.lexusEgypt.note"
   },
-
   "marca-store": {
-    typeLabel: {
-      en: "Freelance · E-Commerce Platform",
-      ar: "عمل حر · منصة تجارة إلكترونية",
-    },
-    market: { en: "Egypt & Saudi Arabia", ar: "مصر والسعودية" },
-    deliverable: {
-      en: "Two Production Web Applications",
-      ar: "تطبيقان ويب إنتاجيان",
-    },
-    intro: {
-      en: "Built the full frontend for a two-market e-commerce business across Egypt and Saudi Arabia. Delivered a customer-facing storefront alongside a comprehensive admin portal connected to Firebase for real-time inventory, order processing, and customer management.",
-      ar: "بنى الواجهة الأمامية الكاملة لنشاط تجارة إلكترونية يخدم سوقي مصر والسعودية. سلّم متجراً موجهاً للعملاء ولوحة إدارة شاملة مرتبطة بخدمة Firebase لإدارة المخزون والطلبات والعملاء لحظياً.",
-    },
-    gallery: [
+    "typeLabel": "content.cASESTUDIES.marcaStore.typeLabel",
+    "market": "content.cASESTUDIES.marcaStore.market",
+    "deliverable": "content.cASESTUDIES.marcaStore.deliverable",
+    "intro": "content.cASESTUDIES.marcaStore.intro",
+    "gallery": [
       {
-        icon: "lucide:shopping-bag",
-        title: { en: "Storefront Home", ar: "الصفحة الرئيسية للمتجر" },
-        caption: { en: "Customer Interface", ar: "واجهة العميل" },
-        stageTitle: {
-          en: "Marca Store — Customer Storefront Preview",
-          ar: "Marca Store — معاينة متجر العملاء",
-        },
-        stageDescription: {
-          en: "Product catalog, category filters, cart, and bilingual Arabic/English checkout flow.",
-          ar: "كتالوج المنتجات وفلاتر الفئات والسلة ومسار دفع ثنائي اللغة بالعربية والإنجليزية.",
-        },
+        "icon": "lucide:shopping-bag",
+        "title": "content.cASESTUDIES.marcaStore.gallery.0.title",
+        "caption": "content.cASESTUDIES.marcaStore.gallery.0.caption",
+        "stageTitle": "content.cASESTUDIES.marcaStore.gallery.0.stageTitle",
+        "stageDescription": "content.cASESTUDIES.marcaStore.gallery.0.stageDescription"
       },
       {
-        icon: "lucide:layout-dashboard",
-        title: { en: "Admin Dashboard", ar: "لوحة الإدارة" },
-        caption: { en: "Orders & Products", ar: "الطلبات والمنتجات" },
-        stageTitle: {
-          en: "Marca Store — Admin Management Backoffice",
-          ar: "Marca Store — لوحة الإدارة الخلفية",
-        },
-        stageDescription: {
-          en: "Complete order fulfillment lifecycle, inventory tracking, and Firebase authentication.",
-          ar: "دورة تنفيذ الطلبات كاملة وتتبع المخزون ومصادقة Firebase.",
-        },
+        "icon": "lucide:layout-dashboard",
+        "title": "content.cASESTUDIES.marcaStore.gallery.1.title",
+        "caption": "content.cASESTUDIES.marcaStore.gallery.1.caption",
+        "stageTitle": "content.cASESTUDIES.marcaStore.gallery.1.stageTitle",
+        "stageDescription": "content.cASESTUDIES.marcaStore.gallery.1.stageDescription"
       },
       {
-        icon: "lucide:users",
-        title: { en: "Role Permissions", ar: "صلاحيات الأدوار" },
-        caption: {
-          en: "Admin/Employee/Merchant",
-          ar: "مدير/موظف/تاجر",
-        },
-        stageTitle: {
-          en: "Marca Store — Three-Tier Account Permissions",
-          ar: "Marca Store — صلاحيات الحسابات بثلاثة مستويات",
-        },
-        stageDescription: {
-          en: "Role-based dashboards restricting sensitive product manipulation for Admin, Employee, and Merchant.",
-          ar: "لوحات مبنية على الأدوار تقيّد العمليات الحساسة على المنتجات لكل من المدير والموظف والتاجر.",
-        },
+        "icon": "lucide:users",
+        "title": "content.cASESTUDIES.marcaStore.gallery.2.title",
+        "caption": "content.cASESTUDIES.marcaStore.gallery.2.caption",
+        "stageTitle": "content.cASESTUDIES.marcaStore.gallery.2.stageTitle",
+        "stageDescription": "content.cASESTUDIES.marcaStore.gallery.2.stageDescription"
       },
       {
-        icon: "lucide:languages",
-        title: { en: "Arabic RTL Layout", ar: "تخطيط العربية RTL" },
-        caption: { en: "vue-i18n Alignment", ar: "محاذاة vue-i18n" },
-        stageTitle: {
-          en: "Marca Store — Arabic RTL Localization Layout",
-          ar: "Marca Store — تخطيط التعريب بالعربية RTL",
-        },
-        stageDescription: {
-          en: "Pixel-perfect right-to-left UI mirroring using vue-i18n and localized VeeValidate forms.",
-          ar: "عكس دقيق للواجهة من اليمين إلى اليسار باستخدام vue-i18n ونماذج VeeValidate المعرّبة.",
-        },
-      },
+        "icon": "lucide:languages",
+        "title": "content.cASESTUDIES.marcaStore.gallery.3.title",
+        "caption": "content.cASESTUDIES.marcaStore.gallery.3.caption",
+        "stageTitle": "content.cASESTUDIES.marcaStore.gallery.3.stageTitle",
+        "stageDescription": "content.cASESTUDIES.marcaStore.gallery.3.stageDescription"
+      }
     ],
-    contributions: [
+    "contributions": [
       {
-        icon: "lucide:layers",
-        title: {
-          en: "Dual-Application Frontend Architecture",
-          ar: "بنية واجهة أمامية بتطبيقين",
-        },
-        text: {
-          en: "Architected two separate web clients from scratch using Vue.js and Vite: a customer shopping interface and an internal business admin portal.",
-          ar: "صمّم عميلي ويب منفصلين من الصفر باستخدام Vue.js وVite: واجهة تسوق للعملاء وبوابة إدارة داخلية للأعمال.",
-        },
+        "icon": "lucide:layers",
+        "title": "content.cASESTUDIES.marcaStore.contributions.0.title",
+        "text": "content.cASESTUDIES.marcaStore.contributions.0.text"
       },
       {
-        icon: "lucide:component",
-        title: {
-          en: "46 Modular Components & 21 Pinia Stores",
-          ar: "46 مكوناً و21 مخزن Pinia",
-        },
-        text: {
-          en: "Standardized UI elements across catalog cards, modals, checkout inputs, and dynamic charts with modular Pinia state management for cart, wishlist, auth, and order flow.",
-          ar: "وحّد عناصر الواجهة عبر بطاقات الكتالوج والنوافذ وحقول الدفع والرسوم الديناميكية، مع إدارة حالة معيارية باستخدام Pinia للسلة والمفضلة والمصادقة ومسار الطلب.",
-        },
+        "icon": "lucide:component",
+        "title": "content.cASESTUDIES.marcaStore.contributions.1.title",
+        "text": "content.cASESTUDIES.marcaStore.contributions.1.text"
       },
       {
-        icon: "lucide:shield-check",
-        title: {
-          en: "Three-Tier Role-Based Access Control (RBAC)",
-          ar: "تحكم بالوصول على ثلاثة مستويات (RBAC)",
-        },
-        text: {
-          en: "Enforced granular permissions for Admin, Employee, and Merchant accounts within the management backoffice, restricting product manipulation and order approvals.",
-          ar: "طبّق صلاحيات دقيقة لحسابات المدير والموظف والتاجر داخل لوحة الإدارة، مع تقييد تعديل المنتجات واعتماد الطلبات.",
-        },
+        "icon": "lucide:shield-check",
+        "title": "content.cASESTUDIES.marcaStore.contributions.2.title",
+        "text": "content.cASESTUDIES.marcaStore.contributions.2.text"
       },
       {
-        icon: "lucide:languages",
-        title: {
-          en: "Bilingual Localization & Full RTL Support",
-          ar: "تعريب ثنائي اللغة ودعم كامل لاتجاه RTL",
-        },
-        text: {
-          en: "Integrated vue-i18n for English and Arabic with automated right-to-left layout switching, mirrored navigation, and localized validation rules with VeeValidate.",
-          ar: "دمج vue-i18n للإنجليزية والعربية مع تبديل تلقائي لاتجاه التخطيط وتنقل معكوس وقواعد تحقق معرّبة عبر VeeValidate.",
-        },
-      },
+        "icon": "lucide:languages",
+        "title": "content.cASESTUDIES.marcaStore.contributions.3.title",
+        "text": "content.cASESTUDIES.marcaStore.contributions.3.text"
+      }
     ],
-    metrics: [
-      metric("2", "Apps Delivered", "تطبيقات مُسلَّمة", "Storefront & Admin", "المتجر والإدارة"),
-      metric("30", "Total Pages", "إجمالي الصفحات", "Both applications", "في التطبيقين"),
-      metric("46", "Components", "مكوناً", "Reusable library", "مكتبة قابلة لإعادة الاستخدام"),
-      metric("21", "Pinia Stores", "مخزن Pinia", "State management", "إدارة الحالة"),
+    "metrics": [
+      {
+        "value": "2",
+        "label": "content.cASESTUDIES.marcaStore.metrics.0.label",
+        "hint": "content.cASESTUDIES.marcaStore.metrics.0.hint"
+      },
+      {
+        "value": "30",
+        "label": "content.cASESTUDIES.marcaStore.metrics.1.label",
+        "hint": "content.cASESTUDIES.marcaStore.metrics.1.hint"
+      },
+      {
+        "value": "46",
+        "label": "content.cASESTUDIES.marcaStore.metrics.2.label",
+        "hint": "content.cASESTUDIES.marcaStore.metrics.2.hint"
+      },
+      {
+        "value": "21",
+        "label": "content.cASESTUDIES.marcaStore.metrics.3.label",
+        "hint": "content.cASESTUDIES.marcaStore.metrics.3.hint"
+      }
     ],
-    stack: [
+    "stack": [
       "Vue.js 3",
       "Vite",
       "Pinia",
@@ -206,47 +131,88 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
       "vue-i18n",
       "VeeValidate",
       "Firebase",
-      "REST APIs",
-    ],
+      "REST APIs"
+    ]
   },
-
-  // Metrics below only restate numbers already given in each project's summary.
   "gym-management": {
-    metrics: [
-      metric("100+", "Views", "واجهة"),
-      metric("38", "Vuex Store Modules", "وحدة Vuex"),
-    ],
+    "metrics": [
+      {
+        "value": "100+",
+        "label": "content.cASESTUDIES.gymManagement.metrics.0.label"
+      },
+      {
+        "value": "38",
+        "label": "content.cASESTUDIES.gymManagement.metrics.1.label"
+      }
+    ]
   },
   "lugar-store": {
-    metrics: [
-      metric("271", "Commits", "تعديلاً"),
-      metric("3", "Months", "أشهر", "Built from scratch", "بُني من الصفر"),
-    ],
+    "metrics": [
+      {
+        "value": "271",
+        "label": "content.cASESTUDIES.lugarStore.metrics.0.label"
+      },
+      {
+        "value": "3",
+        "label": "content.cASESTUDIES.lugarStore.metrics.1.label",
+        "hint": "content.cASESTUDIES.lugarStore.metrics.1.hint"
+      }
+    ]
   },
   "ship-it": {
-    metrics: [
-      metric("15", "Pages", "صفحة"),
-      metric("33", "Components", "مكوناً"),
-      metric("14", "Stores", "مخزناً"),
-      metric("293", "Commits", "تعديلاً"),
-    ],
+    "metrics": [
+      {
+        "value": "15",
+        "label": "content.cASESTUDIES.shipIt.metrics.0.label"
+      },
+      {
+        "value": "33",
+        "label": "content.cASESTUDIES.shipIt.metrics.1.label"
+      },
+      {
+        "value": "14",
+        "label": "content.cASESTUDIES.shipIt.metrics.2.label"
+      },
+      {
+        "value": "293",
+        "label": "content.cASESTUDIES.shipIt.metrics.3.label"
+      }
+    ]
   },
-  cospora: {
-    metrics: [
-      metric("18", "Pages", "صفحة"),
-      metric("43", "Components", "مكوناً"),
-    ],
+  "cospora": {
+    "metrics": [
+      {
+        "value": "18",
+        "label": "content.cASESTUDIES.cospora.metrics.0.label"
+      },
+      {
+        "value": "43",
+        "label": "content.cASESTUDIES.cospora.metrics.1.label"
+      }
+    ]
   },
   "al-quran": {
-    metrics: [
-      metric("22", "Pages", "صفحة"),
-      metric("18", "Components", "مكوناً"),
-    ],
+    "metrics": [
+      {
+        "value": "22",
+        "label": "content.cASESTUDIES.alQuran.metrics.0.label"
+      },
+      {
+        "value": "18",
+        "label": "content.cASESTUDIES.alQuran.metrics.1.label"
+      }
+    ]
   },
   "islam-app": {
-    metrics: [
-      metric("4", "Pages", "صفحات"),
-      metric("7", "Components", "مكونات"),
-    ],
-  },
+    "metrics": [
+      {
+        "value": "4",
+        "label": "content.cASESTUDIES.islamApp.metrics.0.label"
+      },
+      {
+        "value": "7",
+        "label": "content.cASESTUDIES.islamApp.metrics.1.label"
+      }
+    ]
+  }
 };

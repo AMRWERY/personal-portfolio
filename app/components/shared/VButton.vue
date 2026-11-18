@@ -99,7 +99,7 @@ const VARIANT_CLASSES: Record<Variant, string> = {
 const SIZE_CLASSES: Record<Size, string> = {
   // Touch screens get a 44px minimum; desktop keeps the compact size
   icon: "w-11 h-11 lg:w-9 lg:h-9 text-label-sm",
-  sm: "px-3 py-2 min-h-11 lg:min-h-0 text-label-sm",
+  sm: "px-3 py-2 min-h-11 min-w-11 lg:min-h-0 lg:min-w-0 text-label-sm",
   md: "px-6 py-3 min-h-11 text-label-md",
   lg: "px-8 py-3 lg:py-3.5 min-h-11 text-label-md",
 };

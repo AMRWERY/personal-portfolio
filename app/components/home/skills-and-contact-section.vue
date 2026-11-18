@@ -9,7 +9,7 @@
       <span
         class="hidden md:block font-headline text-label-sm font-semibold text-text-secondary uppercase tracking-wider text-center mb-4"
       >
-        {{ locale === "en" ? "TECHNOLOGY FOCUS" : "التقنيات الأساسية" }}
+        {{ t('ui.skillsAndContactSection.technologyFocus') }}
       </span>
       <div
         class="flex flex-wrap items-center justify-center gap-2 md:gap-3 max-w-4xl mx-auto"
@@ -31,16 +31,14 @@
         <span
           class="hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-soft text-accent-ink text-label-sm font-semibold uppercase tracking-wider"
         >
-          {{ locale === "en" ? "GET IN TOUCH" : "تواصل معي" }}
+          {{ t('ui.skillsAndContactSection.getInTouch') }}
         </span>
 
         <h2
           class="font-headline text-headline-sm md:text-headline-lg lg:text-headline-xl font-bold text-text-primary tracking-tight"
         >
           {{
-            locale === "en"
-              ? "Have a project or role in mind? Let's talk."
-              : "هل لديك مشروع أو فرصة عمل في ذهنك؟ لنتحدث."
+            t('ui.skillsAndContactSection.haveAProjectOrRole')
           }}
         </h2>
 
@@ -48,9 +46,7 @@
           class="text-body-sm md:text-body-lg text-text-secondary font-light leading-relaxed"
         >
           {{
-            locale === "en"
-              ? "Always glad to discuss Vue.js and Nuxt.js web applications, e-commerce platforms, or frontend architecture."
-              : "يسعدني دائماً مناقشة مشاريع الويب ومنصات التجارة الإلكترونية وبناء الواجهات باستخدام Vue.js و Nuxt.js."
+            t('ui.skillsAndContactSection.alwaysGladToDiscussVue')
           }}
         </p>
 
@@ -58,7 +54,7 @@
           class="pt-2 lg:pt-4 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 sm:gap-4"
         >
           <LazyVButton to="/contact" size="lg" class="w-full sm:w-auto">
-            <span>{{ locale === "en" ? "Send a message" : "أرسل رسالة" }}</span>
+            <span>{{ t('ui.skillsAndContactSection.sendAMessage') }}</span>
             <LazyVAppIcon
               name="lucide:arrow-right"
               class="w-4 h-4 rtl:rotate-180 arrow-nudge-x"
@@ -83,7 +79,7 @@
 <script lang="ts" setup>
 import { PROFILE, SKILLS_PREVIEW } from "@/data/home";
 
-const { locale } = useLocale();
+const { t } = useLocale();
 
 const sectionRef = ref<HTMLElement | null>(null);
 

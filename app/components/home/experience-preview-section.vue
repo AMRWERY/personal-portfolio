@@ -12,21 +12,21 @@
       >
         <div>
           <LazyVEyebrowLabel class="hidden md:inline-flex mb-1">
-            {{ locale === "en" ? "CAREER TIMELINE" : "المسيرة المهنية" }}
+            {{ t('ui.experiencePreviewSection.careerTimeline') }}
           </LazyVEyebrowLabel>
           <h2
             class="font-headline text-body-md md:text-headline-lg font-bold text-text-primary tracking-tight"
           >
-            {{ locale === "en" ? "Experience preview" : "ملخص الخبرة" }}
+            {{ t('ui.experiencePreviewSection.experiencePreview') }}
           </h2>
         </div>
 
         <LazyVButton to="/about" variant="ghost">
           <span class="md:hidden">{{
-            locale === "en" ? "Full bio" : "السيرة الكاملة"
+            t('ui.experiencePreviewSection.fullBio')
           }}</span>
           <span class="hidden md:inline">{{
-            locale === "en" ? "View full experience" : "عرض الخبرة الكاملة"
+            t('ui.experiencePreviewSection.viewFullExperience')
           }}</span>
           <LazyVAppIcon
             name="lucide:arrow-right"
@@ -69,7 +69,7 @@
 <script lang="ts" setup>
 import { EXPERIENCE_PREVIEW } from "@/data/home";
 
-const { locale, t } = useLocale();
+const { t } = useLocale();
 
 const sectionRef = ref<HTMLElement | null>(null);
 

@@ -72,7 +72,7 @@
               {{ t(entry.projectsLabel) }}
             </span>
             <div class="flex flex-wrap gap-2">
-              <template v-for="project in entry.projects" :key="project.label.en">
+              <template v-for="project in entry.projects" :key="project.label">
                 <nuxt-link-locale
                   v-if="project.slug"
                   :to="`/work/${project.slug}`"

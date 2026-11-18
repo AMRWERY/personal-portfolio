@@ -7,13 +7,11 @@
         <h2
           class="font-headline text-title-lg md:text-headline-sm font-bold text-text-primary"
         >
-          {{ locale === "en" ? "Direct channels" : "قنوات التواصل المباشر" }}
+          {{ t('ui.contactChannels.directChannels') }}
         </h2>
         <p class="text-body-sm text-text-secondary mt-0.5 md:mt-1">
           {{
-            locale === "en"
-              ? "Feel free to reach out directly through email, phone, or professional networks."
-              : "تواصل معي مباشرة عبر البريد أو الهاتف أو الشبكات المهنية."
+            t('ui.contactChannels.feelFreeToReachOut')
           }}
         </p>
       </div>
@@ -29,7 +27,7 @@
           </span>
           <span class="min-w-0 flex-1">
             <span :class="LABEL">{{
-              locale === "en" ? "Email" : "البريد الإلكتروني"
+              t('ui.contactChannels.email')
             }}</span>
             <span :class="VALUE" dir="ltr">{{ PROFILE.email }}</span>
           </span>
@@ -49,7 +47,7 @@
           </span>
           <span class="min-w-0 flex-1">
             <span :class="LABEL">{{
-              locale === "en" ? "Phone / WhatsApp" : "الهاتف / واتساب"
+              t('ui.contactChannels.phoneWhatsApp')
             }}</span>
             <span :class="VALUE" dir="ltr">{{ PROFILE.phoneDisplay }}</span>
           </span>
@@ -68,10 +66,10 @@
           </span>
           <span class="min-w-0 flex-1">
             <span :class="LABEL">{{
-              locale === "en" ? "Location" : "الموقع"
+              t('ui.contactChannels.location')
             }}</span>
             <span :class="VALUE">{{
-              locale === "en" ? "Cairo, Egypt" : "القاهرة، مصر"
+              t('ui.contactChannels.cairoEgypt')
             }}</span>
           </span>
           <span
@@ -129,14 +127,12 @@
           />
         </span>
         <span class="font-headline text-label-md font-bold text-text-primary">
-          {{ locale === "en" ? "Current availability" : "التوفر الحالي" }}
+          {{ t('ui.contactChannels.currentAvailability') }}
         </span>
       </div>
       <p class="text-body-sm text-text-secondary leading-relaxed">
         {{
-          locale === "en"
-            ? "Available for selected frontend freelance contracts, enterprise consulting, and full-time Vue.js / Nuxt.js opportunities. Typical response time within 24 hours."
-            : "متاح لعقود العمل الحر المختارة في الواجهات الأمامية والاستشارات للمؤسسات وفرص العمل بدوام كامل في Vue.js / Nuxt.js. وقت الرد المعتاد خلال 24 ساعة."
+          t('ui.contactChannels.availableForSelectedFrontendFreelanc')
         }}
       </p>
     </div>
@@ -147,7 +143,7 @@
 import { PROFILE } from "@/data/home";
 import type { IconifyName } from "@/types/portfolio";
 
-const { locale } = useLocale();
+const { t } = useLocale();
 
 const SOCIALS: { name: string; icon: IconifyName; href: string; handle: string }[] =
   [

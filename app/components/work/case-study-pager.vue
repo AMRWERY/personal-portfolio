@@ -20,7 +20,7 @@
           <span
             class="text-label-sm font-semibold text-text-secondary uppercase tracking-wider block"
           >
-            {{ locale === "en" ? "Previous Project" : "المشروع السابق" }}
+            {{ t('ui.caseStudyPager.previousProject') }}
           </span>
           <h3
             class="font-headline text-title-lg font-bold text-text-primary group-hover/btn:text-accent-ink transition-colors truncate"
@@ -39,7 +39,7 @@
           <span
             class="text-label-sm font-semibold text-text-secondary uppercase tracking-wider block"
           >
-            {{ locale === "en" ? "Next Project" : "المشروع التالي" }}
+            {{ t('ui.caseStudyPager.nextProject') }}
           </span>
           <h3
             class="font-headline text-title-lg font-bold text-text-primary group-hover/btn:text-accent-ink transition-colors truncate"
@@ -63,7 +63,7 @@
 <script lang="ts" setup>
 import type { CaseStudyPagerProps } from "@/types/work";
 
-const { locale } = useLocale();
+const { locale, t } = useLocale();
 
 defineProps<CaseStudyPagerProps>();
 

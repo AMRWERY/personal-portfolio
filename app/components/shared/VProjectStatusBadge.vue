@@ -6,7 +6,7 @@
       class="w-1.5 h-1.5 rounded-full bg-warning shrink-0"
       aria-hidden="true"
     />
-    <span>{{ status }}</span>
+    <span>{{ label }}</span>
   </div>
 </template>
 
@@ -14,5 +14,13 @@
 import type { ProjectStatus } from "@/types/portfolio";
 import type { Props } from "@/types/shared/VProjectStatusBadge";
 
-defineProps<Props>();
+const props = defineProps<Props>();
+
+const { t } = useLocale();
+
+// Status values are data ("In progress"); the visible label comes from the locale files
+const STATUS_KEYS: Record<ProjectStatus, string> = {
+  "In progress": "ui.vProjectStatusBadge.inProgress",
+};
+const label = computed(() => t(STATUS_KEYS[props.status]));
 </script>

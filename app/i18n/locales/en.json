@@ -1,0 +1,854 @@
+{
+  "content": {
+    "cVFILES": {
+      "pdf": {
+        "label": "PDF",
+        "description": "Best for reading and printing"
+      },
+      "docx": {
+        "label": "Word (.docx)",
+        "description": "Editable document"
+      }
+    },
+    "nAVITEMS": {
+      "home": {
+        "label": "Home"
+      },
+      "work": {
+        "label": "Work"
+      },
+      "about": {
+        "label": "About"
+      }
+    },
+    "hEROCOPY": {
+      "greeting": "Hi, I am Amr Mohamed",
+      "headline": "I build thoughtful web experiences with Vue.js & Nuxt.js.",
+      "supporting": "Frontend Developer with 3+ years of experience building production websites, e-commerce platforms, and admin dashboards. Focused on Vue.js, Nuxt.js, TypeScript, reusable UI, and reliable API integration.",
+      "primaryCta": "Explore my work",
+      "secondaryCta": "Get in touch",
+      "location": "Based in Cairo, Egypt"
+    },
+    "iMPACTMETRICS": {
+      "0": {
+        "label": "Years of frontend experience",
+        "context": "Professional & Freelance"
+      },
+      "1": {
+        "label": "Pages in Marca Store's two-app project",
+        "context": "Storefront & Admin"
+      },
+      "2": {
+        "label": "Reusable components in Marca Store",
+        "context": "21 Pinia Stores · RTL"
+      },
+      "3": {
+        "label": "Views in the Gym Management Dashboard",
+        "context": "ASAGTC · Real-Time Echo"
+      }
+    },
+    "fEATUREDPROJECTS": {
+      "lexusEgypt": {
+        "categoryBadge": "Professional · Code95",
+        "role": "Frontend Developer — Project Owner",
+        "summary": "Owns the frontend from initial setup and architecture through UI development and API integration toward launch."
+      },
+      "marcaStore": {
+        "categoryBadge": "Freelance · Egypt & KSA",
+        "role": "Freelance Frontend Developer",
+        "summary": "Two-app e-commerce frontend for Egypt and Saudi Arabia, with 30 pages and 46 reusable components."
+      },
+      "gymManagement": {
+        "categoryBadge": "Freelance · Cairo, Egypt",
+        "role": "Freelance Frontend Developer",
+        "summary": "Dashboard with 100+ views, real-time updates, and report exports. Integrated with backend REST APIs and Laravel Echo."
+      },
+      "abdal": {
+        "categoryBadge": "Professional · Saudi Arabia",
+        "role": "Frontend Developer — Code95",
+        "summary": "Saudi recruitment platform with Visa, Mada, and STC Pay integrations. Continuous UI bug fixing and feature enhancements."
+      }
+    },
+    "cAPABILITIES": {
+      "vueNuxt": {
+        "title": "Vue.js & Nuxt.js Development",
+        "description": "Production SPAs and SSR web applications built with Vue 3 Composition API, Nuxt 3, and strict TypeScript patterns."
+      },
+      "architecture": {
+        "title": "Reusable Components & Frontend Architecture",
+        "description": "Structured component libraries, consistent state modules in Pinia, and maintainable Tailwind CSS token systems."
+      },
+      "ecommerceDashboards": {
+        "title": "E-Commerce & Dashboards",
+        "description": "Customer storefronts, complex filter catalogs, and comprehensive management dashboards with report exports."
+      },
+      "restApi": {
+        "title": "REST API Integration",
+        "description": "Clean asynchronous API communication, error handling, and real-time events via Pusher and Laravel Echo."
+      },
+      "i18nRtl": {
+        "title": "Arabic / English & RTL Interfaces",
+        "description": "Full bilingual localization using vue-i18n and Nuxt i18n with consistent right-to-left alignment and typography."
+      },
+      "paymentsRbac": {
+        "title": "Payment Integrations & Role-Based Interfaces",
+        "description": "Checkout flows with Visa, Mada, and STC Pay alongside multi-tier role permissions (Admin, Employee, Merchant)."
+      }
+    },
+    "eXPERIENCEPREVIEW": {
+      "0": {
+        "period": "Jul 2025 – Present",
+        "role": "Frontend Developer",
+        "projectsSummary": "Key projects: Lexus Egypt, Abdal, Toyota Egypt, Attijariwafa Bank Egypt."
+      },
+      "1": {
+        "period": "Jan 2024 – May 2025",
+        "role": "Frontend Developer",
+        "projectsSummary": "Key projects: Jai Dashboard, Treat Dashboard admin modules."
+      },
+      "2": {
+        "period": "Apr 2023 – Nov 2025",
+        "role": "Part-time Engagements",
+        "projectsSummary": "Key projects: Marca Store (2 apps), Gym Management Dashboard, Lugar Store."
+      }
+    },
+    "aBOUTINTRO": {
+      "eyebrow": "ABOUT",
+      "title": "A little about how I build.",
+      "bio": "I'm Amr Mohamed, a frontend developer based in Cairo, Egypt. I have 3+ years of experience building Vue.js and Nuxt.js applications, from customer-facing websites and e-commerce storefronts to admin dashboards. I focus on maintainable interfaces, reusable components, API integration, and accessible Arabic/English experiences.",
+      "facts": {
+        "0": {
+          "text": "Cairo, Egypt"
+        },
+        "1": {
+          "text": "Vue.js · Nuxt.js · TypeScript"
+        },
+        "2": {
+          "text": "Native Arabic · Professional English"
+        }
+      }
+    },
+    "aBOUTAPPROACH": {
+      "eyebrow": "METHODOLOGY",
+      "title": "Working approach",
+      "description": "A systematic engineering process from initial requirement discovery to live API integration and post-launch refinement.",
+      "steps": {
+        "requirements": {
+          "title": "Requirements",
+          "description": "Analyze product specifications, user journeys, edge cases, and business goals before committing to code.",
+          "tag": "Discovery & Planning"
+        },
+        "architecture": {
+          "title": "Architecture",
+          "description": "Establish modular Vue/Nuxt directory hierarchy, reusable component libraries, strict TypeScript types, and Pinia stores.",
+          "tag": "Architecture & Tokens"
+        },
+        "uiApis": {
+          "title": "UI & APIs",
+          "description": "Implement responsive views, payment gateways, and asynchronous REST endpoints with proper loading and validation states.",
+          "tag": "Execution & Integration"
+        },
+        "delivery": {
+          "title": "Polish & Delivery",
+          "description": "Collaborate actively with backend teammates, squash live UI defects, polish RTL layouts, and guarantee delivery.",
+          "tag": "Refinement & Delivery"
+        }
+      }
+    },
+    "aBOUTEXPERIENCE": {
+      "eyebrow": "CAREER HISTORY",
+      "title": "Experience timeline",
+      "description": "Track record across agency development, internal dashboards, and multi-market e-commerce platforms.",
+      "entries": {
+        "code95": {
+          "period": "Jul 2025 – Present · Cairo, Egypt",
+          "title": "Code95 Web Technologies",
+          "badge": "Frontend Developer",
+          "description": "Leads frontend development for enterprise clients across automotive, banking, and recruitment industries. Owns project setups, UI architecture, payment gateway implementations, and REST API integration.",
+          "projectsLabel": "Associated Client Projects:",
+          "projects": {
+            "lexusEgypt": {
+              "label": "Lexus Egypt (Project Owner · In progress)"
+            },
+            "abdal": {
+              "label": "Abdal (Visa / Mada / STC Pay)"
+            },
+            "toyotaEgypt": {
+              "label": "Toyota Egypt (Payment Flow)"
+            },
+            "attijariwafaBank": {
+              "label": "Attijariwafa Bank Egypt"
+            }
+          }
+        },
+        "kabret": {
+          "period": "Jan 2024 – May 2025 · Cairo, Egypt",
+          "title": "Kabret",
+          "badge": "Frontend Developer",
+          "description": "Engineered and maintained internal admin dashboard features. Collaborated with backend developers to integrate complex data screens with REST APIs, built reusable Vuetify UI components, and debugged state synchronization issues.",
+          "projectsLabel": "Associated Internal Projects:",
+          "projects": {
+            "0": {
+              "label": "Jai Dashboard (Admin Modules · Vuetify)"
+            },
+            "1": {
+              "label": "Treat Dashboard (Nuxt.js · TypeScript)"
+            }
+          }
+        },
+        "freelance": {
+          "period": "Apr 2023 – Nov 2025 · Part-Time & Independent",
+          "title": "Freelance Frontend Developer",
+          "badge": "Contract Engagements",
+          "description": "Delivered custom web applications, multi-market e-commerce platforms, and real-time operations dashboards for clients in Egypt, Kuwait, and Saudi Arabia.",
+          "projectsLabel": "Key Delivered Projects:",
+          "projects": {
+            "3": {
+              "label": "Travel Booking Website — O Tech (Kuwait)"
+            },
+            "marcaStore": {
+              "label": "Marca Store (2 apps · 30 pages · 46 components)"
+            },
+            "gymManagement": {
+              "label": "Gym Management Dashboard (100+ views · Echo)"
+            },
+            "lugarStore": {
+              "label": "Lugar Store (Furniture E-Commerce)"
+            }
+          }
+        }
+      }
+    },
+    "aBOUTSKILLS": {
+      "eyebrow": "TOOLSET",
+      "title": "Technical skills",
+      "description": "Tools and technologies I work with, grouped by domain.",
+      "groups": {
+        "frontendCore": {
+          "title": "Frontend Core",
+          "skills": {
+            "0": "Vue.js",
+            "1": "Nuxt.js",
+            "2": "Composition API",
+            "3": "TypeScript",
+            "4": "JavaScript (ES6+)",
+            "5": "HTML5",
+            "6": "CSS3"
+          }
+        },
+        "uiStyling": {
+          "title": "UI & Styling",
+          "skills": {
+            "0": "Tailwind CSS",
+            "1": "Vuetify",
+            "2": "Bootstrap",
+            "3": "Headless UI",
+            "4": "Responsive Design"
+          }
+        },
+        "stateForms": {
+          "title": "State, Routing & Forms",
+          "skills": {
+            "0": "Pinia",
+            "1": "Vuex",
+            "2": "Vue Router",
+            "3": "VeeValidate",
+            "4": "Vuelidate",
+            "5": "VueUse"
+          }
+        },
+        "apisBackend": {
+          "title": "APIs & Backend Services",
+          "skills": {
+            "0": "REST API Integration",
+            "1": "Firebase",
+            "2": "Supabase",
+            "3": "Pusher",
+            "4": "Laravel Echo",
+            "5": "Real-Time Updates"
+          }
+        },
+        "i18n": {
+          "title": "Internationalization (i18n)",
+          "skills": {
+            "0": "vue-i18n",
+            "1": "Nuxt i18n",
+            "2": "Arabic / English",
+            "3": "RTL Layouts",
+            "4": "Locale Switching"
+          }
+        },
+        "tooling": {
+          "title": "Tooling & Workflow",
+          "skills": {
+            "0": "Vite",
+            "1": "Git",
+            "2": "GitHub",
+            "3": "GitLab",
+            "4": "Husky",
+            "5": "Commitlint",
+            "6": "Vercel"
+          }
+        }
+      },
+      "specializations": {
+        "title": "Additional Domain Specializations",
+        "items": {
+          "0": "Payment Gateway Integration (Visa, Mada, STC Pay)",
+          "1": "Role-Based Access Control (RBAC)",
+          "2": "SEO Meta Management (useHead)",
+          "3": "ApexCharts Data Visualization",
+          "4": "PDF / Excel / CSV Export",
+          "5": "Frontend Debugging",
+          "6": "AI-Assisted Development (Cursor, Claude Code)"
+        }
+      }
+    },
+    "aBOUTEDUCATION": {
+      "eyebrow": "EDUCATION",
+      "title": "Academic Background",
+      "degree": "Bachelor of Law (LL.B.)",
+      "school": "Cairo University, Egypt",
+      "graduated": "Graduated 2012"
+    },
+    "aBOUTLANGUAGES": {
+      "eyebrow": "COMMUNICATION",
+      "title": "Languages",
+      "items": {
+        "0": {
+          "name": "Arabic",
+          "level": "Native"
+        },
+        "1": {
+          "name": "English",
+          "level": "Professional working proficiency"
+        }
+      }
+    },
+    "cASESTUDIES": {
+      "lexusEgypt": {
+        "typeLabel": "Professional · Official Website",
+        "market": "Egypt",
+        "deliverable": "New Official Website (Frontend)",
+        "intro": "Owns the frontend from initial project setup, architecture, and workflow through UI component development and REST API integration. Leads ongoing development toward launch.",
+        "contributions": {
+          "0": {
+            "title": "Frontend From Scratch",
+            "text": "Created the frontend from the ground up: project setup, architecture, and development workflow."
+          },
+          "1": {
+            "title": "Component Foundations",
+            "text": "Established the component foundations the rest of the interface is built on."
+          },
+          "2": {
+            "title": "Backend Integration",
+            "text": "Leads integration with the backend REST APIs."
+          }
+        },
+        "note": "Project status: the work covers frontend architecture and development and remains actively in progress. The new website has not launched yet."
+      },
+      "marcaStore": {
+        "typeLabel": "Freelance · E-Commerce Platform",
+        "market": "Egypt & Saudi Arabia",
+        "deliverable": "Two Production Web Applications",
+        "intro": "Built the full frontend for a two-market e-commerce business across Egypt and Saudi Arabia. Delivered a customer-facing storefront alongside a comprehensive admin portal connected to Firebase for real-time inventory, order processing, and customer management.",
+        "gallery": {
+          "0": {
+            "title": "Storefront Home",
+            "caption": "Customer Interface",
+            "stageTitle": "Marca Store — Customer Storefront Preview",
+            "stageDescription": "Product catalog, category filters, cart, and bilingual Arabic/English checkout flow."
+          },
+          "1": {
+            "title": "Admin Dashboard",
+            "caption": "Orders & Products",
+            "stageTitle": "Marca Store — Admin Management Backoffice",
+            "stageDescription": "Complete order fulfillment lifecycle, inventory tracking, and Firebase authentication."
+          },
+          "2": {
+            "title": "Role Permissions",
+            "caption": "Admin/Employee/Merchant",
+            "stageTitle": "Marca Store — Three-Tier Account Permissions",
+            "stageDescription": "Role-based dashboards restricting sensitive product manipulation for Admin, Employee, and Merchant."
+          },
+          "3": {
+            "title": "Arabic RTL Layout",
+            "caption": "vue-i18n Alignment",
+            "stageTitle": "Marca Store — Arabic RTL Localization Layout",
+            "stageDescription": "Pixel-perfect right-to-left UI mirroring using vue-i18n and localized VeeValidate forms."
+          }
+        },
+        "contributions": {
+          "0": {
+            "title": "Dual-Application Frontend Architecture",
+            "text": "Architected two separate web clients from scratch using Vue.js and Vite: a customer shopping interface and an internal business admin portal."
+          },
+          "1": {
+            "title": "46 Modular Components & 21 Pinia Stores",
+            "text": "Standardized UI elements across catalog cards, modals, checkout inputs, and dynamic charts with modular Pinia state management for cart, wishlist, auth, and order flow."
+          },
+          "2": {
+            "title": "Three-Tier Role-Based Access Control (RBAC)",
+            "text": "Enforced granular permissions for Admin, Employee, and Merchant accounts within the management backoffice, restricting product manipulation and order approvals."
+          },
+          "3": {
+            "title": "Bilingual Localization & Full RTL Support",
+            "text": "Integrated vue-i18n for English and Arabic with automated right-to-left layout switching, mirrored navigation, and localized validation rules with VeeValidate."
+          }
+        },
+        "metrics": {
+          "0": {
+            "label": "Apps Delivered",
+            "hint": "Storefront & Admin"
+          },
+          "1": {
+            "label": "Total Pages",
+            "hint": "Both applications"
+          },
+          "2": {
+            "label": "Components",
+            "hint": "Reusable library"
+          },
+          "3": {
+            "label": "Pinia Stores",
+            "hint": "State management"
+          }
+        }
+      },
+      "gymManagement": {
+        "metrics": {
+          "0": {
+            "label": "Views"
+          },
+          "1": {
+            "label": "Vuex Store Modules"
+          }
+        }
+      },
+      "lugarStore": {
+        "metrics": {
+          "0": {
+            "label": "Commits"
+          },
+          "1": {
+            "label": "Months",
+            "hint": "Built from scratch"
+          }
+        }
+      },
+      "shipIt": {
+        "metrics": {
+          "0": {
+            "label": "Pages"
+          },
+          "1": {
+            "label": "Components"
+          },
+          "2": {
+            "label": "Stores"
+          },
+          "3": {
+            "label": "Commits"
+          }
+        }
+      },
+      "cospora": {
+        "metrics": {
+          "0": {
+            "label": "Pages"
+          },
+          "1": {
+            "label": "Components"
+          }
+        }
+      },
+      "alQuran": {
+        "metrics": {
+          "0": {
+            "label": "Pages"
+          },
+          "1": {
+            "label": "Components"
+          }
+        }
+      },
+      "islamApp": {
+        "metrics": {
+          "0": {
+            "label": "Pages"
+          },
+          "1": {
+            "label": "Components"
+          }
+        }
+      }
+    },
+    "workProjects": {
+      "lexusEgypt": {
+        "categoryBadge": "Professional · Code95",
+        "role": "Project Owner",
+        "period": "Jul 2025 – Present",
+        "summary": "Owns the frontend of the new Lexus Egypt website from project setup and architecture through UI development and API integration toward launch.",
+        "highlight": {
+          "label": "Key Highlights:",
+          "text": "Created frontend from scratch, established component foundations, and leads backend integration."
+        },
+        "links": {
+          "0": {
+            "label": "Live Site (Brand)"
+          }
+        }
+      },
+      "marcaStore": {
+        "categoryBadge": "Freelance · Egypt & KSA",
+        "role": "Freelance Developer",
+        "period": "May 2025 – Nov 2025",
+        "summary": "Two-app e-commerce frontend for Egypt and Saudi Arabia, delivering a customer storefront and separate admin app connected to Firebase.",
+        "highlight": {
+          "label": "Delivered Metrics:",
+          "text": "2 apps, 30 pages, 46 reusable components, 21 Pinia stores, 3 account roles (Admin/Employee/Merchant), full Arabic RTL."
+        },
+        "links": {
+          "0": {
+            "label": "Live Store",
+            "detailLabel": "Visit Live Storefront"
+          },
+          "1": {
+            "label": "Store Repo",
+            "detailLabel": "Storefront Repository"
+          },
+          "2": {
+            "label": "Admin Repo",
+            "detailLabel": "Admin Repository"
+          }
+        }
+      },
+      "abdal": {
+        "categoryBadge": "Professional · Code95",
+        "role": "Frontend Developer",
+        "period": "Jul 2025 – Present",
+        "summary": "Develops and maintains the customer-facing platform for a Saudi recruitment services firm. Integrated Visa, Mada, and STC Pay payment gateways.",
+        "links": {
+          "0": {
+            "label": "abdal.sa"
+          }
+        }
+      },
+      "toyotaEgypt": {
+        "categoryBadge": "Professional · Code95",
+        "role": "Frontend Developer",
+        "period": "Jul 2025 – Present",
+        "summary": "Maintains and improves the official Toyota Egypt website, resolving online payment flow issues and diagnosing frontend bugs for optimal stability.",
+        "links": {
+          "0": {
+            "label": "toyota.com.eg"
+          }
+        }
+      },
+      "attijariwafaBank": {
+        "categoryBadge": "Professional · Code95",
+        "role": "Frontend Developer",
+        "period": "Jul 2025 – Present",
+        "summary": "Develops new features and maintains the website frontend based on business requirements. Enhanced UI components and fixed bugs for stability.",
+        "links": {
+          "0": {
+            "label": "attijariwafabank.com.eg"
+          }
+        }
+      },
+      "jaiDashboard": {
+        "categoryBadge": "Professional · Kabret",
+        "role": "Frontend Developer",
+        "period": "Jan 2024 – May 2025",
+        "summary": "Built and maintained admin dashboard features, working with backend developers to connect screens to REST APIs. Built reusable UI modules.",
+        "privateNote": "Internal Enterprise"
+      },
+      "treatDashboard": {
+        "categoryBadge": "Professional · Kabret",
+        "role": "Frontend Developer",
+        "period": "Jan 2024 – May 2025",
+        "summary": "Built and maintained admin dashboard features and connected frontend with backend services using Nuxt.js, TypeScript, and Vuetify.",
+        "privateNote": "Internal Enterprise"
+      },
+      "lugarStore": {
+        "categoryBadge": "Freelance · Cairo, Egypt",
+        "role": "Freelance Developer",
+        "period": "Dec 2024 – Feb 2025",
+        "summary": "Built from scratch in 3 months across 271 commits: customer shopping flow and admin panel. Catalog, cart, wishlist, checkout, and Arabic RTL.",
+        "links": {
+          "0": {
+            "label": "Live"
+          },
+          "1": {
+            "label": "Code"
+          }
+        }
+      },
+      "travelBooking": {
+        "categoryBadge": "Freelance · Kuwait (Remote)",
+        "role": "Freelance Developer",
+        "period": "Oct 2023 – Dec 2023",
+        "summary": "Developed and maintained frontend features for a travel booking app, collaborating with the client's backend team on REST API integration.",
+        "privateNote": "Client Private"
+      },
+      "gymManagement": {
+        "categoryBadge": "Freelance · Cairo, Egypt",
+        "role": "Freelance Developer",
+        "period": "Apr 2023 – Sep 2023",
+        "summary": "Built 100+ views and 38 Vuex store modules with real-time updates via Pusher & Laravel Echo, PDF/Excel/CSV exports, and commitlint standards.",
+        "links": {
+          "0": {
+            "label": "Code"
+          }
+        }
+      },
+      "alQuran": {
+        "categoryBadge": "Personal Project",
+        "role": "Personal",
+        "period": "Aug 2026",
+        "summary": "Quran reading and listening application loading Surahs and recitations from public REST APIs. 22 pages, 18 reusable components, and audio streaming.",
+        "links": {
+          "0": {
+            "label": "Live"
+          },
+          "1": {
+            "label": "Code"
+          }
+        }
+      },
+      "shipIt": {
+        "categoryBadge": "Personal Project",
+        "role": "Personal",
+        "period": "Jan 2025 – Mar 2025",
+        "summary": "Complete platform with customer storefront and admin dashboard. 15 pages, 33 reusable components, 14 stores across 293 commits, and Arabic RTL.",
+        "links": {
+          "0": {
+            "label": "Live"
+          },
+          "1": {
+            "label": "Code"
+          }
+        }
+      },
+      "cospora": {
+        "categoryBadge": "Personal Project",
+        "role": "Personal",
+        "period": "Nov 2024 – Dec 2024",
+        "summary": "Cosmetics e-commerce platform with customer and admin interfaces. 18 pages, 43 reusable components, ApexCharts data charts, and SEO with useHead.",
+        "links": {
+          "0": {
+            "label": "Live"
+          },
+          "1": {
+            "label": "Code"
+          }
+        }
+      },
+      "islamApp": {
+        "categoryBadge": "Personal Project",
+        "role": "Personal",
+        "period": "Jan 2024",
+        "summary": "Islamic content web application using public REST API data. 4 pages and 7 reusable components built with Nuxt.js, Pinia, and Headless UI.",
+        "links": {
+          "0": {
+            "label": "Live"
+          },
+          "1": {
+            "label": "Code"
+          }
+        }
+      },
+      "movieApp": {
+        "categoryBadge": "Personal Project",
+        "role": "Personal",
+        "period": "Oct 2023",
+        "summary": "Movie search application fetching titles, posters, release years, and plot summaries from the OMDb API. Built with Vue.js, Vite, and Vue Router.",
+        "links": {
+          "0": {
+            "label": "Live"
+          },
+          "1": {
+            "label": "Code"
+          }
+        }
+      }
+    }
+  },
+  "ui": {
+    "contactChannels": {
+      "directChannels": "Direct channels",
+      "feelFreeToReachOut": "Feel free to reach out directly through email, phone, or professional networks.",
+      "email": "Email",
+      "phoneWhatsApp": "Phone / WhatsApp",
+      "location": "Location",
+      "cairoEgypt": "Cairo, Egypt",
+      "currentAvailability": "Current availability",
+      "availableForSelectedFrontendFreelanc": "Available for selected frontend freelance contracts, enterprise consulting, and full-time Vue.js / Nuxt.js opportunities. Typical response time within 24 hours."
+    },
+    "contactForm": {
+      "messageReceived": "Message received",
+      "thankYouForReachingOut": "Thank you for reaching out. I will review your requirements and respond within 24 hours.",
+      "sendAnotherMessage": "Send another message",
+      "messageCouldNotBeSent": "Message could not be sent.",
+      "messageCouldNotBeSent2": "Message could not be sent",
+      "weHitANetworkIssue": "We hit a network issue reaching the service. Please retry, or email me directly at",
+      "retry": "Retry",
+      "name": "Name",
+      "eGSarahJenkins": "e.g. Sarah Jenkins",
+      "emailAddress": "Email address",
+      "subject": "Subject",
+      "optional": "Optional",
+      "eGFrontendContractNuxt": "e.g. Frontend Contract / Nuxt.js Consulting",
+      "message": "Message",
+      "tellMeAboutYourProject": "Tell me about your project scope, timeline, and tech stack...",
+      "sendingMessage": "Sending message...",
+      "sendMessage": "Send message",
+      "allInquiriesAreReceivedPrivately": "All inquiries are received privately. No spam or third-party sharing.",
+      "pleaseEnterYourName": "Please enter your name.",
+      "pleaseEnterAValidEmail": "Please enter a valid email address.",
+      "pleaseProvideDetailsAboutYour": "Please provide details about your inquiry."
+    },
+    "capabilitiesSection": {
+      "coreServices": "CORE SERVICES",
+      "capabilities": "Capabilities",
+      "handsOnFrontendEngineeringFocused": "Hands-on frontend engineering focused on architecture, reusable interfaces, and robust backend collaboration."
+    },
+    "experiencePreviewSection": {
+      "careerTimeline": "CAREER TIMELINE",
+      "experiencePreview": "Experience preview",
+      "fullBio": "Full bio",
+      "viewFullExperience": "View full experience"
+    },
+    "featuredProjectCard": {
+      "viewCaseStudy": "View case study"
+    },
+    "featuredWorkSection": {
+      "portfolioHighlights": "PORTFOLIO HIGHLIGHTS",
+      "featuredWork": "Featured work",
+      "all15": "All 15",
+      "viewAll15Projects": "View all 15 projects"
+    },
+    "skillsAndContactSection": {
+      "technologyFocus": "TECHNOLOGY FOCUS",
+      "getInTouch": "GET IN TOUCH",
+      "haveAProjectOrRole": "Have a project or role in mind? Let's talk.",
+      "alwaysGladToDiscussVue": "Always glad to discuss Vue.js and Nuxt.js web applications, e-commerce platforms, or frontend architecture.",
+      "sendAMessage": "Send a message"
+    },
+    "footer": {
+      "basedInCairoEgyptBilingual": "Based in Cairo, Egypt. Bilingual English & Arabic.",
+      "email": "Email",
+      "footerNavigation": "Footer navigation",
+      "tagline": "Frontend Developer · Vue.js · Nuxt.js · TypeScript"
+    },
+    "header": {
+      "letsTalk": "Let's talk",
+      "navigationMenu": "Navigation menu",
+      "closeNavigationMenu": "Close navigation menu",
+      "mobileNavigation": "Mobile navigation",
+      "primaryNavigation": "Primary navigation",
+      "openNavigationMenu": "Open navigation menu"
+    },
+    "vCvDownload": {
+      "downloadCV": "Download CV"
+    },
+    "vScrollToTop": {
+      "scrollToTop": "Scroll to top"
+    },
+    "vToggleLocale": {
+      "switchLanguageToArabic": "Switch language to Arabic",
+      "text": "ع"
+    },
+    "caseStudyContributions": {
+      "engineeringResponsibilities": "ENGINEERING RESPONSIBILITIES",
+      "myContribution": "My contribution"
+    },
+    "caseStudyGallery": {
+      "interfaceViewsAppFlows": "Interface Views & App Flows",
+      "clickThumbnailToPreviewStage": "Click thumbnail to preview stage",
+      "projectScreenshotGallery": "Project screenshot gallery"
+    },
+    "caseStudyHero": {
+      "breadcrumb": "Breadcrumb",
+      "home": "Home",
+      "work": "Work",
+      "role": "Role:",
+      "deliverable": "Deliverable:"
+    },
+    "caseStudyMetrics": {
+      "byTheNumbers": "BY THE NUMBERS",
+      "keyMetrics": "Key metrics",
+      "highlights": "Highlights"
+    },
+    "caseStudyPager": {
+      "previousProject": "Previous Project",
+      "nextProject": "Next Project"
+    },
+    "workCtaSection": {
+      "directCollaboration": "DIRECT COLLABORATION",
+      "interestedInWorkingTogether": "Interested in working together?",
+      "iAmAvailableForFrontend": "I am available for frontend architecture, Nuxt.js/Vue.js web applications, and senior frontend roles.",
+      "getInTouch": "Get in touch"
+    },
+    "workFilterBar": {
+      "filterProjectsByCategory": "Filter projects by category"
+    },
+    "workProjectCard": {
+      "viewCaseStudy": "View case study"
+    },
+    "aboutPage": {
+      "aboutAmrMohamed": "About {'|'} Amr Mohamed",
+      "frontendDeveloperInCairoWith": "Frontend developer in Cairo with 3+ years building Vue.js and Nuxt.js applications: websites, e-commerce storefronts, and admin dashboards.",
+      "collaborate": "COLLABORATE",
+      "letsBuildSomethingReliableTogether": "Let's build something reliable together.",
+      "whetherYouHaveAnUpcoming": "Whether you have an upcoming project, need frontend consulting, or are hiring for a Vue.js/Nuxt.js role, I'd love to connect."
+    },
+    "contactPage": {
+      "contact": "CONTACT",
+      "letsBuildSomethingUseful": "Let's build something useful.",
+      "haveARoleProjectOr": "Have a role, project, or collaboration in mind? Send me a message.",
+      "contactAmrMohamed": "Contact {'|'} Amr Mohamed",
+      "getInTouchWithAmr": "Get in touch with Amr Mohamed about frontend roles, Vue.js and Nuxt.js projects, or collaborations."
+    },
+    "homePage": {
+      "amrMohamedPersonalPortfolio": "Amr Mohamed {'|'} Personal Portfolio",
+      "frontendDeveloperInCairoBuilding": "Frontend developer in Cairo building Vue.js and Nuxt.js websites, e-commerce platforms, and admin dashboards."
+    },
+    "workPage": {
+      "breadcrumb": "Breadcrumb",
+      "portfolio": "PORTFOLIO",
+      "work": "WORK",
+      "selectedWork": "Selected work",
+      "aSelectionOfProductionWork": "A selection of production work, freelance projects, and personal builds across e-commerce, dashboards, content, and web applications.",
+      "projectsCataloged": "projects cataloged",
+      "noProjectsFound": "No projects found",
+      "noProjectsMatchThisCategory": "No projects match this category. Click \"All\" to view the full portfolio.",
+      "resetFilter": "Reset filter",
+      "selectedWorkAmrMohamed": "Selected Work {'|'} Amr Mohamed",
+      "productionWorkFreelanceProjectsAnd": "Production work, freelance projects, and personal builds by Amr Mohamed, a frontend developer in Cairo.",
+      "all": "All",
+      "professional": "Professional",
+      "freelance": "Freelance",
+      "personal": "Personal"
+    },
+    "caseStudyPage": {
+      "technologyStack": "Technology stack",
+      "projectInquiry": "PROJECT INQUIRY",
+      "haveASimilarProjectIn": "Have a similar project in mind? Let's talk.",
+      "availableToArchitectFrontendApplicat": "Available to architect frontend applications, consult on Vue.js/Nuxt.js systems, or join engineering teams.",
+      "startAConversation": "Start a conversation",
+      "title": "{title} — Case Study {'|'} Amr Mohamed"
+    },
+    "vToggleTheme": {
+      "switchToLight": "Switch to light theme",
+      "switchToDark": "Switch to dark theme"
+    },
+    "vProjectStatusBadge": {
+      "inProgress": "In progress"
+    },
+    "profileAvatar": {
+      "alt": "Portrait of Amr Mohamed",
+      "role": "Frontend Developer"
+    }
+  }
+}

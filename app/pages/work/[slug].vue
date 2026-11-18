@@ -32,7 +32,7 @@
           <h2
             class="font-headline text-headline-sm md:text-title-lg font-bold text-text-primary"
           >
-            {{ locale === "en" ? "Technology stack" : "التقنيات المستخدمة" }}
+            {{ t('ui.caseStudyPage.technologyStack') }}
           </h2>
           <div class="flex flex-wrap gap-1.5 md:gap-2">
             <LazyVTechBadge v-for="tech in stack" :key="tech" :label="tech" />
@@ -44,16 +44,10 @@
     <CaseStudyPager :previous="adjacent.previous" :next="adjacent.next" />
 
     <WorkCtaSection
-      :eyebrow="{ en: 'PROJECT INQUIRY', ar: 'استفسار عن مشروع' }"
-      :title="{
-        en: 'Have a similar project in mind? Let\'s talk.',
-        ar: 'لديك مشروع مشابه؟ لنتحدث.',
-      }"
-      :description="{
-        en: 'Available to architect frontend applications, consult on Vue.js/Nuxt.js systems, or join engineering teams.',
-        ar: 'متاح لتصميم تطبيقات الواجهات الأمامية والاستشارة في أنظمة Vue.js/Nuxt.js أو الانضمام إلى فرق الهندسة.',
-      }"
-      :primary-label="{ en: 'Start a conversation', ar: 'ابدأ المحادثة' }"
+      :eyebrow="'ui.caseStudyPage.projectInquiry'"
+      :title="'ui.caseStudyPage.haveASimilarProjectIn'"
+      :description="'ui.caseStudyPage.availableToArchitectFrontendApplicat'"
+      :primary-label="'ui.caseStudyPage.startAConversation'"
     />
   </div>
 </template>
@@ -62,7 +56,7 @@
 import { getAdjacentProjects, getProjectBySlug } from "@/data/work";
 
 const route = useRoute();
-const { locale } = useLocale();
+const { t } = useLocale();
 
 const project = getProjectBySlug(String(route.params.slug));
 
@@ -82,11 +76,7 @@ const adjacent = getAdjacentProjects(project.slug);
 const shortTitle = project.title.split(" — ")[0];
 
 useSeoMeta({
-  title: () =>
-    locale.value === "en"
-      ? `${shortTitle} — Case Study — Amr Mohamed`
-      : `${shortTitle} — دراسة حالة — عمرو محمد`,
-  description: () =>
-    locale.value === "en" ? project.summary.en : project.summary.ar,
+  title: () => t("ui.caseStudyPage.title", { title: shortTitle }),
+  description: () => t(project.summary),
 });
 </script>

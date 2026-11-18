@@ -48,15 +48,9 @@ import type { WorkCtaSectionProps } from "@/types/work";
 const { t } = useLocale();
 
 withDefaults(defineProps<WorkCtaSectionProps>(), {
-  eyebrow: () => ({ en: "DIRECT COLLABORATION", ar: "تعاون مباشر" }),
-  title: () => ({
-    en: "Interested in working together?",
-    ar: "مهتم بالعمل معاً؟",
-  }),
-  description: () => ({
-    en: "I am available for frontend architecture, Nuxt.js/Vue.js web applications, and senior frontend roles.",
-    ar: "متاح لأعمال معمارية الواجهات الأمامية وتطبيقات الويب باستخدام Nuxt.js وVue.js والأدوار الأمامية المتقدمة.",
-  }),
-  primaryLabel: () => ({ en: "Get in touch", ar: "تواصل معي" }),
+  eyebrow: () => ('ui.workCtaSection.directCollaboration'),
+  title: () => ('ui.workCtaSection.interestedInWorkingTogether'),
+  description: () => ('ui.workCtaSection.iAmAvailableForFrontend'),
+  primaryLabel: () => ('ui.workCtaSection.getInTouch'),
 });
 </script>
