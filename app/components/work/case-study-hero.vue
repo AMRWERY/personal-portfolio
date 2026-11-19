@@ -9,14 +9,14 @@
     >
       <nuxt-link-locale
         to="/"
-        class="inline-flex items-center justify-center min-h-11 min-w-11 lg:min-h-0 lg:min-w-0 hover:text-accent-ink transition-colors"
+        class="inline-flex items-center justify-center min-h-11 min-w-11 lg:pointer-fine:min-h-0 lg:pointer-fine:min-w-0 hover:text-accent-ink transition-colors"
       >
         {{ t('ui.caseStudyHero.home') }}
       </nuxt-link-locale>
       <span aria-hidden="true">/</span>
       <nuxt-link-locale
         to="/work"
-        class="inline-flex items-center justify-center min-h-11 min-w-11 lg:min-h-0 lg:min-w-0 hover:text-accent-ink transition-colors"
+        class="inline-flex items-center justify-center min-h-11 min-w-11 lg:pointer-fine:min-h-0 lg:pointer-fine:min-w-0 hover:text-accent-ink transition-colors"
       >
         {{ t('ui.caseStudyHero.work') }}
       </nuxt-link-locale>

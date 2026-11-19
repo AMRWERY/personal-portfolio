@@ -30,7 +30,7 @@
       <!-- Desktop Navigation -->
       <nav
         :aria-label="t('ui.header.primaryNavigation')"
-        class="hidden md:flex items-center gap-4"
+        class="hidden lg:flex items-center gap-4"
       >
         <nuxt-link-locale
           v-for="item in NAV_ITEMS"
@@ -72,18 +72,18 @@
         <LazyVToggleLocale />
 
         <!-- Desktop Contact Action -->
-        <div class="hidden sm:block">
+        <div class="hidden md:block">
           <LazyVButton to="/contact" variant="secondary" size="sm">
             {{ t('ui.header.letsTalk') }}
           </LazyVButton>
         </div>
 
-        <!-- Mobile Menu Trigger -->
+        <!-- Tablet menu trigger (phones use the bottom bar, desktop the header links) -->
         <LazyVButton
           ref="menuTriggerRef"
           variant="outline"
           size="icon"
-          class="md:hidden"
+          class="max-md:hidden lg:hidden"
           :aria-expanded="isMobileOpen"
           aria-controls="mobile-drawer"
           :aria-label="
@@ -112,7 +112,7 @@
       >
         <div
           v-if="isMobileOpen"
-          class="md:hidden fixed inset-0 z-60 bg-background/70 backdrop-blur-[2px]"
+          class="max-md:hidden lg:hidden fixed inset-0 z-60 bg-background/70 backdrop-blur-[2px]"
           aria-hidden="true"
           @click="closeMobileMenu(true)"
         />
@@ -132,7 +132,7 @@
           role="dialog"
           aria-modal="true"
           :aria-label="t('ui.header.navigationMenu')"
-          class="md:hidden fixed inset-y-0 end-0 z-61 w-[min(20rem,86vw)] flex flex-col bg-surface border-s border-border shadow-2xl"
+          class="max-md:hidden lg:hidden fixed inset-y-0 end-0 z-61 w-[min(20rem,86vw)] flex flex-col bg-surface border-s border-border shadow-2xl"
           @keydown="onDrawerKeydown"
         >
           <div
@@ -272,9 +272,10 @@ watch(
     if (isMobileOpen.value) closeMobileMenu(false);
   },
 );
-const isDesktop = useMediaQuery("(min-width: 768px)");
-watch(isDesktop, (desktop) => {
-  if (desktop && isMobileOpen.value) closeMobileMenu(false);
+// The drawer exists on tablets only (768–1023px)
+const isTablet = useMediaQuery("(min-width: 768px) and (max-width: 1023.98px)");
+watch(isTablet, (tablet) => {
+  if (!tablet && isMobileOpen.value) closeMobileMenu(false);
 });
 
 onBeforeUnmount(() => {

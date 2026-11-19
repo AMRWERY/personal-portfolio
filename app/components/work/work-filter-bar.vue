@@ -26,7 +26,7 @@
       type="button"
       role="tab"
       :aria-selected="modelValue === option.value"
-      class="relative z-10 shrink-0 inline-flex items-center min-h-11 lg:min-h-0 px-3.5 py-1.5 md:px-4 md:py-2 rounded-full font-headline text-label-sm md:text-label-md border transition-[color,background-color,border-color] duration-[160ms] ease-standard motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
+      class="relative z-10 shrink-0 inline-flex items-center min-h-11 lg:pointer-fine:min-h-0 px-3.5 py-1.5 md:px-4 md:py-2 rounded-full font-headline text-label-sm md:text-label-md border transition-[color,background-color,border-color] duration-[160ms] ease-standard motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
       :class="
         modelValue === option.value
           ? [

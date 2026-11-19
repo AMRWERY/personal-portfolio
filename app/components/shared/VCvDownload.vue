@@ -1,8 +1,8 @@
 <template>
-  <div ref="rootRef" class="relative w-full sm:w-auto" @keydown.esc="close(true)">
+  <div ref="rootRef" class="relative w-full lg:w-auto" @keydown.esc="close(true)">
     <LazyVButton
       variant="outline"
-      class="w-full sm:w-auto"
+      class="w-full lg:w-auto md:py-4 md:text-body-md lg:py-3 lg:text-label-md"
       aria-haspopup="true"
       aria-controls="cv-download-list"
       :aria-expanded="open"

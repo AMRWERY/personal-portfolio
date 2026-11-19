@@ -90,7 +90,7 @@
         </div>
         <button
           type="button"
-          class="shrink-0 px-2.5 py-1 rounded bg-rose-500/20 text-rose-700 dark:text-rose-300 hover:bg-rose-500/30 text-label-sm font-medium transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          class="shrink-0 px-2.5 py-1 min-h-11 lg:pointer-fine:min-h-0 rounded bg-rose-500/20 text-rose-700 dark:text-rose-300 hover:bg-rose-500/30 text-label-sm font-medium transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           @click="onSubmit"
         >
           {{ t('ui.contactForm.retry') }}

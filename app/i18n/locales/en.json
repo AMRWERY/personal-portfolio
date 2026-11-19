@@ -19,6 +19,9 @@
       },
       "about": {
         "label": "About"
+      },
+      "contact": {
+        "label": "Contact"
       }
     },
     "heroCopy": {

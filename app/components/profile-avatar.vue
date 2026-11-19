@@ -24,8 +24,8 @@
     class="relative aspect-4/5 rounded-2xl bg-surface border border-border shadow-xl overflow-hidden"
     :class="
       size === 'md'
-        ? 'w-44 sm:w-48 lg:w-52'
-        : 'w-64 sm:w-[300px] lg:w-[340px]'
+        ? 'w-60 sm:w-72 md:w-[420px] lg:w-52'
+        : 'w-64 sm:w-[300px] md:w-[400px] lg:w-[340px]'
     "
   >
     <img

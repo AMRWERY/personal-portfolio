@@ -57,7 +57,7 @@
         tag="div"
         enter-active-class="transition-ui duration-(--duration-standard) ease-standard"
         enter-from-class="opacity-0 translate-y-2"
-        class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8"
+        class="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-8 max-w-2xl mx-auto lg:max-w-none"
       >
         <WorkProjectCard
           v-for="project in visibleProjects"
@@ -65,7 +65,7 @@
           :project="project"
           :class="
             orphanSlugs.has(project.slug) &&
-            'md:col-span-2 md:justify-self-center md:w-[calc(50%-1rem)]'
+            'lg:col-span-2 lg:justify-self-center lg:w-[calc(50%-1rem)]'
           "
         />
       </TransitionGroup>

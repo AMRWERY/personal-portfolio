@@ -47,7 +47,10 @@ export type IconifyName =
   | "lucide:rotate-ccw"
   | "lucide:download"
   | "lucide:chevron-down"
-  | "lucide:file-text";
+  | "lucide:file-text"
+  | "lucide:house"
+  | "lucide:briefcase"
+  | "lucide:user";
 
 export interface CvFile {
   format: "pdf" | "docx";

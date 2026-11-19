@@ -30,7 +30,7 @@
       </LazyVButton>
     </div>
 
-    <div class="reveal-stagger grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8">
+    <div class="reveal-stagger grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-8 max-w-2xl mx-auto lg:max-w-none">
       <featured-project-card
         v-for="project in FEATURED_PROJECTS"
         :key="project.slug"

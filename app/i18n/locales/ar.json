@@ -19,6 +19,9 @@
       },
       "about": {
         "label": "نبذة عني"
+      },
+      "contact": {
+        "label": "تواصل"
       }
     },
     "heroCopy": {

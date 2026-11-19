@@ -54,9 +54,12 @@
         style="--hero-base: 200ms"
       >
         <div
-          class="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-4"
+          class="grid grid-cols-1 sm:grid-cols-2 md:max-w-xl md:mx-auto lg:mx-0 lg:max-w-none lg:flex lg:flex-row lg:flex-wrap lg:items-center gap-3 sm:gap-4"
         >
-          <LazyVButton to="/work" class="w-full sm:w-auto">
+          <LazyVButton
+            to="/work"
+            class="w-full lg:w-auto md:py-4 md:text-body-md lg:py-3 lg:text-label-md"
+          >
             <span>{{ t(HERO_COPY.primaryCta) }}</span>
             <LazyVAppIcon
               name="lucide:arrow-right"

@@ -8,7 +8,7 @@
     <LazyVButton
       v-if="isVisible"
       size="icon"
-      class="fixed bottom-5 end-5 md:bottom-8 md:end-8 z-40 shadow-lg"
+      class="fixed bottom-24 end-5 md:bottom-8 md:end-8 z-40 shadow-lg"
       :aria-label="t('ui.vScrollToTop.scrollToTop')"
       @click="scrollToTop"
     >

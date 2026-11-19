@@ -1,7 +1,7 @@
 <template>
   <article
     class="group rounded-xl lg:rounded-2xl border border-border bg-surface overflow-hidden flex flex-col transition-ui duration-(--duration-standard) ease-standard hover:border-accent hover:-translate-y-1 hover:shadow-xl"
-    :class="project.featured ? 'md:col-span-2 lg:flex-row' : 'justify-between'"
+    :class="project.featured ? 'lg:col-span-2 lg:flex-row' : 'justify-between'"
   >
     <!-- Media stage -->
     <div
@@ -117,7 +117,7 @@
               :href="link.href"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center justify-center gap-1 min-h-11 min-w-11 lg:min-h-0 lg:min-w-0 text-label-sm font-medium text-text-secondary hover:text-text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+              class="inline-flex items-center justify-center gap-1 min-h-11 min-w-11 lg:pointer-fine:min-h-0 lg:pointer-fine:min-w-0 text-label-sm font-medium text-text-secondary hover:text-text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
             >
               <LazyVAppIcon
                 v-if="link.kind === 'repo'"
