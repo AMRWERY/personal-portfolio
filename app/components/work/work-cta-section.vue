@@ -14,9 +14,7 @@
         >
           {{ t(title) }}
         </h2>
-        <p class="text-body-sm md:text-body-md text-text-secondary font-light">
-          {{ t(description) }}
-        </p>
+        <VWordReveal class="text-body-sm md:text-body-md text-text-secondary font-light" :text="t(description)" />
         <div
           class="pt-2 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 md:gap-4"
         >

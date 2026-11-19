@@ -15,9 +15,7 @@
       >
         {{ t(ABOUT_EXPERIENCE.title) }}
       </h2>
-      <p class="hidden md:block text-body-md text-text-secondary font-light">
-        {{ t(ABOUT_EXPERIENCE.description) }}
-      </p>
+      <VWordReveal class="hidden md:block text-body-md text-text-secondary font-light" :text="t(ABOUT_EXPERIENCE.description)" />
     </div>
 
     <!-- Vertical timeline -->
@@ -61,9 +59,7 @@
             </span>
           </div>
 
-          <p class="text-body-sm text-text-secondary leading-relaxed">
-            {{ t(entry.description) }}
-          </p>
+          <VWordReveal class="text-body-sm text-text-secondary leading-relaxed" :text="t(entry.description)" />
 
           <div class="pt-1 md:pt-2 space-y-2">
             <span

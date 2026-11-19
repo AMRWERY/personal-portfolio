@@ -24,13 +24,9 @@
           >
             {{ t('ui.workPage.selectedWork') }}
           </h1>
-          <p
+          <VWordReveal
             class="text-body-sm md:text-body-lg text-text-secondary font-light leading-relaxed"
-          >
-            {{
-              t('ui.workPage.aSelectionOfProductionWork')
-            }}
-          </p>
+           :text="t('ui.workPage.aSelectionOfProductionWork')" />
         </div>
 
         <div
@@ -87,11 +83,7 @@
         >
           {{ t('ui.workPage.noProjectsFound') }}
         </h2>
-        <p class="text-body-sm text-text-secondary">
-          {{
-            t('ui.workPage.noProjectsMatchThisCategory')
-          }}
-        </p>
+        <VWordReveal class="text-body-sm text-text-secondary" :text="t('ui.workPage.noProjectsMatchThisCategory')" />
         <LazyVButton size="sm" @click="activeFilter = 'all'">
           {{ t('ui.workPage.resetFilter') }}
         </LazyVButton>

@@ -23,11 +23,9 @@
           {{ t(HERO_COPY.headline) }}
         </h1>
 
-        <p
+        <VWordReveal
           class="font-body text-body-md lg:text-body-lg text-text-secondary max-w-2xl font-light leading-relaxed text-pretty"
-        >
-          {{ t(HERO_COPY.supporting) }}
-        </p>
+         :text="t(HERO_COPY.supporting)" />
 
         <!-- Mobile inline location -->
         <div

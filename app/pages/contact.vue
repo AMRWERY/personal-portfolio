@@ -16,13 +16,9 @@
         }}
       </h1>
 
-      <p
+      <VWordReveal
         class="text-body-md md:text-body-lg text-text-secondary font-light text-pretty"
-      >
-        {{
-          t('ui.contactPage.haveARoleProjectOr')
-        }}
-      </p>
+       :text="t('ui.contactPage.haveARoleProjectOr')" />
     </div>
 
     <!-- Channels first on mobile; channels left / form right on desktop -->

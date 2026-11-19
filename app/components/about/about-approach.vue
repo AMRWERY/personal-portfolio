@@ -18,9 +18,7 @@
         >
           {{ t(ABOUT_APPROACH.title) }}
         </h2>
-        <p class="hidden md:block text-body-md text-text-secondary font-light">
-          {{ t(ABOUT_APPROACH.description) }}
-        </p>
+        <VWordReveal class="hidden md:block text-body-md text-text-secondary font-light" :text="t(ABOUT_APPROACH.description)" />
       </div>
 
       <ol class="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
@@ -43,9 +41,7 @@
             >
               {{ t(step.title) }}
             </h3>
-            <p class="text-body-sm text-text-secondary leading-relaxed">
-              {{ t(step.description) }}
-            </p>
+            <VWordReveal class="text-body-sm text-text-secondary leading-relaxed" :text="t(step.description)" />
           </div>
           <div
             class="hidden md:block text-label-sm text-accent-ink font-semibold pt-2 border-t border-border/60"

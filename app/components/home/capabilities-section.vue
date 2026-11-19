@@ -14,11 +14,7 @@
         >
           {{ t('ui.capabilitiesSection.capabilities') }}
         </h2>
-        <p class="hidden md:block text-body-md text-text-secondary mt-2">
-          {{
-            t('ui.capabilitiesSection.handsOnFrontendEngineeringFocused')
-          }}
-        </p>
+        <VWordReveal class="hidden md:block text-body-md text-text-secondary mt-2" :text="t('ui.capabilitiesSection.handsOnFrontendEngineeringFocused')" />
       </div>
 
       <div
@@ -40,11 +36,9 @@
             >
               {{ t(item.title) }}
             </h3>
-            <p
+            <VWordReveal
               class="text-body-sm text-text-secondary leading-relaxed mt-1 md:mt-0"
-            >
-              {{ t(item.description) }}
-            </p>
+             :text="t(item.description)" />
           </div>
         </div>
       </div>

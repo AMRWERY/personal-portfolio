@@ -42,13 +42,9 @@
           }}
         </h2>
 
-        <p
+        <VWordReveal
           class="text-body-sm md:text-body-lg text-text-secondary font-light leading-relaxed"
-        >
-          {{
-            t('ui.skillsAndContactSection.alwaysGladToDiscussVue')
-          }}
-        </p>
+         :text="t('ui.skillsAndContactSection.alwaysGladToDiscussVue')" />
 
         <div
           class="pt-2 lg:pt-4 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 sm:gap-4"

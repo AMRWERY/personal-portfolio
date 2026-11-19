@@ -16,11 +16,7 @@
               {{ t('ui.footer.tagline') }}
             </span>
           </div>
-          <p class="text-body-sm text-text-secondary">
-            {{
-              t('ui.footer.basedInCairoEgyptBilingual')
-            }}
-          </p>
+          <VWordReveal class="text-body-sm text-text-secondary" :text="t('ui.footer.basedInCairoEgyptBilingual')" />
         </div>
 
         <div

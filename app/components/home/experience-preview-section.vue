@@ -57,9 +57,7 @@
           >
             {{ t(item.role) }}
           </div>
-          <p class="text-body-sm text-text-secondary md:mt-2">
-            {{ t(item.projectsSummary) }}
-          </p>
+          <VWordReveal class="text-body-sm text-text-secondary md:mt-2" :text="t(item.projectsSummary)" />
         </div>
       </div>
     </div>

@@ -18,9 +18,7 @@
         >
           {{ t(ABOUT_SKILLS.title) }}
         </h2>
-        <p class="hidden md:block text-body-md text-text-secondary font-light">
-          {{ t(ABOUT_SKILLS.description) }}
-        </p>
+        <VWordReveal class="hidden md:block text-body-md text-text-secondary font-light" :text="t(ABOUT_SKILLS.description)" />
       </div>
 
       <div

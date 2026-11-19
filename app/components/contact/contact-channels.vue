@@ -9,11 +9,7 @@
         >
           {{ t('ui.contactChannels.directChannels') }}
         </h2>
-        <p class="text-body-sm text-text-secondary mt-0.5 md:mt-1">
-          {{
-            t('ui.contactChannels.feelFreeToReachOut')
-          }}
-        </p>
+        <VWordReveal class="text-body-sm text-text-secondary mt-0.5 md:mt-1" :text="t('ui.contactChannels.feelFreeToReachOut')" />
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-1 gap-3 md:gap-4">
@@ -130,11 +126,7 @@
           {{ t('ui.contactChannels.currentAvailability') }}
         </span>
       </div>
-      <p class="text-body-sm text-text-secondary leading-relaxed">
-        {{
-          t('ui.contactChannels.availableForSelectedFrontendFreelanc')
-        }}
-      </p>
+      <VWordReveal class="text-body-sm text-text-secondary leading-relaxed" :text="t('ui.contactChannels.availableForSelectedFrontendFreelanc')" />
     </div>
   </div>
 </template>

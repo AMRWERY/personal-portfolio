@@ -27,13 +27,9 @@
       >
         {{ t('ui.contactForm.messageReceived') }}
       </h2>
-      <p
+      <VWordReveal
         class="text-body-sm md:text-body-md text-text-secondary max-w-md mx-auto leading-relaxed"
-      >
-        {{
-          t('ui.contactForm.thankYouForReachingOut')
-        }}
-      </p>
+       :text="t('ui.contactForm.thankYouForReachingOut')" />
       <div class="pt-2 md:pt-4">
         <LazyVButton variant="secondary" @click="reset">
           <LazyVAppIcon name="lucide:rotate-ccw" class="w-4 h-4" />
@@ -248,11 +244,7 @@
             </span>
           </LazyVButton>
 
-          <p class="text-body-sm text-text-secondary text-center">
-            {{
-              t('ui.contactForm.allInquiriesAreReceivedPrivately')
-            }}
-          </p>
+          <VWordReveal class="text-body-sm text-text-secondary text-center" :text="t('ui.contactForm.allInquiriesAreReceivedPrivately')" />
         </div>
       </form>
     </div>

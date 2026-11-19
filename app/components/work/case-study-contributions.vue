@@ -32,9 +32,7 @@
           >
             {{ t(item.title) }}
           </h3>
-          <p class="text-body-sm text-text-secondary leading-relaxed">
-            {{ t(item.text) }}
-          </p>
+          <VWordReveal class="text-body-sm text-text-secondary leading-relaxed" :text="t(item.text)" />
         </div>
       </div>
     </div>

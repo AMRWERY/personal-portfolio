@@ -16,11 +16,9 @@
           {{ t(ABOUT_INTRO.title) }}
         </h1>
 
-        <p
+        <VWordReveal
           class="text-body-sm md:text-body-lg text-text-secondary max-w-2xl font-light leading-relaxed text-pretty"
-        >
-          {{ t(ABOUT_INTRO.bio) }}
-        </p>
+         :text="t(ABOUT_INTRO.bio)" />
 
         <ul
           class="hidden md:flex pt-4 flex-wrap items-center gap-x-6 gap-y-3 text-body-sm text-text-secondary"

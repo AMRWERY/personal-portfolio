@@ -82,9 +82,7 @@
           {{ project.title }}
         </h2>
 
-        <p class="text-body-sm text-text-secondary leading-relaxed">
-          {{ t(project.summary) }}
-        </p>
+        <VWordReveal class="text-body-sm text-text-secondary leading-relaxed" :text="t(project.summary)" />
 
         <div
           v-if="project.featured && project.highlight"
@@ -93,7 +91,7 @@
           <div class="font-semibold text-text-primary text-label-sm">
             {{ t(project.highlight.label) }}
           </div>
-          <p>{{ t(project.highlight.text) }}</p>
+          <VWordReveal :text="t(project.highlight.text)" />
         </div>
       </div>
 

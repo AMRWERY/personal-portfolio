@@ -66,11 +66,9 @@
         </template>
       </div>
 
-      <p
+      <VWordReveal
         class="text-body-sm md:text-body-lg text-text-secondary font-light leading-relaxed text-pretty"
-      >
-        {{ t(caseStudy?.intro ?? project.summary) }}
-      </p>
+       :text="t(caseStudy?.intro ?? project.summary)" />
 
       <!-- Links -->
       <div
