@@ -360,7 +360,7 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "movie-app",
-    "screenshotSrc": "/img/projects/movie-app.webp",
+    "screenshotSrc": "/img/projects/Movie-App.png",
     "title": "Movie App",
     "category": "personal",
     "categoryBadge": "content.workProjects.movieApp.categoryBadge",
