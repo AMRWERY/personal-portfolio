@@ -304,7 +304,7 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "cospora",
-    "screenshotSrc": "/img/projects/cospora.webp",
+    "screenshotSrc": "/img/projects/Cospora.png",
     "title": "Cospora — Cosmetics Platform",
     "category": "personal",
     "categoryBadge": "content.workProjects.cospora.categoryBadge",
@@ -332,7 +332,7 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "islam-app",
-    "screenshotSrc": "/img/projects/islam-app.webp",
+    "screenshotSrc": "/img/projects/Islam-App-Quran.png",
     "title": "Islam App — Islamic Web Application",
     "category": "personal",
     "categoryBadge": "content.workProjects.islamApp.categoryBadge",
