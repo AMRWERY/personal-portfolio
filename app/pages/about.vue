@@ -1,16 +1,16 @@
 <template>
   <div>
-    <AboutIntro />
+    <about-intro />
 
-    <AboutApproach />
+    <about-approach />
 
-    <AboutExperience />
+    <about-experience />
 
-    <AboutSkills />
+    <about-skills />
 
-    <AboutEducationLanguages />
+    <about-education-languages />
 
-    <WorkCtaSection
+    <work-cta-section
       :eyebrow="'ui.aboutPage.collaborate'"
       :title="'ui.aboutPage.letsBuildSomethingReliableTogether'"
       :description="'ui.aboutPage.whetherYouHaveAnUpcoming'"
@@ -21,10 +21,16 @@
 <script lang="ts" setup>
 const { t } = useLocale();
 
-useSeoMeta({
-  title: () =>
-    t('ui.aboutPage.aboutAmrMohamed'),
-  description: () =>
-    t('ui.aboutPage.frontendDeveloperInCairoWith'),
+usePageSeo({
+  title: () => t("ui.aboutPage.aboutAmrMohamed"),
+  description: () => t("ui.aboutPage.frontendDeveloperInCairoWith"),
+  type: "profile",
+  jsonLd: (abs) => [
+    {
+      "@type": "ProfilePage",
+      url: abs("/about"),
+      mainEntity: personSchema(abs),
+    },
+  ],
 });
 </script>

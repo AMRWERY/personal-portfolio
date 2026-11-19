@@ -1,8 +1,8 @@
 <template>
   <div v-if="project">
-    <CaseStudyHero :project="project" />
+    <case-study-hero :project="project" />
 
-    <CaseStudyGallery :key="project.slug" :project="project" />
+    <case-study-gallery :key="project.slug" :project="project" />
 
     <section
       class="max-w-(--container-max) mx-auto px-5 lg:px-12 py-6 md:py-12"
@@ -11,13 +11,13 @@
         class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-10 lg:gap-y-6"
       >
         <!-- Metrics: first on mobile, right column on desktop -->
-        <CaseStudyMetrics
+        <case-study-metrics
           v-if="caseStudy?.metrics?.length"
           :metrics="caseStudy.metrics"
           :class="hasContributions ? 'lg:col-span-5' : 'lg:col-span-12'"
         />
 
-        <CaseStudyContributions
+        <case-study-contributions
           v-if="hasContributions"
           :contributions="caseStudy!.contributions!"
           :note="caseStudy?.note"
@@ -32,7 +32,7 @@
           <h2
             class="font-headline text-headline-sm md:text-title-lg font-bold text-text-primary"
           >
-            {{ t('ui.caseStudyPage.technologyStack') }}
+            {{ t("ui.caseStudyPage.technologyStack") }}
           </h2>
           <div class="flex flex-wrap gap-1.5 md:gap-2">
             <LazyVTechBadge v-for="tech in stack" :key="tech" :label="tech" />
@@ -41,9 +41,9 @@
       </div>
     </section>
 
-    <CaseStudyPager :previous="adjacent.previous" :next="adjacent.next" />
+    <case-study-pager :previous="adjacent.previous" :next="adjacent.next" />
 
-    <WorkCtaSection
+    <work-cta-section
       :eyebrow="'ui.caseStudyPage.projectInquiry'"
       :title="'ui.caseStudyPage.haveASimilarProjectIn'"
       :description="'ui.caseStudyPage.availableToArchitectFrontendApplicat'"
@@ -55,8 +55,8 @@
 <script lang="ts" setup>
 import { getAdjacentProjects, getProjectBySlug } from "@/data/work";
 
-const route = useRoute();
 const { t } = useLocale();
+const route = useRoute();
 
 const project = getProjectBySlug(String(route.params.slug));
 
@@ -75,8 +75,27 @@ const adjacent = getAdjacentProjects(project.slug);
 
 const shortTitle = project.title.split(" — ")[0];
 
-useSeoMeta({
+const localePath = useLocalePath();
+
+usePageSeo({
   title: () => t("ui.caseStudyPage.title", { title: shortTitle }),
   description: () => t(project.summary),
+  image: project.screenshotSrc,
+  imageAlt: () => project.title,
+  jsonLd: (abs) => [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { name: t("ui.caseStudyHero.home"), path: localePath("/") },
+        { name: t("ui.caseStudyHero.work"), path: localePath("/work") },
+        { name: shortTitle, path: localePath(`/work/${project.slug}`) },
+      ].map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        item: abs(item.path),
+      })),
+    },
+  ],
 });
 </script>
