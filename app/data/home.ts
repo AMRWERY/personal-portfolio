@@ -6,6 +6,7 @@ import type {
   ImpactMetric,
   NavItem,
 } from "@/types/portfolio";
+import { getProjectBySlug } from "@/data/work";
 
 export const PROFILE = {
   "name": "Amr Mohamed",
@@ -89,7 +90,7 @@ export const IMPACT_METRICS: ImpactMetric[] = [
   }
 ];
 
-export const FEATURED_PROJECTS: FeaturedProject[] = [
+const FEATURED_BASE: FeaturedProject[] = [
   {
     "slug": "lexus-egypt",
     "title": "Lexus Egypt — Official Website",
@@ -144,6 +145,15 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     ]
   }
 ];
+
+/** Featured cards reuse the image set on the matching project in data/work.ts */
+export const FEATURED_PROJECTS: FeaturedProject[] = FEATURED_BASE.map(
+  (project) => ({
+    ...project,
+    screenshotSrc:
+      project.screenshotSrc ?? getProjectBySlug(project.slug)?.screenshotSrc,
+  }),
+);
 
 export const CAPABILITIES: CapabilityItem[] = [
   {
