@@ -63,6 +63,10 @@
           v-for="project in visibleProjects"
           :key="project.slug"
           :project="project"
+          :class="
+            orphanSlugs.has(project.slug) &&
+            'md:col-span-2 md:justify-self-center md:w-[calc(50%-1rem)]'
+          "
         />
       </TransitionGroup>
 
@@ -138,4 +142,23 @@ const visibleProjects = computed(() =>
     ? WORK_PROJECTS
     : WORK_PROJECTS.filter((p) => p.category === activeFilter.value),
 );
+
+// Regular cards left alone on a row of the 2-column grid (a featured card spans both
+// columns and starts a new row), so they can be centred instead of hanging on the left
+const orphanSlugs = computed(() => {
+  const orphans = new Set<string>();
+  let lone: string | undefined;
+  for (const project of visibleProjects.value) {
+    if (project.featured) {
+      if (lone) orphans.add(lone);
+      lone = undefined;
+    } else if (lone) {
+      lone = undefined; // second card of the row: the row is full
+    } else {
+      lone = project.slug;
+    }
+  }
+  if (lone) orphans.add(lone);
+  return orphans;
+});
 </script>

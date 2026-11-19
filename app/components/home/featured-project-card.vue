@@ -6,13 +6,11 @@
     <div
       class="relative w-full aspect-16/10 bg-surface-elevated border-b border-border overflow-hidden flex flex-col items-center justify-center p-4 lg:p-6 text-center"
     >
-      <img
-        v-if="project.screenshotSrc"
+      <VProjectCover
+        :slug="project.slug"
         :src="project.screenshotSrc"
         :alt="project.screenshotAlt ? t(project.screenshotAlt) : project.title"
-        class="w-full h-full object-cover transition-transform duration-(--duration-standard) group-hover:scale-[1.02]"
-      />
-      <template v-else>
+      >
         <LazyVAppIcon
           name="lucide:image"
           class="w-8 h-8 lg:w-10 lg:h-10 text-text-secondary mb-1.5 lg:mb-2 group-hover:text-accent-ink transition-colors duration-(--duration-fast)"
@@ -22,7 +20,7 @@
         >
           {{ project.mediaLabel }}
         </span>
-      </template>
+      </VProjectCover>
 
       <div
         v-if="project.status"

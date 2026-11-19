@@ -12,13 +12,11 @@
           : 'aspect-16/10'
       "
     >
-      <img
-        v-if="project.screenshotSrc"
+      <VProjectCover
+        :slug="project.slug"
         :src="project.screenshotSrc"
         :alt="project.title"
-        class="absolute inset-0 w-full h-full object-cover"
-      />
-      <template v-else>
+      >
         <LazyVAppIcon
           name="lucide:image"
           class="text-text-secondary mb-1.5 group-hover:text-accent-ink transition-colors duration-(--duration-fast)"
@@ -38,7 +36,7 @@
         >
           {{ project.title }}
         </span>
-      </template>
+      </VProjectCover>
 
       <div
         v-if="project.status"

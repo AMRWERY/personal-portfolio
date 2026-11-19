@@ -4,6 +4,7 @@ import { CASE_STUDIES } from "@/data/case-studies";
 const BASE_PROJECTS: WorkProject[] = [
   {
     "slug": "lexus-egypt",
+    "screenshotSrc": "/img/projects/Lexus.png",
     "title": "Lexus Egypt — Official Website",
     "category": "professional",
     "featured": true,
@@ -31,7 +32,77 @@ const BASE_PROJECTS: WorkProject[] = [
     ]
   },
   {
+    "slug": "toyota-egypt",
+    "screenshotSrc": "/img/projects/Toyota-Egypt.png",
+    "title": "Toyota Egypt — Official Website",
+    "category": "professional",
+    "categoryBadge": "content.workProjects.toyotaEgypt.categoryBadge",
+    "role": "content.workProjects.toyotaEgypt.role",
+    "period": "content.workProjects.toyotaEgypt.period",
+    "summary": "content.workProjects.toyotaEgypt.summary",
+    "stack": [
+      "Nuxt.js",
+      "REST API",
+      "Payment Gateway",
+      "Tailwind CSS"
+    ],
+    "links": [
+      {
+        "kind": "live",
+        "label": "content.workProjects.toyotaEgypt.links.0.label",
+        "href": "https://toyota.com.eg"
+      }
+    ]
+  },
+  {
+    "slug": "attijariwafa-bank",
+    "screenshotSrc": "/img/projects/Attijariwafa-Bank-Egypt.png",
+    "title": "Attijariwafa Bank Egypt",
+    "category": "professional",
+    "categoryBadge": "content.workProjects.attijariwafaBank.categoryBadge",
+    "role": "content.workProjects.attijariwafaBank.role",
+    "period": "content.workProjects.attijariwafaBank.period",
+    "summary": "content.workProjects.attijariwafaBank.summary",
+    "stack": [
+      "Nuxt.js",
+      "TypeScript",
+      "REST API",
+      "Tailwind CSS"
+    ],
+    "links": [
+      {
+        "kind": "live",
+        "label": "content.workProjects.attijariwafaBank.links.0.label",
+        "href": "https://attijariwafabank.com.eg"
+      }
+    ]
+  },
+  {
+    "slug": "abdal",
+    "screenshotSrc": "/img/projects/Abdal-Human-Resources.png",
+    "title": "Abdal — Recruitment Services Platform",
+    "category": "professional",
+    "categoryBadge": "content.workProjects.abdal.categoryBadge",
+    "role": "content.workProjects.abdal.role",
+    "period": "content.workProjects.abdal.period",
+    "summary": "content.workProjects.abdal.summary",
+    "stack": [
+      "Vue.js",
+      "REST API",
+      "Payment Gateway",
+      "Bootstrap"
+    ],
+    "links": [
+      {
+        "kind": "live",
+        "label": "content.workProjects.abdal.links.0.label",
+        "href": "https://abdal.sa"
+      }
+    ]
+  },
+  {
     "slug": "marca-store",
+    "screenshotSrc": "/img/projects/marca-store.webp",
     "title": "Marca Store — E-Commerce",
     "category": "freelance",
     "featured": true,
@@ -72,73 +143,8 @@ const BASE_PROJECTS: WorkProject[] = [
     ]
   },
   {
-    "slug": "abdal",
-    "title": "Abdal — Recruitment Services Platform",
-    "category": "professional",
-    "categoryBadge": "content.workProjects.abdal.categoryBadge",
-    "role": "content.workProjects.abdal.role",
-    "period": "content.workProjects.abdal.period",
-    "summary": "content.workProjects.abdal.summary",
-    "stack": [
-      "Vue.js",
-      "REST API",
-      "Payment Gateway",
-      "Bootstrap"
-    ],
-    "links": [
-      {
-        "kind": "live",
-        "label": "content.workProjects.abdal.links.0.label",
-        "href": "https://abdal.sa"
-      }
-    ]
-  },
-  {
-    "slug": "toyota-egypt",
-    "title": "Toyota Egypt — Official Website",
-    "category": "professional",
-    "categoryBadge": "content.workProjects.toyotaEgypt.categoryBadge",
-    "role": "content.workProjects.toyotaEgypt.role",
-    "period": "content.workProjects.toyotaEgypt.period",
-    "summary": "content.workProjects.toyotaEgypt.summary",
-    "stack": [
-      "Nuxt.js",
-      "REST API",
-      "Payment Gateway",
-      "Tailwind CSS"
-    ],
-    "links": [
-      {
-        "kind": "live",
-        "label": "content.workProjects.toyotaEgypt.links.0.label",
-        "href": "https://toyota.com.eg"
-      }
-    ]
-  },
-  {
-    "slug": "attijariwafa-bank",
-    "title": "Attijariwafa Bank Egypt",
-    "category": "professional",
-    "categoryBadge": "content.workProjects.attijariwafaBank.categoryBadge",
-    "role": "content.workProjects.attijariwafaBank.role",
-    "period": "content.workProjects.attijariwafaBank.period",
-    "summary": "content.workProjects.attijariwafaBank.summary",
-    "stack": [
-      "Nuxt.js",
-      "TypeScript",
-      "REST API",
-      "Tailwind CSS"
-    ],
-    "links": [
-      {
-        "kind": "live",
-        "label": "content.workProjects.attijariwafaBank.links.0.label",
-        "href": "https://attijariwafabank.com.eg"
-      }
-    ]
-  },
-  {
     "slug": "jai-dashboard",
+    "screenshotSrc": "/img/projects/jai-dashboard.webp",
     "title": "Jai Dashboard — Admin Dashboard",
     "category": "professional",
     "categoryBadge": "content.workProjects.jaiDashboard.categoryBadge",
@@ -156,6 +162,7 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "treat-dashboard",
+    "screenshotSrc": "/img/projects/treat-dashboard.webp",
     "title": "Treat Dashboard — Admin Dashboard",
     "category": "professional",
     "categoryBadge": "content.workProjects.treatDashboard.categoryBadge",
@@ -173,6 +180,7 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "lugar-store",
+    "screenshotSrc": "/img/projects/lugar-store.webp",
     "title": "Lugar Store — Furniture E-Commerce",
     "category": "freelance",
     "categoryBadge": "content.workProjects.lugarStore.categoryBadge",
@@ -200,6 +208,7 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "travel-booking",
+    "screenshotSrc": "/img/projects/travel-booking.webp",
     "title": "Travel Booking — O Tech Company",
     "category": "freelance",
     "categoryBadge": "content.workProjects.travelBooking.categoryBadge",
@@ -216,6 +225,7 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "gym-management",
+    "screenshotSrc": "/img/projects/gym-management.webp",
     "title": "Gym Management Dashboard — ASAGTC",
     "category": "freelance",
     "categoryBadge": "content.workProjects.gymManagement.categoryBadge",
@@ -238,6 +248,7 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "al-quran",
+    "screenshotSrc": "/img/projects/Al-Quran.png",
     "title": "Al-Quran — Quran Reader & Audio",
     "category": "personal",
     "categoryBadge": "content.workProjects.alQuran.categoryBadge",
@@ -265,6 +276,7 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "ship-it",
+    "screenshotSrc": "/img/projects/ship-it.webp",
     "title": "Ship-IT — E-Commerce Platform",
     "category": "personal",
     "categoryBadge": "content.workProjects.shipIt.categoryBadge",
@@ -292,6 +304,7 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "cospora",
+    "screenshotSrc": "/img/projects/cospora.webp",
     "title": "Cospora — Cosmetics Platform",
     "category": "personal",
     "categoryBadge": "content.workProjects.cospora.categoryBadge",
@@ -319,6 +332,7 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "islam-app",
+    "screenshotSrc": "/img/projects/islam-app.webp",
     "title": "Islam App — Islamic Web Application",
     "category": "personal",
     "categoryBadge": "content.workProjects.islamApp.categoryBadge",
@@ -346,6 +360,7 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "movie-app",
+    "screenshotSrc": "/img/projects/movie-app.webp",
     "title": "Movie App",
     "category": "personal",
     "categoryBadge": "content.workProjects.movieApp.categoryBadge",
