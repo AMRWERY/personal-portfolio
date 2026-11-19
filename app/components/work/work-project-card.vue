@@ -13,7 +13,6 @@
       "
     >
       <VProjectCover
-        :slug="project.slug"
         :src="project.screenshotSrc"
         :alt="project.title"
       >

@@ -7,7 +7,6 @@
       class="relative w-full aspect-16/10 bg-surface-elevated border-b border-border overflow-hidden flex flex-col items-center justify-center p-4 lg:p-6 text-center"
     >
       <VProjectCover
-        :slug="project.slug"
         :src="project.screenshotSrc"
         :alt="project.screenshotAlt ? t(project.screenshotAlt) : project.title"
       >

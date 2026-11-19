@@ -6,7 +6,7 @@
     <div class="project-cover-bg absolute inset-0" aria-hidden="true" />
 
     <img
-      v-if="!failed"
+      v-if="source && !failed"
       ref="img"
       :src="source"
       :alt="alt"
@@ -25,14 +25,12 @@
 
 <script lang="ts" setup>
 const props = defineProps<{
-  /** Used to find /img/projects/<slug>.webp when no `src` is given */
-  slug: string;
-  /** Explicit image URL; overrides the slug convention */
+  /** Image URL (e.g. /img/projects/name.png). Without it the default background is shown. */
   src?: string;
   alt: string;
 }>();
 
-const source = computed(() => props.src ?? `/img/projects/${props.slug}.webp`);
+const source = computed(() => props.src || undefined);
 
 const img = ref<HTMLImageElement | null>(null);
 const loaded = ref(false);

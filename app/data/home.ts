@@ -106,29 +106,29 @@ const FEATURED_BASE: FeaturedProject[] = [
     ]
   },
   {
-    "slug": "marca-store",
-    "title": "Marca Store — E-Commerce Platform",
-    "mediaLabel": "Marca Store — Storefront & Admin",
-    "categoryBadge": "content.featuredProjects.marcaStore.categoryBadge",
-    "role": "content.featuredProjects.marcaStore.role",
-    "summary": "content.featuredProjects.marcaStore.summary",
+    "slug": "toyota-egypt",
+    "title": "Toyota Egypt — Official Website",
+    "mediaLabel": "Toyota Egypt — Official Website",
+    "categoryBadge": "content.workProjects.toyotaEgypt.categoryBadge",
+    "role": "content.workProjects.toyotaEgypt.role",
+    "summary": "content.workProjects.toyotaEgypt.summary",
     "stack": [
-      "Vue.js",
-      "Pinia",
-      "Firebase"
+      "Nuxt.js",
+      "REST API",
+      "Tailwind CSS"
     ]
   },
   {
-    "slug": "gym-management",
-    "title": "Gym Management Dashboard — ASAGTC",
-    "mediaLabel": "Gym Management Dashboard — ASAGTC",
-    "categoryBadge": "content.featuredProjects.gymManagement.categoryBadge",
-    "role": "content.featuredProjects.gymManagement.role",
-    "summary": "content.featuredProjects.gymManagement.summary",
+    "slug": "attijariwafa-bank",
+    "title": "Attijariwafa Bank Egypt",
+    "mediaLabel": "Attijariwafa Bank Egypt",
+    "categoryBadge": "content.workProjects.attijariwafaBank.categoryBadge",
+    "role": "content.workProjects.attijariwafaBank.role",
+    "summary": "content.workProjects.attijariwafaBank.summary",
     "stack": [
-      "Vue.js",
-      "Vuex",
-      "Pusher"
+      "Nuxt.js",
+      "TypeScript",
+      "Tailwind CSS"
     ]
   },
   {
@@ -143,7 +143,7 @@ const FEATURED_BASE: FeaturedProject[] = [
       "REST API",
       "Bootstrap"
     ]
-  }
+  },
 ];
 
 /** Featured cards reuse the image set on the matching project in data/work.ts */

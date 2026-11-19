@@ -102,7 +102,6 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "marca-store",
-    "screenshotSrc": "/img/projects/marca-store.webp",
     "title": "Marca Store — E-Commerce",
     "category": "freelance",
     "featured": true,
@@ -144,7 +143,6 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "jai-dashboard",
-    "screenshotSrc": "/img/projects/jai-dashboard.webp",
     "title": "Jai Dashboard — Admin Dashboard",
     "category": "professional",
     "categoryBadge": "content.workProjects.jaiDashboard.categoryBadge",
@@ -162,7 +160,6 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "treat-dashboard",
-    "screenshotSrc": "/img/projects/treat-dashboard.webp",
     "title": "Treat Dashboard — Admin Dashboard",
     "category": "professional",
     "categoryBadge": "content.workProjects.treatDashboard.categoryBadge",
@@ -180,7 +177,6 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "lugar-store",
-    "screenshotSrc": "/img/projects/lugar-store.webp",
     "title": "Lugar Store — Furniture E-Commerce",
     "category": "freelance",
     "categoryBadge": "content.workProjects.lugarStore.categoryBadge",
@@ -208,7 +204,6 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "travel-booking",
-    "screenshotSrc": "/img/projects/travel-booking.webp",
     "title": "Travel Booking — O Tech Company",
     "category": "freelance",
     "categoryBadge": "content.workProjects.travelBooking.categoryBadge",
@@ -225,7 +220,6 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "gym-management",
-    "screenshotSrc": "/img/projects/gym-management.webp",
     "title": "Gym Management Dashboard — ASAGTC",
     "category": "freelance",
     "categoryBadge": "content.workProjects.gymManagement.categoryBadge",
@@ -276,7 +270,6 @@ const BASE_PROJECTS: WorkProject[] = [
   },
   {
     "slug": "ship-it",
-    "screenshotSrc": "/img/projects/ship-it.webp",
     "title": "Ship-IT — E-Commerce Platform",
     "category": "personal",
     "categoryBadge": "content.workProjects.shipIt.categoryBadge",
