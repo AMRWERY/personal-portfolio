@@ -3,7 +3,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   modules: [
-    "@pinia/nuxt",
     "@vueuse/nuxt/module",
     "@vueuse/motion/nuxt",
     "@nuxtjs/i18n",
@@ -23,9 +22,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   vite: {
     plugins: [tailwindcss()],
-  },
-  pinia: {
-    storesDirs: ["./app/stores/**"],
   },
   i18n: {
     // Locale files, vue-i18n config and detector live in app/i18n (resolved from the project root)
