@@ -33,11 +33,11 @@
 import type { HeaderProps } from "@/types/layouts";
 import type { IconifyName, NavItem } from "@/types/portfolio";
 
+const { t } = useLocale();
+
 withDefaults(defineProps<HeaderProps>(), {
   activeRoute: "home",
 });
-
-const { t } = useLocale();
 
 const items: {
   key: NavItem["key"];
@@ -45,9 +45,29 @@ const items: {
   label: string;
   icon: IconifyName;
 }[] = [
-  { key: "home", to: "/", label: "content.navItems.home.label", icon: "lucide:house" },
-  { key: "work", to: "/work", label: "content.navItems.work.label", icon: "lucide:briefcase" },
-  { key: "about", to: "/about", label: "content.navItems.about.label", icon: "lucide:user" },
-  { key: "contact", to: "/contact", label: "content.navItems.contact.label", icon: "lucide:mail" },
+  {
+    key: "home",
+    to: "/",
+    label: "content.navItems.home.label",
+    icon: "lucide:house",
+  },
+  {
+    key: "work",
+    to: "/work",
+    label: "content.navItems.work.label",
+    icon: "lucide:briefcase",
+  },
+  {
+    key: "about",
+    to: "/about",
+    label: "content.navItems.about.label",
+    icon: "lucide:user",
+  },
+  {
+    key: "contact",
+    to: "/contact",
+    label: "content.navItems.contact.label",
+    icon: "lucide:mail",
+  },
 ];
 </script>

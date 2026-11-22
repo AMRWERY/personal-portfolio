@@ -15,7 +15,11 @@
       >
         {{ t(ABOUT_EXPERIENCE.title) }}
       </h2>
-      <VWordReveal class="hidden md:block text-body-md text-text-secondary font-light" :text="t(ABOUT_EXPERIENCE.description)" />
+
+      <VWordReveal
+        class="hidden md:block text-body-md text-text-secondary font-light"
+        :text="t(ABOUT_EXPERIENCE.description)"
+      />
     </div>
 
     <!-- Vertical timeline -->
@@ -42,7 +46,9 @@
             <div>
               <span
                 class="text-label-sm font-semibold uppercase tracking-wider block mb-1"
-                :class="entry.isCurrent ? 'text-accent-ink' : 'text-text-secondary'"
+                :class="
+                  entry.isCurrent ? 'text-accent-ink' : 'text-text-secondary'
+                "
               >
                 {{ t(entry.period) }}
               </span>
@@ -59,7 +65,10 @@
             </span>
           </div>
 
-          <VWordReveal class="text-body-sm text-text-secondary leading-relaxed" :text="t(entry.description)" />
+          <VWordReveal
+            class="text-body-sm text-text-secondary leading-relaxed"
+            :text="t(entry.description)"
+          />
 
           <div class="pt-1 md:pt-2 space-y-2">
             <span

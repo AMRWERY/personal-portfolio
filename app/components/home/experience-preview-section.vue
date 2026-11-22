@@ -12,21 +12,21 @@
       >
         <div>
           <LazyVEyebrowLabel class="hidden md:inline-flex mb-1">
-            {{ t('ui.experiencePreviewSection.careerTimeline') }}
+            {{ t("ui.experiencePreviewSection.careerTimeline") }}
           </LazyVEyebrowLabel>
           <h2
             class="font-headline text-body-md md:text-headline-lg font-bold text-text-primary tracking-tight"
           >
-            {{ t('ui.experiencePreviewSection.experiencePreview') }}
+            {{ t("ui.experiencePreviewSection.experiencePreview") }}
           </h2>
         </div>
 
         <LazyVButton to="/about" variant="ghost">
           <span class="md:hidden">{{
-            t('ui.experiencePreviewSection.fullBio')
+            t("ui.experiencePreviewSection.fullBio")
           }}</span>
           <span class="hidden md:inline">{{
-            t('ui.experiencePreviewSection.viewFullExperience')
+            t("ui.experiencePreviewSection.viewFullExperience")
           }}</span>
           <LazyVAppIcon
             name="lucide:arrow-right"
@@ -35,7 +35,9 @@
         </LazyVButton>
       </div>
 
-      <div class="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+      <div
+        class="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8"
+      >
         <div
           v-for="item in EXPERIENCE_PREVIEW"
           :key="item.company"
@@ -57,7 +59,10 @@
           >
             {{ t(item.role) }}
           </div>
-          <VWordReveal class="text-body-sm text-text-secondary md:mt-2" :text="t(item.projectsSummary)" />
+          <VWordReveal
+            class="text-body-sm text-text-secondary md:mt-2"
+            :text="t(item.projectsSummary)"
+          />
         </div>
       </div>
     </div>

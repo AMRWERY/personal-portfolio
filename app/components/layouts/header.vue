@@ -74,7 +74,7 @@
         <!-- Desktop Contact Action -->
         <div class="hidden md:block">
           <LazyVButton to="/contact" variant="secondary" size="sm">
-            {{ t('ui.header.letsTalk') }}
+            {{ t("ui.header.letsTalk") }}
           </LazyVButton>
         </div>
 
@@ -147,9 +147,7 @@
               ref="closeButtonRef"
               variant="outline"
               size="icon"
-              :aria-label="
-                t('ui.header.closeNavigationMenu')
-              "
+              :aria-label="t('ui.header.closeNavigationMenu')"
               @click="closeMobileMenu(true)"
             >
               <LazyVAppIcon name="lucide:x" class="w-4 h-4" />
@@ -181,7 +179,7 @@
             class="shrink-0 p-5 border-t border-border pb-[max(1.25rem,env(safe-area-inset-bottom))]"
           >
             <LazyVButton to="/contact" block @click="closeMobileMenu(false)">
-              {{ t('ui.header.letsTalk') }}
+              {{ t("ui.header.letsTalk") }}
             </LazyVButton>
           </div>
         </aside>

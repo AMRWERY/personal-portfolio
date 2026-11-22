@@ -2,12 +2,10 @@
   <LazyVButton
     :variant="variant"
     :size="size"
-    :aria-label="
-      t('ui.vToggleLocale.switchLanguageToArabic')
-    "
+    :aria-label="t('ui.vToggleLocale.switchLanguageToArabic')"
     @click="toggleLocale"
   >
-    {{ t('ui.vToggleLocale.text') }}
+    {{ t("ui.vToggleLocale.text") }}
   </LazyVButton>
 </template>
 

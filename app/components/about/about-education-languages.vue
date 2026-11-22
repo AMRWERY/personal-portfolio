@@ -30,9 +30,7 @@
         </div>
 
         <div class="md:pt-2 md:border-t border-border space-y-1 md:space-y-1.5">
-          <div
-            class="font-headline text-title-lg font-bold text-text-primary"
-          >
+          <div class="font-headline text-title-lg font-bold text-text-primary">
             {{ t(ABOUT_EDUCATION.degree) }}
           </div>
           <div class="text-body-sm text-text-secondary">

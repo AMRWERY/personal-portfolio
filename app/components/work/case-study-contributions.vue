@@ -4,14 +4,12 @@
       <span
         class="hidden md:block font-headline text-label-sm font-semibold text-accent-ink uppercase tracking-wider mb-1"
       >
-        {{
-          t('ui.caseStudyContributions.engineeringResponsibilities')
-        }}
+        {{ t("ui.caseStudyContributions.engineeringResponsibilities") }}
       </span>
       <h2
         class="font-headline text-headline-sm md:text-headline-lg font-bold text-text-primary"
       >
-        {{ t('ui.caseStudyContributions.myContribution') }}
+        {{ t("ui.caseStudyContributions.myContribution") }}
       </h2>
     </div>
 
@@ -32,7 +30,10 @@
           >
             {{ t(item.title) }}
           </h3>
-          <VWordReveal class="text-body-sm text-text-secondary leading-relaxed" :text="t(item.text)" />
+          <VWordReveal
+            class="text-body-sm text-text-secondary leading-relaxed"
+            :text="t(item.text)"
+          />
         </div>
       </div>
     </div>

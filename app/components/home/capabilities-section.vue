@@ -7,14 +7,17 @@
     <div class="max-w-(--container-max) mx-auto px-5 lg:px-12">
       <div class="reveal-head max-w-2xl mb-5 md:mb-12">
         <LazyVEyebrowLabel class="hidden md:inline-flex mb-2">
-          {{ t('ui.capabilitiesSection.coreServices') }}
+          {{ t("ui.capabilitiesSection.coreServices") }}
         </LazyVEyebrowLabel>
         <h2
           class="font-headline text-headline-sm md:text-headline-lg lg:text-headline-xl font-bold text-text-primary tracking-tight"
         >
-          {{ t('ui.capabilitiesSection.capabilities') }}
+          {{ t("ui.capabilitiesSection.capabilities") }}
         </h2>
-        <VWordReveal class="hidden md:block text-body-md text-text-secondary mt-2" :text="t('ui.capabilitiesSection.handsOnFrontendEngineeringFocused')" />
+        <VWordReveal
+          class="hidden md:block text-body-md text-text-secondary mt-2"
+          :text="t('ui.capabilitiesSection.handsOnFrontendEngineeringFocused')"
+        />
       </div>
 
       <div
@@ -38,7 +41,8 @@
             </h3>
             <VWordReveal
               class="text-body-sm text-text-secondary leading-relaxed mt-1 md:mt-0"
-             :text="t(item.description)" />
+              :text="t(item.description)"
+            />
           </div>
         </div>
       </div>

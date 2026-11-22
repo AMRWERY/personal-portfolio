@@ -13,10 +13,13 @@
             </span>
             <span class="text-text-muted" aria-hidden="true">·</span>
             <span class="text-body-sm text-text-secondary">
-              {{ t('ui.footer.tagline') }}
+              {{ t("ui.footer.tagline") }}
             </span>
           </div>
-          <VWordReveal class="text-body-sm text-text-secondary" :text="t('ui.footer.basedInCairoEgyptBilingual')" />
+          <VWordReveal
+            class="text-body-sm text-text-secondary"
+            :text="t('ui.footer.basedInCairoEgyptBilingual')"
+          />
         </div>
 
         <div
@@ -45,7 +48,7 @@
             class="hover:text-accent-ink transition-colors inline-flex items-center gap-1.5 min-h-11 lg:pointer-fine:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
           >
             <LazyVAppIcon name="lucide:mail" class="w-4 h-4" />
-            <span>{{ t('ui.footer.email') }}</span>
+            <span>{{ t("ui.footer.email") }}</span>
           </a>
         </div>
       </div>
@@ -55,7 +58,10 @@
       >
         <div class="flex flex-wrap items-center justify-center gap-4">
           <span>© {{ currentYear }} {{ PROFILE.name }}</span>
-          <nav :aria-label="t('ui.footer.footerNavigation')" class="flex items-center gap-4">
+          <nav
+            :aria-label="t('ui.footer.footerNavigation')"
+            class="flex items-center gap-4"
+          >
             <nuxt-link-locale
               v-for="item in NAV_ITEMS"
               :key="item.key"

@@ -6,7 +6,7 @@
     <div
       class="relative w-full aspect-16/10 bg-surface-elevated border-b border-border overflow-hidden flex flex-col items-center justify-center p-4 lg:p-6 text-center"
     >
-      <VProjectCover
+      <LazyVProjectCover
         :src="project.screenshotSrc"
         :alt="project.screenshotAlt ? t(project.screenshotAlt) : project.title"
       >
@@ -19,7 +19,7 @@
         >
           {{ project.mediaLabel }}
         </span>
-      </VProjectCover>
+      </LazyVProjectCover>
 
       <div
         v-if="project.status"
@@ -58,7 +58,8 @@
 
         <VWordReveal
           class="text-body-sm text-text-secondary leading-relaxed mb-5 lg:mb-6"
-         :text="t(project.summary)" />
+          :text="t(project.summary)"
+        />
       </div>
 
       <div
@@ -76,7 +77,7 @@
           variant="ghost"
           class="shrink-0"
         >
-          {{ t('ui.featuredProjectCard.viewCaseStudy') }}
+          {{ t("ui.featuredProjectCard.viewCaseStudy") }}
         </LazyVButton>
       </div>
     </div>

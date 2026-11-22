@@ -33,17 +33,19 @@
 <script lang="ts" setup>
 import type { Props } from "~/types/shared/VToggle";
 
+const { t } = useLocale();
+
+const { theme, toggleTheme } = useTheme();
+
 withDefaults(defineProps<Props>(), {
   variant: "outline",
   size: "icon",
 });
 
-const { theme, toggleTheme } = useTheme();
-const { t } = useLocale();
-
 // Neutral label until mounted: the real one depends on the stored theme, which the
 // server doesn't know. After mount it names the action the button will perform.
 const isMounted = ref(false);
+
 onMounted(() => {
   isMounted.value = true;
 });

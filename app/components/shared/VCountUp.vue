@@ -22,7 +22,14 @@ const props = withDefaults(defineProps<Props>(), {
 // "100+" -> prefix "", number 100, suffix "+"; anything else is shown as-is
 const parts = computed(() => {
   const m = props.value.match(/^(\D*)(\d+(?:\.\d+)?)(\D*)$/);
-  return m ? { prefix: m[1], num: Number(m[2]), decimals: (m[2].split(".")[1] ?? "").length, suffix: m[3] } : null;
+  return m
+    ? {
+        prefix: m[1],
+        num: Number(m[2]),
+        decimals: (m[2].split(".")[1] ?? "").length,
+        suffix: m[3],
+      }
+    : null;
 });
 
 // 0..1 progress. Starts at 1 so server render, no-JS and reduced motion all show the final value.

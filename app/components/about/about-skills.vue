@@ -18,7 +18,10 @@
         >
           {{ t(ABOUT_SKILLS.title) }}
         </h2>
-        <VWordReveal class="hidden md:block text-body-md text-text-secondary font-light" :text="t(ABOUT_SKILLS.description)" />
+        <VWordReveal
+          class="hidden md:block text-body-md text-text-secondary font-light"
+          :text="t(ABOUT_SKILLS.description)"
+        />
       </div>
 
       <div
@@ -54,7 +57,10 @@
         <h3
           class="font-headline text-title-lg font-bold text-text-primary flex items-center gap-2"
         >
-          <LazyVAppIcon name="lucide:sparkles" class="w-4 h-4 text-accent-ink" />
+          <LazyVAppIcon
+            name="lucide:sparkles"
+            class="w-4 h-4 text-accent-ink"
+          />
           {{ t(ABOUT_SKILLS.specializations.title) }}
         </h3>
         <div class="flex flex-wrap gap-2 pt-1">

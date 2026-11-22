@@ -1,5 +1,9 @@
 <template>
-  <div ref="rootRef" class="relative w-full lg:w-auto" @keydown.esc="close(true)">
+  <div
+    ref="rootRef"
+    class="relative w-full lg:w-auto"
+    @keydown.esc="close(true)"
+  >
     <LazyVButton
       variant="outline"
       class="w-full lg:w-auto md:py-4 md:text-body-md lg:py-3 lg:text-label-md"
@@ -9,7 +13,7 @@
       @click="open = !open"
     >
       <LazyVAppIcon name="lucide:download" class="w-4 h-4" />
-      <span>{{ t('ui.vCvDownload.downloadCV') }}</span>
+      <span>{{ t("ui.vCvDownload.downloadCV") }}</span>
       <LazyVAppIcon
         name="lucide:chevron-down"
         class="w-4 h-4 transition-transform duration-(--duration-fast) motion-reduce:transition-none"
@@ -48,7 +52,9 @@
               >
                 {{ t(file.label) }}
               </span>
-              <span class="block text-label-sm font-normal normal-case tracking-normal text-text-secondary">
+              <span
+                class="block text-label-sm font-normal normal-case tracking-normal text-text-secondary"
+              >
                 {{ t(file.description) }}
               </span>
             </span>

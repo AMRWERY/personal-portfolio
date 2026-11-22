@@ -7,9 +7,12 @@
         <h2
           class="font-headline text-title-lg md:text-headline-sm font-bold text-text-primary"
         >
-          {{ t('ui.contactChannels.directChannels') }}
+          {{ t("ui.contactChannels.directChannels") }}
         </h2>
-        <VWordReveal class="text-body-sm text-text-secondary mt-0.5 md:mt-1" :text="t('ui.contactChannels.feelFreeToReachOut')" />
+        <VWordReveal
+          class="text-body-sm text-text-secondary mt-0.5 md:mt-1"
+          :text="t('ui.contactChannels.feelFreeToReachOut')"
+        />
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-1 gap-3 md:gap-4">
@@ -22,11 +25,10 @@
             <LazyVAppIcon name="lucide:mail" class="w-4 h-4 md:w-5 md:h-5" />
           </span>
           <span class="min-w-0 flex-1">
-            <span :class="LABEL">{{
-              t('ui.contactChannels.email')
-            }}</span>
+            <span :class="LABEL">{{ t("ui.contactChannels.email") }}</span>
             <span :class="VALUE" dir="ltr">{{ PROFILE.email }}</span>
           </span>
+
           <LazyVAppIcon
             name="lucide:arrow-up-right"
             class="w-4 h-4 text-text-secondary group-hover/btn:text-accent-ink shrink-0 arrow-nudge-diag"
@@ -43,7 +45,7 @@
           </span>
           <span class="min-w-0 flex-1">
             <span :class="LABEL">{{
-              t('ui.contactChannels.phoneWhatsApp')
+              t("ui.contactChannels.phoneWhatsApp")
             }}</span>
             <span :class="VALUE" dir="ltr">{{ PROFILE.phoneDisplay }}</span>
           </span>
@@ -61,12 +63,8 @@
             <LazyVAppIcon name="lucide:map-pin" class="w-4 h-4 md:w-5 md:h-5" />
           </span>
           <span class="min-w-0 flex-1">
-            <span :class="LABEL">{{
-              t('ui.contactChannels.location')
-            }}</span>
-            <span :class="VALUE">{{
-              t('ui.contactChannels.cairoEgypt')
-            }}</span>
+            <span :class="LABEL">{{ t("ui.contactChannels.location") }}</span>
+            <span :class="VALUE">{{ t("ui.contactChannels.cairoEgypt") }}</span>
           </span>
           <span
             class="text-label-sm font-medium text-accent-ink px-2 py-0.5 rounded bg-accent-soft"
@@ -123,10 +121,13 @@
           />
         </span>
         <span class="font-headline text-label-md font-bold text-text-primary">
-          {{ t('ui.contactChannels.currentAvailability') }}
+          {{ t("ui.contactChannels.currentAvailability") }}
         </span>
       </div>
-      <VWordReveal class="text-body-sm text-text-secondary leading-relaxed" :text="t('ui.contactChannels.availableForSelectedFrontendFreelanc')" />
+      <VWordReveal
+        class="text-body-sm text-text-secondary leading-relaxed"
+        :text="t('ui.contactChannels.availableForSelectedFrontendFreelanc')"
+      />
     </div>
   </div>
 </template>
@@ -137,30 +138,34 @@ import type { IconifyName } from "@/types/portfolio";
 
 const { t } = useLocale();
 
-const SOCIALS: { name: string; icon: IconifyName; href: string; handle: string }[] =
-  [
-    {
-      name: "LinkedIn",
-      icon: "lucide:linkedin",
-      href: PROFILE.linkedinUrl,
-      handle: PROFILE.linkedinHandle,
-    },
-    {
-      name: "GitHub",
-      icon: "lucide:github",
-      href: PROFILE.githubUrl,
-      handle: PROFILE.githubHandle,
-    },
-  ];
+const SOCIALS: {
+  name: string;
+  icon: IconifyName;
+  href: string;
+  handle: string;
+}[] = [
+  {
+    name: "LinkedIn",
+    icon: "lucide:linkedin",
+    href: PROFILE.linkedinUrl,
+    handle: PROFILE.linkedinHandle,
+  },
+  {
+    name: "GitHub",
+    icon: "lucide:github",
+    href: PROFILE.githubUrl,
+    handle: PROFILE.githubHandle,
+  },
+];
 
 // Shared row styling (constants keep the link variants in sync)
 const ROW =
   "group/btn flex items-center gap-3 md:gap-4 p-3 md:p-3.5 rounded-xl border border-border bg-background hover:border-accent transition-colors duration-(--duration-fast) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
 
-  const ICON_BOX =
+const ICON_BOX =
   "w-9 h-9 md:w-10 md:h-10 rounded-lg bg-accent-soft text-accent-ink flex items-center justify-center shrink-0 transition-transform duration-(--duration-fast) group-hover/btn:scale-105";
 
-  const LABEL = "block text-label-sm font-semibold text-text-secondary";
+const LABEL = "block text-label-sm font-semibold text-text-secondary";
 
 const VALUE =
   "block text-body-sm md:text-body-md font-medium text-text-primary truncate";

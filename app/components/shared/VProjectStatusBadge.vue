@@ -14,13 +14,14 @@
 import type { ProjectStatus } from "@/types/portfolio";
 import type { Props } from "@/types/shared/VProjectStatusBadge";
 
-const props = defineProps<Props>();
-
 const { t } = useLocale();
+
+const props = defineProps<Props>();
 
 // Status values are data ("In progress"); the visible label comes from the locale files
 const STATUS_KEYS: Record<ProjectStatus, string> = {
   "In progress": "ui.vProjectStatusBadge.inProgress",
 };
+
 const label = computed(() => t(STATUS_KEYS[props.status]));
 </script>

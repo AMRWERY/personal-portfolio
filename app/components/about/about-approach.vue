@@ -18,10 +18,15 @@
         >
           {{ t(ABOUT_APPROACH.title) }}
         </h2>
-        <VWordReveal class="hidden md:block text-body-md text-text-secondary font-light" :text="t(ABOUT_APPROACH.description)" />
+        <VWordReveal
+          class="hidden md:block text-body-md text-text-secondary font-light"
+          :text="t(ABOUT_APPROACH.description)"
+        />
       </div>
 
-      <ol class="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+      <ol
+        class="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6"
+      >
         <li
           v-for="(step, index) in ABOUT_APPROACH.steps"
           :key="step.id"
@@ -33,7 +38,9 @@
             >
               {{ String(index + 1).padStart(2, "0") }}
             </div>
-            <div class="md:hidden text-label-sm font-bold text-accent-ink uppercase">
+            <div
+              class="md:hidden text-label-sm font-bold text-accent-ink uppercase"
+            >
               {{ String(index + 1).padStart(2, "0") }} · {{ t(step.tag) }}
             </div>
             <h3
@@ -41,7 +48,10 @@
             >
               {{ t(step.title) }}
             </h3>
-            <VWordReveal class="text-body-sm text-text-secondary leading-relaxed" :text="t(step.description)" />
+            <VWordReveal
+              class="text-body-sm text-text-secondary leading-relaxed"
+              :text="t(step.description)"
+            />
           </div>
           <div
             class="hidden md:block text-label-sm text-accent-ink font-semibold pt-2 border-t border-border/60"

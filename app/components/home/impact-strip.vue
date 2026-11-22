@@ -10,7 +10,9 @@
       <div
         class="max-w-(--container-max) mx-auto p-5 md:px-6 lg:px-12 md:py-10"
       >
-        <div class="reveal-stagger grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8">
+        <div
+          class="reveal-stagger grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8"
+        >
           <div
             v-for="(metric, index) in IMPACT_METRICS"
             :key="metric.value"

@@ -12,7 +12,7 @@
           : 'aspect-16/10'
       "
     >
-      <VProjectCover
+      <LazyVProjectCover
         :src="project.screenshotSrc"
         :alt="project.title"
       >
@@ -35,7 +35,7 @@
         >
           {{ project.title }}
         </span>
-      </VProjectCover>
+      </LazyVProjectCover>
 
       <div
         v-if="project.status"

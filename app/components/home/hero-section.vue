@@ -25,7 +25,8 @@
 
         <VWordReveal
           class="font-body text-body-md lg:text-body-lg text-text-secondary max-w-2xl font-light leading-relaxed text-pretty"
-         :text="t(HERO_COPY.supporting)" />
+          :text="t(HERO_COPY.supporting)"
+        />
 
         <!-- Mobile inline location -->
         <div

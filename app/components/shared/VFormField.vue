@@ -6,7 +6,9 @@
         class="block font-headline text-label-sm md:text-label-md font-semibold text-text-primary"
       >
         {{ label }}
-        <span v-if="required" class="text-accent-ink" aria-hidden="true">*</span>
+        <span v-if="required" class="text-accent-ink" aria-hidden="true"
+          >*</span
+        >
       </label>
       <span v-if="optionalLabel" class="text-label-sm text-text-secondary">
         {{ optionalLabel }}
@@ -18,7 +20,9 @@
     <!-- Always mounted so screen readers announce changes; collapses smoothly (no layout jump) -->
     <div
       class="grid transition-[grid-template-rows,opacity] duration-(--duration-standard) ease-standard motion-reduce:transition-none"
-      :class="error ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+      :class="
+        error ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+      "
     >
       <div class="overflow-hidden">
         <p
