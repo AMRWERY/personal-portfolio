@@ -1,6 +1,6 @@
 import type { Locale } from "~/types/supported-locales";
 
-export function useLocale() {
+export const useLocale = () => {
   const { locale, t: translate, setLocale } = useI18n();
   const switchLocalePath = useSwitchLocalePath();
 
@@ -12,14 +12,14 @@ export function useLocale() {
     named ? translate(key, named) : translate(key);
 
   /** Crossfades between languages so the dir/lang flip is never seen as a jump. */
-  async function toggleLocale() {
+  const toggleLocale = async () => {
     const next: Locale = locale.value === "en" ? "ar" : "en";
     await withViewTransition(async () => {
         await setLocale(next);
         const path = switchLocalePath(next);
         if (path) await navigateTo(path);
       });
-  }
+  };
 
   return { locale, t, toggleLocale };
-}
+};

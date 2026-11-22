@@ -22,9 +22,9 @@
     </LazyVButton>
 
     <Transition
-      enter-active-class="transition-ui duration-(--duration-fast) ease-standard motion-reduce:transition-none"
+      enter-active-class="transition-fast motion-reduce:transition-none"
       enter-from-class="opacity-0 -translate-y-1"
-      leave-active-class="transition-ui duration-(--duration-fast) ease-standard motion-reduce:transition-none"
+      leave-active-class="transition-fast motion-reduce:transition-none"
       leave-to-class="opacity-0 -translate-y-1"
     >
       <ul
@@ -70,18 +70,18 @@
 </template>
 
 <script lang="ts" setup>
-import { CV_FILES } from "@/data/home";
+import { CV_FILES } from "~/data/home";
 
 const { locale, t } = useLocale();
 
 const rootRef = ref<HTMLElement | null>(null);
 const open = ref(false);
 
-function close(returnFocus = false): void {
+const close = (returnFocus = false): void => {
   if (!open.value) return;
   open.value = false;
   if (returnFocus) rootRef.value?.querySelector("button")?.focus();
-}
+};
 
 // Click/tap anywhere else dismisses the list
 onClickOutside(rootRef, () => close());

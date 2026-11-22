@@ -15,10 +15,10 @@ interface ViewTransitionOptions {
  * instead of snapping. Falls back to running `update` directly when the API
  * is missing or the user prefers reduced motion.
  */
-export async function withViewTransition(
+export const withViewTransition = async (
   update: () => void | Promise<void>,
   { kind, origin, duration = 520 }: ViewTransitionOptions = {},
-): Promise<void> {
+): Promise<void> => {
   const supported =
     typeof document !== "undefined" && "startViewTransition" in document;
   const reduced =
@@ -63,4 +63,4 @@ export async function withViewTransition(
   } finally {
     delete root.dataset.vt;
   }
-}
+};

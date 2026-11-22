@@ -11,14 +11,14 @@
         to="/"
         class="inline-flex items-center justify-center min-h-11 min-w-11 lg:pointer-fine:min-h-0 lg:pointer-fine:min-w-0 hover:text-accent-ink transition-colors"
       >
-        {{ t('ui.caseStudyHero.home') }}
+        {{ t("ui.caseStudyHero.home") }}
       </nuxt-link-locale>
       <span aria-hidden="true">/</span>
       <nuxt-link-locale
         to="/work"
         class="inline-flex items-center justify-center min-h-11 min-w-11 lg:pointer-fine:min-h-0 lg:pointer-fine:min-w-0 hover:text-accent-ink transition-colors"
       >
-        {{ t('ui.caseStudyHero.work') }}
+        {{ t("ui.caseStudyHero.work") }}
       </nuxt-link-locale>
       <span aria-hidden="true">/</span>
       <span class="text-accent-ink" aria-current="page">{{ shortTitle }}</span>
@@ -27,7 +27,10 @@
     <div class="space-y-3 md:space-y-6 max-w-4xl">
       <!-- Meta pills -->
       <div class="flex flex-wrap items-center gap-2 md:gap-3">
-        <LazyVProjectStatusBadge v-if="project.status" :status="project.status" />
+        <LazyVProjectStatusBadge
+          v-if="project.status"
+          :status="project.status"
+        />
         <span
           class="inline-flex items-center px-2.5 py-0.5 md:px-3 md:py-1 rounded-full bg-surface-elevated border border-border text-label-sm font-semibold text-accent-ink uppercase tracking-wider"
         >
@@ -45,7 +48,7 @@
       </div>
 
       <h1
-        class="font-headline text-headline-xl-mobile md:text-display-lg-mobile lg:text-display-lg font-bold text-text-primary tracking-tight text-balance"
+        class="page-title"
       >
         {{ project.title }}
       </h1>
@@ -54,13 +57,13 @@
         class="hidden md:flex flex-wrap items-center gap-x-3 gap-y-1 text-body-sm text-text-secondary"
       >
         <span class="font-semibold text-text-primary">
-          {{ t('ui.caseStudyHero.role') }}
+          {{ t("ui.caseStudyHero.role") }}
         </span>
         <span>{{ t(project.role) }}</span>
         <template v-if="caseStudy?.deliverable">
           <span aria-hidden="true">·</span>
           <span class="font-semibold text-text-primary">
-            {{ t('ui.caseStudyHero.deliverable') }}
+            {{ t("ui.caseStudyHero.deliverable") }}
           </span>
           <span>{{ t(caseStudy.deliverable) }}</span>
         </template>
@@ -68,7 +71,8 @@
 
       <VWordReveal
         class="text-body-sm md:text-body-lg text-text-secondary font-light leading-relaxed text-pretty"
-       :text="t(caseStudy?.intro ?? project.summary)" />
+        :text="t(caseStudy?.intro ?? project.summary)"
+      />
 
       <!-- Links -->
       <div
@@ -97,7 +101,9 @@
             class="sm:px-5 sm:py-2.5"
           >
             <LazyVAppIcon
-              :name="link.kind === 'repo' ? 'lucide:github' : 'lucide:external-link'"
+              :name="
+                link.kind === 'repo' ? 'lucide:github' : 'lucide:external-link'
+              "
               class="w-3.5 h-3.5 md:w-4 md:h-4"
             />
             <span>{{ t(link.detailLabel ?? link.label) }}</span>
@@ -109,11 +115,11 @@
 </template>
 
 <script lang="ts" setup>
-import type { CaseStudyProps } from "@/types/work";
-
-const props = defineProps<CaseStudyProps>();
+import type { CaseStudyProps } from "~/types/work";
 
 const { locale, t } = useLocale();
+
+const props = defineProps<CaseStudyProps>();
 
 const caseStudy = computed(() => props.project.caseStudy);
 
@@ -124,6 +130,7 @@ const shortTitle = computed(() => props.project.title.split(" — ")[0]);
 const primaryLink = computed(() =>
   props.project.links.find((link) => link.kind !== "repo"),
 );
+
 const secondaryLinks = computed(() =>
   props.project.links.filter((link) => link !== primaryLink.value),
 );

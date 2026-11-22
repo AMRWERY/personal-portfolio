@@ -3,9 +3,7 @@
     ref="containerRef"
     class="relative flex items-center gap-2 md:gap-2.5 overflow-x-auto no-scrollbar pb-1 md:flex-wrap md:overflow-visible"
     role="tablist"
-    :aria-label="
-      t('ui.workFilterBar.filterProjectsByCategory')
-    "
+    :aria-label="t('ui.workFilterBar.filterProjectsByCategory')"
   >
     <!-- Sliding active pill (sits behind the tabs) -->
     <span
@@ -32,7 +30,9 @@
           ? [
               'font-semibold text-on-accent',
               // until the sliding pill is measured, paint the tab itself
-              indicator.ready ? 'border-transparent bg-transparent' : 'bg-accent border-accent',
+              indicator.ready
+                ? 'border-transparent bg-transparent'
+                : 'bg-accent border-accent',
             ]
           : 'font-medium bg-surface-elevated text-text-secondary border-border hover:border-accent hover:text-text-primary'
       "
@@ -56,7 +56,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { WorkFilter, WorkFilterBarProps } from "@/types/work";
+import type { WorkFilter, WorkFilterBarProps } from "~/types/work";
 
 const { locale, t } = useLocale();
 
@@ -77,13 +77,13 @@ const indicator = reactive({
   height: 0,
 });
 
-function setTabRef(key: WorkFilter, el: unknown): void {
+const setTabRef = (key: WorkFilter, el: unknown): void => {
   if (el instanceof HTMLElement) tabRefs.set(key, el);
   else tabRefs.delete(key);
-}
+};
 
 /** Place the pill over the active tab. offset* are layout values, unaffected by transforms. */
-function measure(): void {
+const measure = (): void => {
   const el = tabRefs.get(props.modelValue);
   if (!el) return;
   indicator.x = el.offsetLeft;
@@ -91,7 +91,7 @@ function measure(): void {
   indicator.width = el.offsetWidth;
   indicator.height = el.offsetHeight;
   indicator.ready = true;
-}
+};
 
 watch(
   [() => props.modelValue, locale],

@@ -29,7 +29,7 @@
       </div>
 
       <div
-        class="absolute top-3 lg:top-4 end-3 lg:end-4 inline-flex items-center px-2.5 py-0.5 lg:px-3 lg:py-1 rounded-full bg-surface dark:bg-background border border-border text-text-primary text-label-sm font-medium"
+        class="cover-badge"
       >
         {{ t(project.categoryBadge) }}
       </div>
@@ -85,8 +85,8 @@
 </template>
 
 <script lang="ts" setup>
-import type { FeaturedProject } from "@/types/portfolio";
-import type { FeaturedProjectCardProps } from "@/types/home";
+import type { FeaturedProject } from "~/types/portfolio";
+import type { FeaturedProjectCardProps } from "~/types/home";
 
 const { t } = useLocale();
 

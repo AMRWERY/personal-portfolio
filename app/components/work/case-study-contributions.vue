@@ -31,7 +31,7 @@
             {{ t(item.title) }}
           </h3>
           <VWordReveal
-            class="text-body-sm text-text-secondary leading-relaxed"
+            class="body-muted"
             :text="t(item.text)"
           />
         </div>
@@ -52,7 +52,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { CaseStudyContribution, LocalizedText } from "@/types/portfolio";
+import type { CaseStudyContribution, LocalizedText } from "~/types/portfolio";
 
 const { t } = useLocale();
 

@@ -11,8 +11,8 @@
 </template>
 
 <script lang="ts" setup>
-import type { ProjectStatus } from "@/types/portfolio";
-import type { Props } from "@/types/shared/VProjectStatusBadge";
+import type { ProjectStatus } from "~/types/portfolio";
+import type { Props } from "~/types/shared/VProjectStatusBadge";
 
 const { t } = useLocale();
 

@@ -12,10 +12,7 @@
           : 'aspect-16/10'
       "
     >
-      <LazyVProjectCover
-        :src="project.screenshotSrc"
-        :alt="project.title"
-      >
+      <LazyVProjectCover :src="project.screenshotSrc" :alt="project.title">
         <LazyVAppIcon
           name="lucide:image"
           class="text-text-secondary mb-1.5 group-hover:text-accent-ink transition-colors duration-(--duration-fast)"
@@ -44,9 +41,7 @@
         <LazyVProjectStatusBadge :status="project.status" />
       </div>
 
-      <div
-        class="absolute top-3 lg:top-4 end-3 lg:end-4 inline-flex items-center px-2.5 py-0.5 lg:px-3 lg:py-1 rounded-full bg-surface dark:bg-background border border-border text-text-primary text-label-sm font-medium"
-      >
+      <div class="cover-badge">
         {{ t(project.categoryBadge) }}
       </div>
     </div>
@@ -79,7 +74,7 @@
           {{ project.title }}
         </h2>
 
-        <VWordReveal class="text-body-sm text-text-secondary leading-relaxed" :text="t(project.summary)" />
+        <VWordReveal class="body-muted" :text="t(project.summary)" />
 
         <div
           v-if="project.featured && project.highlight"
@@ -103,11 +98,8 @@
 
         <div class="flex flex-wrap items-center justify-between gap-3">
           <LazyVButton :to="`/work/${project.slug}`" variant="ghost">
-            {{ t('ui.workProjectCard.viewCaseStudy') }}
-            <LazyVAppIcon
-              name="lucide:arrow-right"
-              class="w-4 h-4 rtl:rotate-180 arrow-nudge-x"
-            />
+            {{ t("ui.workProjectCard.viewCaseStudy") }}
+            <LazyVAppIcon name="lucide:arrow-right" class="icon-arrow" />
           </LazyVButton>
 
           <div v-if="project.links.length" class="flex items-center gap-4">
@@ -145,7 +137,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { WorkProjectCardProps } from "@/types/work";
+import type { WorkProjectCardProps } from "~/types/work";
 
 const { t } = useLocale();
 

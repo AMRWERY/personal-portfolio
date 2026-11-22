@@ -12,9 +12,9 @@
     <ClientOnly>
       <Transition
         mode="out-in"
-        enter-active-class="transition-ui duration-(--duration-standard) ease-standard"
+        enter-active-class="transition-standard"
         enter-from-class="opacity-0 rotate-90 scale-50"
-        leave-active-class="transition-ui duration-(--duration-fast) ease-standard"
+        leave-active-class="transition-fast"
         leave-to-class="opacity-0 -rotate-90 scale-50"
       >
         <LazyVAppIcon

@@ -5,7 +5,7 @@
     >
       <div class="md:border-b border-border md:pb-5">
         <h2
-          class="font-headline text-title-lg md:text-headline-sm font-bold text-text-primary"
+          class="card-title"
         >
           {{ t("ui.contactChannels.directChannels") }}
         </h2>
@@ -125,7 +125,7 @@
         </span>
       </div>
       <VWordReveal
-        class="text-body-sm text-text-secondary leading-relaxed"
+        class="body-muted"
         :text="t('ui.contactChannels.availableForSelectedFrontendFreelanc')"
       />
     </div>
@@ -133,8 +133,8 @@
 </template>
 
 <script lang="ts" setup>
-import { PROFILE } from "@/data/home";
-import type { IconifyName } from "@/types/portfolio";
+import { PROFILE } from "~/data/home";
+import type { IconifyName } from "~/types/portfolio";
 
 const { t } = useLocale();
 

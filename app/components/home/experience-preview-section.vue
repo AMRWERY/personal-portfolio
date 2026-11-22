@@ -2,7 +2,7 @@
   <section
     ref="sectionRef"
     class="max-w-(--container-max) mx-auto px-5 lg:px-12 py-10 md:py-20 lg:py-24 transition-ui duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'reveal-group-in' : 'reveal-group-out'"
+    :class="revealClass"
   >
     <div
       class="border border-border bg-surface rounded-xl lg:rounded-2xl p-5 md:p-8 lg:p-12"
@@ -30,7 +30,7 @@
           }}</span>
           <LazyVAppIcon
             name="lucide:arrow-right"
-            class="w-4 h-4 rtl:rotate-180 arrow-nudge-x"
+            class="icon-arrow"
           />
         </LazyVButton>
       </div>
@@ -70,11 +70,11 @@
 </template>
 
 <script lang="ts" setup>
-import { EXPERIENCE_PREVIEW } from "@/data/home";
+import { EXPERIENCE_PREVIEW } from "~/data/home";
 
 const { t } = useLocale();
 
 const sectionRef = ref<HTMLElement | null>(null);
 
-const { isVisible } = useRevealOnce(sectionRef);
+const { revealClass } = useRevealOnce(sectionRef);
 </script>

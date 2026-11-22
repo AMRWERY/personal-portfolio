@@ -3,8 +3,8 @@
 </template>
 
 <script lang="ts" setup>
-import type { IconifyName } from "@/types/portfolio";
-import type { Props } from "@/types/shared/VAppIcon";
+import type { IconifyName } from "~/types/portfolio";
+import type { Props } from "~/types/shared/VAppIcon";
 
 defineProps<Props>();
 </script>

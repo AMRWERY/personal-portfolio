@@ -5,7 +5,7 @@
     >
       <div class="max-w-xl mx-auto space-y-4 md:space-y-5">
         <span
-          class="hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-soft text-accent-ink text-label-sm font-semibold uppercase tracking-wider"
+          class="pill-label"
         >
           {{ t(eyebrow) }}
         </span>
@@ -14,7 +14,10 @@
         >
           {{ t(title) }}
         </h2>
-        <VWordReveal class="text-body-sm md:text-body-md text-text-secondary font-light" :text="t(description)" />
+        <VWordReveal
+          class="text-body-sm md:text-body-md text-text-secondary font-light"
+          :text="t(description)"
+        />
         <div
           class="pt-2 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 md:gap-4"
         >
@@ -22,7 +25,7 @@
             <span>{{ t(primaryLabel) }}</span>
             <LazyVAppIcon
               name="lucide:arrow-right"
-              class="w-4 h-4 rtl:rotate-180 arrow-nudge-x"
+              class="icon-arrow"
             />
           </LazyVButton>
           <LazyVButton
@@ -40,15 +43,15 @@
 </template>
 
 <script lang="ts" setup>
-import { PROFILE } from "@/data/home";
-import type { WorkCtaSectionProps } from "@/types/work";
+import { PROFILE } from "~/data/home";
+import type { WorkCtaSectionProps } from "~/types/work";
 
 const { t } = useLocale();
 
 withDefaults(defineProps<WorkCtaSectionProps>(), {
-  eyebrow: () => ('ui.workCtaSection.directCollaboration'),
-  title: () => ('ui.workCtaSection.interestedInWorkingTogether'),
-  description: () => ('ui.workCtaSection.iAmAvailableForFrontend'),
-  primaryLabel: () => ('ui.workCtaSection.getInTouch'),
+  eyebrow: () => "ui.workCtaSection.directCollaboration",
+  title: () => "ui.workCtaSection.interestedInWorkingTogether",
+  description: () => "ui.workCtaSection.iAmAvailableForFrontend",
+  primaryLabel: () => "ui.workCtaSection.getInTouch",
 });
 </script>

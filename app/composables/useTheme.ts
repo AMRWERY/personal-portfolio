@@ -1,4 +1,4 @@
-import type { ThemeMode } from "@/types/portfolio";
+import type { ThemeMode } from "~/types/portfolio";
 
 /**
  * Light/dark theme.
@@ -7,12 +7,12 @@ import type { ThemeMode } from "@/types/portfolio";
  * `useDark` toggles the `dark` class on <html>, which Tailwind's dark variant uses.
  * Toggling reveals the new theme as a circle growing from the clicked button.
  */
-export function useTheme() {
+export const useTheme = () => {
   const isDark = useDark({ storageKey: "portfolio-theme-mode" });
 
   const theme = computed<ThemeMode>(() => (isDark.value ? "dark" : "light"));
 
-  async function toggleTheme(event?: MouseEvent): Promise<void> {
+  const toggleTheme = async (event?: MouseEvent): Promise<void> => {
     // Centre of the pressed button (works for keyboard activation too)
     const button = (event?.target as HTMLElement | null)?.closest("button");
     const rect = button?.getBoundingClientRect();
@@ -26,7 +26,7 @@ export function useTheme() {
       },
       { kind: "theme", origin },
     );
-  }
+  };
 
   return { theme, toggleTheme };
-}
+};

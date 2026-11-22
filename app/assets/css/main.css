@@ -177,9 +177,15 @@
   animation: heroFadeInUp var(--duration-enter) var(--ease-enter)
     calc(var(--hero-base, 0ms) + var(--n, 0) * 50ms) forwards;
 }
-.animate-hero-text > :nth-child(2) { --n: 1; }
-.animate-hero-text > :nth-child(3) { --n: 2; }
-.animate-hero-text > :nth-child(4) { --n: 3; }
+.animate-hero-text > :nth-child(2) {
+  --n: 1;
+}
+.animate-hero-text > :nth-child(3) {
+  --n: 2;
+}
+.animate-hero-text > :nth-child(4) {
+  --n: 3;
+}
 
 .animate-hero-avatar {
   opacity: 0;
@@ -220,8 +226,9 @@
    defaults (duration-* / ease-* utilities still override them).
    ============================================================================ */
 @utility transition-ui {
-  transition-property: color, background-color, border-color,
-    text-decoration-color, box-shadow, opacity, translate, scale, rotate;
+  transition-property:
+    color, background-color, border-color, text-decoration-color, box-shadow,
+    opacity, translate, scale, rotate;
   transition-timing-function: var(--tw-ease, var(--ease-standard));
   transition-duration: var(--tw-duration, var(--duration-standard));
 }
@@ -238,7 +245,8 @@
   opacity: 0;
 }
 .reveal-group-in :is(.reveal-head, .reveal-stagger > *) {
-  animation: revealRise var(--duration-enter) var(--ease-enter) var(--d, 0ms) backwards;
+  animation: revealRise var(--duration-enter) var(--ease-enter) var(--d, 0ms)
+    backwards;
 }
 @keyframes revealRise {
   from {
@@ -246,11 +254,21 @@
     translate: 0 0.75rem;
   }
 }
-.reveal-stagger > :nth-child(1) { --d: 60ms; }
-.reveal-stagger > :nth-child(2) { --d: 120ms; }
-.reveal-stagger > :nth-child(3) { --d: 180ms; }
-.reveal-stagger > :nth-child(4) { --d: 240ms; }
-.reveal-stagger > :nth-child(n + 5) { --d: 280ms; }
+.reveal-stagger > :nth-child(1) {
+  --d: 60ms;
+}
+.reveal-stagger > :nth-child(2) {
+  --d: 120ms;
+}
+.reveal-stagger > :nth-child(3) {
+  --d: 180ms;
+}
+.reveal-stagger > :nth-child(4) {
+  --d: 240ms;
+}
+.reveal-stagger > :nth-child(n + 5) {
+  --d: 280ms;
+}
 @media (prefers-reduced-motion: reduce) {
   .reveal-group-out :is(.reveal-head, .reveal-stagger > *) {
     opacity: 1;
@@ -454,8 +472,69 @@ html {
    Components draw their own ring; anything that doesn't still gets one.
    ============================================================================ */
 @layer base {
-  :where(a, button, input, textarea, select, summary, [role="tab"]):focus-visible {
+  :where(
+    a,
+    button,
+    input,
+    textarea,
+    select,
+    summary,
+    [role="tab"]
+  ):focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
   }
+}
+
+/* Shared composite utilities (de-duplicated from component templates) */
+@utility section-heading {
+  @apply font-headline text-headline-sm md:text-headline-lg lg:text-headline-xl font-bold text-text-primary tracking-tight;
+}
+
+@utility body-muted {
+  @apply text-body-sm text-text-secondary leading-relaxed;
+}
+
+@utility icon-arrow {
+  @apply w-4 h-4 rtl:rotate-180 arrow-nudge-x;
+}
+
+@utility eyebrow-text {
+  @apply font-headline text-label-sm font-semibold text-accent-ink uppercase tracking-wider block;
+}
+
+@utility lead-muted {
+  @apply hidden md:block text-body-md text-text-secondary font-light;
+}
+
+@utility card-title {
+  @apply font-headline text-title-lg md:text-headline-sm font-bold text-text-primary;
+}
+
+@utility page-title {
+  @apply font-headline text-headline-xl-mobile md:text-display-lg-mobile lg:text-display-lg font-bold text-text-primary tracking-tight text-balance;
+}
+
+@utility footer-link {
+  @apply hover:text-accent-ink transition-colors inline-flex items-center gap-1.5 min-h-11 lg:pointer-fine:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm;
+}
+
+@utility cover-badge {
+  @apply absolute top-3 lg:top-4 end-3 lg:end-4 inline-flex items-center px-2.5 py-0.5 lg:px-3 lg:py-1 rounded-full bg-surface dark:bg-background border border-border text-text-primary text-label-sm font-medium;
+}
+
+@utility pill-label {
+  @apply hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-soft text-accent-ink text-label-sm font-semibold uppercase tracking-wider;
+}
+
+@utility pager-icon {
+  @apply w-8 h-8 md:w-10 md:h-10 rounded-full bg-surface-elevated border border-border text-text-secondary group-hover/btn:text-accent-ink group-hover/btn:border-accent flex items-center justify-center shrink-0 transition-colors;
+}
+
+@utility transition-standard {
+  @apply transition-ui duration-(--duration-standard) ease-standard;
+}
+
+@utility transition-fast {
+  @apply transition-ui duration-(--duration-fast) ease-standard;
 }

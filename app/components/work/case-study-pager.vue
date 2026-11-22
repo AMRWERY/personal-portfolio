@@ -9,7 +9,7 @@
         class="group/btn p-4 md:p-6 rounded-xl border border-border bg-surface hover:border-accent hover:-translate-y-0.5 transition-ui duration-(--duration-fast) flex items-center gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       >
         <div
-          class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-surface-elevated border border-border text-text-secondary group-hover/btn:text-accent-ink group-hover/btn:border-accent flex items-center justify-center shrink-0 transition-colors"
+          class="pager-icon"
         >
           <LazyVAppIcon
             name="lucide:arrow-left"
@@ -20,7 +20,7 @@
           <span
             class="text-label-sm font-semibold text-text-secondary uppercase tracking-wider block"
           >
-            {{ t('ui.caseStudyPager.previousProject') }}
+            {{ t("ui.caseStudyPager.previousProject") }}
           </span>
           <h3
             class="font-headline text-title-lg font-bold text-text-primary group-hover/btn:text-accent-ink transition-colors truncate"
@@ -39,7 +39,7 @@
           <span
             class="text-label-sm font-semibold text-text-secondary uppercase tracking-wider block"
           >
-            {{ t('ui.caseStudyPager.nextProject') }}
+            {{ t("ui.caseStudyPager.nextProject") }}
           </span>
           <h3
             class="font-headline text-title-lg font-bold text-text-primary group-hover/btn:text-accent-ink transition-colors truncate"
@@ -48,7 +48,7 @@
           </h3>
         </div>
         <div
-          class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-surface-elevated border border-border text-text-secondary group-hover/btn:text-accent-ink group-hover/btn:border-accent flex items-center justify-center shrink-0 transition-colors"
+          class="pager-icon"
         >
           <LazyVAppIcon
             name="lucide:arrow-right"
@@ -61,7 +61,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { CaseStudyPagerProps } from "@/types/work";
+import type { CaseStudyPagerProps } from "~/types/work";
 
 const { locale, t } = useLocale();
 

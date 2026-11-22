@@ -1,6 +1,6 @@
 import { type Ref } from "vue";
 
-export function useRevealOnce(target: Ref<HTMLElement | null>) {
+export const useRevealOnce = (target: Ref<HTMLElement | null>) => {
   const isVisible = ref(false);
   let observer: IntersectionObserver | null = null;
 
@@ -33,5 +33,9 @@ export function useRevealOnce(target: Ref<HTMLElement | null>) {
     observer?.disconnect();
   });
 
-  return { isVisible };
-}
+  const revealClass = computed(() =>
+    isVisible.value ? "reveal-group-in" : "reveal-group-out",
+  );
+
+  return { isVisible, revealClass };
+};

@@ -2,9 +2,9 @@
   <div class="border border-border bg-surface rounded-2xl p-5 sm:p-8">
     <Transition
       mode="out-in"
-      enter-active-class="transition-ui duration-(--duration-standard) ease-standard"
+      enter-active-class="transition-standard"
       enter-from-class="opacity-0"
-      leave-active-class="transition-ui duration-(--duration-fast) ease-standard"
+      leave-active-class="transition-fast"
       leave-to-class="opacity-0"
     >
       <!-- Success -->
@@ -253,7 +253,7 @@
 </template>
 
 <script lang="ts" setup>
-import { PROFILE } from "@/data/home";
+import { PROFILE } from "~/data/home";
 import type { Status } from "~/types/contact";
 
 const { locale, t } = useLocale();
@@ -282,7 +282,7 @@ const inputClass = (invalid: boolean, withIcon = false) => [
 ];
 
 /** Fills `errors`; returns the id of the first invalid control (to focus it). */
-function validate(): string | null {
+const validate = (): string | null => {
   errors.name = form.name.trim() ? "" : t("ui.contactForm.pleaseEnterYourName");
   errors.email = EMAIL_PATTERN.test(form.email.trim())
     ? ""
@@ -295,9 +295,9 @@ function validate(): string | null {
   if (errors.email) return "contact-email";
   if (errors.message) return "contact-message";
   return null;
-}
+};
 
-async function onSubmit(): Promise<void> {
+const onSubmit = async (): Promise<void> => {
   if (status.value === "sending") return;
 
   const firstInvalid = validate();
@@ -324,11 +324,11 @@ async function onSubmit(): Promise<void> {
   } catch {
     status.value = "error";
   }
-}
+};
 
-function reset(): void {
+const reset = (): void => {
   form.name = form.email = form.subject = form.message = form.website = "";
   errors.name = errors.email = errors.message = "";
   status.value = "idle";
-}
+};
 </script>

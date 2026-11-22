@@ -29,13 +29,13 @@
     >
       <div class="relative z-10 max-w-2xl mx-auto space-y-4 lg:space-y-6">
         <span
-          class="hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-soft text-accent-ink text-label-sm font-semibold uppercase tracking-wider"
+          class="pill-label"
         >
           {{ t("ui.skillsAndContactSection.getInTouch") }}
         </span>
 
         <h2
-          class="font-headline text-headline-sm md:text-headline-lg lg:text-headline-xl font-bold text-text-primary tracking-tight"
+          class="section-heading"
         >
           {{ t("ui.skillsAndContactSection.haveAProjectOrRole") }}
         </h2>
@@ -52,7 +52,7 @@
             <span>{{ t("ui.skillsAndContactSection.sendAMessage") }}</span>
             <LazyVAppIcon
               name="lucide:arrow-right"
-              class="w-4 h-4 rtl:rotate-180 arrow-nudge-x"
+              class="icon-arrow"
             />
           </LazyVButton>
 
@@ -72,7 +72,7 @@
 </template>
 
 <script lang="ts" setup>
-import { PROFILE, SKILLS_PREVIEW } from "@/data/home";
+import { PROFILE, SKILLS_PREVIEW } from "~/data/home";
 
 const { t } = useLocale();
 

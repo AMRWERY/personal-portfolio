@@ -2,7 +2,7 @@
   <section
     ref="sectionRef"
     class="max-w-(--container-max) mx-auto px-5 lg:px-12 py-14 md:py-20 lg:py-28 transition-ui duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'reveal-group-in' : 'reveal-group-out'"
+    :class="revealClass"
   >
     <div
       class="reveal-head flex flex-row items-end justify-between gap-4 mb-6 md:mb-12"
@@ -12,7 +12,7 @@
           {{ t("ui.featuredWorkSection.portfolioHighlights") }}
         </LazyVEyebrowLabel>
         <h2
-          class="font-headline text-headline-sm md:text-headline-lg lg:text-headline-xl font-bold text-text-primary tracking-tight"
+          class="section-heading"
         >
           {{ t("ui.featuredWorkSection.featuredWork") }}
         </h2>
@@ -25,7 +25,7 @@
         }}</span>
         <LazyVAppIcon
           name="lucide:arrow-right"
-          class="w-4 h-4 rtl:rotate-180 arrow-nudge-x"
+          class="icon-arrow"
         />
       </LazyVButton>
     </div>
@@ -43,11 +43,11 @@
 </template>
 
 <script lang="ts" setup>
-import { FEATURED_PROJECTS } from "@/data/home";
+import { FEATURED_PROJECTS } from "~/data/home";
 
 const { t } = useLocale();
 
 const sectionRef = ref<HTMLElement | null>(null);
 
-const { isVisible } = useRevealOnce(sectionRef);
+const { revealClass } = useRevealOnce(sectionRef);
 </script>

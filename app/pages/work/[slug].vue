@@ -53,7 +53,7 @@
 </template>
 
 <script lang="ts" setup>
-import { getAdjacentProjects, getProjectBySlug } from "@/data/work";
+import { getAdjacentProjects, getProjectBySlug } from "~/data/work";
 
 const { t } = useLocale();
 const route = useRoute();

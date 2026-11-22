@@ -2,7 +2,7 @@
   <section
     ref="sectionRef"
     class="md:border-t md:border-border md:bg-surface-elevated/50 dark:md:bg-surface/40 py-6 md:py-20 lg:py-28 transition-ui duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'reveal-group-in' : 'reveal-group-out'"
+    :class="revealClass"
   >
     <div class="max-w-(--container-max) mx-auto px-5 lg:px-12">
       <div class="reveal-head max-w-2xl mb-5 md:mb-12">
@@ -10,7 +10,7 @@
           {{ t("ui.capabilitiesSection.coreServices") }}
         </LazyVEyebrowLabel>
         <h2
-          class="font-headline text-headline-sm md:text-headline-lg lg:text-headline-xl font-bold text-text-primary tracking-tight"
+          class="section-heading"
         >
           {{ t("ui.capabilitiesSection.capabilities") }}
         </h2>
@@ -51,11 +51,11 @@
 </template>
 
 <script lang="ts" setup>
-import { CAPABILITIES } from "@/data/home";
+import { CAPABILITIES } from "~/data/home";
 
 const { t } = useLocale();
 
 const sectionRef = ref<HTMLElement | null>(null);
 
-const { isVisible } = useRevealOnce(sectionRef);
+const { revealClass } = useRevealOnce(sectionRef);
 </script>

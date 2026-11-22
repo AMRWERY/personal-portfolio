@@ -1,5 +1,5 @@
-import type { WorkProject } from "@/types/portfolio";
-import { CASE_STUDIES } from "@/data/case-studies";
+import type { WorkProject } from "~/types/portfolio";
+import { CASE_STUDIES } from "~/data/case-studies";
 
 const BASE_PROJECTS: WorkProject[] = [
   {
@@ -390,10 +390,12 @@ export const getProjectBySlug = (slug: string): WorkProject | undefined =>
   WORK_PROJECTS.find((project) => project.slug === slug);
 
 /** Previous/next project in catalog order, wrapping around at the ends. */
-export function getAdjacentProjects(slug: string): {
+export const getAdjacentProjects = (
+  slug: string,
+): {
   previous: WorkProject;
   next: WorkProject;
-} {
+} => {
   const index = Math.max(
     0,
     WORK_PROJECTS.findIndex((project) => project.slug === slug),
@@ -403,4 +405,4 @@ export function getAdjacentProjects(slug: string): {
     previous: WORK_PROJECTS[(index - 1 + total) % total]!,
     next: WORK_PROJECTS[(index + 1) % total]!,
   };
-}
+};

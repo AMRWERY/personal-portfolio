@@ -64,7 +64,7 @@
             <span>{{ t(HERO_COPY.primaryCta) }}</span>
             <LazyVAppIcon
               name="lucide:arrow-right"
-              class="w-4 h-4 rtl:rotate-180 arrow-nudge-x"
+              class="icon-arrow"
             />
           </LazyVButton>
 
@@ -83,7 +83,7 @@
 </template>
 
 <script lang="ts" setup>
-import { HERO_COPY, PROFILE } from "@/data/home";
+import { HERO_COPY, PROFILE } from "~/data/home";
 
 const { locale, t } = useLocale();
 </script>

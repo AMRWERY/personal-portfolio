@@ -2,24 +2,24 @@
   <section
     ref="sectionRef"
     class="border-y border-border bg-surface/50 py-12 md:py-20 lg:py-24 transition-ui duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'reveal-group-in' : 'reveal-group-out'"
+    :class="revealClass"
   >
     <div
       class="max-w-(--container-max) mx-auto px-5 lg:px-12 space-y-8 md:space-y-12"
     >
       <div class="reveal-head max-w-2xl space-y-1 md:space-y-2">
         <span
-          class="font-headline text-label-sm font-semibold text-accent-ink uppercase tracking-wider block"
+          class="eyebrow-text"
         >
           {{ t(ABOUT_APPROACH.eyebrow) }}
         </span>
         <h2
-          class="font-headline text-headline-sm md:text-headline-lg lg:text-headline-xl font-bold text-text-primary tracking-tight"
+          class="section-heading"
         >
           {{ t(ABOUT_APPROACH.title) }}
         </h2>
         <VWordReveal
-          class="hidden md:block text-body-md text-text-secondary font-light"
+          class="lead-muted"
           :text="t(ABOUT_APPROACH.description)"
         />
       </div>
@@ -44,12 +44,12 @@
               {{ String(index + 1).padStart(2, "0") }} · {{ t(step.tag) }}
             </div>
             <h3
-              class="font-headline text-title-lg md:text-headline-sm font-bold text-text-primary"
+              class="card-title"
             >
               {{ t(step.title) }}
             </h3>
             <VWordReveal
-              class="text-body-sm text-text-secondary leading-relaxed"
+              class="body-muted"
               :text="t(step.description)"
             />
           </div>
@@ -65,10 +65,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ABOUT_APPROACH } from "@/data/about";
+import { ABOUT_APPROACH } from "~/data/about";
 
 const { t } = useLocale();
 
 const sectionRef = ref<HTMLElement | null>(null);
-const { isVisible } = useRevealOnce(sectionRef);
+const { revealClass } = useRevealOnce(sectionRef);
 </script>

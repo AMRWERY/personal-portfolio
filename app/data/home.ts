@@ -5,8 +5,8 @@ import type {
   FeaturedProject,
   ImpactMetric,
   NavItem,
-} from "@/types/portfolio";
-import { getProjectBySlug } from "@/data/work";
+} from "~/types/portfolio";
+import { getProjectBySlug } from "~/data/work";
 
 export const PROFILE = {
   "name": "Amr Mohamed",

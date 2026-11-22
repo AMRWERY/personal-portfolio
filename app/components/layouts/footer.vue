@@ -29,7 +29,7 @@
             :href="PROFILE.githubUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="hover:text-accent-ink transition-colors inline-flex items-center gap-1.5 min-h-11 lg:pointer-fine:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+            class="footer-link"
           >
             <LazyVAppIcon name="lucide:github" class="w-4 h-4" />
             <span>GitHub</span>
@@ -38,14 +38,14 @@
             :href="PROFILE.linkedinUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="hover:text-accent-ink transition-colors inline-flex items-center gap-1.5 min-h-11 lg:pointer-fine:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+            class="footer-link"
           >
             <LazyVAppIcon name="lucide:linkedin" class="w-4 h-4" />
             <span>LinkedIn</span>
           </a>
           <a
             :href="`mailto:${PROFILE.email}`"
-            class="hover:text-accent-ink transition-colors inline-flex items-center gap-1.5 min-h-11 lg:pointer-fine:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+            class="footer-link"
           >
             <LazyVAppIcon name="lucide:mail" class="w-4 h-4" />
             <span>{{ t("ui.footer.email") }}</span>
@@ -78,13 +78,13 @@
 </template>
 
 <script lang="ts" setup>
-import { NAV_ITEMS, PROFILE } from "@/data/home";
+import { NAV_ITEMS, PROFILE } from "~/data/home";
 
 const { locale, t } = useLocale();
 
 const currentYear = new Date().getFullYear();
 
-function scrollToTop(): void {
+const scrollToTop = (): void => {
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
   ).matches;
@@ -92,5 +92,5 @@ function scrollToTop(): void {
     top: 0,
     behavior: prefersReducedMotion ? "auto" : "smooth",
   });
-}
+};
 </script>

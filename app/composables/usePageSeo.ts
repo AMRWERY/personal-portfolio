@@ -1,4 +1,4 @@
-import { PROFILE } from "@/data/home";
+import { PROFILE } from "~/data/home";
 
 interface PageSeoOptions {
   /** Full <title>, already localised (getter so it follows the language). */
@@ -22,7 +22,7 @@ const OG_LOCALE: Record<string, string> = { en: "en_US", ar: "ar_EG" };
  *
  * Absolute URLs use NUXT_PUBLIC_SITE_URL when set, otherwise the host serving the request.
  */
-export function usePageSeo(options: PageSeoOptions) {
+export const usePageSeo = (options: PageSeoOptions) => {
   const { locale, locales } = useI18n();
   const route = useRoute();
   const switchLocalePath = useSwitchLocalePath();
@@ -104,10 +104,10 @@ export function usePageSeo(options: PageSeoOptions) {
       })),
     };
   });
-}
+};
 
 /** schema.org Person for the site owner. */
-export function personSchema(abs: (path: string) => string) {
+export const personSchema = (abs: (path: string) => string) => {
   return {
     "@type": "Person",
     "@id": abs("/#person"),
@@ -124,4 +124,4 @@ export function personSchema(abs: (path: string) => string) {
     sameAs: [PROFILE.githubUrl, PROFILE.linkedinUrl],
     knowsAbout: ["Vue.js", "Nuxt.js", "TypeScript", "Tailwind CSS", "REST APIs"],
   };
-}
+};

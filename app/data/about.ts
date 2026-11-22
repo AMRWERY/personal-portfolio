@@ -3,7 +3,7 @@ import type {
   AboutExperienceEntry,
   AboutSkillGroup,
   LocalizedText,
-} from "@/types/portfolio";
+} from "~/types/portfolio";
 
 /** Proper nouns / tool names read the same in both languages. */
 const tech = (name: string): LocalizedText => ({ en: name, ar: name });

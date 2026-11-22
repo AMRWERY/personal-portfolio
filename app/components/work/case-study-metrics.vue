@@ -4,16 +4,14 @@
       <span
         class="hidden md:block font-headline text-label-sm font-semibold text-accent-ink uppercase tracking-wider mb-1"
       >
-        {{ t('ui.caseStudyMetrics.byTheNumbers') }}
+        {{ t("ui.caseStudyMetrics.byTheNumbers") }}
       </span>
       <h2
         class="font-headline text-headline-sm md:text-headline-lg font-bold text-text-primary"
       >
-        <span class="md:hidden">{{
-          t('ui.caseStudyMetrics.keyMetrics')
-        }}</span>
+        <span class="md:hidden">{{ t("ui.caseStudyMetrics.keyMetrics") }}</span>
         <span class="hidden md:inline">{{
-          t('ui.caseStudyMetrics.highlights')
+          t("ui.caseStudyMetrics.highlights")
         }}</span>
       </h2>
     </div>
@@ -44,7 +42,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { CaseStudyMetric } from "@/types/portfolio";
+import type { CaseStudyMetric } from "~/types/portfolio";
 
 const { t } = useLocale();
 

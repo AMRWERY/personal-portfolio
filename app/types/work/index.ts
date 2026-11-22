@@ -2,7 +2,7 @@ import type {
   LocalizedText,
   ProjectCategory,
   WorkProject,
-} from "@/types/portfolio";
+} from "~/types/portfolio";
 
 export type WorkFilter = "all" | ProjectCategory;
 

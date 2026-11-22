@@ -2,7 +2,7 @@
   <section
     ref="sectionRef"
     class="max-w-(--container-max) mx-auto px-5 lg:px-12 py-10 md:py-20 lg:py-24 transition-ui duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'reveal-group-in' : 'reveal-group-out'"
+    :class="revealClass"
   >
     <div class="reveal-stagger grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8">
       <!-- Education -->
@@ -95,10 +95,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ABOUT_EDUCATION, ABOUT_LANGUAGES } from "@/data/about";
+import { ABOUT_EDUCATION, ABOUT_LANGUAGES } from "~/data/about";
 
 const { t } = useLocale();
 
 const sectionRef = ref<HTMLElement | null>(null);
-const { isVisible } = useRevealOnce(sectionRef);
+const { revealClass } = useRevealOnce(sectionRef);
 </script>

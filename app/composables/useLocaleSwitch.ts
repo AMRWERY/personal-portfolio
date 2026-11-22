@@ -4,13 +4,13 @@ const OVERLAY_FADE_IN_MS = 200;
 
 const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-export function useLocaleSwitch() {
+export const useLocaleSwitch = () => {
   const { locale, locales, setLocale } = useI18n();
   const switchLocalePath = useSwitchLocalePath();
   // <VLocaleOverlay /> (ui layer) renders this state; each app mounts it in app.vue
   const overlay = useLocaleOverlay();
 
-  async function switchLocale(code: string) {
+  const switchLocale = async (code: string) => {
     if (code === locale.value || overlay.visible.value) return;
 
     const applyLocale = async () => {
@@ -38,7 +38,7 @@ export function useLocaleSwitch() {
     } finally {
       overlay.hide();
     }
-  }
+  };
 
   return { locale, locales, switchLocale };
-}
+};

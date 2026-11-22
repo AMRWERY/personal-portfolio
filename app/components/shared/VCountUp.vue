@@ -47,7 +47,7 @@ const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
 let frame = 0;
 let started = false;
 
-function run(): void {
+const run = (): void => {
   started = true;
   const t0 = performance.now() + props.delay;
   const tick = (now: number) => {
@@ -56,7 +56,7 @@ function run(): void {
     if (t < 1) frame = requestAnimationFrame(tick);
   };
   frame = requestAnimationFrame(tick);
-}
+};
 
 onMounted(() => {
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

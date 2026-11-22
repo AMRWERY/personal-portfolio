@@ -77,6 +77,8 @@
 <script lang="ts" setup>
 import type { Props } from "~/types/profile-avatar";
 
+const { t } = useLocale();
+
 const props = withDefaults(defineProps<Props>(), {
   variant: "hero",
   size: "lg",
@@ -84,8 +86,6 @@ const props = withDefaults(defineProps<Props>(), {
   monogram: "AM",
   name: "Amr Mohamed",
 });
-
-const { t } = useLocale();
 
 // Defaults come from the locale files so the alt text / role follow the language
 const altText = computed(() => props.alt ?? t("ui.profileAvatar.alt"));

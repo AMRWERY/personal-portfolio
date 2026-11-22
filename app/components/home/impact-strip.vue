@@ -2,7 +2,7 @@
   <section
     ref="sectionRef"
     class="px-5 md:px-0 transition-ui duration-(--duration-enter) ease-enter"
-    :class="isVisible ? 'reveal-group-in' : 'reveal-group-out'"
+    :class="revealClass"
   >
     <div
       class="border border-border md:border-x-0 rounded-xl md:rounded-none bg-surface md:bg-surface/80 dark:md:bg-surface/60"
@@ -47,11 +47,11 @@
 </template>
 
 <script lang="ts" setup>
-import { IMPACT_METRICS } from "@/data/home";
+import { IMPACT_METRICS } from "~/data/home";
 
 const { t } = useLocale();
 
 const sectionRef = ref<HTMLElement | null>(null);
 
-const { isVisible } = useRevealOnce(sectionRef);
+const { isVisible, revealClass } = useRevealOnce(sectionRef);
 </script>

@@ -30,8 +30,8 @@
 </template>
 
 <script lang="ts" setup>
-import type { HeaderProps } from "@/types/layouts";
-import type { IconifyName, NavItem } from "@/types/portfolio";
+import type { HeaderProps } from "~/types/layouts";
+import type { IconifyName, NavItem } from "~/types/portfolio";
 
 const { t } = useLocale();
 

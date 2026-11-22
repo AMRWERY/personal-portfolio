@@ -11,7 +11,7 @@
         </LazyVEyebrowLabel>
 
         <h1
-          class="font-headline text-headline-xl-mobile md:text-display-lg-mobile lg:text-display-lg font-bold text-text-primary tracking-tight text-balance"
+          class="page-title"
         >
           {{ t(ABOUT_INTRO.title) }}
         </h1>
@@ -50,8 +50,8 @@
 </template>
 
 <script lang="ts" setup>
-import { PROFILE } from "@/data/home";
-import { ABOUT_INTRO } from "@/data/about";
+import { PROFILE } from "~/data/home";
+import { ABOUT_INTRO } from "~/data/about";
 
 const { t } = useLocale();
 </script>

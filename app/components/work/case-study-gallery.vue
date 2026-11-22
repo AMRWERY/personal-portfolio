@@ -17,8 +17,8 @@
 
         <Transition
           mode="out-in"
-          enter-active-class="transition-ui duration-(--duration-standard) ease-standard"
-          leave-active-class="transition-ui duration-(--duration-fast) ease-standard"
+          enter-active-class="transition-standard"
+          leave-active-class="transition-fast"
           enter-from-class="opacity-0 translate-y-2"
           leave-to-class="opacity-0 -translate-y-2"
         >
@@ -42,7 +42,7 @@
             </h2>
             <p
               v-if="stageDescription"
-              class="text-body-sm text-text-secondary leading-relaxed"
+              class="body-muted"
             >
               {{ stageDescription }}
             </p>
@@ -63,14 +63,10 @@
           <span
             class="text-label-sm font-semibold uppercase tracking-wider text-text-secondary"
           >
-            {{
-              t('ui.caseStudyGallery.interfaceViewsAppFlows')
-            }}
+            {{ t("ui.caseStudyGallery.interfaceViewsAppFlows") }}
           </span>
           <span class="text-label-sm text-text-secondary">
-            {{
-              t('ui.caseStudyGallery.clickThumbnailToPreviewStage')
-            }}
+            {{ t("ui.caseStudyGallery.clickThumbnailToPreviewStage") }}
           </span>
         </div>
 
@@ -78,9 +74,7 @@
         <div
           class="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-4"
           role="tablist"
-          :aria-label="
-            t('ui.caseStudyGallery.projectScreenshotGallery')
-          "
+          :aria-label="t('ui.caseStudyGallery.projectScreenshotGallery')"
         >
           <button
             v-for="(item, index) in gallery"
@@ -116,7 +110,11 @@
             </div>
             <span
               class="absolute top-2 end-2 w-2 h-2 rounded-full bg-accent transition-ui duration-(--duration-panel) ease-panel"
-              :class="activeIndex === index ? 'scale-100 opacity-100' : 'scale-0 opacity-0'"
+              :class="
+                activeIndex === index
+                  ? 'scale-100 opacity-100'
+                  : 'scale-0 opacity-0'
+              "
               aria-hidden="true"
             />
           </button>
@@ -126,9 +124,7 @@
         <div
           class="md:hidden flex items-center gap-2 overflow-x-auto no-scrollbar"
           role="tablist"
-          :aria-label="
-            t('ui.caseStudyGallery.projectScreenshotGallery')
-          "
+          :aria-label="t('ui.caseStudyGallery.projectScreenshotGallery')"
         >
           <button
             v-for="(item, index) in gallery"
@@ -153,13 +149,14 @@
 </template>
 
 <script lang="ts" setup>
-import type { CaseStudyProps } from "@/types/work";
-
-const props = defineProps<CaseStudyProps>();
+import type { CaseStudyProps } from "~/types/work";
 
 const { t } = useLocale();
 
+const props = defineProps<CaseStudyProps>();
+
 const gallery = computed(() => props.project.caseStudy?.gallery ?? []);
+
 const hasGallery = computed(() => gallery.value.length > 0);
 
 const activeIndex = ref(0);
@@ -168,9 +165,11 @@ const activeItem = computed(() => gallery.value[activeIndex.value]);
 const stageTitle = computed(() =>
   activeItem.value ? t(activeItem.value.stageTitle) : props.project.title,
 );
+
 const stageDescription = computed(() =>
   activeItem.value ? t(activeItem.value.stageDescription) : "",
 );
+
 const stageImage = computed(
   () => activeItem.value?.screenshotSrc ?? props.project.screenshotSrc,
 );

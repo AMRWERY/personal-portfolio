@@ -189,9 +189,9 @@
 </template>
 
 <script lang="ts" setup>
-import { NAV_ITEMS, PROFILE } from "@/data/home";
-import type { NavItem } from "@/types/portfolio";
-import type { HeaderProps } from "@/types/layouts";
+import { NAV_ITEMS, PROFILE } from "~/data/home";
+import type { NavItem } from "~/types/portfolio";
+import type { HeaderProps } from "~/types/layouts";
 
 const { locale, t } = useLocale();
 
@@ -209,29 +209,29 @@ const menuTriggerRef = ref<{ $el: HTMLElement } | null>(null);
 const closeButtonRef = ref<{ $el: HTMLElement } | null>(null);
 const drawerRef = ref<HTMLElement | null>(null);
 
-async function openMobileMenu(): Promise<void> {
+const openMobileMenu = async (): Promise<void> => {
   isMobileOpen.value = true;
   await nextTick();
   closeButtonRef.value?.$el.focus();
-}
+};
 
-function closeMobileMenu(restoreFocus = true): void {
+const closeMobileMenu = (restoreFocus = true): void => {
   isMobileOpen.value = false;
   if (restoreFocus) {
     nextTick(() => menuTriggerRef.value?.$el.focus());
   }
-}
+};
 
-function toggleMobileMenu(): void {
+const toggleMobileMenu = (): void => {
   if (isMobileOpen.value) {
     closeMobileMenu(true);
   } else {
     openMobileMenu();
   }
-}
+};
 
 /** Esc closes; Tab / Shift+Tab stay inside the open sidebar (modal dialog). */
-function onDrawerKeydown(event: KeyboardEvent): void {
+const onDrawerKeydown = (event: KeyboardEvent): void => {
   if (event.key === "Escape") {
     event.stopPropagation();
     closeMobileMenu(true);
@@ -255,7 +255,7 @@ function onDrawerKeydown(event: KeyboardEvent): void {
     event.preventDefault();
     first.focus();
   }
-}
+};
 
 // Page behind the sidebar doesn't scroll while it is open
 watch(isMobileOpen, (open) => {

@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { NavItem } from "@/types/portfolio";
+import type { NavItem } from "~/types/portfolio";
 
 const route = useRoute();
 

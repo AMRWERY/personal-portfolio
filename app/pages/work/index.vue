@@ -51,7 +51,7 @@
       <TransitionGroup
         v-if="visibleProjects.length"
         tag="div"
-        enter-active-class="transition-ui duration-(--duration-standard) ease-standard"
+        enter-active-class="transition-standard"
         enter-from-class="opacity-0 translate-y-2"
         class="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-8 max-w-2xl mx-auto lg:max-w-none"
       >
@@ -98,8 +98,8 @@
 </template>
 
 <script lang="ts" setup>
-import { WORK_PROJECTS } from "@/data/work";
-import type { WorkFilter, WorkFilterOption } from "@/types/work";
+import { WORK_PROJECTS } from "~/data/work";
+import type { WorkFilter, WorkFilterOption } from "~/types/work";
 
 const { t } = useLocale();
 

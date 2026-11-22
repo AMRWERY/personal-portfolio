@@ -9,7 +9,7 @@
       </LazyVEyebrowLabel>
 
       <h1
-        class="font-headline text-headline-xl-mobile md:text-display-lg-mobile lg:text-display-lg font-bold text-text-primary tracking-tight text-balance"
+        class="page-title"
       >
         {{ t("ui.contactPage.letsBuildSomethingUseful") }}
       </h1>

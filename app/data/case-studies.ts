@@ -1,4 +1,4 @@
-import type { CaseStudy, CaseStudyMetric } from "@/types/portfolio";
+import type { CaseStudy, CaseStudyMetric } from "~/types/portfolio";
 
 /**
  * Extra content for /work/[slug], keyed by project slug.
