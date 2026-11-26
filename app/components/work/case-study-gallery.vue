@@ -91,14 +91,21 @@
             @click="activeIndex = index"
           >
             <div
-              class="aspect-16/10 bg-background rounded-lg border border-border mb-2.5 flex items-center justify-center transition-colors duration-(--duration-fast)"
+              class="aspect-16/10 bg-background rounded-lg border border-border mb-2.5 flex items-center justify-center overflow-hidden transition-colors duration-(--duration-fast)"
               :class="
                 activeIndex === index
                   ? 'text-accent-ink'
                   : 'text-text-secondary group-hover:text-accent-ink'
               "
             >
-              <LazyVAppIcon :name="item.icon" class="w-5 h-5" />
+              <img
+                v-if="item.screenshotSrc"
+                :src="item.screenshotSrc"
+                :alt="t(item.title)"
+                loading="lazy"
+                class="w-full h-full object-cover object-top"
+              />
+              <LazyVAppIcon v-else :name="item.icon" class="w-5 h-5" />
             </div>
             <div
               class="font-headline text-label-md font-bold text-text-primary group-hover:text-accent-ink transition-colors"

@@ -101,6 +101,55 @@ const BASE_PROJECTS: WorkProject[] = [
     ]
   },
   {
+    "slug": "print-pro",
+    "screenshotSrc": "/img/projects/PrintPro-Storefront.png",
+    "title": "PrintPro — Printers & Copiers E-Commerce",
+    "category": "freelance",
+    "categoryBadge": "content.workProjects.printPro.categoryBadge",
+    "role": "content.workProjects.printPro.role",
+    "period": "content.workProjects.printPro.period",
+    "summary": "content.workProjects.printPro.summary",
+    "stack": [
+      "Nuxt.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js"
+    ],
+    "links": [
+      {
+        "kind": "live",
+        "label": "content.workProjects.printPro.links.0.label",
+        "detailLabel": "content.workProjects.printPro.links.0.detailLabel",
+        "href": "https://print-pro-sigma.vercel.app/en"
+      },
+      {
+        "kind": "live",
+        "label": "content.workProjects.printPro.links.1.label",
+        "detailLabel": "content.workProjects.printPro.links.1.detailLabel",
+        "href": "https://print-pro-admin.vercel.app/en"
+      },
+      {
+        "kind": "repo",
+        "label": "content.workProjects.printPro.links.2.label",
+        "detailLabel": "content.workProjects.printPro.links.2.detailLabel",
+        "href": "https://github.com/AMRWERY/print-pro"
+      },
+      {
+        "kind": "repo",
+        "label": "content.workProjects.printPro.links.3.label",
+        "detailLabel": "content.workProjects.printPro.links.3.detailLabel",
+        "href": "https://github.com/AMRWERY/print-pro-admin"
+      },
+      {
+        "kind": "repo",
+        "label": "content.workProjects.printPro.links.4.label",
+        "detailLabel": "content.workProjects.printPro.links.4.detailLabel",
+        "href": "https://github.com/AMRWERY/print-pro-backend"
+      }
+    ]
+  },
+  {
     "slug": "marca-store",
     "title": "Marca Store — E-Commerce",
     "category": "freelance",

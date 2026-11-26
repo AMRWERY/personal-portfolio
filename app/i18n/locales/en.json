@@ -351,6 +351,26 @@
         },
         "note": "Project status: the work covers frontend architecture and development and remains actively in progress. The new website has not launched yet."
       },
+      "printPro": {
+        "typeLabel": "Freelance · E-Commerce Platform",
+        "market": "Egypt",
+        "deliverable": "Storefront & Admin Dashboard",
+        "intro": "Built PrintPro, an e-commerce platform for printers, photocopiers, and genuine ink and toner. Delivered a bilingual customer storefront and an admin analytics dashboard backed by a Node.js and Express.js API.",
+        "gallery": {
+          "0": {
+            "title": "Storefront Home",
+            "caption": "Customer Interface",
+            "stageTitle": "PrintPro — Customer Storefront",
+            "stageDescription": "Category browsing, featured products, trade-in offers, and bilingual Arabic/English layouts with light and dark themes."
+          },
+          "1": {
+            "title": "Admin Analytics",
+            "caption": "Sales & Orders",
+            "stageTitle": "PrintPro — Admin Analytics Dashboard",
+            "stageDescription": "Revenue vs cash collected, order conversion funnel, category margins, client cohorts, and best-selling SKUs."
+          }
+        }
+      },
       "marcaStore": {
         "typeLabel": "Freelance · E-Commerce Platform",
         "market": "Egypt & Saudi Arabia",
@@ -573,6 +593,19 @@
         "period": "Jan 2024 – May 2025",
         "summary": "Built and maintained admin dashboard features and connected frontend with backend services using Nuxt.js, TypeScript, and Vuetify.",
         "privateNote": "Internal Enterprise"
+      },
+      "printPro": {
+        "categoryBadge": "Freelance · Egypt",
+        "role": "Freelance Full-Stack Developer",
+        "period": "2026",
+        "summary": "Printers, photocopiers, ink and toner e-commerce platform with a customer storefront and an analytics-driven admin dashboard, built with Nuxt.js, TypeScript, Node.js, and Express.js.",
+        "links": {
+          "0": { "label": "Live Store", "detailLabel": "Visit Live Storefront" },
+          "1": { "label": "Live Admin", "detailLabel": "Visit Live Admin Dashboard" },
+          "2": { "label": "Store Repo", "detailLabel": "Storefront Repository" },
+          "3": { "label": "Admin Repo", "detailLabel": "Admin Repository" },
+          "4": { "label": "API Repo", "detailLabel": "Backend API Repository" }
+        }
       },
       "lugarStore": {
         "categoryBadge": "Freelance · Cairo, Egypt",

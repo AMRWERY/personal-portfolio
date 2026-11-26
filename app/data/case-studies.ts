@@ -20,6 +20,37 @@ const metric = (
 });
 
 export const CASE_STUDIES: Record<string, CaseStudy> = {
+  "print-pro": {
+    "typeLabel": "content.caseStudies.printPro.typeLabel",
+    "market": "content.caseStudies.printPro.market",
+    "deliverable": "content.caseStudies.printPro.deliverable",
+    "intro": "content.caseStudies.printPro.intro",
+    "gallery": [
+      {
+        "icon": "lucide:shopping-bag",
+        "title": "content.caseStudies.printPro.gallery.0.title",
+        "caption": "content.caseStudies.printPro.gallery.0.caption",
+        "stageTitle": "content.caseStudies.printPro.gallery.0.stageTitle",
+        "stageDescription": "content.caseStudies.printPro.gallery.0.stageDescription",
+        "screenshotSrc": "/img/projects/PrintPro-Storefront.png"
+      },
+      {
+        "icon": "lucide:layout-dashboard",
+        "title": "content.caseStudies.printPro.gallery.1.title",
+        "caption": "content.caseStudies.printPro.gallery.1.caption",
+        "stageTitle": "content.caseStudies.printPro.gallery.1.stageTitle",
+        "stageDescription": "content.caseStudies.printPro.gallery.1.stageDescription",
+        "screenshotSrc": "/img/projects/PrintPro-Admin-Analytics.png"
+      }
+    ],
+    "stack": [
+      "Nuxt.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js"
+    ]
+  },
   "lexus-egypt": {
     "typeLabel": "content.caseStudies.lexusEgypt.typeLabel",
     "market": "content.caseStudies.lexusEgypt.market",
