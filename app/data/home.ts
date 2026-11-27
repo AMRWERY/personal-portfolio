@@ -11,7 +11,7 @@ import { getProjectBySlug } from "~/data/work";
 export const PROFILE = {
   "name": "Amr Mohamed",
   "monogram": "AM",
-  "avatarSrc": "/img/personal-photo.png",
+  "avatarSrc": "/img/personal-photo.gif",
   "email": "amrmounir2@gmail.com",
   "phone": "+201022655742",
   "phoneDisplay": "+20 102 265 5742",
