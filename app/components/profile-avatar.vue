@@ -6,8 +6,8 @@
   >
     <img
       v-if="showRealImage()"
-      :src="src"
-      :alt="altText"
+      src="/img/personal-photo.png"
+      alt="personal-photo"
       width="32"
       height="32"
       class="w-full h-full object-cover max-w-none [transform:translate(-18%,79%)_scale(2.6)]"

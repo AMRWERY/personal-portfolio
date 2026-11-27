@@ -1,3 +1,5 @@
+import nodemailer from "nodemailer";
+
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const clean = (value: unknown, max: number): string =>
@@ -5,8 +7,8 @@ const clean = (value: unknown, max: number): string =>
 
 /**
  * POST /api/contact
- * Validates the message and forwards it to the webhook configured in
- * `runtimeConfig.contactWebhookUrl` (env: NUXT_CONTACT_WEBHOOK_URL).
+ * Validates the message and emails it to the owner's Gmail via SMTP
+ * (env: NUXT_GMAIL_USER, NUXT_GMAIL_APP_PASSWORD).
  */
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
@@ -24,8 +26,8 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: "Invalid input" });
   }
 
-  const { contactWebhookUrl } = useRuntimeConfig(event);
-  if (!contactWebhookUrl) {
+  const { gmailUser, gmailAppPassword } = useRuntimeConfig(event);
+  if (!gmailUser || !gmailAppPassword) {
     // Not configured yet: report it clearly instead of silently dropping mail
     throw createError({
       statusCode: 503,
@@ -33,12 +35,28 @@ export default defineEventHandler(async (event) => {
     });
   }
 
+  const text = [
+    `Name: ${name}`,
+    `Email: ${email}`,
+    `Subject: ${subject || "-"}`,
+    "",
+    message,
+  ].join("\n");
+
   try {
-    await $fetch(contactWebhookUrl, {
-      method: "POST",
-      headers: { Accept: "application/json" },
-      body: { name, email, subject, message },
-      timeout: 10_000,
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: { user: gmailUser, pass: gmailAppPassword },
+    });
+    await transporter.sendMail({
+      from: `"Portfolio Contact" <${gmailUser}>`,
+      to: gmailUser,
+      replyTo: `"${name.replace(/["\r\n]/g, "")}" <${email}>`,
+      subject: `Portfolio: ${subject || `Message from ${name}`}`.replace(
+        /[\r\n]/g,
+        " ",
+      ),
+      text,
     });
   } catch {
     throw createError({
